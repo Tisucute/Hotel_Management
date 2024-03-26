@@ -55,12 +55,6 @@ namespace GUI
 
         }
 
-        private void ImageButtonTwitter_Click(object sender, EventArgs e)
-        {
-            string url = "https://twitter.com/"; // URL cần được mở trên trình duyệt.
-            Process.Start(url); // Thực hiện mở URL trên trình duyệt.
-        }
-
         private void ImageButtonInsta_Click(object sender, EventArgs e)
         {
             string url = "https://www.instagram.com/histtuw._ti/"; // URL cần được mở trên trình duyệt.
@@ -83,6 +77,12 @@ namespace GUI
                 PBeye.BringToFront();
                 TextBoxPassword.PasswordChar = '\u25CF';
             }
+        }
+
+        private void PBTwitter_Click(object sender, EventArgs e)
+        {
+            string url = "https://twitter.com/"; // URL cần được mở trên trình duyệt.
+            Process.Start(url); // Thực hiện mở URL trên trình duyệt.
         }
     }
 }

@@ -63,39 +63,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _885d75b9b0096ecff1ae66e0b59f97bb {
-            get {
-                object obj = ResourceManager.GetObject("885d75b9b0096ecff1ae66e0b59f97bb", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bff2a2de919defff2efd9d74f50b1cc5 {
             get {
                 object obj = ResourceManager.GetObject("bff2a2de919defff2efd9d74f50b1cc5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_eye {
-            get {
-                object obj = ResourceManager.GetObject("icons8-eye", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_eye_24 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-eye-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +93,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_eye_64__2_ {
+        internal static System.Drawing.Bitmap icons8_facebook_64 {
             get {
-                object obj = ResourceManager.GetObject("icons8-eye-64 (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-facebook-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,20 +103,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_eye_64__2_1 {
+        internal static System.Drawing.Bitmap icons8_instagram_100 {
             get {
-                object obj = ResourceManager.GetObject("icons8-eye-64 (2)1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_famous_social_media_online_social_media_and_social_networking_service__facebook_24 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-famous-social-media-online-social-media-and-social-networking-service,-fac" +
-                        "ebook-24", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-instagram-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -164,46 +123,6 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_key_25_1 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-key-25_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_lock_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-lock-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_lock_501 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-lock-501", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_lock_502 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-lock-502", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_login_67 {
             get {
                 object obj = ResourceManager.GetObject("icons8-login-67", resourceCulture);
@@ -214,9 +133,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loginsua {
+        internal static System.Drawing.Bitmap icons8_twitter {
             get {
-                object obj = ResourceManager.GetObject("loginsua", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-twitter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -224,9 +143,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OIP__1_ {
+        internal static System.Drawing.Bitmap icons8_twitter_50 {
             get {
-                object obj = ResourceManager.GetObject("OIP (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-twitter-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

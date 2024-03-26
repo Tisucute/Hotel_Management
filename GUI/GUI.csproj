@@ -65,19 +65,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -98,55 +98,31 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\885d75b9b0096ecff1ae66e0b59f97bb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-login-67.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-lock-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginsua.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-key-25_1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-key-25.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-lock-501.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-lock-502.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bff2a2de919defff2efd9d74f50b1cc5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\OIP %281%29.jpg" />
+    <None Include="Resources\icons8-login-671.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-famous-social-media-online-social-media-and-social-networking-service,-facebook-24.png" />
+    <None Include="Resources\icons8-key-251.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-eye.gif" />
+    <None Include="Resources\icons8-facebook-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-eye-24.png" />
+    <None Include="Resources\icons8-twitter-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-eye-64 %281%29.png" />
+    <None Include="Resources\icons8-instagram-100.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-eye-64 %282%29.png" />
+    <None Include="Resources\icons8-eye-64 %281%291.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-eye-64.png" />
+    <None Include="Resources\icons8-eye-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-eye-64 %282%291.png" />
+    <None Include="Resources\icons8-twitter.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
