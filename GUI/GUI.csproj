@@ -121,5 +121,32 @@
   <ItemGroup>
     <None Include="Resources\icons8-lock-502.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bff2a2de919defff2efd9d74f50b1cc5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-famous-social-media-online-social-media-and-social-networking-service,-facebook-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-64 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-64 %282%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

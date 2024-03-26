@@ -73,6 +73,87 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bff2a2de919defff2efd9d74f50b1cc5 {
+            get {
+                object obj = ResourceManager.GetObject("bff2a2de919defff2efd9d74f50b1cc5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_64__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-64 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_64__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-64 (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_famous_social_media_online_social_media_and_social_networking_service__facebook_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-famous-social-media-online-social-media-and-social-networking-service,-fac" +
+                        "ebook-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_key_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8-key-25", resourceCulture);
@@ -136,6 +217,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap loginsua {
             get {
                 object obj = ResourceManager.GetObject("loginsua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIP__1_ {
+            get {
+                object obj = ResourceManager.GetObject("OIP (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
