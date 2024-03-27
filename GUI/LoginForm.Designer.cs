@@ -30,8 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.PBTwitter = new System.Windows.Forms.PictureBox();
+            this.PBeye = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ImageButtonInsta = new Guna.UI2.WinForms.Guna2ImageButton();
             this.LinkForgot = new System.Windows.Forms.LinkLabel();
+            this.ImageButtonFB = new Guna.UI2.WinForms.Guna2ImageButton();
             this.RadioButtonJanitor = new System.Windows.Forms.RadioButton();
             this.RadioButtonRecep = new System.Windows.Forms.RadioButton();
             this.RadioButtonManager = new System.Windows.Forms.RadioButton();
@@ -39,20 +43,16 @@
             this.LinkSignUp = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonLogin = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.LabelLogin = new System.Windows.Forms.Label();
-            this.PBeye = new System.Windows.Forms.PictureBox();
-            this.ImageButtonInsta = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.ImageButtonFB = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.LabelLogin = new System.Windows.Forms.Label();
             this.PBhide = new System.Windows.Forms.PictureBox();
             this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PBTwitter = new System.Windows.Forms.PictureBox();
             this.PanelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelLogin
@@ -83,6 +83,30 @@
             this.PanelLogin.TabIndex = 3;
             this.PanelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
+            // PBTwitter
+            // 
+            this.PBTwitter.Image = ((System.Drawing.Image)(resources.GetObject("PBTwitter.Image")));
+            this.PBTwitter.Location = new System.Drawing.Point(204, 553);
+            this.PBTwitter.Name = "PBTwitter";
+            this.PBTwitter.Size = new System.Drawing.Size(84, 70);
+            this.PBTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBTwitter.TabIndex = 17;
+            this.PBTwitter.TabStop = false;
+            this.PBTwitter.Click += new System.EventHandler(this.PBTwitter_Click);
+            // 
+            // PBeye
+            // 
+            this.PBeye.BackColor = System.Drawing.Color.Gainsboro;
+            this.PBeye.BackgroundImage = global::GUI.Properties.Resources.icons8_eye_48;
+            this.PBeye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PBeye.Location = new System.Drawing.Point(339, 302);
+            this.PBeye.Name = "PBeye";
+            this.PBeye.Size = new System.Drawing.Size(30, 28);
+            this.PBeye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBeye.TabIndex = 14;
+            this.PBeye.TabStop = false;
+            this.PBeye.Click += new System.EventHandler(this.PBeye_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -92,6 +116,23 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "----------------Follow Us----------------";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ImageButtonInsta
+            // 
+            this.ImageButtonInsta.BackColor = System.Drawing.Color.Transparent;
+            this.ImageButtonInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ImageButtonInsta.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ImageButtonInsta.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ImageButtonInsta.Image = ((System.Drawing.Image)(resources.GetObject("ImageButtonInsta.Image")));
+            this.ImageButtonInsta.ImageOffset = new System.Drawing.Point(0, 0);
+            this.ImageButtonInsta.ImageRotate = 0F;
+            this.ImageButtonInsta.ImageSize = new System.Drawing.Size(70, 70);
+            this.ImageButtonInsta.Location = new System.Drawing.Point(329, 553);
+            this.ImageButtonInsta.Name = "ImageButtonInsta";
+            this.ImageButtonInsta.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ImageButtonInsta.Size = new System.Drawing.Size(64, 64);
+            this.ImageButtonInsta.TabIndex = 7;
+            this.ImageButtonInsta.Click += new System.EventHandler(this.ImageButtonInsta_Click);
             // 
             // LinkForgot
             // 
@@ -104,6 +145,22 @@
             this.LinkForgot.TabIndex = 12;
             this.LinkForgot.TabStop = true;
             this.LinkForgot.Text = "Forgot Password?";
+            // 
+            // ImageButtonFB
+            // 
+            this.ImageButtonFB.BackColor = System.Drawing.Color.Transparent;
+            this.ImageButtonFB.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ImageButtonFB.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ImageButtonFB.Image = ((System.Drawing.Image)(resources.GetObject("ImageButtonFB.Image")));
+            this.ImageButtonFB.ImageOffset = new System.Drawing.Point(0, 0);
+            this.ImageButtonFB.ImageRotate = 0F;
+            this.ImageButtonFB.ImageSize = new System.Drawing.Size(60, 60);
+            this.ImageButtonFB.Location = new System.Drawing.Point(95, 553);
+            this.ImageButtonFB.Name = "ImageButtonFB";
+            this.ImageButtonFB.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ImageButtonFB.Size = new System.Drawing.Size(70, 70);
+            this.ImageButtonFB.TabIndex = 5;
+            this.ImageButtonFB.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // RadioButtonJanitor
             // 
@@ -153,7 +210,7 @@
             this.LinkSignUp.AutoSize = true;
             this.LinkSignUp.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkSignUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.LinkSignUp.Location = new System.Drawing.Point(303, 475);
+            this.LinkSignUp.Location = new System.Drawing.Point(304, 473);
             this.LinkSignUp.Name = "LinkSignUp";
             this.LinkSignUp.Size = new System.Drawing.Size(54, 16);
             this.LinkSignUp.TabIndex = 7;
@@ -165,7 +222,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(148, 475);
+            this.label2.Location = new System.Drawing.Point(145, 473);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 16);
             this.label2.TabIndex = 6;
@@ -190,64 +247,6 @@
             this.ButtonLogin.TabIndex = 4;
             this.ButtonLogin.Text = "Login";
             // 
-            // LabelLogin
-            // 
-            this.LabelLogin.AutoSize = true;
-            this.LabelLogin.Font = new System.Drawing.Font("Camranh", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.LabelLogin.Location = new System.Drawing.Point(117, 62);
-            this.LabelLogin.Name = "LabelLogin";
-            this.LabelLogin.Size = new System.Drawing.Size(276, 111);
-            this.LabelLogin.TabIndex = 0;
-            this.LabelLogin.Text = "Login";
-            this.LabelLogin.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // PBeye
-            // 
-            this.PBeye.BackColor = System.Drawing.Color.Transparent;
-            this.PBeye.BackgroundImage = global::GUI.Properties.Resources.icons8_eye_64__1_;
-            this.PBeye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PBeye.Location = new System.Drawing.Point(339, 302);
-            this.PBeye.Name = "PBeye";
-            this.PBeye.Size = new System.Drawing.Size(30, 28);
-            this.PBeye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBeye.TabIndex = 14;
-            this.PBeye.TabStop = false;
-            this.PBeye.Click += new System.EventHandler(this.PBeye_Click);
-            // 
-            // ImageButtonInsta
-            // 
-            this.ImageButtonInsta.BackColor = System.Drawing.Color.Transparent;
-            this.ImageButtonInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ImageButtonInsta.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonInsta.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonInsta.Image = global::GUI.Properties.Resources.icons8_instagram_100;
-            this.ImageButtonInsta.ImageOffset = new System.Drawing.Point(0, 0);
-            this.ImageButtonInsta.ImageRotate = 0F;
-            this.ImageButtonInsta.ImageSize = new System.Drawing.Size(70, 70);
-            this.ImageButtonInsta.Location = new System.Drawing.Point(329, 553);
-            this.ImageButtonInsta.Name = "ImageButtonInsta";
-            this.ImageButtonInsta.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonInsta.Size = new System.Drawing.Size(64, 64);
-            this.ImageButtonInsta.TabIndex = 7;
-            this.ImageButtonInsta.Click += new System.EventHandler(this.ImageButtonInsta_Click);
-            // 
-            // ImageButtonFB
-            // 
-            this.ImageButtonFB.BackColor = System.Drawing.Color.Transparent;
-            this.ImageButtonFB.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonFB.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonFB.Image = global::GUI.Properties.Resources.icons8_facebook_64;
-            this.ImageButtonFB.ImageOffset = new System.Drawing.Point(0, 0);
-            this.ImageButtonFB.ImageRotate = 0F;
-            this.ImageButtonFB.ImageSize = new System.Drawing.Size(60, 60);
-            this.ImageButtonFB.Location = new System.Drawing.Point(95, 553);
-            this.ImageButtonFB.Name = "ImageButtonFB";
-            this.ImageButtonFB.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonFB.Size = new System.Drawing.Size(70, 70);
-            this.ImageButtonFB.TabIndex = 5;
-            this.ImageButtonFB.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
             // TextBoxPassword
             // 
             this.TextBoxPassword.AutoRoundedCorners = true;
@@ -265,7 +264,7 @@
             this.TextBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.TextBoxPassword.HideSelection = false;
             this.TextBoxPassword.HoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.TextBoxPassword.IconLeft = global::GUI.Properties.Resources.icons8_key_25;
+            this.TextBoxPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("TextBoxPassword.IconLeft")));
             this.TextBoxPassword.Location = new System.Drawing.Point(124, 296);
             this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBoxPassword.Name = "TextBoxPassword";
@@ -300,8 +299,8 @@
             this.TextBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.TextBoxUsername.HideSelection = false;
             this.TextBoxUsername.HoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.TextBoxUsername.IconLeft = global::GUI.Properties.Resources.icons8_login_67;
-            this.TextBoxUsername.Location = new System.Drawing.Point(124, 227);
+            this.TextBoxUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("TextBoxUsername.IconLeft")));
+            this.TextBoxUsername.Location = new System.Drawing.Point(124, 239);
             this.TextBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBoxUsername.Name = "TextBoxUsername";
             this.TextBoxUsername.PasswordChar = '\0';
@@ -318,10 +317,22 @@
             this.TextBoxUsername.WordWrap = false;
             this.TextBoxUsername.TextChanged += new System.EventHandler(this.TextBoxUsername_TextChanged);
             // 
+            // LabelLogin
+            // 
+            this.LabelLogin.AutoSize = true;
+            this.LabelLogin.Font = new System.Drawing.Font("Camranh", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.LabelLogin.Location = new System.Drawing.Point(117, 62);
+            this.LabelLogin.Name = "LabelLogin";
+            this.LabelLogin.Size = new System.Drawing.Size(276, 111);
+            this.LabelLogin.TabIndex = 0;
+            this.LabelLogin.Text = "Login";
+            this.LabelLogin.Click += new System.EventHandler(this.label1_Click);
+            // 
             // PBhide
             // 
-            this.PBhide.BackColor = System.Drawing.Color.Transparent;
-            this.PBhide.BackgroundImage = global::GUI.Properties.Resources.icons8_eye_64;
+            this.PBhide.BackColor = System.Drawing.Color.Gainsboro;
+            this.PBhide.BackgroundImage = global::GUI.Properties.Resources.icons8_closed_eye_48;
             this.PBhide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PBhide.Location = new System.Drawing.Point(339, 302);
             this.PBhide.Name = "PBhide";
@@ -333,7 +344,7 @@
             // 
             // PictureBox
             // 
-            this.PictureBox.Image = global::GUI.Properties.Resources.bff2a2de919defff2efd9d74f50b1cc5;
+            this.PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox.Image")));
             this.PictureBox.ImageRotate = 0F;
             this.PictureBox.Location = new System.Drawing.Point(493, -36);
             this.PictureBox.Name = "PictureBox";
@@ -342,21 +353,11 @@
             this.PictureBox.TabIndex = 4;
             this.PictureBox.TabStop = false;
             // 
-            // PBTwitter
-            // 
-            this.PBTwitter.Image = global::GUI.Properties.Resources.icons8_twitter;
-            this.PBTwitter.Location = new System.Drawing.Point(204, 553);
-            this.PBTwitter.Name = "PBTwitter";
-            this.PBTwitter.Size = new System.Drawing.Size(84, 70);
-            this.PBTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBTwitter.TabIndex = 17;
-            this.PBTwitter.TabStop = false;
-            this.PBTwitter.Click += new System.EventHandler(this.PBTwitter_Click);
-            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(994, 671);
             this.Controls.Add(this.PanelLogin);
@@ -369,10 +370,10 @@
             this.Click += new System.EventHandler(this.LoginForm_Load);
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).EndInit();
             this.ResumeLayout(false);
 
         }

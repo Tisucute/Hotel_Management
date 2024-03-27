@@ -73,6 +73,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_closed_eye_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-closed-eye-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_eye_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-eye-64", resourceCulture);
@@ -116,6 +136,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_key_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8-key-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_key_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-key-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
