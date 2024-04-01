@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.PBTwitter = new System.Windows.Forms.PictureBox();
@@ -48,11 +49,13 @@
             this.LabelLogin = new System.Windows.Forms.Label();
             this.PBhide = new System.Windows.Forms.PictureBox();
             this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.errorProviderLogin = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelLogin
@@ -76,7 +79,7 @@
             this.PanelLogin.Controls.Add(this.TextBoxUsername);
             this.PanelLogin.Controls.Add(this.LabelLogin);
             this.PanelLogin.Controls.Add(this.PBhide);
-            this.PanelLogin.Font = new System.Drawing.Font("Phatdiem", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin.Location = new System.Drawing.Point(-3, 0);
             this.PanelLogin.Name = "PanelLogin";
             this.PanelLogin.Size = new System.Drawing.Size(502, 671);
@@ -112,7 +115,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(153, 514);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 17);
+            this.label1.Size = new System.Drawing.Size(194, 16);
             this.label1.TabIndex = 13;
             this.label1.Text = "----------------Follow Us----------------";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,11 +140,11 @@
             // LinkForgot
             // 
             this.LinkForgot.AutoSize = true;
-            this.LinkForgot.Font = new System.Drawing.Font("Phatdiem", 7.799999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkForgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.LinkForgot.Location = new System.Drawing.Point(121, 372);
             this.LinkForgot.Name = "LinkForgot";
-            this.LinkForgot.Size = new System.Drawing.Size(113, 17);
+            this.LinkForgot.Size = new System.Drawing.Size(116, 16);
             this.LinkForgot.TabIndex = 12;
             this.LinkForgot.TabStop = true;
             this.LinkForgot.Text = "Forgot Password?";
@@ -167,7 +170,7 @@
             this.RadioButtonJanitor.AutoSize = true;
             this.RadioButtonJanitor.Location = new System.Drawing.Point(347, 199);
             this.RadioButtonJanitor.Name = "RadioButtonJanitor";
-            this.RadioButtonJanitor.Size = new System.Drawing.Size(68, 21);
+            this.RadioButtonJanitor.Size = new System.Drawing.Size(68, 20);
             this.RadioButtonJanitor.TabIndex = 11;
             this.RadioButtonJanitor.TabStop = true;
             this.RadioButtonJanitor.Text = "Janitor";
@@ -178,7 +181,7 @@
             this.RadioButtonRecep.AutoSize = true;
             this.RadioButtonRecep.Location = new System.Drawing.Point(204, 199);
             this.RadioButtonRecep.Name = "RadioButtonRecep";
-            this.RadioButtonRecep.Size = new System.Drawing.Size(104, 21);
+            this.RadioButtonRecep.Size = new System.Drawing.Size(103, 20);
             this.RadioButtonRecep.TabIndex = 10;
             this.RadioButtonRecep.TabStop = true;
             this.RadioButtonRecep.Text = "Receptionist";
@@ -189,7 +192,7 @@
             this.RadioButtonManager.AutoSize = true;
             this.RadioButtonManager.Location = new System.Drawing.Point(80, 199);
             this.RadioButtonManager.Name = "RadioButtonManager";
-            this.RadioButtonManager.Size = new System.Drawing.Size(82, 21);
+            this.RadioButtonManager.Size = new System.Drawing.Size(82, 20);
             this.RadioButtonManager.TabIndex = 9;
             this.RadioButtonManager.TabStop = true;
             this.RadioButtonManager.Text = "Manager";
@@ -200,7 +203,7 @@
             this.CheckBoxRemember.AutoSize = true;
             this.CheckBoxRemember.Location = new System.Drawing.Point(124, 349);
             this.CheckBoxRemember.Name = "CheckBoxRemember";
-            this.CheckBoxRemember.Size = new System.Drawing.Size(145, 21);
+            this.CheckBoxRemember.Size = new System.Drawing.Size(148, 20);
             this.CheckBoxRemember.TabIndex = 8;
             this.CheckBoxRemember.Text = "Remeber password";
             this.CheckBoxRemember.UseVisualStyleBackColor = true;
@@ -222,7 +225,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(145, 473);
+            this.label2.Location = new System.Drawing.Point(146, 473);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 16);
             this.label2.TabIndex = 6;
@@ -239,13 +242,14 @@
             this.ButtonLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ButtonLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.ButtonLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.ButtonLogin.Font = new System.Drawing.Font("Phatdiem", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonLogin.ForeColor = System.Drawing.Color.White;
-            this.ButtonLogin.Location = new System.Drawing.Point(124, 418);
+            this.ButtonLogin.Location = new System.Drawing.Point(124, 413);
             this.ButtonLogin.Name = "ButtonLogin";
             this.ButtonLogin.Size = new System.Drawing.Size(255, 34);
             this.ButtonLogin.TabIndex = 4;
             this.ButtonLogin.Text = "Login";
+            this.ButtonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // TextBoxPassword
             // 
@@ -353,6 +357,11 @@
             this.PictureBox.TabIndex = 4;
             this.PictureBox.TabStop = false;
             // 
+            // errorProviderLogin
+            // 
+            this.errorProviderLogin.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderLogin.ContainerControl = this;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -374,6 +383,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,5 +408,6 @@
         private System.Windows.Forms.PictureBox PBeye;
         private System.Windows.Forms.PictureBox PBhide;
         private System.Windows.Forms.PictureBox PBTwitter;
+        private System.Windows.Forms.ErrorProvider errorProviderLogin;
     }
 }
