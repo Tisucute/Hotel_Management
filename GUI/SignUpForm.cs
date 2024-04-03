@@ -16,5 +16,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ManagerForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ManagerForm manager = new ManagerForm();
+            manager.Show();
+        }
     }
 }

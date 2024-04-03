@@ -26,7 +26,7 @@ namespace GUI
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,25 +34,10 @@ namespace GUI
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e) //TextBoxPassword
-        {
-            TextBoxPassword.PasswordChar = '\u25CF';
-        }
-
         private void guna2ImageButton1_Click(object sender, EventArgs e) // ImageButtonFB
         {
             string url = "https://www.facebook.com/tisuhuongnoi/"; // URL cần được mở trên trình duyệt.
             Process.Start(url); // Thực hiện mở URL trên trình duyệt.
-        }
-
-        private void TextBoxUsername_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void ImageButtonInsta_Click(object sender, EventArgs e)
@@ -83,6 +68,36 @@ namespace GUI
         {
             string url = "https://twitter.com/"; // URL cần được mở trên trình duyệt.
             Process.Start(url); // Thực hiện mở URL trên trình duyệt.
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.ShowDialog();
+        }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void LinkLabelForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           
+        }
+
+        private void TextBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxPassword.PasswordChar = '\u25CF';
         }
     }
 }
