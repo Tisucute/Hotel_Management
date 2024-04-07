@@ -80,9 +80,9 @@
             this.LabelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.LabelLogin.Location = new System.Drawing.Point(137, 31);
             this.LabelLogin.Name = "LabelLogin";
-            this.LabelLogin.Size = new System.Drawing.Size(370, 111);
+            this.LabelLogin.Size = new System.Drawing.Size(392, 111);
             this.LabelLogin.TabIndex = 3;
-            this.LabelLogin.Text = "Sign Up";
+            this.LabelLogin.Text = "Sign Up ";
             // 
             // guna2TextBox1
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.TextBoxUsername);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUpForm";
-            this.Text = "SignUpForm";
+            this.Text = "Sign Up Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
