@@ -45,8 +45,8 @@
             this.ButtonHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.PanelHienThi = new System.Windows.Forms.Panel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.PanelHienThi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // SideBarTimer
             // 
-            this.SideBarTimer.Interval = 5;
+            this.SideBarTimer.Interval = 10;
             this.SideBarTimer.Tick += new System.EventHandler(this.SideBarTimer_Tick);
             // 
             // MenuSideBar2
@@ -240,6 +240,10 @@
             this.panel4.Size = new System.Drawing.Size(246, 65);
             this.panel4.TabIndex = 6;
             // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.Interval = 100;
+            // 
             // PanelHienThi
             // 
             this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -247,10 +251,7 @@
             this.PanelHienThi.Name = "PanelHienThi";
             this.PanelHienThi.Size = new System.Drawing.Size(1086, 665);
             this.PanelHienThi.TabIndex = 7;
-            // 
-            // guna2AnimateWindow1
-            // 
-            this.guna2AnimateWindow1.Interval = 100;
+            this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
             // 
             // ManagerForm
             // 
@@ -298,7 +299,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button ButtonHome;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel PanelHienThi;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.Panel PanelHienThi;
     }
 }

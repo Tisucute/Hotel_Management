@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace GUI
             if (sideBarExpand)
             {
                 //ì sidebar is expand, minimize
-                SideBar.Width -= 5;
+                SideBar.Width -= 253;
                 if (SideBar.Width <= SideBar.MinimumSize.Width)
                 {
                     sideBarExpand = false;
@@ -42,7 +43,7 @@ namespace GUI
             }
             else
             {
-                SideBar.Width += 5;
+                SideBar.Width += 253;
                 if (SideBar.Width >= SideBar.MaximumSize.Width)
                 {
                     sideBarExpand = true;
@@ -64,11 +65,7 @@ namespace GUI
         private void ManagerForm_Load(object sender, EventArgs e)
         {
             SideBar.Width = SideBar.MinimumSize.Width;
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
+            PanelHienThi.Hide();
         }
 
         private void panel6_Paint_1(object sender, PaintEventArgs e)
@@ -81,21 +78,27 @@ namespace GUI
 
         }
         
-        private void addHienThi(UserControl uc)
+        /*private void addHienThi(UserControl uc)
         {
             uc.Dock = DockStyle.Fill;
             PanelHienThi.Controls.Clear();
             PanelHienThi.Controls.Add(uc);
             uc.BringToFront();
 
-        }
+        }*/
         private void ButtonEmployeeManagement_Click_1(object sender, EventArgs e)
         {
+            /*PanelHienThi.Visible = true;
             EmployeeManagementForm eMF = new EmployeeManagementForm();
-            addHienThi(eMF);
+            addHienThi(eMF);*/
+            AddControls(new frmEmployeeManagementView());
             
         }
-
+        public static void AddControls(Form f)
+        {
+            f.Dock = DockStyle.Fill;
+            f.Show();
+        }
         private void ButtonTimeAndSalary_Click_1(object sender, EventArgs e)
         {
          
@@ -147,5 +150,9 @@ namespace GUI
             }
         }
 
+        private void PanelHienThi_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
     }
 }

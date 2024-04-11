@@ -41,6 +41,8 @@
             this.LabelLogin = new System.Windows.Forms.Label();
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.ErrorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
             this.ImageButtonFB = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.PBTwitter = new System.Windows.Forms.PictureBox();
@@ -48,15 +50,13 @@
             this.ImageButtonInsta = new Guna.UI2.WinForms.Guna2ImageButton();
             this.PBhide = new System.Windows.Forms.PictureBox();
             this.TextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ErrorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ErrorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
             this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,6 +215,14 @@
             this.label1.Text = "Don\'t have an account?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // ErrorProviderPassword
+            // 
+            this.ErrorProviderPassword.ContainerControl = this;
+            // 
+            // ErrorProviderUsername
+            // 
+            this.ErrorProviderUsername.ContainerControl = this;
+            // 
             // ImageButtonFB
             // 
             this.ImageButtonFB.BackColor = System.Drawing.Color.Transparent;
@@ -359,14 +367,6 @@
             this.TextBoxPassword.WordWrap = false;
             this.TextBoxPassword.TextChanged += new System.EventHandler(this.TextBoxPassword_TextChanged);
             // 
-            // ErrorProviderPassword
-            // 
-            this.ErrorProviderPassword.ContainerControl = this;
-            // 
-            // ErrorProviderUsername
-            // 
-            this.ErrorProviderUsername.ContainerControl = this;
-            // 
             // PictureBox
             // 
             this.PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox.Image")));
@@ -397,11 +397,11 @@
             this.Click += new System.EventHandler(this.LoginForm_Load);
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.ResumeLayout(false);
 
