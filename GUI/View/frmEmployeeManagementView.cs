@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
+namespace GUI.View
 {
-    public partial class EmployeeManagementForm : Form
+    public partial class frmEmployeeManagementView : EmployeeManagementForm
     {
-        public EmployeeManagementForm()
+        public frmEmployeeManagementView()
         {
             InitializeComponent();
         }
 
-        public virtual void ButtonAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public virtual void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        private void frmEmployeeManagementView_Load(object sender, EventArgs e)
         {
 
         }

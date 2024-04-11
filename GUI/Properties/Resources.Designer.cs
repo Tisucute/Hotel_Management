@@ -93,6 +93,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_both_direction_scrolling_arrows_in_horizontal_direction_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-both-direction-scrolling-arrows-in-horizontal-direction-24", resourceCulture);
@@ -106,6 +116,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_closed_eye_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-closed-eye-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +276,36 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_menu_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_recycle_bin_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-recycle-bin-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_recycle_bin_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-recycle-bin-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

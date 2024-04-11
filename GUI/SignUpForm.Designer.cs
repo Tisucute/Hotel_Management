@@ -37,6 +37,7 @@
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.ManagerForm = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TextBoxUsername
@@ -265,12 +266,23 @@
             this.ManagerForm.Text = "linkLabel1";
             this.ManagerForm.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ManagerForm_LinkClicked);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(822, 254);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.e6bd9b408cca3a70f45b29be585c3bb1;
             this.ClientSize = new System.Drawing.Size(1237, 609);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ManagerForm);
             this.Controls.Add(this.guna2TextBox5);
             this.Controls.Add(this.guna2TextBox4);
@@ -297,5 +309,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private System.Windows.Forms.LinkLabel ManagerForm;
+        private System.Windows.Forms.Button button1;
     }
 }

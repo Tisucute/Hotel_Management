@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace GUI
         private void ManagerForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ManagerForm manager = new ManagerForm();
+            manager.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmEmployeeManagementView manager = new frmEmployeeManagementView();
             manager.Show();
         }
     }
