@@ -1,4 +1,4 @@
-﻿using GUI.View;
+﻿using GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +26,7 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmEmployeeManagementView manager = new frmEmployeeManagementView();
-            manager.Show();
+            
         }
     }
 }

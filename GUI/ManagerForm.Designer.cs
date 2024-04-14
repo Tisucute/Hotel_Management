@@ -32,29 +32,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.MenuSideBar2 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.LabelManager = new System.Windows.Forms.Label();
             this.ButtonTimeAndSalary = new System.Windows.Forms.Button();
             this.ButtonEmployeeManagement = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAvatar = new System.Windows.Forms.Panel();
             this.LabelName = new System.Windows.Forms.Label();
             this.PictureBoxManager = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.SideBar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelHome = new System.Windows.Forms.Panel();
             this.ButtonHome = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelEmployee = new System.Windows.Forms.Panel();
+            this.panelWorkingTime = new System.Windows.Forms.Panel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.PanelHienThi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelTitle.SuspendLayout();
+            this.panelAvatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxManager)).BeginInit();
             this.SideBar.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelHome.SuspendLayout();
+            this.panelEmployee.SuspendLayout();
+            this.panelWorkingTime.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBarTimer
@@ -75,20 +75,20 @@
             this.MenuSideBar2.TabStop = false;
             this.MenuSideBar2.Click += new System.EventHandler(this.MenuSideBar2_Click);
             // 
-            // panel6
+            // panelTitle
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.nightControlBox1);
-            this.panel6.Controls.Add(this.LabelManager);
-            this.panel6.Controls.Add(this.MenuSideBar2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1339, 62);
-            this.panel6.TabIndex = 5;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint_1);
-            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
+            this.panelTitle.BackColor = System.Drawing.Color.White;
+            this.panelTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTitle.Controls.Add(this.nightControlBox1);
+            this.panelTitle.Controls.Add(this.LabelManager);
+            this.panelTitle.Controls.Add(this.MenuSideBar2);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(1467, 62);
+            this.panelTitle.TabIndex = 5;
+            this.panelTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint_1);
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             // 
             // nightControlBox1
             // 
@@ -105,7 +105,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1200, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(1328, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -128,7 +128,7 @@
             // 
             this.ButtonTimeAndSalary.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.ButtonTimeAndSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonTimeAndSalary.Font = new System.Drawing.Font("VNbahamas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTimeAndSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonTimeAndSalary.Image = global::GUI.Properties.Resources.icons8_time_is_money_48;
             this.ButtonTimeAndSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonTimeAndSalary.Location = new System.Drawing.Point(4, 0);
@@ -144,7 +144,7 @@
             // 
             this.ButtonEmployeeManagement.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.ButtonEmployeeManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonEmployeeManagement.Font = new System.Drawing.Font("VNbahamas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonEmployeeManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonEmployeeManagement.Image = global::GUI.Properties.Resources.icons8_identification_documents_50;
             this.ButtonEmployeeManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonEmployeeManagement.Location = new System.Drawing.Point(4, 4);
@@ -155,17 +155,17 @@
             this.ButtonEmployeeManagement.Text = "              Employee Management";
             this.ButtonEmployeeManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonEmployeeManagement.UseVisualStyleBackColor = true;
-            this.ButtonEmployeeManagement.Click += new System.EventHandler(this.ButtonEmployeeManagement_Click_1);
+            this.ButtonEmployeeManagement.Click += new System.EventHandler(this.ButtonEmployeeManagement_Click);
             // 
-            // panel1
+            // panelAvatar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.panel1.Controls.Add(this.LabelName);
-            this.panel1.Controls.Add(this.PictureBoxManager);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 232);
-            this.panel1.TabIndex = 0;
+            this.panelAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
+            this.panelAvatar.Controls.Add(this.LabelName);
+            this.panelAvatar.Controls.Add(this.PictureBoxManager);
+            this.panelAvatar.Location = new System.Drawing.Point(3, 3);
+            this.panelAvatar.Name = "panelAvatar";
+            this.panelAvatar.Size = new System.Drawing.Size(246, 232);
+            this.panelAvatar.TabIndex = 0;
             // 
             // LabelName
             // 
@@ -189,10 +189,10 @@
             // SideBar
             // 
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(188)))), ((int)(((byte)(182)))));
-            this.SideBar.Controls.Add(this.panel1);
-            this.SideBar.Controls.Add(this.panel2);
-            this.SideBar.Controls.Add(this.panel3);
-            this.SideBar.Controls.Add(this.panel4);
+            this.SideBar.Controls.Add(this.panelAvatar);
+            this.SideBar.Controls.Add(this.panelHome);
+            this.SideBar.Controls.Add(this.panelEmployee);
+            this.SideBar.Controls.Add(this.panelWorkingTime);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.SideBar.Location = new System.Drawing.Point(0, 62);
@@ -201,19 +201,19 @@
             this.SideBar.Size = new System.Drawing.Size(253, 665);
             this.SideBar.TabIndex = 6;
             // 
-            // panel2
+            // panelHome
             // 
-            this.panel2.Controls.Add(this.ButtonHome);
-            this.panel2.Location = new System.Drawing.Point(3, 241);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 65);
-            this.panel2.TabIndex = 1;
+            this.panelHome.Controls.Add(this.ButtonHome);
+            this.panelHome.Location = new System.Drawing.Point(3, 241);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(246, 65);
+            this.panelHome.TabIndex = 1;
             // 
             // ButtonHome
             // 
             this.ButtonHome.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonHome.Font = new System.Drawing.Font("VNbahamas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonHome.Image = global::GUI.Properties.Resources.icons8_home_50;
             this.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonHome.Location = new System.Drawing.Point(4, 3);
@@ -223,22 +223,23 @@
             this.ButtonHome.Text = "               Home";
             this.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonHome.UseVisualStyleBackColor = true;
+            this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
             // 
-            // panel3
+            // panelEmployee
             // 
-            this.panel3.Controls.Add(this.ButtonEmployeeManagement);
-            this.panel3.Location = new System.Drawing.Point(3, 312);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 65);
-            this.panel3.TabIndex = 2;
+            this.panelEmployee.Controls.Add(this.ButtonEmployeeManagement);
+            this.panelEmployee.Location = new System.Drawing.Point(3, 312);
+            this.panelEmployee.Name = "panelEmployee";
+            this.panelEmployee.Size = new System.Drawing.Size(246, 65);
+            this.panelEmployee.TabIndex = 2;
             // 
-            // panel4
+            // panelWorkingTime
             // 
-            this.panel4.Controls.Add(this.ButtonTimeAndSalary);
-            this.panel4.Location = new System.Drawing.Point(3, 383);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(246, 65);
-            this.panel4.TabIndex = 6;
+            this.panelWorkingTime.Controls.Add(this.ButtonTimeAndSalary);
+            this.panelWorkingTime.Location = new System.Drawing.Point(3, 383);
+            this.panelWorkingTime.Name = "panelWorkingTime";
+            this.panelWorkingTime.Size = new System.Drawing.Size(246, 65);
+            this.panelWorkingTime.TabIndex = 6;
             // 
             // guna2AnimateWindow1
             // 
@@ -249,7 +250,7 @@
             this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
             this.PanelHienThi.Name = "PanelHienThi";
-            this.PanelHienThi.Size = new System.Drawing.Size(1086, 665);
+            this.PanelHienThi.Size = new System.Drawing.Size(1214, 665);
             this.PanelHienThi.TabIndex = 7;
             this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
             // 
@@ -259,10 +260,10 @@
             this.AutoSize = true;
             this.BackgroundImage = global::GUI.Properties.Resources.R;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1339, 727);
+            this.ClientSize = new System.Drawing.Size(1467, 727);
             this.Controls.Add(this.PanelHienThi);
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panelTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -270,15 +271,15 @@
             this.Load += new System.EventHandler(this.ManagerForm_Load);
             this.Resize += new System.EventHandler(this.ManagerForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
+            this.panelAvatar.ResumeLayout(false);
+            this.panelAvatar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxManager)).EndInit();
             this.SideBar.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.panelHome.ResumeLayout(false);
+            this.panelEmployee.ResumeLayout(false);
+            this.panelWorkingTime.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -286,19 +287,19 @@
         #endregion
         private System.Windows.Forms.Timer SideBarTimer;
         private System.Windows.Forms.PictureBox MenuSideBar2;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label LabelManager;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private System.Windows.Forms.Button ButtonTimeAndSalary;
         private System.Windows.Forms.Button ButtonEmployeeManagement;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelAvatar;
         private System.Windows.Forms.Label LabelName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox PictureBoxManager;
         private System.Windows.Forms.FlowLayoutPanel SideBar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelHome;
+        private System.Windows.Forms.Panel panelEmployee;
         private System.Windows.Forms.Button ButtonHome;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelWorkingTime;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Panel PanelHienThi;
     }

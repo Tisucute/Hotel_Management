@@ -87,10 +87,11 @@ namespace GUI
                 employee.password = TextBoxPassword.Text;
                 if (RadioButtonManager.Checked)
                 {
-                    employee.role = "Manager";
+                    employee.role = "1";
                     if (EmployeeBLL.checkLogin(employee))
                     {
-                        ManagerForm managerForm = new ManagerForm();
+                        
+                        ManagerForm managerForm = new ManagerForm(TextBoxUsername.Text);
                         this.Hide();
                         managerForm.Show();
                     }
@@ -101,7 +102,7 @@ namespace GUI
                 }
                 else if (RadioButtonReceptionist.Checked)
                 {
-                    employee.role = "Receptionist";
+                    employee.role = "2";
                     if (EmployeeBLL.checkLogin(employee))
                     {
                         ReceptionistForm receptionistForm = new ReceptionistForm();
@@ -115,7 +116,7 @@ namespace GUI
                 }
                 else
                 {
-                    employee.role = "Janitor";
+                    employee.role = "3";
                     if (EmployeeBLL.checkLogin(employee))
                     {
                         JanitorForm janitorForm = new JanitorForm();

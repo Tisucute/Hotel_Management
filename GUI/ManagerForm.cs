@@ -1,4 +1,5 @@
-﻿using GUI.View;
+﻿using BLL;
+using GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,12 @@ namespace GUI
             InitializeComponent();
             this.Padding = new Padding(borderSize);
         }
-
+        string user;
+        public ManagerForm(string u)
+        {
+            InitializeComponent();
+            user = u;
+        }
         bool sideBarExpand;
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -61,11 +67,19 @@ namespace GUI
         {
             SideBarTimer.Start();
         }
-
+        
+        //Hiện thông tin đăng nhập
+        public void showInformation()
+        {
+            string name = EmployeeBLL.getEmployeeByUsername(user);
+            LabelName.Text = name;
+        }
         private void ManagerForm_Load(object sender, EventArgs e)
         {
+            showInformation();
             SideBar.Width = SideBar.MinimumSize.Width;
             PanelHienThi.Hide();
+
         }
 
         private void panel6_Paint_1(object sender, PaintEventArgs e)
@@ -86,19 +100,7 @@ namespace GUI
             uc.BringToFront();
 
         }*/
-        private void ButtonEmployeeManagement_Click_1(object sender, EventArgs e)
-        {
-            /*PanelHienThi.Visible = true;
-            EmployeeManagementForm eMF = new EmployeeManagementForm();
-            addHienThi(eMF);*/
-            AddControls(new frmEmployeeManagementView());
-            
-        }
-        public static void AddControls(Form f)
-        {
-            f.Dock = DockStyle.Fill;
-            f.Show();
-        }
+
         private void ButtonTimeAndSalary_Click_1(object sender, EventArgs e)
         {
          
@@ -152,7 +154,28 @@ namespace GUI
 
         private void PanelHienThi_Paint(object sender, PaintEventArgs e)
         {
-          
+            
+        }
+        public void AddControls(Form f)
+        {
+            PanelHienThi.Show();
+            PanelHienThi.Controls.Clear();
+            f.Dock = DockStyle.Fill;
+            f.TopLevel = false;
+            PanelHienThi.Controls.Add(f);
+            f.Show();
+            PanelHienThi.BringToFront();
+        }
+
+        private void ButtonEmployeeManagement_Click(object sender, EventArgs e)
+        {
+            AddControls(new EmployeeManagementForm());
+
+        }
+
+        private void ButtonHome_Click(object sender, EventArgs e)
+        {
+            PanelHienThi.Hide();
         }
     }
 }
