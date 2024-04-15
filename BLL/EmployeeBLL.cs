@@ -37,7 +37,7 @@ namespace BLL
         }
         public static string getEmployeeByUsername(string username)
         {
-           DataTable table = employee.getEmployeesByUsername(username);
+            DataTable table = employee.getEmployeesByUsername(username);
             return table.Rows[0][1].ToString();
         }
     }

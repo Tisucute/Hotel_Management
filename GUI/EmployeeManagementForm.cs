@@ -34,6 +34,7 @@ namespace GUI
         {
             // TODO: This line of code loads data into the 'qLKSDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
             this.eMPLOYEESTableAdapter.Fill(this.qLKSDataSet.EMPLOYEES);
+            fillGrid();
 
         }
         public void fillGrid()
@@ -61,10 +62,14 @@ namespace GUI
             {
                 try
                 {
-                    int id = Convert.ToInt32(dgvListEmployees.CurrentRow.Cells["ID"].Value);
-                    EmployeeBLL.deleteEmployee(id);
-                    MessageBox.Show("Delete successfully", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    fillGrid();
+                    if ((MessageBox.Show("Are You Sure You Want To Delete This Course", "Remove Course", MessageBoxButtons.YesNo) == DialogResult.Yes))
+                    {
+                        // rang buoc neu dang la nguoi dang nhap thi ko duoc xoa
+                        int id = Convert.ToInt32(dgvListEmployees.CurrentRow.Cells["ID"].Value);
+                        EmployeeBLL.deleteEmployee(id);
+                        MessageBox.Show("Delete successfully", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        fillGrid();
+                    }
                 }
                 catch (Exception ex)
                 {
