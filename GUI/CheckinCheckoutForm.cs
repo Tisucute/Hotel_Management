@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class JanitorForm : Form
+    public partial class CheckinCheckoutForm : Form
     {
-        public JanitorForm()
+        public CheckinCheckoutForm()
         {
             InitializeComponent();
+            TimePicker.ShowUpDown = true;
         }
 
-        private void ButtonTimeAndSalary_Click(object sender, EventArgs e)
+        private void TimePicker_ValueChanged(object sender, EventArgs e)
         {
-            CheckinCheckoutForm check = new CheckinCheckoutForm();
-            check.ShowDialog();
+
         }
+
+        private void skyLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

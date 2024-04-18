@@ -16,5 +16,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void BtnCheckTime_Click(object sender, EventArgs e)
+        {
+            CheckinCheckoutForm check = new CheckinCheckoutForm();
+            check.ShowDialog();
+        }
     }
 }

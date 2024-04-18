@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.ButtonLogin = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.CheckBoxRemember = new System.Windows.Forms.CheckBox();
             this.RadioButtonManager = new System.Windows.Forms.RadioButton();
             this.RadioButtonReceptionist = new System.Windows.Forms.RadioButton();
             this.RadioButtonJanitor = new System.Windows.Forms.RadioButton();
@@ -40,9 +39,9 @@
             this.LabelFollow = new System.Windows.Forms.Label();
             this.LabelLogin = new System.Windows.Forms.Label();
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.moonLabel = new ReaLTaiizor.Controls.MoonLabel();
+            this.ToggleSwitchRemem = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
-            this.ErrorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ErrorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
             this.ImageButtonFB = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.PBTwitter = new System.Windows.Forms.PictureBox();
@@ -50,13 +49,15 @@
             this.ImageButtonInsta = new Guna.UI2.WinForms.Guna2ImageButton();
             this.PBhide = new System.Windows.Forms.PictureBox();
             this.TextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ErrorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
             this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,17 +80,6 @@
             this.ButtonLogin.TabIndex = 4;
             this.ButtonLogin.Text = "Login";
             this.ButtonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
-            // 
-            // CheckBoxRemember
-            // 
-            this.CheckBoxRemember.AutoSize = true;
-            this.CheckBoxRemember.Location = new System.Drawing.Point(124, 349);
-            this.CheckBoxRemember.Name = "CheckBoxRemember";
-            this.CheckBoxRemember.Size = new System.Drawing.Size(106, 21);
-            this.CheckBoxRemember.TabIndex = 8;
-            this.CheckBoxRemember.Text = "Remeber Me";
-            this.CheckBoxRemember.UseVisualStyleBackColor = true;
-            this.CheckBoxRemember.CheckedChanged += new System.EventHandler(this.CheckBoxRemember_CheckedChanged);
             // 
             // RadioButtonManager
             // 
@@ -180,6 +170,8 @@
             // 
             this.PanelLogin.BackColor = System.Drawing.Color.White;
             this.PanelLogin.BorderRadius = 15;
+            this.PanelLogin.Controls.Add(this.moonLabel);
+            this.PanelLogin.Controls.Add(this.ToggleSwitchRemem);
             this.PanelLogin.Controls.Add(this.label1);
             this.PanelLogin.Controls.Add(this.ImageButtonFB);
             this.PanelLogin.Controls.Add(this.LabelLogin);
@@ -193,7 +185,6 @@
             this.PanelLogin.Controls.Add(this.RadioButtonJanitor);
             this.PanelLogin.Controls.Add(this.RadioButtonReceptionist);
             this.PanelLogin.Controls.Add(this.RadioButtonManager);
-            this.PanelLogin.Controls.Add(this.CheckBoxRemember);
             this.PanelLogin.Controls.Add(this.ButtonLogin);
             this.PanelLogin.Controls.Add(this.PBhide);
             this.PanelLogin.Controls.Add(this.TextBoxPassword);
@@ -203,6 +194,33 @@
             this.PanelLogin.Size = new System.Drawing.Size(502, 671);
             this.PanelLogin.TabIndex = 3;
             this.PanelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
+            // 
+            // moonLabel
+            // 
+            this.moonLabel.AutoSize = true;
+            this.moonLabel.BackColor = System.Drawing.Color.Transparent;
+            this.moonLabel.ForeColor = System.Drawing.Color.Gray;
+            this.moonLabel.Location = new System.Drawing.Point(165, 349);
+            this.moonLabel.Name = "moonLabel";
+            this.moonLabel.Size = new System.Drawing.Size(96, 17);
+            this.moonLabel.TabIndex = 26;
+            this.moonLabel.Text = "Remember Me";
+            // 
+            // ToggleSwitchRemem
+            // 
+            this.ToggleSwitchRemem.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ToggleSwitchRemem.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
+            this.ToggleSwitchRemem.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
+            this.ToggleSwitchRemem.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.ToggleSwitchRemem.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.ToggleSwitchRemem.Location = new System.Drawing.Point(124, 349);
+            this.ToggleSwitchRemem.Name = "ToggleSwitchRemem";
+            this.ToggleSwitchRemem.Size = new System.Drawing.Size(35, 20);
+            this.ToggleSwitchRemem.TabIndex = 25;
+            this.ToggleSwitchRemem.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ToggleSwitchRemem.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.ToggleSwitchRemem.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.ToggleSwitchRemem.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // label1
             // 
@@ -214,14 +232,6 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Don\'t have an account?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // ErrorProviderPassword
-            // 
-            this.ErrorProviderPassword.ContainerControl = this;
-            // 
-            // ErrorProviderUsername
-            // 
-            this.ErrorProviderUsername.ContainerControl = this;
             // 
             // ImageButtonFB
             // 
@@ -367,13 +377,22 @@
             this.TextBoxPassword.WordWrap = false;
             this.TextBoxPassword.TextChanged += new System.EventHandler(this.TextBoxPassword_TextChanged);
             // 
+            // ErrorProviderPassword
+            // 
+            this.ErrorProviderPassword.ContainerControl = this;
+            // 
+            // ErrorProviderUsername
+            // 
+            this.ErrorProviderUsername.ContainerControl = this;
+            // 
             // PictureBox
             // 
+            this.PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox.Image")));
             this.PictureBox.ImageRotate = 0F;
-            this.PictureBox.Location = new System.Drawing.Point(493, -36);
+            this.PictureBox.Location = new System.Drawing.Point(489, -36);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(500, 707);
+            this.PictureBox.Size = new System.Drawing.Size(505, 707);
             this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox.TabIndex = 4;
             this.PictureBox.TabStop = false;
@@ -385,23 +404,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(994, 671);
             this.Controls.Add(this.PanelLogin);
             this.Controls.Add(this.PictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.Click += new System.EventHandler(this.LoginForm_Load);
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBeye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBhide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -412,7 +432,6 @@
         private Guna.UI2.WinForms.Guna2TextBox TextBoxPassword;
         private System.Windows.Forms.PictureBox PBhide;
         private Guna.UI2.WinForms.Guna2GradientButton ButtonLogin;
-        private System.Windows.Forms.CheckBox CheckBoxRemember;
         private System.Windows.Forms.RadioButton RadioButtonManager;
         private System.Windows.Forms.RadioButton RadioButtonReceptionist;
         private System.Windows.Forms.RadioButton RadioButtonJanitor;
@@ -429,5 +448,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider ErrorProviderPassword;
         private System.Windows.Forms.ErrorProvider ErrorProviderUsername;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitchRemem;
+        private ReaLTaiizor.Controls.MoonLabel moonLabel;
     }
 }

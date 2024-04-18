@@ -10,7 +10,7 @@ namespace DAL
 {
     internal class SqlConnectionDatacs
     {
-        SqlConnection con = new SqlConnection(@"Data Source=NOOB;Initial Catalog=QLKS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-K55KLSK;Initial Catalog=QLKS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         public SqlConnection getConnection
         {

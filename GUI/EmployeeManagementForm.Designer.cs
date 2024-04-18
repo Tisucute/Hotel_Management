@@ -40,9 +40,6 @@
             this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLKSDataSet = new GUI.QLKSDataSet();
-            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +52,9 @@
             this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLKSDataSet = new GUI.QLKSDataSet();
+            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
@@ -135,9 +135,9 @@
             this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
             this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
             this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_search_64;
             this.TextBoxSearch.Location = new System.Drawing.Point(789, 98);
             this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -218,20 +218,6 @@
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellClick);
-            // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
-            // 
-            // qLKSDataSet
-            // 
-            this.qLKSDataSet.DataSetName = "QLKSDataSet";
-            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
             // 
             // ID
             // 
@@ -336,6 +322,20 @@
             this.dgvdelete.Name = "dgvdelete";
             this.dgvdelete.ReadOnly = true;
             this.dgvdelete.Width = 50;
+            // 
+            // eMPLOYEESBindingSource
+            // 
+            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
+            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
+            // 
+            // qLKSDataSet
+            // 
+            this.qLKSDataSet.DataSetName = "QLKSDataSet";
+            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eMPLOYEESTableAdapter
+            // 
+            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
             // 
             // EmployeeManagementForm
             // 

@@ -92,18 +92,9 @@ namespace GUI
 
         }
         
-        /*private void addHienThi(UserControl uc)
-        {
-            uc.Dock = DockStyle.Fill;
-            PanelHienThi.Controls.Clear();
-            PanelHienThi.Controls.Add(uc);
-            uc.BringToFront();
-
-        }*/
-
         private void ButtonTimeAndSalary_Click_1(object sender, EventArgs e)
         {
-         
+            AddControls(new WorkingTimeAndSalaryForm());
         }
 
         private void panel6_MouseDown(object sender, MouseEventArgs e) //Panel TitleBar

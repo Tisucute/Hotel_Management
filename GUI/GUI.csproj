@@ -64,6 +64,12 @@
     <Compile Include="AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckinCheckoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckinCheckoutForm.Designer.cs">
+      <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,15 @@
     <Compile Include="WorkingTimeAndSalaryForm.Designer.cs">
       <DependentUpon>WorkingTimeAndSalaryForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckinCheckoutForm.resx">
+      <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagementForm.resx">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +298,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-recycle-bin-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-instagram-check-mark-50.png" />
+    <None Include="Resources\icons8-about-me-50.png" />
+    <None Include="Resources\icons8-writer-male-48.png" />
+    <None Include="Resources\icons8-add-64 %281%29.png" />
+    <Content Include="Resources\Screenshot_20221114_093940.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

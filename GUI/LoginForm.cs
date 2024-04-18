@@ -133,8 +133,7 @@ namespace GUI
             {
                 MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            if (CheckBoxRemember.Checked == true)
+            if (ToggleSwitchRemem.Checked == true)
             {
                 Properties.Settings.Default.username = TextBoxUsername.Text;
                 Properties.Settings.Default.password = TextBoxPassword.Text;
@@ -223,5 +222,7 @@ namespace GUI
         {
 
         }
+
+        
     }
 }
