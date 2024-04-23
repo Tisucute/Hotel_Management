@@ -22,7 +22,7 @@ namespace DAL
         }
         public DataTable getEmployeeByID(int id)
         {
-            SqlCommand command = new SqlCommand("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id WHERE id = @id", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
