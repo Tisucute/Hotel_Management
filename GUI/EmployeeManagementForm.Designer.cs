@@ -40,6 +40,9 @@
             this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLKSDataSet = new GUI.QLKSDataSet();
+            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,14 +50,11 @@
             this.cCCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role_nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLKSDataSet = new GUI.QLKSDataSet();
-            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
@@ -68,7 +68,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1198, 69);
+            this.guna2Panel1.Size = new System.Drawing.Size(1244, 69);
             this.guna2Panel1.TabIndex = 0;
             // 
             // LabelHeader
@@ -90,7 +90,7 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 572);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1198, 52);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1244, 52);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
             // LabelSearch
@@ -108,7 +108,7 @@
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.Location = new System.Drawing.Point(14, 153);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1170, 19);
+            this.guna2Separator1.Size = new System.Drawing.Size(1203, 19);
             this.guna2Separator1.TabIndex = 5;
             // 
             // ButtonAdd
@@ -173,7 +173,7 @@
             this.cCCDDataGridViewTextBoxColumn,
             this.phoneDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
-            this.roleidDataGridViewTextBoxColumn,
+            this.role_nameDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn,
             this.pictureDataGridViewImageColumn,
             this.dgvedit,
@@ -194,7 +194,7 @@
             this.dgvListEmployees.RowHeadersVisible = false;
             this.dgvListEmployees.RowHeadersWidth = 51;
             this.dgvListEmployees.RowTemplate.Height = 24;
-            this.dgvListEmployees.Size = new System.Drawing.Size(1169, 386);
+            this.dgvListEmployees.Size = new System.Drawing.Size(1200, 386);
             this.dgvListEmployees.TabIndex = 7;
             this.dgvListEmployees.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListEmployees.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -218,6 +218,20 @@
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellClick);
+            // 
+            // eMPLOYEESBindingSource
+            // 
+            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
+            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
+            // 
+            // qLKSDataSet
+            // 
+            this.qLKSDataSet.DataSetName = "QLKSDataSet";
+            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eMPLOYEESTableAdapter
+            // 
+            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
             // 
             // ID
             // 
@@ -275,13 +289,13 @@
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // roleidDataGridViewTextBoxColumn
+            // role_nameDataGridViewTextBoxColumn
             // 
-            this.roleidDataGridViewTextBoxColumn.DataPropertyName = "role_id";
-            this.roleidDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roleidDataGridViewTextBoxColumn.Name = "roleidDataGridViewTextBoxColumn";
-            this.roleidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.role_nameDataGridViewTextBoxColumn.DataPropertyName = "role_name";
+            this.role_nameDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.role_nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.role_nameDataGridViewTextBoxColumn.Name = "role_nameDataGridViewTextBoxColumn";
+            this.role_nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
@@ -323,25 +337,11 @@
             this.dgvdelete.ReadOnly = true;
             this.dgvdelete.Width = 50;
             // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
-            // 
-            // qLKSDataSet
-            // 
-            this.qLKSDataSet.DataSetName = "QLKSDataSet";
-            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
             // EmployeeManagementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1198, 624);
+            this.ClientSize = new System.Drawing.Size(1244, 624);
             this.Controls.Add(this.dgvListEmployees);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.ButtonAdd);
@@ -384,7 +384,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cCCDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn role_nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;

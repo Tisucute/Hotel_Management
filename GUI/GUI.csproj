@@ -108,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLKSDataSet.cs">
+      <DependentUpon>QLKSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLKSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

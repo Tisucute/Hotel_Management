@@ -13,32 +13,36 @@ namespace BLL
 {
     public class EmployeeBLL
     {
-        static EmployeeAccess employee = new EmployeeAccess();
-        public static bool checkLogin(EMPLOYEE emp)
+        static EmployeeAccess employeeAccess = new EmployeeAccess();
+       
+        public DataTable getEmployees()
         {
-            try
-            {
-                return employee.checkLogin(emp);
-
-            }
-            catch (Exception ex)
-            {
-                System.Console.WriteLine(ex.Message);
-                return false;
-            }
+            return employeeAccess.getEmployees();
         }
-        public static DataTable getEmployees()
+        public DataTable getEmployeeByID(int id)
         {
-            return employee.getEmployees();
+            return employeeAccess.getEmployeeByID(id);
         }
-        public static bool deleteEmployee(int id)
+        public DataTable findEmployeesByName(string name)
         {
-            return employee.deleteEmployee(id);
+            return employeeAccess.findEmployeesByName(name);
         }
-        public static string getEmployeeByUsername(string username)
+        public bool insertEmployee(EMPLOYEE employee)
         {
-            DataTable table = employee.getEmployeesByUsername(username);
-            return table.Rows[0][1].ToString();
+            return employeeAccess.insertEmployee(employee);
+        } 
+        public bool updateEmployee(EMPLOYEE employee)
+        {
+            return employeeAccess.updateEmployee(employee);
         }
+        public bool deleteEmployee(int id)
+        {
+            return employeeAccess.deleteEmployee(id);
+        }
+        public DataTable getAllRole()
+        {
+            return employeeAccess.getAllRole();
+        }
+       
     }
 }

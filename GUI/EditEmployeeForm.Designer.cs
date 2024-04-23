@@ -54,11 +54,11 @@
             this.CmbBoxRole = new ReaLTaiizor.Controls.SkyComboBox();
             this.DatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PictureBoxEmployee = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelManager
@@ -86,6 +86,7 @@
             this.BtnSave.Size = new System.Drawing.Size(117, 48);
             this.BtnSave.TabIndex = 119;
             this.BtnSave.Text = "Save";
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // groupBox1
             // 
@@ -144,7 +145,7 @@
             this.nightLabel5.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel5.Location = new System.Drawing.Point(92, 223);
+            this.nightLabel5.Location = new System.Drawing.Point(92, 133);
             this.nightLabel5.Name = "nightLabel5";
             this.nightLabel5.Size = new System.Drawing.Size(24, 20);
             this.nightLabel5.TabIndex = 110;
@@ -269,7 +270,7 @@
             this.nightLabel6.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel6.Location = new System.Drawing.Point(205, 223);
+            this.nightLabel6.Location = new System.Drawing.Point(215, 133);
             this.nightLabel6.Name = "nightLabel6";
             this.nightLabel6.Size = new System.Drawing.Size(39, 20);
             this.nightLabel6.TabIndex = 111;
@@ -289,7 +290,7 @@
             this.txtBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxID.Location = new System.Drawing.Point(78, 246);
+            this.txtBoxID.Location = new System.Drawing.Point(78, 166);
             this.txtBoxID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxID.Name = "txtBoxID";
             this.txtBoxID.PasswordChar = '\0';
@@ -324,7 +325,7 @@
             this.txtBoxFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxFullName.Location = new System.Drawing.Point(78, 166);
+            this.txtBoxFullName.Location = new System.Drawing.Point(78, 247);
             this.txtBoxFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxFullName.Name = "txtBoxFullName";
             this.txtBoxFullName.PasswordChar = '\0';
@@ -372,7 +373,7 @@
             this.nightLabel1.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel1.Location = new System.Drawing.Point(92, 142);
+            this.nightLabel1.Location = new System.Drawing.Point(92, 223);
             this.nightLabel1.Name = "nightLabel1";
             this.nightLabel1.Size = new System.Drawing.Size(76, 20);
             this.nightLabel1.TabIndex = 106;
@@ -456,7 +457,7 @@
             this.CmbBoxRole.ListForeColor = System.Drawing.Color.Black;
             this.CmbBoxRole.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CmbBoxRole.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CmbBoxRole.Location = new System.Drawing.Point(209, 246);
+            this.CmbBoxRole.Location = new System.Drawing.Point(209, 166);
             this.CmbBoxRole.Name = "CmbBoxRole";
             this.CmbBoxRole.Size = new System.Drawing.Size(175, 36);
             this.CmbBoxRole.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -489,14 +490,15 @@
             this.pictureBox1.TabIndex = 97;
             this.pictureBox1.TabStop = false;
             // 
-            // PictureBox
+            // PictureBoxEmployee
             // 
-            this.PictureBox.ImageRotate = 0F;
-            this.PictureBox.Location = new System.Drawing.Point(483, 225);
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(272, 182);
-            this.PictureBox.TabIndex = 103;
-            this.PictureBox.TabStop = false;
+            this.PictureBoxEmployee.ImageRotate = 0F;
+            this.PictureBoxEmployee.Location = new System.Drawing.Point(483, 225);
+            this.PictureBoxEmployee.Name = "PictureBoxEmployee";
+            this.PictureBoxEmployee.Size = new System.Drawing.Size(272, 182);
+            this.PictureBoxEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxEmployee.TabIndex = 103;
+            this.PictureBoxEmployee.TabStop = false;
             // 
             // EditEmployeeForm
             // 
@@ -521,7 +523,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtBoxPhone);
             this.Controls.Add(this.nightLabel1);
-            this.Controls.Add(this.PictureBox);
+            this.Controls.Add(this.PictureBoxEmployee);
             this.Controls.Add(this.RadioBtnFemale);
             this.Controls.Add(this.RadioBtnMale);
             this.Controls.Add(this.BtnUpload);
@@ -529,10 +531,11 @@
             this.Controls.Add(this.DatePicker);
             this.Name = "EditEmployeeForm";
             this.Text = "EditEmployeeForm";
+            this.Load += new System.EventHandler(this.EditEmployeeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,7 +564,7 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxPhone;
         private ReaLTaiizor.Controls.NightLabel nightLabel1;
-        private Guna.UI2.WinForms.Guna2PictureBox PictureBox;
+        private Guna.UI2.WinForms.Guna2PictureBox PictureBoxEmployee;
         private ReaLTaiizor.Controls.FoxRadioButton RadioBtnFemale;
         private ReaLTaiizor.Controls.FoxRadioButton RadioBtnMale;
         private ReaLTaiizor.Controls.AirButton BtnUpload;

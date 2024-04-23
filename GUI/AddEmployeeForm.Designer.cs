@@ -30,7 +30,6 @@
         {
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.BtnAdd = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.RadioBtnQuit = new ReaLTaiizor.Controls.FoxRadioButton();
             this.RadioBtnKeepOn = new ReaLTaiizor.Controls.FoxRadioButton();
             this.LabelManager = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,8 +40,6 @@
             this.nightLabel2 = new ReaLTaiizor.Controls.NightLabel();
             this.txtBoxAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.nightLabel6 = new ReaLTaiizor.Controls.NightLabel();
-            this.nightLabel5 = new ReaLTaiizor.Controls.NightLabel();
-            this.txtBoxID = new Guna.UI2.WinForms.Guna2TextBox();
             this.nightLabel4 = new ReaLTaiizor.Controls.NightLabel();
             this.txtBoxPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.nightLabel1 = new ReaLTaiizor.Controls.NightLabel();
@@ -54,11 +51,11 @@
             this.CmbBoxRole = new ReaLTaiizor.Controls.SkyComboBox();
             this.DatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PictureUpload = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PictureEmployee = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUpload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // nightControlBox1
@@ -84,6 +81,7 @@
             this.nightControlBox1.Name = "nightControlBox1";
             this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
             this.nightControlBox1.TabIndex = 73;
+            this.nightControlBox1.Click += new System.EventHandler(this.nightControlBox1_Click);
             // 
             // BtnAdd
             // 
@@ -100,25 +98,7 @@
             this.BtnAdd.Size = new System.Drawing.Size(117, 48);
             this.BtnAdd.TabIndex = 95;
             this.BtnAdd.Text = "Add";
-            // 
-            // RadioBtnQuit
-            // 
-            this.RadioBtnQuit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.RadioBtnQuit.Checked = false;
-            this.RadioBtnQuit.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
-            this.RadioBtnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioBtnQuit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.RadioBtnQuit.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.RadioBtnQuit.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.RadioBtnQuit.EnabledCalc = true;
-            this.RadioBtnQuit.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.RadioBtnQuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))));
-            this.RadioBtnQuit.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
-            this.RadioBtnQuit.Location = new System.Drawing.Point(60, 55);
-            this.RadioBtnQuit.Name = "RadioBtnQuit";
-            this.RadioBtnQuit.Size = new System.Drawing.Size(147, 23);
-            this.RadioBtnQuit.TabIndex = 72;
-            this.RadioBtnQuit.Text = "Quit";
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // RadioBtnKeepOn
             // 
@@ -133,7 +113,7 @@
             this.RadioBtnKeepOn.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.RadioBtnKeepOn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))));
             this.RadioBtnKeepOn.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(156)))), ((int)(((byte)(218)))));
-            this.RadioBtnKeepOn.Location = new System.Drawing.Point(60, 26);
+            this.RadioBtnKeepOn.Location = new System.Drawing.Point(60, 34);
             this.RadioBtnKeepOn.Name = "RadioBtnKeepOn";
             this.RadioBtnKeepOn.Size = new System.Drawing.Size(147, 23);
             this.RadioBtnKeepOn.TabIndex = 71;
@@ -151,7 +131,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.RadioBtnQuit);
             this.groupBox1.Controls.Add(this.RadioBtnKeepOn);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
@@ -257,46 +236,11 @@
             this.nightLabel6.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel6.Location = new System.Drawing.Point(204, 225);
+            this.nightLabel6.Location = new System.Drawing.Point(91, 227);
             this.nightLabel6.Name = "nightLabel6";
             this.nightLabel6.Size = new System.Drawing.Size(39, 20);
             this.nightLabel6.TabIndex = 87;
             this.nightLabel6.Text = "Role";
-            // 
-            // nightLabel5
-            // 
-            this.nightLabel5.AutoSize = true;
-            this.nightLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.nightLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nightLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel5.Location = new System.Drawing.Point(91, 225);
-            this.nightLabel5.Name = "nightLabel5";
-            this.nightLabel5.Size = new System.Drawing.Size(24, 20);
-            this.nightLabel5.TabIndex = 86;
-            this.nightLabel5.Text = "ID";
-            // 
-            // txtBoxID
-            // 
-            this.txtBoxID.Animated = true;
-            this.txtBoxID.AutoRoundedCorners = true;
-            this.txtBoxID.BorderRadius = 17;
-            this.txtBoxID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBoxID.DefaultText = "";
-            this.txtBoxID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBoxID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBoxID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBoxID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBoxID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxID.Location = new System.Drawing.Point(77, 248);
-            this.txtBoxID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxID.Name = "txtBoxID";
-            this.txtBoxID.PasswordChar = '\0';
-            this.txtBoxID.PlaceholderText = "";
-            this.txtBoxID.SelectedText = "";
-            this.txtBoxID.Size = new System.Drawing.Size(102, 36);
-            this.txtBoxID.TabIndex = 85;
             // 
             // nightLabel4
             // 
@@ -429,6 +373,7 @@
             this.BtnUpload.TabIndex = 76;
             this.BtnUpload.Text = "Upload Picture";
             this.BtnUpload.Transparent = false;
+            this.BtnUpload.Click += new System.EventHandler(this.BtnUpload_Click);
             // 
             // CmbBoxRole
             // 
@@ -456,7 +401,7 @@
             this.CmbBoxRole.ListForeColor = System.Drawing.Color.Black;
             this.CmbBoxRole.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CmbBoxRole.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CmbBoxRole.Location = new System.Drawing.Point(208, 248);
+            this.CmbBoxRole.Location = new System.Drawing.Point(77, 250);
             this.CmbBoxRole.Name = "CmbBoxRole";
             this.CmbBoxRole.Size = new System.Drawing.Size(175, 36);
             this.CmbBoxRole.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -489,14 +434,15 @@
             this.pictureBox1.TabIndex = 73;
             this.pictureBox1.TabStop = false;
             // 
-            // PictureUpload
+            // PictureEmployee
             // 
-            this.PictureUpload.ImageRotate = 0F;
-            this.PictureUpload.Location = new System.Drawing.Point(482, 227);
-            this.PictureUpload.Name = "PictureUpload";
-            this.PictureUpload.Size = new System.Drawing.Size(272, 182);
-            this.PictureUpload.TabIndex = 79;
-            this.PictureUpload.TabStop = false;
+            this.PictureEmployee.ImageRotate = 0F;
+            this.PictureEmployee.Location = new System.Drawing.Point(482, 227);
+            this.PictureEmployee.Name = "PictureEmployee";
+            this.PictureEmployee.Size = new System.Drawing.Size(272, 182);
+            this.PictureEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureEmployee.TabIndex = 79;
+            this.PictureEmployee.TabStop = false;
             // 
             // AddEmployeeForm
             // 
@@ -513,15 +459,13 @@
             this.Controls.Add(this.nightLabel2);
             this.Controls.Add(this.txtBoxAddress);
             this.Controls.Add(this.nightLabel6);
-            this.Controls.Add(this.nightLabel5);
-            this.Controls.Add(this.txtBoxID);
             this.Controls.Add(this.nightLabel4);
             this.Controls.Add(this.txtBoxPhone);
             this.Controls.Add(this.nightLabel1);
             this.Controls.Add(this.txtBoxFullName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PictureUpload);
+            this.Controls.Add(this.PictureEmployee);
             this.Controls.Add(this.RadioBtnFemale);
             this.Controls.Add(this.RadioBtnMale);
             this.Controls.Add(this.BtnUpload);
@@ -529,10 +473,11 @@
             this.Controls.Add(this.DatePicker);
             this.Name = "AddEmployeeForm";
             this.Text = "AddEmployeeForm";
+            this.Load += new System.EventHandler(this.AddEmployeeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUpload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,7 +487,6 @@
 
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private Guna.UI2.WinForms.Guna2CircleButton BtnAdd;
-        private ReaLTaiizor.Controls.FoxRadioButton RadioBtnQuit;
         private ReaLTaiizor.Controls.FoxRadioButton RadioBtnKeepOn;
         private System.Windows.Forms.Label LabelManager;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -553,15 +497,13 @@
         private ReaLTaiizor.Controls.NightLabel nightLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxAddress;
         private ReaLTaiizor.Controls.NightLabel nightLabel6;
-        private ReaLTaiizor.Controls.NightLabel nightLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox txtBoxID;
         private ReaLTaiizor.Controls.NightLabel nightLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxPhone;
         private ReaLTaiizor.Controls.NightLabel nightLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox PictureUpload;
+        private Guna.UI2.WinForms.Guna2PictureBox PictureEmployee;
         private ReaLTaiizor.Controls.FoxRadioButton RadioBtnFemale;
         private ReaLTaiizor.Controls.FoxRadioButton RadioBtnMale;
         private ReaLTaiizor.Controls.AirButton BtnUpload;

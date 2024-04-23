@@ -1,10 +1,14 @@
 ﻿using BLL;
+using DTO;
 using GUI;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -67,16 +71,19 @@ namespace GUI
         {
             SideBarTimer.Start();
         }
-        
-        //Hiện thông tin đăng nhập
-        public void showInformation()
+        public void getImageAndUsername()
         {
-            string name = EmployeeBLL.getEmployeeByUsername(user);
-            LabelName.Text = name;
+            LoginBLL loginBLL = new LoginBLL();
+            DataTable table = loginBLL.getUserNameandImage(LOGIN.id);
+            byte[] pic = (byte[])table.Rows[0]["picture"];
+            MemoryStream picture = new MemoryStream(pic);
+            PictureBoxManager.Image = Image.FromStream(picture);
+            LabelName.Text = "Welcome, " + table.Rows[0]["fullname"].ToString().Trim();
         }
+        //Hiện thông tin đăng nhập
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-            showInformation();
+            getImageAndUsername();
             SideBar.Width = SideBar.MinimumSize.Width;
             PanelHienThi.Hide();
 

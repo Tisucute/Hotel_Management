@@ -170,7 +170,7 @@
             // LabelName
             // 
             this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(102, 192);
+            this.LabelName.Location = new System.Drawing.Point(72, 195);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(44, 16);
             this.LabelName.TabIndex = 2;
@@ -183,6 +183,7 @@
             this.PictureBoxManager.Name = "PictureBoxManager";
             this.PictureBoxManager.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PictureBoxManager.Size = new System.Drawing.Size(141, 136);
+            this.PictureBoxManager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxManager.TabIndex = 1;
             this.PictureBoxManager.TabStop = false;
             // 

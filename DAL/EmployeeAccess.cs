@@ -15,12 +15,29 @@ namespace DAL
         SqlConnectionDatacs mydb = new SqlConnectionDatacs();
         public DataTable getEmployees()
         {
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, fullname, gender, birthdate, CCCD, phone, address, role_id, status, picture FROM EMPLOYEES", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id", mydb.getConnection);
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
-
         }
+        public DataTable getEmployeeByID(int id)
+        {
+            SqlCommand command = new SqlCommand("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable findEmployeesByName(string name)
+        {
+            SqlCommand command = new SqlCommand("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id WHERE fullname LIKE N'%" + name + "%'", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
         public bool deleteEmployee(int id)
         {
             SqlCommand command = new SqlCommand("DELETE FROM EMPLOYEES WHERE id = @id", mydb.getConnection);
@@ -37,37 +54,62 @@ namespace DAL
                 return false;
             }
         }
-
-        public DataTable getEmployeesByUsername(string username)
+        public DataTable getAllRole()
         {
-            SqlCommand command = new SqlCommand("SELECT id, fullname, gender, birthdate, CCCD, phone, address, role_id, status, picture FROM EMPLOYEES WHERE username = @user ", mydb.getConnection);
-            command.Parameters.Add("@user", SqlDbType.NChar).Value = username;
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM ROLE", mydb.getConnection);
             adapter.Fill(table);
             return table;
+
         }
-        public bool checkLogin(EMPLOYEE employee)
+        public bool insertEmployee(EMPLOYEE employee)
         {
-            SqlConnection conn = mydb.getConnection;
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("SELECT * FROM EMPLOYEES WHERE username = @User AND password = @Pass AND role_id = @Role", conn);
-            command.Parameters.Add("@User", SqlDbType.VarChar).Value = employee.username;
-            command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = employee.password;
-            command.Parameters.Add("@Role", SqlDbType.Int).Value = employee.role;
-            adapter.SelectCommand = command;
-            conn.Open();
-            adapter.Fill(table);
-            if ((table.Rows.Count > 0))
+            SqlCommand command = new SqlCommand("INSERT INTO EMPLOYEES(fullname, gender, birthdate, CCCD, address, phone, role_id, picture, status) VALUES (@name, @gender, @birthdate, @CCCD, @address, @phone, @rid, @pic, @stt)", mydb.getConnection);
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = employee.fullname;
+            command.Parameters.Add("@gender", SqlDbType.NVarChar).Value = employee.gender;
+            command.Parameters.Add("@birthdate", SqlDbType.NVarChar).Value = employee.birthdate;
+            command.Parameters.Add("@CCCD", SqlDbType.NVarChar).Value = employee.CCCD;
+            command.Parameters.Add("@address", SqlDbType.NVarChar).Value = employee.address;
+            command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = employee.phone;
+            command.Parameters.Add("@rid", SqlDbType.Int).Value = employee.role;
+            command.Parameters.Add("@pic", SqlDbType.Image).Value = employee.pic.ToArray();
+            command.Parameters.Add("@stt", SqlDbType.VarChar).Value = employee.status;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
             {
+                mydb.closeConnection();
                 return true;
             }
             else
             {
+                mydb.closeConnection();
                 return false;
             }
         }
-
+        public bool updateEmployee(EMPLOYEE employee)
+        {
+            SqlCommand command = new SqlCommand("UPDATE EMPLOYEES SET fullname = @name, gender = @gender, birthdate= @bdate, CCCD = @cccd, address = @addr, phone = @phone, role_id = @rid, picture = @pic, status = @stt WHERE id = @id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = employee.id;
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = employee.fullname;
+            command.Parameters.Add("@gender", SqlDbType.NVarChar).Value = employee.gender;
+            command.Parameters.Add("@bdate", SqlDbType.NVarChar).Value = employee.birthdate;
+            command.Parameters.Add("@cccd", SqlDbType.NVarChar).Value = employee.CCCD;
+            command.Parameters.Add("@addr", SqlDbType.NVarChar).Value = employee.address;
+            command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = employee.phone;
+            command.Parameters.Add("@rid", SqlDbType.Int).Value = employee.role;
+            command.Parameters.Add("@pic", SqlDbType.Image).Value = employee.pic.ToArray();
+            command.Parameters.Add("@stt", SqlDbType.VarChar).Value = employee.status;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
     }
 }

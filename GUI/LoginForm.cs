@@ -77,21 +77,20 @@ namespace GUI
             SignUpForm signUpForm = new SignUpForm();
             signUpForm.ShowDialog();
         }
-
+        
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
+            LoginBLL loginBLL = new LoginBLL();
             if (TextBoxUsername.Text != "" && TextBoxPassword.Text != "")
             {
-                EMPLOYEE employee = new EMPLOYEE();
-                employee.username = TextBoxUsername.Text;
-                employee.password = TextBoxPassword.Text;
+                LOGIN.username = TextBoxUsername.Text;
+                LOGIN.password = TextBoxPassword.Text;
                 if (RadioButtonManager.Checked)
                 {
-                    employee.role = "1";
-                    if (EmployeeBLL.checkLogin(employee))
+                    LOGIN.role = 1;
+                    if (loginBLL.checkLogin())
                     {
-                        
-                        ManagerForm managerForm = new ManagerForm(TextBoxUsername.Text);
+                        ManagerForm managerForm = new ManagerForm();
                         this.Hide();
                         managerForm.Show();
                     }
@@ -102,8 +101,8 @@ namespace GUI
                 }
                 else if (RadioButtonReceptionist.Checked)
                 {
-                    employee.role = "2";
-                    if (EmployeeBLL.checkLogin(employee))
+                    LOGIN.role = 2;
+                    if (loginBLL.checkLogin())
                     {
                         ReceptionistForm receptionistForm = new ReceptionistForm();
                         this.Hide();
@@ -114,10 +113,10 @@ namespace GUI
                         MessageBox.Show("Sai tài khoản hoặc mật khẩu hoặc sai quyền truy cập", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
+                else 
                 {
-                    employee.role = "3";
-                    if (EmployeeBLL.checkLogin(employee))
+                    LOGIN.role = 3;
+                    if (loginBLL.checkLogin())
                     {
                         JanitorForm janitorForm = new JanitorForm();
                         this.Hide();

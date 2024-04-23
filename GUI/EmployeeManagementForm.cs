@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,11 +24,18 @@ namespace GUI
         {
             AddEmployeeForm addEmployeeForm = new AddEmployeeForm();
             addEmployeeForm.ShowDialog();
+            fillGrid();
         }
 
         public virtual void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-
+            dgvListEmployees.ReadOnly = true;
+            DataGridViewImageColumn picCol = new DataGridViewImageColumn();
+            dgvListEmployees.RowTemplate.Height = 50;
+            dgvListEmployees.DataSource = employeeBLL.findEmployeesByName(TextBoxSearch.Text);
+            picCol = (DataGridViewImageColumn)dgvListEmployees.Columns[9];
+            picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dgvListEmployees.AllowUserToAddRows = false;
         }
 
         private void EmployeeManagementForm_Load(object sender, EventArgs e)
@@ -37,12 +45,13 @@ namespace GUI
             fillGrid();
 
         }
+        EmployeeBLL employeeBLL = new EmployeeBLL();
         public void fillGrid()
         {
             dgvListEmployees.ReadOnly = true;
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
-            dgvListEmployees.RowTemplate.Height = 50;
-            dgvListEmployees.DataSource = EmployeeBLL.getEmployees();
+            dgvListEmployees.RowTemplate.Height = 60;
+            dgvListEmployees.DataSource = employeeBLL.getEmployees();
             picCol = (DataGridViewImageColumn)dgvListEmployees.Columns[9];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dgvListEmployees.AllowUserToAddRows = false;
@@ -52,9 +61,14 @@ namespace GUI
 
         private void dgvListEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             if (dgvListEmployees.CurrentCell.OwningColumn.Name == "dgvedit")
             {
-                EditEmployeeForm editEmployeeForm = new EditEmployeeForm();
+                EMPLOYEE employee = new EMPLOYEE();
+                int id = Convert.ToInt32(dgvListEmployees.CurrentRow.Cells[0].Value.ToString());
+                DataTable table = employeeBLL.getEmployeeByID(id);
+                employee.fillData(table);
+                EditEmployeeForm editEmployeeForm = new EditEmployeeForm(employee);
                 editEmployeeForm.ShowDialog();
                 fillGrid();
             }
@@ -62,12 +76,12 @@ namespace GUI
             {
                 try
                 {
-                    if ((MessageBox.Show("Are You Sure You Want To Delete This Course", "Remove Course", MessageBoxButtons.YesNo) == DialogResult.Yes))
+                    if ((MessageBox.Show("Bạn chắc chắn muốn xoá nhân viên này?", "Remove Employees", MessageBoxButtons.YesNo) == DialogResult.Yes))
                     {
                         // rang buoc neu dang la nguoi dang nhap thi ko duoc xoa
                         int id = Convert.ToInt32(dgvListEmployees.CurrentRow.Cells["ID"].Value);
-                        EmployeeBLL.deleteEmployee(id);
-                        MessageBox.Show("Delete successfully", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        employeeBLL.deleteEmployee(id);
+                        MessageBox.Show("Xoá thành công", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         fillGrid();
                     }
                 }
