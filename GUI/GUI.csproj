@@ -37,6 +37,24 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="ReaLTaiizor, Version=3.7.8.5, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReaLTaiizor.3.7.8.5\lib\net472\ReaLTaiizor.dll</HintPath>
@@ -58,10 +76,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmployeeForm.cs">
+    <Compile Include="MANAGER\EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployeeForm.Designer.cs">
+    <Compile Include="MANAGER\EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MANAGER\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MANAGER\AddReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\AddReportForm.Designer.cs">
+      <DependentUpon>AddReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All UC\UC_ReportES.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All UC\UC_ReportES.Designer.cs">
+      <DependentUpon>UC_ReportES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All UC\UC_ReportRS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All UC\UC_ReportRS.Designer.cs">
+      <DependentUpon>UC_ReportRS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MANAGER\AccountUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\AccountUser.Designer.cs">
+      <DependentUpon>AccountUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MANAGER\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CheckinCheckoutForm.cs">
@@ -70,40 +124,40 @@
     <Compile Include="CheckinCheckoutForm.Designer.cs">
       <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditEmployeeForm.cs">
+    <Compile Include="MANAGER\EditEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditEmployeeForm.Designer.cs">
+    <Compile Include="MANAGER\EditEmployeeForm.Designer.cs">
       <DependentUpon>EditEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeManagementForm.cs">
+    <Compile Include="MANAGER\EmployeeManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeManagementForm.Designer.cs">
+    <Compile Include="MANAGER\EmployeeManagementForm.Designer.cs">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgotPasswordForm.cs">
+    <Compile Include="LOGIN\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPasswordForm.Designer.cs">
+    <Compile Include="LOGIN\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="JanitorForm.cs">
+    <Compile Include="JANITOR\JanitorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JanitorForm.Designer.cs">
+    <Compile Include="JANITOR\JanitorForm.Designer.cs">
       <DependentUpon>JanitorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="LOGIN\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="LOGIN\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerForm.cs">
+    <Compile Include="MANAGER\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerForm.Designer.cs">
+    <Compile Include="MANAGER\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -116,46 +170,65 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKSDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ReceptionistForm.cs">
+    <Compile Include="RECEPTIONIST\ReceptionistForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReceptionistForm.Designer.cs">
+    <Compile Include="RECEPTIONIST\ReceptionistForm.Designer.cs">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUpForm.cs">
+    <Compile Include="MANAGER\WorkingTimeAndSalaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpForm.Designer.cs">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WorkingTimeAndSalaryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WorkingTimeAndSalaryForm.Designer.cs">
+    <Compile Include="MANAGER\WorkingTimeAndSalaryForm.Designer.cs">
       <DependentUpon>WorkingTimeAndSalaryForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEmployeeForm.resx">
+    <Compile Include="MANAGER\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="All UC\UC_ReportES.resx">
+      <DependentUpon>UC_ReportES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All UC\UC_ReportRS.resx">
+      <DependentUpon>UC_ReportRS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\AccountUser.resx">
+      <DependentUpon>AccountUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckinCheckoutForm.resx">
       <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditEmployeeForm.resx">
+    <EmbeddedResource Include="MANAGER\AddReportForm.resx">
+      <DependentUpon>AddReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\EditEmployeeForm.resx">
       <DependentUpon>EditEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeManagementForm.resx">
+    <EmbeddedResource Include="MANAGER\EmployeeManagementForm.resx">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgotPasswordForm.resx">
+    <EmbeddedResource Include="LOGIN\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JanitorForm.resx">
+    <EmbeddedResource Include="JANITOR\JanitorForm.resx">
       <DependentUpon>JanitorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="LOGIN\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerForm.resx">
+    <EmbeddedResource Include="MANAGER\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -163,15 +236,16 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceptionistForm.resx">
+    <EmbeddedResource Include="RECEPTIONIST\ReceptionistForm.resx">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUpForm.resx">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WorkingTimeAndSalaryForm.resx">
+    <EmbeddedResource Include="MANAGER\WorkingTimeAndSalaryForm.resx">
       <DependentUpon>WorkingTimeAndSalaryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -303,11 +377,34 @@
     <None Include="Resources\icons8-recycle-bin-48.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\icons8-instagram-check-mark-50.png" />
     <None Include="Resources\icons8-about-me-50.png" />
     <None Include="Resources\icons8-writer-male-48.png" />
     <None Include="Resources\icons8-add-64 %281%29.png" />
+    <None Include="Resources\icons8-user-60.png" />
+    <None Include="Resources\icons8-user-48.png" />
+    <None Include="Resources\icons8-report-50.png" />
+    <None Include="Resources\icons8-salary.gif" />
+    <None Include="Resources\icons8-refresh-48.png" />
+    <None Include="Resources\icons8-search-64 %281%29.png" />
+    <None Include="Resources\icons8-arrow-50.png" />
+    <None Include="Resources\icons8-arrow-50 %281%29.png" />
+    <None Include="Resources\icons8-point-48.png" />
     <Content Include="Resources\Screenshot_20221114_093940.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

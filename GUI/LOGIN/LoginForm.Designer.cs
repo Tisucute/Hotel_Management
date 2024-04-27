@@ -35,13 +35,11 @@
             this.RadioButtonReceptionist = new System.Windows.Forms.RadioButton();
             this.RadioButtonJanitor = new System.Windows.Forms.RadioButton();
             this.LinkLabelForgot = new System.Windows.Forms.LinkLabel();
-            this.LinkLabelSignUp = new System.Windows.Forms.LinkLabel();
             this.LabelFollow = new System.Windows.Forms.Label();
             this.LabelLogin = new System.Windows.Forms.Label();
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.moonLabel = new ReaLTaiizor.Controls.MoonLabel();
             this.ToggleSwitchRemem = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.label1 = new System.Windows.Forms.Label();
             this.ImageButtonFB = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.PBTwitter = new System.Windows.Forms.PictureBox();
@@ -72,7 +70,7 @@
             this.ButtonLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ButtonLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.ButtonLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.ButtonLogin.Font = new System.Drawing.Font("Phatdiem", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonLogin.Font = new System.Drawing.Font("Phatdiem", 8.999999F);
             this.ButtonLogin.ForeColor = System.Drawing.Color.White;
             this.ButtonLogin.Location = new System.Drawing.Point(124, 418);
             this.ButtonLogin.Name = "ButtonLogin";
@@ -130,23 +128,10 @@
             this.LinkLabelForgot.Text = "Forgot Password?";
             this.LinkLabelForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelForgot_LinkClicked);
             // 
-            // LinkLabelSignUp
-            // 
-            this.LinkLabelSignUp.AutoSize = true;
-            this.LinkLabelSignUp.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabelSignUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.LinkLabelSignUp.Location = new System.Drawing.Point(304, 480);
-            this.LinkLabelSignUp.Name = "LinkLabelSignUp";
-            this.LinkLabelSignUp.Size = new System.Drawing.Size(54, 16);
-            this.LinkLabelSignUp.TabIndex = 18;
-            this.LinkLabelSignUp.TabStop = true;
-            this.LinkLabelSignUp.Text = "Sign up";
-            this.LinkLabelSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelSignUp_LinkClicked);
-            // 
             // LabelFollow
             // 
             this.LabelFollow.AutoSize = true;
-            this.LabelFollow.Location = new System.Drawing.Point(153, 514);
+            this.LabelFollow.Location = new System.Drawing.Point(152, 479);
             this.LabelFollow.Name = "LabelFollow";
             this.LabelFollow.Size = new System.Drawing.Size(196, 17);
             this.LabelFollow.TabIndex = 21;
@@ -172,12 +157,10 @@
             this.PanelLogin.BorderRadius = 15;
             this.PanelLogin.Controls.Add(this.moonLabel);
             this.PanelLogin.Controls.Add(this.ToggleSwitchRemem);
-            this.PanelLogin.Controls.Add(this.label1);
             this.PanelLogin.Controls.Add(this.ImageButtonFB);
             this.PanelLogin.Controls.Add(this.LabelLogin);
             this.PanelLogin.Controls.Add(this.LabelFollow);
             this.PanelLogin.Controls.Add(this.TextBoxUsername);
-            this.PanelLogin.Controls.Add(this.LinkLabelSignUp);
             this.PanelLogin.Controls.Add(this.PBTwitter);
             this.PanelLogin.Controls.Add(this.PBeye);
             this.PanelLogin.Controls.Add(this.ImageButtonInsta);
@@ -222,17 +205,6 @@
             this.ToggleSwitchRemem.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.ToggleSwitchRemem.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 480);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 16);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Don\'t have an account?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // ImageButtonFB
             // 
             this.ImageButtonFB.BackColor = System.Drawing.Color.Transparent;
@@ -242,7 +214,7 @@
             this.ImageButtonFB.ImageOffset = new System.Drawing.Point(0, 0);
             this.ImageButtonFB.ImageRotate = 0F;
             this.ImageButtonFB.ImageSize = new System.Drawing.Size(60, 60);
-            this.ImageButtonFB.Location = new System.Drawing.Point(95, 553);
+            this.ImageButtonFB.Location = new System.Drawing.Point(95, 530);
             this.ImageButtonFB.Name = "ImageButtonFB";
             this.ImageButtonFB.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.ImageButtonFB.Size = new System.Drawing.Size(70, 70);
@@ -289,7 +261,7 @@
             // PBTwitter
             // 
             this.PBTwitter.Image = ((System.Drawing.Image)(resources.GetObject("PBTwitter.Image")));
-            this.PBTwitter.Location = new System.Drawing.Point(204, 553);
+            this.PBTwitter.Location = new System.Drawing.Point(204, 530);
             this.PBTwitter.Name = "PBTwitter";
             this.PBTwitter.Size = new System.Drawing.Size(84, 70);
             this.PBTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -320,7 +292,7 @@
             this.ImageButtonInsta.ImageOffset = new System.Drawing.Point(0, 0);
             this.ImageButtonInsta.ImageRotate = 0F;
             this.ImageButtonInsta.ImageSize = new System.Drawing.Size(70, 70);
-            this.ImageButtonInsta.Location = new System.Drawing.Point(329, 553);
+            this.ImageButtonInsta.Location = new System.Drawing.Point(329, 530);
             this.ImageButtonInsta.Name = "ImageButtonInsta";
             this.ImageButtonInsta.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.ImageButtonInsta.Size = new System.Drawing.Size(64, 64);
@@ -439,13 +411,11 @@
         private Guna.UI2.WinForms.Guna2ImageButton ImageButtonInsta;
         private System.Windows.Forms.PictureBox PBeye;
         private System.Windows.Forms.PictureBox PBTwitter;
-        private System.Windows.Forms.LinkLabel LinkLabelSignUp;
         private Guna.UI2.WinForms.Guna2TextBox TextBoxUsername;
         private System.Windows.Forms.Label LabelFollow;
         private System.Windows.Forms.Label LabelLogin;
         private Guna.UI2.WinForms.Guna2Panel PanelLogin;
         private Guna.UI2.WinForms.Guna2ImageButton ImageButtonFB;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider ErrorProviderPassword;
         private System.Windows.Forms.ErrorProvider ErrorProviderUsername;
         private Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitchRemem;

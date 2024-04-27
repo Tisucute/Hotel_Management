@@ -37,12 +37,7 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.LabelSearch = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLKSDataSet = new GUI.QLKSDataSet();
-            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +48,21 @@
             this.role_nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLKSDataSet = new GUI.QLKSDataSet();
+            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.BtnSearch = new System.Windows.Forms.PictureBox();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -111,44 +115,6 @@
             this.guna2Separator1.Size = new System.Drawing.Size(1203, 19);
             this.guna2Separator1.TabIndex = 5;
             // 
-            // ButtonAdd
-            // 
-            this.ButtonAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ButtonAdd.HoverState.ImageSize = new System.Drawing.Size(57, 57);
-            this.ButtonAdd.Image = global::GUI.Properties.Resources.icons8_add_64;
-            this.ButtonAdd.ImageOffset = new System.Drawing.Point(0, 0);
-            this.ButtonAdd.ImageRotate = 0F;
-            this.ButtonAdd.ImageSize = new System.Drawing.Size(55, 55);
-            this.ButtonAdd.IndicateFocus = true;
-            this.ButtonAdd.Location = new System.Drawing.Point(26, 92);
-            this.ButtonAdd.Name = "ButtonAdd";
-            this.ButtonAdd.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.ButtonAdd.Size = new System.Drawing.Size(64, 54);
-            this.ButtonAdd.TabIndex = 4;
-            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
-            // 
-            // TextBoxSearch
-            // 
-            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.DefaultText = "";
-            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_search_64;
-            this.TextBoxSearch.Location = new System.Drawing.Point(789, 98);
-            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.PasswordChar = '\0';
-            this.TextBoxSearch.PlaceholderText = "Search here";
-            this.TextBoxSearch.SelectedText = "";
-            this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
-            this.TextBoxSearch.TabIndex = 2;
-            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
-            // 
             // dgvListEmployees
             // 
             this.dgvListEmployees.AllowUserToDeleteRows = false;
@@ -194,7 +160,7 @@
             this.dgvListEmployees.RowHeadersVisible = false;
             this.dgvListEmployees.RowHeadersWidth = 51;
             this.dgvListEmployees.RowTemplate.Height = 24;
-            this.dgvListEmployees.Size = new System.Drawing.Size(1200, 386);
+            this.dgvListEmployees.Size = new System.Drawing.Size(1215, 386);
             this.dgvListEmployees.TabIndex = 7;
             this.dgvListEmployees.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListEmployees.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -218,20 +184,6 @@
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellClick);
-            // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
-            // 
-            // qLKSDataSet
-            // 
-            this.qLKSDataSet.DataSetName = "QLKSDataSet";
-            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
             // 
             // ID
             // 
@@ -313,6 +265,54 @@
             this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
             this.pictureDataGridViewImageColumn.ReadOnly = true;
             // 
+            // eMPLOYEESBindingSource
+            // 
+            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
+            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
+            // 
+            // qLKSDataSet
+            // 
+            this.qLKSDataSet.DataSetName = "QLKSDataSet";
+            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eMPLOYEESTableAdapter
+            // 
+            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.FillWeight = 50F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::GUI.Properties.Resources.icons8_edit_100;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 50;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.FillWeight = 50F;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::GUI.Properties.Resources.icons8_recycle_bin_48;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 50;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Width = 50;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Image = global::GUI.Properties.Resources.icons8_arrow_50;
+            this.BtnSearch.Location = new System.Drawing.Point(1130, 98);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(49, 48);
+            this.BtnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnSearch.TabIndex = 8;
+            this.BtnSearch.TabStop = false;
+            // 
             // dgvedit
             // 
             this.dgvedit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -337,11 +337,50 @@
             this.dgvdelete.ReadOnly = true;
             this.dgvdelete.Width = 50;
             // 
+            // ButtonAdd
+            // 
+            this.ButtonAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ButtonAdd.HoverState.ImageSize = new System.Drawing.Size(57, 57);
+            this.ButtonAdd.Image = global::GUI.Properties.Resources.icons8_add_64;
+            this.ButtonAdd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.ButtonAdd.ImageRotate = 0F;
+            this.ButtonAdd.ImageSize = new System.Drawing.Size(55, 55);
+            this.ButtonAdd.IndicateFocus = true;
+            this.ButtonAdd.Location = new System.Drawing.Point(26, 92);
+            this.ButtonAdd.Name = "ButtonAdd";
+            this.ButtonAdd.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.ButtonAdd.Size = new System.Drawing.Size(64, 54);
+            this.ButtonAdd.TabIndex = 4;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            // 
+            // TextBoxSearch
+            // 
+            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearch.DefaultText = "";
+            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
+            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
+            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_search_64;
+            this.TextBoxSearch.Location = new System.Drawing.Point(789, 98);
+            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            this.TextBoxSearch.PasswordChar = '\0';
+            this.TextBoxSearch.PlaceholderText = "Search here";
+            this.TextBoxSearch.SelectedText = "";
+            this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
+            this.TextBoxSearch.TabIndex = 2;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
             // EmployeeManagementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1244, 624);
+            this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.dgvListEmployees);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.ButtonAdd);
@@ -359,6 +398,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,5 +429,8 @@
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;
         private System.Windows.Forms.DataGridViewImageColumn dgvdelete;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.PictureBox BtnSearch;
     }
 }

@@ -175,5 +175,15 @@ namespace GUI
         {
             PanelHienThi.Hide();
         }
+
+        private void BtnAccManage_Click(object sender, EventArgs e)
+        {
+            AddControls(new AccountUserForm());
+        }
+
+        private void BtnReport_Click(object sender, EventArgs e)
+        {
+            AddControls(new ReportForm());
+        }
     }
 }

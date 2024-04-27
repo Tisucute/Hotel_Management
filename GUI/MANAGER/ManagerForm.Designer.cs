@@ -45,6 +45,10 @@
             this.ButtonHome = new System.Windows.Forms.Button();
             this.panelEmployee = new System.Windows.Forms.Panel();
             this.panelWorkingTime = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnAccManage = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnReport = new System.Windows.Forms.Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.PanelHienThi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).BeginInit();
@@ -55,6 +59,8 @@
             this.panelHome.SuspendLayout();
             this.panelEmployee.SuspendLayout();
             this.panelWorkingTime.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBarTimer
@@ -131,7 +137,7 @@
             this.ButtonTimeAndSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonTimeAndSalary.Image = global::GUI.Properties.Resources.icons8_time_is_money_48;
             this.ButtonTimeAndSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonTimeAndSalary.Location = new System.Drawing.Point(4, 0);
+            this.ButtonTimeAndSalary.Location = new System.Drawing.Point(3, 3);
             this.ButtonTimeAndSalary.Name = "ButtonTimeAndSalary";
             this.ButtonTimeAndSalary.Size = new System.Drawing.Size(240, 60);
             this.ButtonTimeAndSalary.TabIndex = 4;
@@ -194,12 +200,14 @@
             this.SideBar.Controls.Add(this.panelHome);
             this.SideBar.Controls.Add(this.panelEmployee);
             this.SideBar.Controls.Add(this.panelWorkingTime);
+            this.SideBar.Controls.Add(this.panel1);
+            this.SideBar.Controls.Add(this.panel2);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.SideBar.Location = new System.Drawing.Point(0, 62);
             this.SideBar.MaximumSize = new System.Drawing.Size(253, 0);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(253, 665);
+            this.SideBar.Size = new System.Drawing.Size(253, 726);
             this.SideBar.TabIndex = 6;
             // 
             // panelHome
@@ -242,6 +250,54 @@
             this.panelWorkingTime.Size = new System.Drawing.Size(246, 65);
             this.panelWorkingTime.TabIndex = 6;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.BtnAccManage);
+            this.panel1.Location = new System.Drawing.Point(3, 454);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(246, 65);
+            this.panel1.TabIndex = 7;
+            // 
+            // BtnAccManage
+            // 
+            this.BtnAccManage.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnAccManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAccManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAccManage.Image = global::GUI.Properties.Resources.icons8_user_48;
+            this.BtnAccManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAccManage.Location = new System.Drawing.Point(3, 3);
+            this.BtnAccManage.Name = "BtnAccManage";
+            this.BtnAccManage.Size = new System.Drawing.Size(240, 60);
+            this.BtnAccManage.TabIndex = 8;
+            this.BtnAccManage.Text = "              Account User";
+            this.BtnAccManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAccManage.UseVisualStyleBackColor = true;
+            this.BtnAccManage.Click += new System.EventHandler(this.BtnAccManage_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.BtnReport);
+            this.panel2.Location = new System.Drawing.Point(3, 525);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(246, 65);
+            this.panel2.TabIndex = 9;
+            // 
+            // BtnReport
+            // 
+            this.BtnReport.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReport.Image = global::GUI.Properties.Resources.icons8_report_50;
+            this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReport.Location = new System.Drawing.Point(3, 2);
+            this.BtnReport.Name = "BtnReport";
+            this.BtnReport.Size = new System.Drawing.Size(240, 60);
+            this.BtnReport.TabIndex = 10;
+            this.BtnReport.Text = "              Report";
+            this.BtnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReport.UseVisualStyleBackColor = true;
+            this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
+            // 
             // guna2AnimateWindow1
             // 
             this.guna2AnimateWindow1.Interval = 100;
@@ -251,7 +307,7 @@
             this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
             this.PanelHienThi.Name = "PanelHienThi";
-            this.PanelHienThi.Size = new System.Drawing.Size(1214, 665);
+            this.PanelHienThi.Size = new System.Drawing.Size(1214, 726);
             this.PanelHienThi.TabIndex = 7;
             this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
             // 
@@ -261,7 +317,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::GUI.Properties.Resources.R;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1467, 727);
+            this.ClientSize = new System.Drawing.Size(1467, 788);
             this.Controls.Add(this.PanelHienThi);
             this.Controls.Add(this.SideBar);
             this.Controls.Add(this.panelTitle);
@@ -281,6 +337,8 @@
             this.panelHome.ResumeLayout(false);
             this.panelEmployee.ResumeLayout(false);
             this.panelWorkingTime.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -303,5 +361,9 @@
         private System.Windows.Forms.Panel panelWorkingTime;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Panel PanelHienThi;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BtnAccManage;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnReport;
     }
 }

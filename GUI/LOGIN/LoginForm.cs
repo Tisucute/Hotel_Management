@@ -72,11 +72,6 @@ namespace GUI
 
         }
 
-        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpForm signUpForm = new SignUpForm();
-            signUpForm.ShowDialog();
-        }
         
         private void ButtonLogin_Click(object sender, EventArgs e)
         {

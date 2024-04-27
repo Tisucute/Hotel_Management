@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
+namespace GUI.All_UC
 {
-    public partial class WorkingTimeAndSalaryForm : Form
+    public partial class UC_ReportRS : UserControl
     {
-        public WorkingTimeAndSalaryForm()
+        public UC_ReportRS()
         {
             InitializeComponent();
-        }
-
-        private void WorkingTimeAndSalaryForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
