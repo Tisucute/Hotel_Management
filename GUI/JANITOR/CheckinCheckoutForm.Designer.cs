@@ -244,10 +244,10 @@
             this.RadioButtonJanitor.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.RadioButtonJanitor.CheckedState.InnerColor = System.Drawing.Color.White;
             this.RadioButtonJanitor.CheckedState.InnerOffset = -4;
-            this.RadioButtonJanitor.Font = new System.Drawing.Font("VNbahamas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonJanitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonJanitor.Location = new System.Drawing.Point(500, 55);
             this.RadioButtonJanitor.Name = "RadioButtonJanitor";
-            this.RadioButtonJanitor.Size = new System.Drawing.Size(80, 28);
+            this.RadioButtonJanitor.Size = new System.Drawing.Size(81, 24);
             this.RadioButtonJanitor.TabIndex = 18;
             this.RadioButtonJanitor.Text = "Janitor";
             this.RadioButtonJanitor.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
@@ -263,10 +263,10 @@
             this.RadioButtonRecep.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.RadioButtonRecep.CheckedState.InnerColor = System.Drawing.Color.White;
             this.RadioButtonRecep.CheckedState.InnerOffset = -4;
-            this.RadioButtonRecep.Font = new System.Drawing.Font("VNbahamas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonRecep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonRecep.Location = new System.Drawing.Point(365, 55);
             this.RadioButtonRecep.Name = "RadioButtonRecep";
-            this.RadioButtonRecep.Size = new System.Drawing.Size(122, 28);
+            this.RadioButtonRecep.Size = new System.Drawing.Size(123, 24);
             this.RadioButtonRecep.TabIndex = 16;
             this.RadioButtonRecep.Text = "Receptionist";
             this.RadioButtonRecep.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
@@ -499,6 +499,7 @@
             this.Controls.Add(this.GroupBoxCheck);
             this.Name = "CheckinCheckoutForm";
             this.Text = "CheckinCheckoutForm";
+            this.Load += new System.EventHandler(this.CheckinCheckoutForm_Load);
             this.GroupBoxCheck.ResumeLayout(false);
             this.GroupBoxCheck.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

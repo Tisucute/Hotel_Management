@@ -85,6 +85,7 @@
             this.SideBar.Name = "SideBar";
             this.SideBar.Size = new System.Drawing.Size(253, 602);
             this.SideBar.TabIndex = 9;
+            this.SideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.SideBar_Paint);
             // 
             // panelAvatar
             // 
@@ -99,7 +100,7 @@
             // LabelName
             // 
             this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(102, 192);
+            this.LabelName.Location = new System.Drawing.Point(64, 193);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(44, 16);
             this.LabelName.TabIndex = 2;
@@ -112,6 +113,7 @@
             this.PictureBoxJanitor.Name = "PictureBoxJanitor";
             this.PictureBoxJanitor.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PictureBoxJanitor.Size = new System.Drawing.Size(141, 136);
+            this.PictureBoxJanitor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxJanitor.TabIndex = 1;
             this.PictureBoxJanitor.TabStop = false;
             // 
@@ -228,6 +230,7 @@
             this.Controls.Add(this.PanelHienThi);
             this.Name = "JanitorForm";
             this.Text = "Janitor Form";
+            this.Load += new System.EventHandler(this.JanitorForm_Load);
             this.SideBar.ResumeLayout(false);
             this.panelAvatar.ResumeLayout(false);
             this.panelAvatar.PerformLayout();

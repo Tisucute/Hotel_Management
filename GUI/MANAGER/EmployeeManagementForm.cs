@@ -55,8 +55,23 @@ namespace GUI
             picCol = (DataGridViewImageColumn)dgvListEmployees.Columns[9];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dgvListEmployees.AllowUserToAddRows = false;
-            // Dem nhan vien
-            // labelTotalStudents.Text = ("Total Students: " + dataGridView1.Rows.Count);
+            dgvListEmployees.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvListEmployees.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvListEmployees.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            // Now that DataGridView has calculated it's Widths; we can now store each column Width values.
+            for (int i = 0; i <= dgvListEmployees.Columns.Count - 1; i++)
+            {
+                // Store Auto Sized Widths:
+                int colw = dgvListEmployees.Columns[i].Width;
+
+                // Remove AutoSizing:
+                dgvListEmployees.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                // Set Width to calculated AutoSize value:
+                dgvListEmployees.Columns[i].Width = colw;
+            }
+            labelTotal.Text = ("Total Employees: " + dgvListEmployees.Rows.Count);
         }
 
         private void dgvListEmployees_CellClick(object sender, DataGridViewCellEventArgs e)

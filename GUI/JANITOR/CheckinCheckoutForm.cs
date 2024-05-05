@@ -28,6 +28,9 @@ namespace GUI
 
         }
 
-        
+        private void CheckinCheckoutForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

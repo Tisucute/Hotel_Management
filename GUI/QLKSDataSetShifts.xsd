@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLKSDataSetShifts" targetNamespace="http://tempuri.org/QLKSDataSetShifts.xsd" xmlns:mstns="http://tempuri.org/QLKSDataSetShifts.xsd" xmlns="http://tempuri.org/QLKSDataSetShifts.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLKSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLKSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GUI.Properties.Settings.GlobalReference.Default.QLKSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SHIFTSTableAdapter" GeneratorDataComponentClassName="SHIFTSTableAdapter" Name="SHIFTS" UserDataComponentName="SHIFTSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLKSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SHIFT_ASSIGNMENT.employee_id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, ROLE.role_name, ROLE.role_id, EMPLOYEES.picture, 
+                  SHIFT_ASSIGNMENT.shift_id, SHIFTS.shift_type, ATTENDANCE.check_in_time, ATTENDANCE.check_out_time, ATTENDANCE.work_date
+FROM     SHIFT_ASSIGNMENT INNER JOIN
+                  EMPLOYEES ON SHIFT_ASSIGNMENT.employee_id = EMPLOYEES.id INNER JOIN
+                  SHIFTS ON SHIFT_ASSIGNMENT.shift_id = SHIFTS.shift_id INNER JOIN
+                  ATTENDANCE ON ATTENDANCE.employee_id = SHIFT_ASSIGNMENT.employee_id INNER JOIN
+                  ROLE ON ROLE.role_id = EMPLOYEES.role_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="shift_id" DataSetColumn="shift_id" />
+              <Mapping SourceColumn="employee_id" DataSetColumn="employee_id" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="gender" DataSetColumn="gender" />
+              <Mapping SourceColumn="birthdate" DataSetColumn="birthdate" />
+              <Mapping SourceColumn="CCCD" DataSetColumn="CCCD" />
+              <Mapping SourceColumn="address" DataSetColumn="address" />
+              <Mapping SourceColumn="phone" DataSetColumn="phone" />
+              <Mapping SourceColumn="role_name" DataSetColumn="role_name" />
+              <Mapping SourceColumn="role_id" DataSetColumn="role_id" />
+              <Mapping SourceColumn="picture" DataSetColumn="picture" />
+              <Mapping SourceColumn="check_in_time" DataSetColumn="check_in_time" />
+              <Mapping SourceColumn="check_out_time" DataSetColumn="check_out_time" />
+              <Mapping SourceColumn="work_date" DataSetColumn="work_date" />
+              <Mapping SourceColumn="shift_type" DataSetColumn="shift_type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLKSDataSetShifts" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="QLKSDataSetShifts" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLKSDataSetShifts">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SHIFTS" msprop:Generator_RowClassName="SHIFTSRow" msprop:Generator_RowEvHandlerName="SHIFTSRowChangeEventHandler" msprop:Generator_RowDeletedName="SHIFTSRowDeleted" msprop:Generator_RowDeletingName="SHIFTSRowDeleting" msprop:Generator_RowEvArgName="SHIFTSRowChangeEvent" msprop:Generator_TablePropName="SHIFTS" msprop:Generator_RowChangedName="SHIFTSRowChanged" msprop:Generator_UserTableName="SHIFTS" msprop:Generator_RowChangingName="SHIFTSRowChanging" msprop:Generator_TableClassName="SHIFTSDataTable" msprop:Generator_TableVarName="tableSHIFTS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="shift_id" msprop:Generator_UserColumnName="shift_id" msprop:Generator_ColumnPropNameInTable="shift_idColumn" msprop:Generator_ColumnPropNameInRow="shift_id" msprop:Generator_ColumnVarNameInTable="columnshift_id" type="xs:int" minOccurs="0" />
+              <xs:element name="employee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_UserColumnName="employee_id" type="xs:int" minOccurs="0" />
+              <xs:element name="fullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_UserColumnName="fullname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gender" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_ColumnVarNameInTable="columngender" msprop:Generator_UserColumnName="gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="birthdate" msprop:Generator_ColumnPropNameInRow="birthdate" msprop:Generator_ColumnPropNameInTable="birthdateColumn" msprop:Generator_ColumnVarNameInTable="columnbirthdate" msprop:Generator_UserColumnName="birthdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CCCD" msprop:Generator_ColumnPropNameInRow="CCCD" msprop:Generator_ColumnPropNameInTable="CCCDColumn" msprop:Generator_ColumnVarNameInTable="columnCCCD" msprop:Generator_UserColumnName="CCCD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_UserColumnName="address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_UserColumnName="phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="role_name" msprop:Generator_ColumnPropNameInRow="role_name" msprop:Generator_ColumnPropNameInTable="role_nameColumn" msprop:Generator_ColumnVarNameInTable="columnrole_name" msprop:Generator_UserColumnName="role_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="role_id" msprop:Generator_ColumnPropNameInRow="role_id" msprop:Generator_ColumnPropNameInTable="role_idColumn" msprop:Generator_ColumnVarNameInTable="columnrole_id" msprop:Generator_UserColumnName="role_id" type="xs:int" />
+              <xs:element name="picture" msprop:Generator_ColumnPropNameInRow="picture" msprop:Generator_ColumnPropNameInTable="pictureColumn" msprop:Generator_ColumnVarNameInTable="columnpicture" msprop:Generator_UserColumnName="picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="check_in_time" msprop:Generator_ColumnPropNameInRow="check_in_time" msprop:Generator_ColumnPropNameInTable="check_in_timeColumn" msprop:Generator_ColumnVarNameInTable="columncheck_in_time" msprop:Generator_UserColumnName="check_in_time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="check_out_time" msprop:Generator_ColumnPropNameInRow="check_out_time" msprop:Generator_ColumnPropNameInTable="check_out_timeColumn" msprop:Generator_ColumnVarNameInTable="columncheck_out_time" msprop:Generator_UserColumnName="check_out_time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="work_date" msprop:Generator_ColumnPropNameInRow="work_date" msprop:Generator_ColumnPropNameInTable="work_dateColumn" msprop:Generator_ColumnVarNameInTable="columnwork_date" msprop:Generator_UserColumnName="work_date" type="xs:int" minOccurs="0" />
+              <xs:element name="shift_type" msprop:Generator_ColumnPropNameInRow="shift_type" msprop:Generator_ColumnPropNameInTable="shift_typeColumn" msprop:Generator_ColumnVarNameInTable="columnshift_type" msprop:Generator_UserColumnName="shift_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SHIFTS" />
+      <xs:field xpath="mstns:shift_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

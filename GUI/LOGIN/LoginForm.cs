@@ -76,16 +76,17 @@ namespace GUI
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
             LoginBLL loginBLL = new LoginBLL();
+            LOGIN login  = new LOGIN();
             if (TextBoxUsername.Text != "" && TextBoxPassword.Text != "")
             {
-                LOGIN.username = TextBoxUsername.Text;
-                LOGIN.password = TextBoxPassword.Text;
+                login.username = TextBoxUsername.Text;
+                login.password = TextBoxPassword.Text;
                 if (RadioButtonManager.Checked)
                 {
-                    LOGIN.role = 1;
-                    if (loginBLL.checkLogin())
+                    login.role = 1;
+                    if (loginBLL.checkLogin(login))
                     {
-                        ManagerForm managerForm = new ManagerForm();
+                        ManagerForm managerForm = new ManagerForm(login);
                         this.Hide();
                         managerForm.Show();
                     }
@@ -96,8 +97,8 @@ namespace GUI
                 }
                 else if (RadioButtonReceptionist.Checked)
                 {
-                    LOGIN.role = 2;
-                    if (loginBLL.checkLogin())
+                    login.role = 2;
+                    if (loginBLL.checkLogin(login))
                     {
                         ReceptionistForm receptionistForm = new ReceptionistForm();
                         this.Hide();
@@ -110,10 +111,10 @@ namespace GUI
                 }
                 else 
                 {
-                    LOGIN.role = 3;
-                    if (loginBLL.checkLogin())
+                    login.role = 3;
+                    if (loginBLL.checkLogin(login))
                     {
-                        JanitorForm janitorForm = new JanitorForm();
+                        JanitorForm janitorForm = new JanitorForm(login);
                         this.Hide();
                         janitorForm.Show();
                     }
@@ -182,41 +183,5 @@ namespace GUI
 
         }
 
-        private void CheckBoxRemember_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButtonManager_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButtonReceptionist_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButtonJanitor_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelFollow_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

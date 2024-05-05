@@ -37,24 +37,25 @@
             this.LabelSearch = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLKSDataSet = new GUI.QLKSDataSet();
-            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.lOGINBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLKSDataSetLogin = new GUI.QLKSDataSetLogin();
+            this.lOGINTableAdapter = new GUI.QLKSDataSetLoginTableAdapters.LOGINTableAdapter();
+            this.employeeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.picture = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSetLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelHeader
@@ -75,14 +76,15 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(812, 69);
+            this.guna2Panel1.Size = new System.Drawing.Size(941, 69);
             this.guna2Panel1.TabIndex = 8;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // LabelSearch
             // 
             this.LabelSearch.AutoSize = true;
             this.LabelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSearch.Location = new System.Drawing.Point(450, 72);
+            this.LabelSearch.Location = new System.Drawing.Point(566, 83);
             this.LabelSearch.Name = "LabelSearch";
             this.LabelSearch.Size = new System.Drawing.Size(67, 22);
             this.LabelSearch.TabIndex = 11;
@@ -93,7 +95,7 @@
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.Location = new System.Drawing.Point(14, 153);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(775, 19);
+            this.guna2Separator1.Size = new System.Drawing.Size(891, 19);
             this.guna2Separator1.TabIndex = 13;
             // 
             // dgvListEmployees
@@ -113,14 +115,15 @@
             this.dgvListEmployees.ColumnHeadersHeight = 30;
             this.dgvListEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvListEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Username,
-            this.Role,
-            this.Password,
-            this.pictureDataGridViewImageColumn,
+            this.employeeidDataGridViewTextBoxColumn,
+            this.fullnameDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.role_name,
+            this.picture,
             this.dgvedit,
             this.dgvdelete});
-            this.dgvListEmployees.DataSource = this.eMPLOYEESBindingSource;
+            this.dgvListEmployees.DataSource = this.lOGINBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +139,7 @@
             this.dgvListEmployees.RowHeadersVisible = false;
             this.dgvListEmployees.RowHeadersWidth = 51;
             this.dgvListEmployees.RowTemplate.Height = 24;
-            this.dgvListEmployees.Size = new System.Drawing.Size(773, 386);
+            this.dgvListEmployees.Size = new System.Drawing.Size(888, 446);
             this.dgvListEmployees.TabIndex = 14;
             this.dgvListEmployees.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListEmployees.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -159,61 +162,8 @@
             this.dgvListEmployees.ThemeStyle.RowsStyle.Height = 24;
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListEmployees.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellClick);
             this.dgvListEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellContentClick);
-            // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSet;
-            // 
-            // qLKSDataSet
-            // 
-            this.qLKSDataSet.DataSetName = "QLKSDataSet";
-            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "id";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "id";
-            this.Username.HeaderText = "Username";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // Role
-            // 
-            this.Role.DataPropertyName = "id";
-            this.Role.HeaderText = "Role";
-            this.Role.MinimumWidth = 6;
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "id";
-            this.Password.HeaderText = "Password";
-            this.Password.MinimumWidth = 6;
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            // 
-            // pictureDataGridViewImageColumn
-            // 
-            this.pictureDataGridViewImageColumn.DataPropertyName = "picture";
-            this.pictureDataGridViewImageColumn.HeaderText = "Picture";
-            this.pictureDataGridViewImageColumn.MinimumWidth = 6;
-            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
-            this.pictureDataGridViewImageColumn.ReadOnly = true;
             // 
             // dataGridViewImageColumn1
             // 
@@ -249,7 +199,7 @@
             this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
             this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_search_64;
-            this.TextBoxSearch.Location = new System.Drawing.Point(454, 98);
+            this.TextBoxSearch.Location = new System.Drawing.Point(570, 109);
             this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.PasswordChar = '\0';
@@ -257,6 +207,7 @@
             this.TextBoxSearch.SelectedText = "";
             this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
             this.TextBoxSearch.TabIndex = 10;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
             // ButtonAdd
             // 
@@ -273,6 +224,68 @@
             this.ButtonAdd.Size = new System.Drawing.Size(64, 54);
             this.ButtonAdd.TabIndex = 12;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            // 
+            // lOGINBindingSource
+            // 
+            this.lOGINBindingSource.DataMember = "LOGIN";
+            this.lOGINBindingSource.DataSource = this.qLKSDataSetLogin;
+            // 
+            // qLKSDataSetLogin
+            // 
+            this.qLKSDataSetLogin.DataSetName = "QLKSDataSetLogin";
+            this.qLKSDataSetLogin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lOGINTableAdapter
+            // 
+            this.lOGINTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeeidDataGridViewTextBoxColumn
+            // 
+            this.employeeidDataGridViewTextBoxColumn.DataPropertyName = "employee_id";
+            this.employeeidDataGridViewTextBoxColumn.HeaderText = "Employee ID";
+            this.employeeidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeidDataGridViewTextBoxColumn.Name = "employeeidDataGridViewTextBoxColumn";
+            this.employeeidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fullnameDataGridViewTextBoxColumn
+            // 
+            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
+            this.fullnameDataGridViewTextBoxColumn.HeaderText = "Full Name";
+            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
+            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // role_name
+            // 
+            this.role_name.DataPropertyName = "role_name";
+            this.role_name.HeaderText = "Role";
+            this.role_name.MinimumWidth = 6;
+            this.role_name.Name = "role_name";
+            this.role_name.ReadOnly = true;
+            // 
+            // picture
+            // 
+            this.picture.DataPropertyName = "picture";
+            this.picture.HeaderText = "Picture";
+            this.picture.MinimumWidth = 6;
+            this.picture.Name = "picture";
+            this.picture.ReadOnly = true;
             // 
             // dgvedit
             // 
@@ -302,7 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 591);
+            this.ClientSize = new System.Drawing.Size(941, 663);
             this.Controls.Add(this.TextBoxSearch);
             this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.dgvListEmployees);
@@ -313,11 +326,12 @@
             this.Name = "AccountUserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountUser";
+            this.Load += new System.EventHandler(this.AccountUserForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOGINBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSetLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,15 +347,16 @@
         private System.Windows.Forms.Label LabelSearch;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListEmployees;
-        private System.Windows.Forms.BindingSource eMPLOYEESBindingSource;
-        private QLKSDataSet qLKSDataSet;
         public Guna.UI2.WinForms.Guna2ImageButton ButtonAdd;
-        private QLKSDataSetTableAdapters.EMPLOYEESTableAdapter eMPLOYEESTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
+        private QLKSDataSetLogin qLKSDataSetLogin;
+        private System.Windows.Forms.BindingSource lOGINBindingSource;
+        private QLKSDataSetLoginTableAdapters.LOGINTableAdapter lOGINTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn role_name;
+        private System.Windows.Forms.DataGridViewImageColumn picture;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;
         private System.Windows.Forms.DataGridViewImageColumn dgvdelete;
     }

@@ -107,5 +107,15 @@ namespace GUI
             }
 
         }
+
+        private void BtnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Image( *.jpg, *.png, *.gif) | *.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                PictureBoxEmployee.Image = System.Drawing.Image.FromFile(opf.FileName);
+            }
+        }
     }
 }

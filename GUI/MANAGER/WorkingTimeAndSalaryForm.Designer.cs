@@ -28,46 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.labelMorning = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.dgvListMorning = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Picture = new System.Windows.Forms.DataGridViewImageColumn();
-            this.DatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dgvListAfternoon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgvListNight = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.labelTitle = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.dgvListEmployeeAssign = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.DateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.dgvListCheck = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -80,423 +49,110 @@
             this.LabelHeader = new System.Windows.Forms.Label();
             this.LabelTotalSalary = new ReaLTaiizor.Controls.MetroLabel();
             this.BtnRefresh = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListMorning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListAfternoon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListNight)).BeginInit();
+            this.comboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.labelTotal = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployeeAssign)).BeginInit();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCheck)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRefresh)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelMorning
+            // labelTitle
             // 
-            this.labelMorning.AutoSize = true;
-            this.labelMorning.BackColor = System.Drawing.Color.Transparent;
-            this.labelMorning.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMorning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.labelMorning.Location = new System.Drawing.Point(432, 71);
-            this.labelMorning.Name = "labelMorning";
-            this.labelMorning.Size = new System.Drawing.Size(111, 31);
-            this.labelMorning.TabIndex = 0;
-            this.labelMorning.Text = "Morning";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.labelTitle.Location = new System.Drawing.Point(432, 55);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(112, 31);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "List Shift";
             // 
-            // dungeonHeaderLabel1
+            // dgvListEmployeeAssign
             // 
-            this.dungeonHeaderLabel1.AutoSize = true;
-            this.dungeonHeaderLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel1.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonHeaderLabel1.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.dungeonHeaderLabel1.Location = new System.Drawing.Point(432, 315);
-            this.dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
-            this.dungeonHeaderLabel1.Size = new System.Drawing.Size(128, 31);
-            this.dungeonHeaderLabel1.TabIndex = 1;
-            this.dungeonHeaderLabel1.Text = "Afternoon";
+            this.dgvListEmployeeAssign.AllowUserToAddRows = false;
+            this.dgvListEmployeeAssign.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvListEmployeeAssign.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvListEmployeeAssign.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListEmployeeAssign.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvListEmployeeAssign.ColumnHeadersHeight = 30;
+            this.dgvListEmployeeAssign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListEmployeeAssign.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvListEmployeeAssign.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvListEmployeeAssign.Location = new System.Drawing.Point(438, 140);
+            this.dgvListEmployeeAssign.Name = "dgvListEmployeeAssign";
+            this.dgvListEmployeeAssign.ReadOnly = true;
+            this.dgvListEmployeeAssign.RowHeadersVisible = false;
+            this.dgvListEmployeeAssign.RowHeadersWidth = 51;
+            this.dgvListEmployeeAssign.RowTemplate.Height = 24;
+            this.dgvListEmployeeAssign.Size = new System.Drawing.Size(1027, 406);
+            this.dgvListEmployeeAssign.TabIndex = 8;
+            this.dgvListEmployeeAssign.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvListEmployeeAssign.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvListEmployeeAssign.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvListEmployeeAssign.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvListEmployeeAssign.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvListEmployeeAssign.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvListEmployeeAssign.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvListEmployeeAssign.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dgvListEmployeeAssign.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvListEmployeeAssign.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvListEmployeeAssign.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvListEmployeeAssign.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvListEmployeeAssign.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvListEmployeeAssign.ThemeStyle.ReadOnly = true;
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvListEmployeeAssign.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // dungeonHeaderLabel2
+            // DateTimePicker
             // 
-            this.dungeonHeaderLabel2.AutoSize = true;
-            this.dungeonHeaderLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel2.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonHeaderLabel2.ForeColor = System.Drawing.Color.Navy;
-            this.dungeonHeaderLabel2.Location = new System.Drawing.Point(432, 561);
-            this.dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
-            this.dungeonHeaderLabel2.Size = new System.Drawing.Size(78, 31);
-            this.dungeonHeaderLabel2.TabIndex = 2;
-            this.dungeonHeaderLabel2.Text = "Night";
-            // 
-            // dgvListMorning
-            // 
-            this.dgvListMorning.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvListMorning.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvListMorning.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Vietsea Sample Font", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListMorning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvListMorning.ColumnHeadersHeight = 30;
-            this.dgvListMorning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListMorning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Fullname,
-            this.Role,
-            this.Gender,
-            this.CCCD,
-            this.Phone,
-            this.Picture});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListMorning.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvListMorning.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListMorning.Location = new System.Drawing.Point(438, 105);
-            this.dgvListMorning.Name = "dgvListMorning";
-            this.dgvListMorning.ReadOnly = true;
-            this.dgvListMorning.RowHeadersVisible = false;
-            this.dgvListMorning.RowHeadersWidth = 51;
-            this.dgvListMorning.RowTemplate.Height = 24;
-            this.dgvListMorning.Size = new System.Drawing.Size(1004, 177);
-            this.dgvListMorning.TabIndex = 8;
-            this.dgvListMorning.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListMorning.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListMorning.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListMorning.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListMorning.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListMorning.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvListMorning.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListMorning.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dgvListMorning.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListMorning.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListMorning.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListMorning.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListMorning.ThemeStyle.HeaderStyle.Height = 30;
-            this.dgvListMorning.ThemeStyle.ReadOnly = true;
-            this.dgvListMorning.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListMorning.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListMorning.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListMorning.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvListMorning.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvListMorning.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListMorning.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Fullname
-            // 
-            this.Fullname.HeaderText = "Fullname";
-            this.Fullname.MinimumWidth = 6;
-            this.Fullname.Name = "Fullname";
-            this.Fullname.ReadOnly = true;
-            // 
-            // Role
-            // 
-            this.Role.HeaderText = "Role";
-            this.Role.MinimumWidth = 6;
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // CCCD
-            // 
-            this.CCCD.HeaderText = "CCCD";
-            this.CCCD.MinimumWidth = 6;
-            this.CCCD.Name = "CCCD";
-            this.CCCD.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.MinimumWidth = 6;
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Picture
-            // 
-            this.Picture.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Picture.FillWeight = 50F;
-            this.Picture.HeaderText = "Picture";
-            this.Picture.MinimumWidth = 50;
-            this.Picture.Name = "Picture";
-            this.Picture.ReadOnly = true;
-            this.Picture.Width = 50;
-            // 
-            // DatePicker
-            // 
-            this.DatePicker.Animated = true;
-            this.DatePicker.AutoRoundedCorners = true;
-            this.DatePicker.BackColor = System.Drawing.Color.Transparent;
-            this.DatePicker.BorderRadius = 17;
-            this.DatePicker.Checked = true;
-            this.DatePicker.FillColor = System.Drawing.Color.FloralWhite;
-            this.DatePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DatePicker.Location = new System.Drawing.Point(96, 146);
-            this.DatePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DatePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DatePicker.Name = "DatePicker";
-            this.DatePicker.Size = new System.Drawing.Size(229, 36);
-            this.DatePicker.TabIndex = 13;
-            this.DatePicker.UseTransparentBackground = true;
-            this.DatePicker.Value = new System.DateTime(2024, 4, 27, 21, 40, 53, 875);
-            // 
-            // dgvListAfternoon
-            // 
-            this.dgvListAfternoon.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvListAfternoon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvListAfternoon.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Vietsea Sample Font", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGoldenrodYellow;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListAfternoon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvListAfternoon.ColumnHeadersHeight = 30;
-            this.dgvListAfternoon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListAfternoon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewImageColumn1});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListAfternoon.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvListAfternoon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListAfternoon.Location = new System.Drawing.Point(438, 349);
-            this.dgvListAfternoon.Name = "dgvListAfternoon";
-            this.dgvListAfternoon.ReadOnly = true;
-            this.dgvListAfternoon.RowHeadersVisible = false;
-            this.dgvListAfternoon.RowHeadersWidth = 51;
-            this.dgvListAfternoon.RowTemplate.Height = 24;
-            this.dgvListAfternoon.Size = new System.Drawing.Size(1004, 177);
-            this.dgvListAfternoon.TabIndex = 14;
-            this.dgvListAfternoon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListAfternoon.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListAfternoon.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListAfternoon.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListAfternoon.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListAfternoon.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvListAfternoon.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListAfternoon.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dgvListAfternoon.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListAfternoon.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListAfternoon.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListAfternoon.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListAfternoon.ThemeStyle.HeaderStyle.Height = 30;
-            this.dgvListAfternoon.ThemeStyle.ReadOnly = true;
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListAfternoon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fullname";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Gender";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "CCCD";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.FillWeight = 50F;
-            this.dataGridViewImageColumn1.HeaderText = "Picture";
-            this.dataGridViewImageColumn1.MinimumWidth = 50;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dgvListNight
-            // 
-            this.dgvListNight.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvListNight.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvListNight.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Vietsea Sample Font", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListNight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvListNight.ColumnHeadersHeight = 30;
-            this.dgvListNight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListNight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewImageColumn2});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListNight.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvListNight.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListNight.Location = new System.Drawing.Point(438, 595);
-            this.dgvListNight.Name = "dgvListNight";
-            this.dgvListNight.ReadOnly = true;
-            this.dgvListNight.RowHeadersVisible = false;
-            this.dgvListNight.RowHeadersWidth = 51;
-            this.dgvListNight.RowTemplate.Height = 24;
-            this.dgvListNight.Size = new System.Drawing.Size(1004, 177);
-            this.dgvListNight.TabIndex = 15;
-            this.dgvListNight.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListNight.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListNight.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListNight.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListNight.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListNight.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvListNight.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListNight.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dgvListNight.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListNight.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListNight.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListNight.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListNight.ThemeStyle.HeaderStyle.Height = 30;
-            this.dgvListNight.ThemeStyle.ReadOnly = true;
-            this.dgvListNight.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListNight.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListNight.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListNight.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvListNight.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvListNight.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListNight.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Fullname";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Gender";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "CCCD";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn2.FillWeight = 50F;
-            this.dataGridViewImageColumn2.HeaderText = "Picture";
-            this.dataGridViewImageColumn2.MinimumWidth = 50;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Width = 50;
+            this.DateTimePicker.Animated = true;
+            this.DateTimePicker.AutoRoundedCorners = true;
+            this.DateTimePicker.BackColor = System.Drawing.Color.Transparent;
+            this.DateTimePicker.BorderRadius = 17;
+            this.DateTimePicker.Checked = true;
+            this.DateTimePicker.FillColor = System.Drawing.Color.FloralWhite;
+            this.DateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateTimePicker.Location = new System.Drawing.Point(98, 98);
+            this.DateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePicker.Name = "DateTimePicker";
+            this.DateTimePicker.Size = new System.Drawing.Size(229, 36);
+            this.DateTimePicker.TabIndex = 13;
+            this.DateTimePicker.UseTransparentBackground = true;
+            this.DateTimePicker.Value = new System.DateTime(2024, 4, 27, 21, 40, 53, 875);
             // 
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(188)))), ((int)(((byte)(182)))));
             this.groupBox.Controls.Add(this.dungeonHeaderLabel3);
             this.groupBox.Controls.Add(this.dgvListCheck);
-            this.groupBox.Font = new System.Drawing.Font("Vietsea Sample Font", 7.799999F);
+            this.groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F);
             this.groupBox.ForeColor = System.Drawing.Color.Tomato;
-            this.groupBox.Location = new System.Drawing.Point(37, 209);
+            this.groupBox.Location = new System.Drawing.Point(37, 159);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(358, 387);
             this.groupBox.TabIndex = 16;
@@ -518,17 +174,17 @@
             // dgvListCheck
             // 
             this.dgvListCheck.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvListCheck.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgvListCheck.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvListCheck.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Vietsea Sample Font", 7.799999F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCheck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCheck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvListCheck.ColumnHeadersHeight = 30;
             this.dgvListCheck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvListCheck.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -537,14 +193,14 @@
             this.Checkin,
             this.Checkout,
             this.Time});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Vietsea Sample Font", 7.799999F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListCheck.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListCheck.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvListCheck.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListCheck.Location = new System.Drawing.Point(6, 38);
             this.dgvListCheck.Name = "dgvListCheck";
@@ -620,6 +276,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1477, 52);
             this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LabelHeader
             // 
@@ -637,7 +294,7 @@
             // 
             this.LabelTotalSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelTotalSalary.IsDerivedStyle = true;
-            this.LabelTotalSalary.Location = new System.Drawing.Point(37, 619);
+            this.LabelTotalSalary.Location = new System.Drawing.Point(37, 573);
             this.LabelTotalSalary.Name = "LabelTotalSalary";
             this.LabelTotalSalary.Size = new System.Drawing.Size(162, 23);
             this.LabelTotalSalary.Style = ReaLTaiizor.Enum.Metro.Style.Light;
@@ -650,7 +307,7 @@
             // BtnRefresh
             // 
             this.BtnRefresh.Image = global::GUI.Properties.Resources.icons8_refresh_48;
-            this.BtnRefresh.Location = new System.Drawing.Point(168, 667);
+            this.BtnRefresh.Location = new System.Drawing.Point(166, 624);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(71, 63);
             this.BtnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -658,31 +315,59 @@
             this.BtnRefresh.TabStop = false;
             this.BtnRefresh.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // comboBox
+            // 
+            this.comboBox.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox.ItemHeight = 30;
+            this.comboBox.Items.AddRange(new object[] {
+            "Ca 7h-11h",
+            "Ca 11h-15h",
+            "Ca 15h-19h",
+            "Ca 19h-23h",
+            "Ca 23h-3h",
+            "Ca 3h-7h"});
+            this.comboBox.Location = new System.Drawing.Point(438, 98);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(154, 36);
+            this.comboBox.TabIndex = 25;
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(1275, 573);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(79, 29);
+            this.labelTotal.TabIndex = 26;
+            this.labelTotal.Text = "label1";
+            // 
             // WorkingTimeAndSalaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.ClientSize = new System.Drawing.Size(1477, 804);
+            this.ClientSize = new System.Drawing.Size(1477, 718);
+            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.comboBox);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.LabelTotalSalary);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox);
-            this.Controls.Add(this.dgvListNight);
-            this.Controls.Add(this.dgvListAfternoon);
-            this.Controls.Add(this.DatePicker);
-            this.Controls.Add(this.dgvListMorning);
-            this.Controls.Add(this.dungeonHeaderLabel2);
-            this.Controls.Add(this.dungeonHeaderLabel1);
-            this.Controls.Add(this.labelMorning);
+            this.Controls.Add(this.DateTimePicker);
+            this.Controls.Add(this.dgvListEmployeeAssign);
+            this.Controls.Add(this.labelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WorkingTimeAndSalaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Working Time And Salary Form";
             this.Load += new System.EventHandler(this.WorkingTimeAndSalaryForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListMorning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListAfternoon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListNight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployeeAssign)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCheck)).EndInit();
@@ -696,34 +381,9 @@
 
         #endregion
 
-        private ReaLTaiizor.Controls.DungeonHeaderLabel labelMorning;
-        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
-        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListMorning;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DatePicker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CCCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewImageColumn Picture;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListAfternoon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListNight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel labelTitle;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvListEmployeeAssign;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePicker;
         private System.Windows.Forms.GroupBox groupBox;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListCheck;
         private System.Windows.Forms.Panel panel1;
@@ -736,5 +396,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Checkin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Checkout;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBox;
+        private System.Windows.Forms.Label labelTotal;
     }
 }

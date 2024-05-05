@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MANAGER\AssignShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\AssignShiftForm.Designer.cs">
+      <DependentUpon>AssignShiftForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MANAGER\EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,10 +124,10 @@
     <Compile Include="MANAGER\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CheckinCheckoutForm.cs">
+    <Compile Include="JANITOR\CheckinCheckoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheckinCheckoutForm.Designer.cs">
+    <Compile Include="JANITOR\CheckinCheckoutForm.Designer.cs">
       <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MANAGER\EditEmployeeForm.cs">
@@ -170,6 +176,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLKSDataSetLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKSDataSetLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLKSDataSetShifts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKSDataSetShifts.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\ReceptionistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,12 +204,21 @@
     <Compile Include="MANAGER\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectEmployeeForm.Designer.cs">
+      <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="All UC\UC_ReportES.resx">
       <DependentUpon>UC_ReportES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="All UC\UC_ReportRS.resx">
       <DependentUpon>UC_ReportRS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\AssignShiftForm.resx">
+      <DependentUpon>AssignShiftForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
@@ -204,7 +229,7 @@
     <EmbeddedResource Include="MANAGER\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CheckinCheckoutForm.resx">
+    <EmbeddedResource Include="JANITOR\CheckinCheckoutForm.resx">
       <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\AddReportForm.resx">
@@ -246,6 +271,9 @@
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="SelectEmployeeForm.resx">
+      <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -286,6 +314,28 @@
     </None>
     <None Include="QLKSDataSet.xss">
       <DependentUpon>QLKSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetLogin.xsc">
+      <DependentUpon>QLKSDataSetLogin.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetLogin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSetLogin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLKSDataSetLogin.xss">
+      <DependentUpon>QLKSDataSetLogin.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetShifts.xsc">
+      <DependentUpon>QLKSDataSetShifts.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetShifts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSetShifts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLKSDataSetShifts.xss">
+      <DependentUpon>QLKSDataSetShifts.xsd</DependentUpon>
     </None>
     <None Include="Resources\bff2a2de919defff2efd9d74f50b1cc5.jpg" />
   </ItemGroup>

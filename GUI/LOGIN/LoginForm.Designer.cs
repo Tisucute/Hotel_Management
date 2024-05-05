@@ -89,7 +89,6 @@
             this.RadioButtonManager.TabStop = true;
             this.RadioButtonManager.Text = "Manager";
             this.RadioButtonManager.UseVisualStyleBackColor = true;
-            this.RadioButtonManager.CheckedChanged += new System.EventHandler(this.RadioButtonManager_CheckedChanged);
             // 
             // RadioButtonReceptionist
             // 
@@ -101,7 +100,6 @@
             this.RadioButtonReceptionist.TabStop = true;
             this.RadioButtonReceptionist.Text = "Receptionist";
             this.RadioButtonReceptionist.UseVisualStyleBackColor = true;
-            this.RadioButtonReceptionist.CheckedChanged += new System.EventHandler(this.RadioButtonReceptionist_CheckedChanged);
             // 
             // RadioButtonJanitor
             // 
@@ -113,7 +111,6 @@
             this.RadioButtonJanitor.TabStop = true;
             this.RadioButtonJanitor.Text = "Janitor";
             this.RadioButtonJanitor.UseVisualStyleBackColor = true;
-            this.RadioButtonJanitor.CheckedChanged += new System.EventHandler(this.RadioButtonJanitor_CheckedChanged);
             // 
             // LinkLabelForgot
             // 
@@ -137,7 +134,6 @@
             this.LabelFollow.TabIndex = 21;
             this.LabelFollow.Text = "----------------Follow Us----------------";
             this.LabelFollow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelFollow.Click += new System.EventHandler(this.LabelFollow_Click);
             // 
             // LabelLogin
             // 
@@ -149,7 +145,6 @@
             this.LabelLogin.Size = new System.Drawing.Size(276, 111);
             this.LabelLogin.TabIndex = 22;
             this.LabelLogin.Text = "Login";
-            this.LabelLogin.Click += new System.EventHandler(this.LabelLogin_Click);
             // 
             // PanelLogin
             // 

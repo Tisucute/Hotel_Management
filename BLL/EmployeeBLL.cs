@@ -15,9 +15,21 @@ namespace BLL
     {
         static EmployeeAccess employeeAccess = new EmployeeAccess();
        
+        public DataTable getEmployeesnoUser()
+        {
+            return employeeAccess.getEmployeesnoUser();
+        }
+        public DataTable getUserNameAndImage(int id)
+        {
+            return employeeAccess.getUserNameandImage(id);
+        }
         public DataTable getEmployees()
         {
             return employeeAccess.getEmployees();
+        }
+        public DataTable getEmployeesWorking()
+        {
+            return employeeAccess.getEmployeesWorking();
         }
         public DataTable getEmployeeByID(int id)
         {
@@ -43,6 +55,14 @@ namespace BLL
         {
             return employeeAccess.getAllRole();
         }
-       
+        public bool insertShift(int employeeID, DateTime checkInTime)
+        {
+            return employeeAccess.insertShift(employeeID, checkInTime);
+        }
+        public DataTable getShiftByTime(DateTime time)
+        {
+            return employeeAccess.getShiftByTime(time);
+        }
+
     }
 }

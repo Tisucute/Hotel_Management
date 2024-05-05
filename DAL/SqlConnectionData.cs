@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class SqlConnectionDatacs
+    internal class SqlConnectionData
     {
-        SqlConnection con = new SqlConnection(@"Data Source=TISU;Initial Catalog=QLKS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection con = new SqlConnection(@"Data Source=NOOB;Initial Catalog=QLKS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         public SqlConnection getConnection
         {

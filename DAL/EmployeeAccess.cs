@@ -12,11 +12,35 @@ namespace DAL
 {
     public class EmployeeAccess
     {
-        SqlConnectionDatacs mydb = new SqlConnectionDatacs();
+        SqlConnectionData mydb = new SqlConnectionData();
+        public DataTable getEmployeesnoUser()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT EMPLOYEES.id, EMPLOYEES.fullname, gender, birthdate, CCCD, phone FROM LOGIN RIGHT JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id WHERE EMPLOYEES.id NOT IN (  SELECT employee_id   FROM LOGIN);", mydb.getConnection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
         public DataTable getEmployees()
         {
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id", mydb.getConnection);
             DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable getEmployeesWorking()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT EMPLOYEES.id, EMPLOYEES.fullname, EMPLOYEES.gender, EMPLOYEES.birthdate, EMPLOYEES.CCCD, EMPLOYEES.address, EMPLOYEES.phone, EMPLOYEES.picture, EMPLOYEES.status, ROLE.role_id, ROLE.role_name, ROLE.salary FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id WHERE status = 'Working'", mydb.getConnection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable getUserNameandImage(int id)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+            SqlCommand command = new SqlCommand("SELECT * FROM LOGIN INNER JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id WHERE LOGIN.employee_id = @uid", mydb.getConnection);
+            command.Parameters.Add("@uid", SqlDbType.Int).Value = id;
+            adapter.SelectCommand = command;
             adapter.Fill(table);
             return table;
         }
@@ -37,7 +61,6 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
-
         public bool deleteEmployee(int id)
         {
             SqlCommand command = new SqlCommand("DELETE FROM EMPLOYEES WHERE id = @id", mydb.getConnection);
@@ -60,7 +83,6 @@ namespace DAL
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM ROLE", mydb.getConnection);
             adapter.Fill(table);
             return table;
-
         }
         public bool insertEmployee(EMPLOYEE employee)
         {
@@ -110,6 +132,35 @@ namespace DAL
                 mydb.closeConnection();
                 return false;
             }
+        }
+        public bool insertShift(int employeeID, DateTime checkInTime)
+        {
+            SqlCommand command = new SqlCommand("INSERT INTO ATTENDANCE(employee_id, checkInTime) VALUES (@eid, @ci)", mydb.getConnection);
+
+            command.Parameters.Add("@eid", SqlDbType.Int).Value = employeeID;
+            command.Parameters.Add("@ci", SqlDbType.DateTime).Value = checkInTime;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
+        public DataTable getShiftByTime(DateTime dateTime)
+        {
+            DataTable table = new DataTable();
+            SqlCommand command = new SqlCommand("SELECT EMPLOYEES.id as [ID], EMPLOYEES.fullname as [Full Name], EMPLOYEES.gender as [Gender], EMPLOYEES.birthdate as [Birthdate], EMPLOYEES.CCCD as [CCCD], EMPLOYEES.phone as [Phone], ROLE.role_name as [Role],  EMPLOYEES.status as [Status],  EMPLOYEES.picture as [Picture] FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id INNER JOIN ATTENDANCE ON ATTENDANCE.employee_id = EMPLOYEES.id WHERE ATTENDANCE.checkInTime = @time", mydb.getConnection);
+            command.Parameters.Add("@time", SqlDbType.VarChar).Value = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            mydb.openConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(table);
+            return table;
+           
         }
     }
 }

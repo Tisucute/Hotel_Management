@@ -44,6 +44,7 @@
     <Compile Include="EmployeeBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShiftScheduler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

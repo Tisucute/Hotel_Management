@@ -25,11 +25,13 @@ namespace GUI
             InitializeComponent();
             this.Padding = new Padding(borderSize);
         }
-        string user;
-        public ManagerForm(string u)
+
+        LOGIN login;
+        public ManagerForm(LOGIN tmp)
         {
+            login = tmp;
             InitializeComponent();
-            user = u;
+            this.Padding = new Padding(borderSize);
         }
         bool sideBarExpand;
 
@@ -73,8 +75,8 @@ namespace GUI
         }
         public void getImageAndUsername()
         {
-            LoginBLL loginBLL = new LoginBLL();
-            DataTable table = loginBLL.getUserNameandImage(LOGIN.id);
+            EmployeeBLL employeeBLL = new EmployeeBLL();
+            DataTable table = employeeBLL.getUserNameAndImage(login.id);
             byte[] pic = (byte[])table.Rows[0]["picture"];
             MemoryStream picture = new MemoryStream(pic);
             PictureBoxManager.Image = Image.FromStream(picture);
@@ -178,12 +180,17 @@ namespace GUI
 
         private void BtnAccManage_Click(object sender, EventArgs e)
         {
-            AddControls(new AccountUserForm());
+            AddControls(new AccountUserForm(login));
         }
 
         private void BtnReport_Click(object sender, EventArgs e)
         {
             AddControls(new ReportForm());
+        }
+
+        private void ButtonShift_Click(object sender, EventArgs e)
+        {
+            AddControls(new AssignShiftForm());
         }
     }
 }

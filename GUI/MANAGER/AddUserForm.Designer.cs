@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.BtnAdd = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.nightLabel3 = new ReaLTaiizor.Controls.NightLabel();
-            this.txtBoxCCCD = new Guna.UI2.WinForms.Guna2TextBox();
             this.nightLabel2 = new ReaLTaiizor.Controls.NightLabel();
             this.txtBoxPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.nightLabel6 = new ReaLTaiizor.Controls.NightLabel();
@@ -39,6 +37,7 @@
             this.nightLabel1 = new ReaLTaiizor.Controls.NightLabel();
             this.txtBoxFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.CmbBoxRole = new ReaLTaiizor.Controls.SkyComboBox();
+            this.ButtonSelect = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // BtnAdd
@@ -50,47 +49,13 @@
             this.BtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
             this.BtnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAdd.ForeColor = System.Drawing.Color.White;
-            this.BtnAdd.Location = new System.Drawing.Point(157, 523);
+            this.BtnAdd.Location = new System.Drawing.Point(153, 465);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.BtnAdd.Size = new System.Drawing.Size(117, 48);
             this.BtnAdd.TabIndex = 114;
             this.BtnAdd.Text = "Add";
-            // 
-            // nightLabel3
-            // 
-            this.nightLabel3.AutoSize = true;
-            this.nightLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.nightLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nightLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel3.Location = new System.Drawing.Point(84, 402);
-            this.nightLabel3.Name = "nightLabel3";
-            this.nightLabel3.Size = new System.Drawing.Size(47, 20);
-            this.nightLabel3.TabIndex = 111;
-            this.nightLabel3.Text = "CCCD";
-            // 
-            // txtBoxCCCD
-            // 
-            this.txtBoxCCCD.Animated = true;
-            this.txtBoxCCCD.AutoRoundedCorners = true;
-            this.txtBoxCCCD.BorderRadius = 21;
-            this.txtBoxCCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBoxCCCD.DefaultText = "";
-            this.txtBoxCCCD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBoxCCCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBoxCCCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBoxCCCD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBoxCCCD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxCCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBoxCCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxCCCD.Location = new System.Drawing.Point(70, 426);
-            this.txtBoxCCCD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxCCCD.Name = "txtBoxCCCD";
-            this.txtBoxCCCD.PasswordChar = '\0';
-            this.txtBoxCCCD.PlaceholderText = "";
-            this.txtBoxCCCD.SelectedText = "";
-            this.txtBoxCCCD.Size = new System.Drawing.Size(306, 44);
-            this.txtBoxCCCD.TabIndex = 110;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // nightLabel2
             // 
@@ -98,7 +63,7 @@
             this.nightLabel2.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel2.Location = new System.Drawing.Point(84, 320);
+            this.nightLabel2.Location = new System.Drawing.Point(84, 355);
             this.nightLabel2.Name = "nightLabel2";
             this.nightLabel2.Size = new System.Drawing.Size(70, 20);
             this.nightLabel2.TabIndex = 108;
@@ -108,7 +73,7 @@
             // 
             this.txtBoxPass.Animated = true;
             this.txtBoxPass.AutoRoundedCorners = true;
-            this.txtBoxPass.BorderRadius = 21;
+            this.txtBoxPass.BorderRadius = 20;
             this.txtBoxPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBoxPass.DefaultText = "";
             this.txtBoxPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -118,13 +83,13 @@
             this.txtBoxPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxPass.Location = new System.Drawing.Point(70, 344);
+            this.txtBoxPass.Location = new System.Drawing.Point(70, 379);
             this.txtBoxPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxPass.Name = "txtBoxPass";
             this.txtBoxPass.PasswordChar = '\0';
             this.txtBoxPass.PlaceholderText = "";
             this.txtBoxPass.SelectedText = "";
-            this.txtBoxPass.Size = new System.Drawing.Size(306, 44);
+            this.txtBoxPass.Size = new System.Drawing.Size(306, 42);
             this.txtBoxPass.TabIndex = 107;
             // 
             // nightLabel6
@@ -133,7 +98,7 @@
             this.nightLabel6.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel6.Location = new System.Drawing.Point(84, 132);
+            this.nightLabel6.Location = new System.Drawing.Point(84, 193);
             this.nightLabel6.Name = "nightLabel6";
             this.nightLabel6.Size = new System.Drawing.Size(39, 20);
             this.nightLabel6.TabIndex = 106;
@@ -145,7 +110,7 @@
             this.nightLabel4.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel4.Location = new System.Drawing.Point(84, 238);
+            this.nightLabel4.Location = new System.Drawing.Point(84, 268);
             this.nightLabel4.Name = "nightLabel4";
             this.nightLabel4.Size = new System.Drawing.Size(75, 20);
             this.nightLabel4.TabIndex = 105;
@@ -165,7 +130,7 @@
             this.txtBoxUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxUsername.Location = new System.Drawing.Point(70, 262);
+            this.txtBoxUsername.Location = new System.Drawing.Point(70, 292);
             this.txtBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxUsername.Name = "txtBoxUsername";
             this.txtBoxUsername.PasswordChar = '\0';
@@ -180,7 +145,7 @@
             this.nightLabel1.BackColor = System.Drawing.Color.Transparent;
             this.nightLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nightLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel1.Location = new System.Drawing.Point(84, 49);
+            this.nightLabel1.Location = new System.Drawing.Point(84, 60);
             this.nightLabel1.Name = "nightLabel1";
             this.nightLabel1.Size = new System.Drawing.Size(69, 20);
             this.nightLabel1.TabIndex = 103;
@@ -200,7 +165,7 @@
             this.txtBoxFullname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxFullname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxFullname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxFullname.Location = new System.Drawing.Point(70, 73);
+            this.txtBoxFullname.Location = new System.Drawing.Point(70, 84);
             this.txtBoxFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxFullname.Name = "txtBoxFullname";
             this.txtBoxFullname.PasswordChar = '\0';
@@ -235,7 +200,7 @@
             this.CmbBoxRole.ListForeColor = System.Drawing.Color.Black;
             this.CmbBoxRole.ListSelectedBackColorA = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CmbBoxRole.ListSelectedBackColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CmbBoxRole.Location = new System.Drawing.Point(70, 155);
+            this.CmbBoxRole.Location = new System.Drawing.Point(82, 216);
             this.CmbBoxRole.Name = "CmbBoxRole";
             this.CmbBoxRole.Size = new System.Drawing.Size(175, 36);
             this.CmbBoxRole.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -244,14 +209,29 @@
             this.CmbBoxRole.TriangleColorA = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
             this.CmbBoxRole.TriangleColorB = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
             // 
+            // ButtonSelect
+            // 
+            this.ButtonSelect.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonSelect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonSelect.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ButtonSelect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ButtonSelect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
+            this.ButtonSelect.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ButtonSelect.ForeColor = System.Drawing.Color.White;
+            this.ButtonSelect.Location = new System.Drawing.Point(82, 135);
+            this.ButtonSelect.Name = "ButtonSelect";
+            this.ButtonSelect.Size = new System.Drawing.Size(150, 44);
+            this.ButtonSelect.TabIndex = 117;
+            this.ButtonSelect.Text = "Select Employee";
+            this.ButtonSelect.Click += new System.EventHandler(this.ButtonSelect_Click);
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 613);
+            this.ClientSize = new System.Drawing.Size(425, 547);
+            this.Controls.Add(this.ButtonSelect);
             this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.nightLabel3);
-            this.Controls.Add(this.txtBoxCCCD);
             this.Controls.Add(this.nightLabel2);
             this.Controls.Add(this.txtBoxPass);
             this.Controls.Add(this.nightLabel6);
@@ -262,6 +242,7 @@
             this.Controls.Add(this.CmbBoxRole);
             this.Name = "AddUserForm";
             this.Text = "AddUserForm";
+            this.Load += new System.EventHandler(this.AddUserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,8 +250,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2CircleButton BtnAdd;
-        private ReaLTaiizor.Controls.NightLabel nightLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtBoxCCCD;
         private ReaLTaiizor.Controls.NightLabel nightLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxPass;
         private ReaLTaiizor.Controls.NightLabel nightLabel6;
@@ -279,5 +258,6 @@
         private ReaLTaiizor.Controls.NightLabel nightLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxFullname;
         private ReaLTaiizor.Controls.SkyComboBox CmbBoxRole;
+        private Guna.UI2.WinForms.Guna2Button ButtonSelect;
     }
 }

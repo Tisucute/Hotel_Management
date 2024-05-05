@@ -21,6 +21,8 @@ namespace DTO
         public int role { get; set; }
         public MemoryStream pic { get; set; }
         public string status { get; set; }
+        public List<WorkSession> workSessions { get; set; } = new List<WorkSession>();
+        public List<SHIFTS> shifts { get; set; } = new List<SHIFTS>();
         public void fillData(DataTable table)
         {
             id = Convert.ToInt32(table.Rows[0]["id"].ToString());
@@ -35,6 +37,18 @@ namespace DTO
             byte[] tmp = (byte[])table.Rows[0]["picture"];
             pic = new MemoryStream(tmp);
         }
+        public void CheckIn(DateTime time)
+        {
+            WorkSession session = new WorkSession();
+            session.startTime = time;
+            workSessions.Add(session);
+        }
 
-    }
+        public void CheckOut(DateTime time)
+        {
+            WorkSession session = workSessions.Last();
+            session.endTime = time;
+            session.CalculateHours();
+        }
+    }    
 }

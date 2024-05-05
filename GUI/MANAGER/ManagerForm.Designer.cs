@@ -44,9 +44,10 @@
             this.panelHome = new System.Windows.Forms.Panel();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.panelEmployee = new System.Windows.Forms.Panel();
+            this.BtnAccManage = new System.Windows.Forms.Button();
             this.panelWorkingTime = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnAccManage = new System.Windows.Forms.Button();
+            this.ButtonShift = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnReport = new System.Windows.Forms.Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -137,7 +138,7 @@
             this.ButtonTimeAndSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonTimeAndSalary.Image = global::GUI.Properties.Resources.icons8_time_is_money_48;
             this.ButtonTimeAndSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonTimeAndSalary.Location = new System.Drawing.Point(3, 3);
+            this.ButtonTimeAndSalary.Location = new System.Drawing.Point(4, 3);
             this.ButtonTimeAndSalary.Name = "ButtonTimeAndSalary";
             this.ButtonTimeAndSalary.Size = new System.Drawing.Size(240, 60);
             this.ButtonTimeAndSalary.TabIndex = 4;
@@ -153,10 +154,10 @@
             this.ButtonEmployeeManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonEmployeeManagement.Image = global::GUI.Properties.Resources.icons8_identification_documents_50;
             this.ButtonEmployeeManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonEmployeeManagement.Location = new System.Drawing.Point(4, 4);
+            this.ButtonEmployeeManagement.Location = new System.Drawing.Point(4, 5);
             this.ButtonEmployeeManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonEmployeeManagement.Name = "ButtonEmployeeManagement";
-            this.ButtonEmployeeManagement.Size = new System.Drawing.Size(239, 60);
+            this.ButtonEmployeeManagement.Size = new System.Drawing.Size(240, 60);
             this.ButtonEmployeeManagement.TabIndex = 0;
             this.ButtonEmployeeManagement.Text = "              Employee Management";
             this.ButtonEmployeeManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,7 +177,7 @@
             // LabelName
             // 
             this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(72, 195);
+            this.LabelName.Location = new System.Drawing.Point(50, 195);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(44, 16);
             this.LabelName.TabIndex = 2;
@@ -202,6 +203,7 @@
             this.SideBar.Controls.Add(this.panelWorkingTime);
             this.SideBar.Controls.Add(this.panel1);
             this.SideBar.Controls.Add(this.panel2);
+            this.SideBar.Controls.Add(this.BtnReport);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.SideBar.Location = new System.Drawing.Point(0, 62);
@@ -236,27 +238,11 @@
             // 
             // panelEmployee
             // 
-            this.panelEmployee.Controls.Add(this.ButtonEmployeeManagement);
+            this.panelEmployee.Controls.Add(this.BtnAccManage);
             this.panelEmployee.Location = new System.Drawing.Point(3, 312);
             this.panelEmployee.Name = "panelEmployee";
             this.panelEmployee.Size = new System.Drawing.Size(246, 65);
             this.panelEmployee.TabIndex = 2;
-            // 
-            // panelWorkingTime
-            // 
-            this.panelWorkingTime.Controls.Add(this.ButtonTimeAndSalary);
-            this.panelWorkingTime.Location = new System.Drawing.Point(3, 383);
-            this.panelWorkingTime.Name = "panelWorkingTime";
-            this.panelWorkingTime.Size = new System.Drawing.Size(246, 65);
-            this.panelWorkingTime.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.BtnAccManage);
-            this.panel1.Location = new System.Drawing.Point(3, 454);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 65);
-            this.panel1.TabIndex = 7;
             // 
             // BtnAccManage
             // 
@@ -265,18 +251,50 @@
             this.BtnAccManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAccManage.Image = global::GUI.Properties.Resources.icons8_user_48;
             this.BtnAccManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAccManage.Location = new System.Drawing.Point(3, 3);
+            this.BtnAccManage.Location = new System.Drawing.Point(4, 2);
             this.BtnAccManage.Name = "BtnAccManage";
             this.BtnAccManage.Size = new System.Drawing.Size(240, 60);
             this.BtnAccManage.TabIndex = 8;
-            this.BtnAccManage.Text = "              Account User";
+            this.BtnAccManage.Text = "              Account Management";
             this.BtnAccManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAccManage.UseVisualStyleBackColor = true;
             this.BtnAccManage.Click += new System.EventHandler(this.BtnAccManage_Click);
             // 
+            // panelWorkingTime
+            // 
+            this.panelWorkingTime.Controls.Add(this.ButtonEmployeeManagement);
+            this.panelWorkingTime.Location = new System.Drawing.Point(3, 383);
+            this.panelWorkingTime.Name = "panelWorkingTime";
+            this.panelWorkingTime.Size = new System.Drawing.Size(246, 65);
+            this.panelWorkingTime.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ButtonShift);
+            this.panel1.Location = new System.Drawing.Point(3, 454);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(246, 65);
+            this.panel1.TabIndex = 7;
+            // 
+            // ButtonShift
+            // 
+            this.ButtonShift.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonShift.Image = global::GUI.Properties.Resources.icons8_time_is_money_48;
+            this.ButtonShift.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonShift.Location = new System.Drawing.Point(4, 2);
+            this.ButtonShift.Name = "ButtonShift";
+            this.ButtonShift.Size = new System.Drawing.Size(240, 60);
+            this.ButtonShift.TabIndex = 10;
+            this.ButtonShift.Text = "             Shift";
+            this.ButtonShift.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonShift.UseVisualStyleBackColor = true;
+            this.ButtonShift.Click += new System.EventHandler(this.ButtonShift_Click);
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.BtnReport);
+            this.panel2.Controls.Add(this.ButtonTimeAndSalary);
             this.panel2.Location = new System.Drawing.Point(3, 525);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(246, 65);
@@ -289,9 +307,9 @@
             this.BtnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReport.Image = global::GUI.Properties.Resources.icons8_report_50;
             this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReport.Location = new System.Drawing.Point(3, 2);
+            this.BtnReport.Location = new System.Drawing.Point(3, 596);
             this.BtnReport.Name = "BtnReport";
-            this.BtnReport.Size = new System.Drawing.Size(240, 60);
+            this.BtnReport.Size = new System.Drawing.Size(244, 60);
             this.BtnReport.TabIndex = 10;
             this.BtnReport.Text = "              Report";
             this.BtnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -365,5 +383,6 @@
         private System.Windows.Forms.Button BtnAccManage;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnReport;
+        private System.Windows.Forms.Button ButtonShift;
     }
 }

@@ -430,6 +430,7 @@
             this.BtnUpload.TabIndex = 100;
             this.BtnUpload.Text = "Upload Picture";
             this.BtnUpload.Transparent = false;
+            this.BtnUpload.Click += new System.EventHandler(this.BtnUpload_Click);
             // 
             // CmbBoxRole
             // 
