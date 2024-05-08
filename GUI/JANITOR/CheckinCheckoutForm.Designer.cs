@@ -37,8 +37,6 @@
             this.GroupBoxCheck = new ReaLTaiizor.Controls.RibbonGroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBoxDate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.RadioButtonJanitor = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.RadioButtonRecep = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GroupBoxProfile = new ReaLTaiizor.Controls.RibbonGroupBox();
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtBoxRole = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,7 +69,7 @@
             this.btnCheckIn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.btnCheckIn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btnCheckIn.Location = new System.Drawing.Point(365, 342);
+            this.btnCheckIn.Location = new System.Drawing.Point(112, 342);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(173, 39);
             this.btnCheckIn.TabIndex = 5;
@@ -90,7 +88,7 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(105, 342);
+            this.btnCheckOut.Location = new System.Drawing.Point(365, 342);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(173, 39);
             this.btnCheckOut.TabIndex = 6;
@@ -114,7 +112,7 @@
             this.cmbBoxTime.FormattingEnabled = true;
             this.cmbBoxTime.IsDerivedStyle = true;
             this.cmbBoxTime.ItemHeight = 20;
-            this.cmbBoxTime.Location = new System.Drawing.Point(365, 99);
+            this.cmbBoxTime.Location = new System.Drawing.Point(365, 74);
             this.cmbBoxTime.Name = "cmbBoxTime";
             this.cmbBoxTime.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.cmbBoxTime.SelectedItemForeColor = System.Drawing.Color.White;
@@ -164,13 +162,13 @@
             this.txtBoxNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.txtBoxNote.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.txtBoxNote.Location = new System.Drawing.Point(365, 145);
+            this.txtBoxNote.Location = new System.Drawing.Point(365, 107);
             this.txtBoxNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxNote.Name = "txtBoxNote";
             this.txtBoxNote.PasswordChar = '\0';
             this.txtBoxNote.PlaceholderText = "Note";
             this.txtBoxNote.SelectedText = "";
-            this.txtBoxNote.Size = new System.Drawing.Size(215, 117);
+            this.txtBoxNote.Size = new System.Drawing.Size(215, 171);
             this.txtBoxNote.TabIndex = 15;
             // 
             // GroupBoxCheck
@@ -183,8 +181,6 @@
             this.GroupBoxCheck.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.GroupBoxCheck.Controls.Add(this.pictureBox1);
             this.GroupBoxCheck.Controls.Add(this.txtBoxDate);
-            this.GroupBoxCheck.Controls.Add(this.RadioButtonJanitor);
-            this.GroupBoxCheck.Controls.Add(this.RadioButtonRecep);
             this.GroupBoxCheck.Controls.Add(this.txtBoxNote);
             this.GroupBoxCheck.Controls.Add(this.MonthCalendar);
             this.GroupBoxCheck.Controls.Add(this.TimePicker);
@@ -235,44 +231,6 @@
             this.txtBoxDate.SelectedText = "";
             this.txtBoxDate.Size = new System.Drawing.Size(165, 36);
             this.txtBoxDate.TabIndex = 19;
-            // 
-            // RadioButtonJanitor
-            // 
-            this.RadioButtonJanitor.AutoSize = true;
-            this.RadioButtonJanitor.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.RadioButtonJanitor.CheckedState.BorderThickness = 0;
-            this.RadioButtonJanitor.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.RadioButtonJanitor.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RadioButtonJanitor.CheckedState.InnerOffset = -4;
-            this.RadioButtonJanitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioButtonJanitor.Location = new System.Drawing.Point(500, 55);
-            this.RadioButtonJanitor.Name = "RadioButtonJanitor";
-            this.RadioButtonJanitor.Size = new System.Drawing.Size(81, 24);
-            this.RadioButtonJanitor.TabIndex = 18;
-            this.RadioButtonJanitor.Text = "Janitor";
-            this.RadioButtonJanitor.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.RadioButtonJanitor.UncheckedState.BorderThickness = 1;
-            this.RadioButtonJanitor.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.RadioButtonJanitor.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // RadioButtonRecep
-            // 
-            this.RadioButtonRecep.AutoSize = true;
-            this.RadioButtonRecep.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.RadioButtonRecep.CheckedState.BorderThickness = 0;
-            this.RadioButtonRecep.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.RadioButtonRecep.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RadioButtonRecep.CheckedState.InnerOffset = -4;
-            this.RadioButtonRecep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioButtonRecep.Location = new System.Drawing.Point(365, 55);
-            this.RadioButtonRecep.Name = "RadioButtonRecep";
-            this.RadioButtonRecep.Size = new System.Drawing.Size(123, 24);
-            this.RadioButtonRecep.TabIndex = 16;
-            this.RadioButtonRecep.Text = "Receptionist";
-            this.RadioButtonRecep.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.RadioButtonRecep.UncheckedState.BorderThickness = 1;
-            this.RadioButtonRecep.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.RadioButtonRecep.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // GroupBoxProfile
             // 
@@ -333,6 +291,7 @@
             this.txtBoxRole.Name = "txtBoxRole";
             this.txtBoxRole.PasswordChar = '\0';
             this.txtBoxRole.PlaceholderText = "";
+            this.txtBoxRole.ReadOnly = true;
             this.txtBoxRole.SelectedText = "";
             this.txtBoxRole.Size = new System.Drawing.Size(146, 31);
             this.txtBoxRole.TabIndex = 29;
@@ -367,6 +326,7 @@
             this.txtBoxID.Name = "txtBoxID";
             this.txtBoxID.PasswordChar = '\0';
             this.txtBoxID.PlaceholderText = "";
+            this.txtBoxID.ReadOnly = true;
             this.txtBoxID.SelectedText = "";
             this.txtBoxID.Size = new System.Drawing.Size(93, 31);
             this.txtBoxID.TabIndex = 27;
@@ -401,6 +361,7 @@
             this.txtBoxCCCD.Name = "txtBoxCCCD";
             this.txtBoxCCCD.PasswordChar = '\0';
             this.txtBoxCCCD.PlaceholderText = "";
+            this.txtBoxCCCD.ReadOnly = true;
             this.txtBoxCCCD.SelectedText = "";
             this.txtBoxCCCD.Size = new System.Drawing.Size(254, 31);
             this.txtBoxCCCD.TabIndex = 25;
@@ -435,6 +396,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "";
+            this.txtFullName.ReadOnly = true;
             this.txtFullName.SelectedText = "";
             this.txtFullName.Size = new System.Drawing.Size(254, 31);
             this.txtFullName.TabIndex = 23;
@@ -446,6 +408,7 @@
             this.PictureBoxEmployee.Name = "PictureBoxEmployee";
             this.PictureBoxEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PictureBoxEmployee.Size = new System.Drawing.Size(200, 190);
+            this.PictureBoxEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxEmployee.TabIndex = 22;
             this.PictureBoxEmployee.TabStop = false;
             // 
@@ -501,7 +464,6 @@
             this.Text = "CheckinCheckoutForm";
             this.Load += new System.EventHandler(this.CheckinCheckoutForm_Load);
             this.GroupBoxCheck.ResumeLayout(false);
-            this.GroupBoxCheck.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GroupBoxProfile.ResumeLayout(false);
             this.GroupBoxProfile.PerformLayout();
@@ -520,8 +482,6 @@
         private System.Windows.Forms.MonthCalendar MonthCalendar;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxNote;
         private ReaLTaiizor.Controls.RibbonGroupBox GroupBoxCheck;
-        private Guna.UI2.WinForms.Guna2RadioButton RadioButtonRecep;
-        private Guna.UI2.WinForms.Guna2RadioButton RadioButtonJanitor;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxDate;
         private ReaLTaiizor.Controls.RibbonGroupBox GroupBoxProfile;
         private System.Windows.Forms.PictureBox pictureBox1;

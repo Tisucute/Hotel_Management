@@ -176,12 +176,12 @@
             // 
             // LabelName
             // 
-            this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(50, 195);
+            this.LabelName.Location = new System.Drawing.Point(0, 195);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(44, 16);
+            this.LabelName.Size = new System.Drawing.Size(243, 37);
             this.LabelName.TabIndex = 2;
             this.LabelName.Text = "Name";
+            this.LabelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PictureBoxManager
             // 
@@ -349,7 +349,6 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.panelAvatar.ResumeLayout(false);
-            this.panelAvatar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxManager)).EndInit();
             this.SideBar.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);

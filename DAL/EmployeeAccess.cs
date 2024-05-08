@@ -162,5 +162,25 @@ namespace DAL
             return table;
            
         }
+        public bool checkExistShift(DateTime dateTime)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM ATTENDANCE WHERE checkInTime = @time", mydb.getConnection);
+            command.Parameters.Add("@time", SqlDbType.VarChar).Value = dateTime.ToString("yyyy-MM-dd 07:00:00");
+            mydb.openConnection();
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                mydb.closeConnection();
+                return false;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return true;
+            }
+
+        }
     }
 }

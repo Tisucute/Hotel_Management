@@ -63,6 +63,10 @@ namespace BLL
         {
             return employeeAccess.getShiftByTime(time);
         }
+        public bool checkExistShift(DateTime dateTime)
+        {
+            return employeeAccess.checkExistShift(dateTime);
+        }
 
     }
 }

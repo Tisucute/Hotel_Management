@@ -412,6 +412,7 @@
             this.Controls.Add(this.ButtonSave);
             this.Controls.Add(this.ButtonAssign);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AssignShiftForm";
             this.Text = "AssignShiftForm";
             this.Load += new System.EventHandler(this.AssignShiftForm_Load);

@@ -35,7 +35,8 @@ namespace GUI
                 // Remove AutoSizing:
                 dgvListEmployee.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-                // Set Width to calculated AutoSize value:
+                // Set Width to
+                // AutoSize value:
                 dgvListEmployee.Columns[i].Width = colw;
             }
         }
@@ -44,7 +45,12 @@ namespace GUI
         private void ButtonAssign_Click(object sender, EventArgs e)
         {
             DateTime dateTime = dateTimePicker.Value;
-            DataTable dt = employeeBLL.getEmployeesWorking();
+            if (!employeeBLL.checkExistShift(dateTime))
+            {
+                MessageBox.Show("This date has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+                DataTable dt = employeeBLL.getEmployeesWorking();
             List<EMPLOYEE> employees = new List<EMPLOYEE>();
             foreach (DataRow x in dt.Rows)
             {
@@ -184,7 +190,6 @@ namespace GUI
             }
             catch { }
         }
-
         private void ButtonSave_Click(object sender, EventArgs e)
         {
             if (comboBox.SelectedIndex == 0)

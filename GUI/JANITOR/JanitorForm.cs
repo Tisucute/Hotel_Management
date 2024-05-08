@@ -32,18 +32,25 @@ namespace GUI
             byte[] pic = (byte[])table.Rows[0]["picture"];
             MemoryStream picture = new MemoryStream(pic);
             PictureBoxJanitor.Image = Image.FromStream(picture);
-            LabelName.Text = "Welcome, " + table.Rows[0]["fullname"].ToString().Trim();
+            LabelName.Text = "Xin chào, " + table.Rows[0]["fullname"].ToString().Trim();
         }
         LoginBLL loginBLL = new LoginBLL();
         private void ButtonTimeAndSalary_Click(object sender, EventArgs e)
         {
             EMPLOYEE employee = new EMPLOYEE();
-            DataTable dt = loginBLL.getUserByID(login.id);
+            EmployeeBLL employeeBLL = new EmployeeBLL();
+            DataTable dt = employeeBLL.getEmployeeByID(login.id);
             foreach (DataRow row in dt.Rows)
             {
                 employee.id = Convert.ToInt32(row["id"].ToString());
+                employee.fullname = row["fullname"].ToString();
+                employee.CCCD = row["CCCD"].ToString().Trim();
+                employee.roleName = row["role_name"].ToString();
+                byte[] tmp = (byte[])row["picture"];
+                employee.pic = new MemoryStream(tmp);
+                employee.role = Convert.ToInt32(row["role_id"].ToString());
             }
-            CheckinCheckoutForm check = new CheckinCheckoutForm();
+            CheckinCheckoutForm check = new CheckinCheckoutForm(employee);
             check.ShowDialog();
         }
 

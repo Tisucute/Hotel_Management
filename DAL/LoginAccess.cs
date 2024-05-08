@@ -40,7 +40,7 @@ namespace DAL
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("SELECT employee_id,  LOGIN.fullname, username, password, ROLE.role_id, picture, ROLE.role_name FROM dbo.LOGIN \r\nINNER JOIN ROLE ON ROLE.role_id = LOGIN.role_id INNER JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT employee_id,  LOGIN.fullname, username, password, ROLE.role_id, picture, ROLE.role_name FROM dbo.LOGIN INNER JOIN ROLE ON ROLE.role_id = LOGIN.role_id INNER JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id", mydb.getConnection);
             adapter.SelectCommand = command;
             adapter.Fill(table);
             return table;
@@ -49,7 +49,7 @@ namespace DAL
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("SELECT employee_id,  LOGIN.fullname, username, password, ROLE.role_id, picture, ROLE.role_name FROM dbo.LOGIN \r\nINNER JOIN ROLE ON ROLE.role_id = LOGIN.role_id INNER JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id WHERE id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT employee_id,  LOGIN.fullname, username, password, ROLE.role_id, picture, ROLE.role_name FROM dbo.LOGIN INNER JOIN ROLE ON ROLE.role_id = LOGIN.role_id INNER JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id WHERE id = @id", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             adapter.SelectCommand = command;
             adapter.Fill(table);

@@ -99,20 +99,20 @@
             // 
             // LabelName
             // 
-            this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(64, 193);
+            this.LabelName.Location = new System.Drawing.Point(0, 192);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(44, 16);
+            this.LabelName.Size = new System.Drawing.Size(246, 40);
             this.LabelName.TabIndex = 2;
             this.LabelName.Text = "Name";
+            this.LabelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PictureBoxJanitor
             // 
             this.PictureBoxJanitor.ImageRotate = 0F;
-            this.PictureBoxJanitor.Location = new System.Drawing.Point(53, 37);
+            this.PictureBoxJanitor.Location = new System.Drawing.Point(42, 28);
             this.PictureBoxJanitor.Name = "PictureBoxJanitor";
             this.PictureBoxJanitor.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.PictureBoxJanitor.Size = new System.Drawing.Size(141, 136);
+            this.PictureBoxJanitor.Size = new System.Drawing.Size(167, 161);
             this.PictureBoxJanitor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxJanitor.TabIndex = 1;
             this.PictureBoxJanitor.TabStop = false;
@@ -233,7 +233,6 @@
             this.Load += new System.EventHandler(this.JanitorForm_Load);
             this.SideBar.ResumeLayout(false);
             this.panelAvatar.ResumeLayout(false);
-            this.panelAvatar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxJanitor)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.panelWorkingTime.ResumeLayout(false);

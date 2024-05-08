@@ -19,6 +19,7 @@ namespace DTO
         public string address { get; set; }
         public string phone { get; set; }
         public int role { get; set; }
+        public string roleName { get; set; }
         public MemoryStream pic { get; set; }
         public string status { get; set; }
         public List<WorkSession> workSessions { get; set; } = new List<WorkSession>();
