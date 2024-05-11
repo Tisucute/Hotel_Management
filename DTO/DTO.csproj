@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +46,7 @@
     <Compile Include="EMPLOYEE.cs" />
     <Compile Include="LOGIN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ROOM.cs" />
     <Compile Include="SHIFTS.cs" />
     <Compile Include="WorkSession.cs" />
   </ItemGroup>

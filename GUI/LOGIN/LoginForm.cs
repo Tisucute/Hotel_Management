@@ -100,7 +100,7 @@ namespace GUI
                     login.role = 2;
                     if (loginBLL.checkLogin(login))
                     {
-                        ReceptionistForm receptionistForm = new ReceptionistForm();
+                        ReceptionistForm receptionistForm = new ReceptionistForm(login);
                         this.Hide();
                         receptionistForm.Show();
                     }

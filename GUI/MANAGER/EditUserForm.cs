@@ -35,7 +35,7 @@ namespace GUI
             txtBoxFullname.Text = login.fullname;
             txtBoxUsername.Text = login.username;
             txtBoxPass.Text = login.password;
-            PictureBoxEmployee.Image = System.Drawing.Image.FromStream(login.pic);
+            //PictureBoxEmployee.Image = System.Drawing.Image.FromStream(login.pic);
             CmbBoxRole.DataSource = loginBLL.getAllRole();
             CmbBoxRole.DisplayMember = "role_name";
             CmbBoxRole.ValueMember = "role_id";

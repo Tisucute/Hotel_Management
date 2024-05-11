@@ -19,8 +19,6 @@ namespace GUI
 
         private void AssignShiftForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLKSDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
-            this.eMPLOYEESTableAdapter.Fill(this.qLKSDataSet.EMPLOYEES);
             dateTimePicker.Value = DateTime.Now;
             dgvListEmployee.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvListEmployee.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;

@@ -69,7 +69,7 @@
             this.btnCheckIn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.btnCheckIn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btnCheckIn.Location = new System.Drawing.Point(112, 342);
+            this.btnCheckIn.Location = new System.Drawing.Point(114, 400);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(173, 39);
             this.btnCheckIn.TabIndex = 5;
@@ -88,7 +88,7 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(365, 342);
+            this.btnCheckOut.Location = new System.Drawing.Point(371, 400);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(173, 39);
             this.btnCheckOut.TabIndex = 6;
@@ -112,7 +112,7 @@
             this.cmbBoxTime.FormattingEnabled = true;
             this.cmbBoxTime.IsDerivedStyle = true;
             this.cmbBoxTime.ItemHeight = 20;
-            this.cmbBoxTime.Location = new System.Drawing.Point(365, 74);
+            this.cmbBoxTime.Location = new System.Drawing.Point(371, 96);
             this.cmbBoxTime.Name = "cmbBoxTime";
             this.cmbBoxTime.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.cmbBoxTime.SelectedItemForeColor = System.Drawing.Color.White;
@@ -132,7 +132,7 @@
             this.TimePicker.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.TimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.TimePicker.Location = new System.Drawing.Point(193, 290);
+            this.TimePicker.Location = new System.Drawing.Point(195, 312);
             this.TimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.TimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.TimePicker.Name = "TimePicker";
@@ -144,7 +144,7 @@
             // 
             // MonthCalendar
             // 
-            this.MonthCalendar.Location = new System.Drawing.Point(58, 71);
+            this.MonthCalendar.Location = new System.Drawing.Point(60, 93);
             this.MonthCalendar.Name = "MonthCalendar";
             this.MonthCalendar.TabIndex = 14;
             this.MonthCalendar.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
@@ -162,7 +162,7 @@
             this.txtBoxNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.txtBoxNote.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.txtBoxNote.Location = new System.Drawing.Point(365, 107);
+            this.txtBoxNote.Location = new System.Drawing.Point(371, 129);
             this.txtBoxNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxNote.Name = "txtBoxNote";
             this.txtBoxNote.PasswordChar = '\0';
@@ -193,7 +193,7 @@
             this.GroupBoxCheck.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.GroupBoxCheck.Location = new System.Drawing.Point(629, 12);
             this.GroupBoxCheck.Name = "GroupBoxCheck";
-            this.GroupBoxCheck.Size = new System.Drawing.Size(611, 419);
+            this.GroupBoxCheck.Size = new System.Drawing.Size(611, 473);
             this.GroupBoxCheck.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.GroupBoxCheck.TabIndex = 16;
             this.GroupBoxCheck.Text = "Check in & Check out";
@@ -222,7 +222,7 @@
             this.txtBoxDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxDate.Location = new System.Drawing.Point(22, 291);
+            this.txtBoxDate.Location = new System.Drawing.Point(24, 313);
             this.txtBoxDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxDate.Name = "txtBoxDate";
             this.txtBoxDate.PasswordChar = '\0';
@@ -256,7 +256,7 @@
             this.GroupBoxProfile.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.GroupBoxProfile.Location = new System.Drawing.Point(12, 12);
             this.GroupBoxProfile.Name = "GroupBoxProfile";
-            this.GroupBoxProfile.Size = new System.Drawing.Size(611, 289);
+            this.GroupBoxProfile.Size = new System.Drawing.Size(611, 358);
             this.GroupBoxProfile.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.GroupBoxProfile.TabIndex = 17;
             this.GroupBoxProfile.Text = "Employee Profile";
@@ -266,7 +266,7 @@
             this.skyLabel4.AutoSize = true;
             this.skyLabel4.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
             this.skyLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel4.Location = new System.Drawing.Point(438, 74);
+            this.skyLabel4.Location = new System.Drawing.Point(428, 93);
             this.skyLabel4.Name = "skyLabel4";
             this.skyLabel4.Size = new System.Drawing.Size(36, 14);
             this.skyLabel4.TabIndex = 30;
@@ -286,7 +286,7 @@
             this.txtBoxRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxRole.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxRole.Location = new System.Drawing.Point(431, 92);
+            this.txtBoxRole.Location = new System.Drawing.Point(421, 111);
             this.txtBoxRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxRole.Name = "txtBoxRole";
             this.txtBoxRole.PasswordChar = '\0';
@@ -301,7 +301,7 @@
             this.skyLabel3.AutoSize = true;
             this.skyLabel3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
             this.skyLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel3.Location = new System.Drawing.Point(330, 74);
+            this.skyLabel3.Location = new System.Drawing.Point(320, 93);
             this.skyLabel3.Name = "skyLabel3";
             this.skyLabel3.Size = new System.Drawing.Size(23, 14);
             this.skyLabel3.TabIndex = 28;
@@ -321,7 +321,7 @@
             this.txtBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxID.Location = new System.Drawing.Point(323, 92);
+            this.txtBoxID.Location = new System.Drawing.Point(313, 111);
             this.txtBoxID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxID.Name = "txtBoxID";
             this.txtBoxID.PasswordChar = '\0';
@@ -336,7 +336,7 @@
             this.skyLabel2.AutoSize = true;
             this.skyLabel2.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
             this.skyLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel2.Location = new System.Drawing.Point(330, 190);
+            this.skyLabel2.Location = new System.Drawing.Point(320, 209);
             this.skyLabel2.Name = "skyLabel2";
             this.skyLabel2.Size = new System.Drawing.Size(44, 14);
             this.skyLabel2.TabIndex = 26;
@@ -356,7 +356,7 @@
             this.txtBoxCCCD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBoxCCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBoxCCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBoxCCCD.Location = new System.Drawing.Point(323, 208);
+            this.txtBoxCCCD.Location = new System.Drawing.Point(313, 227);
             this.txtBoxCCCD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxCCCD.Name = "txtBoxCCCD";
             this.txtBoxCCCD.PasswordChar = '\0';
@@ -371,7 +371,7 @@
             this.skyLabel1.AutoSize = true;
             this.skyLabel1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
             this.skyLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel1.Location = new System.Drawing.Point(330, 127);
+            this.skyLabel1.Location = new System.Drawing.Point(320, 146);
             this.skyLabel1.Name = "skyLabel1";
             this.skyLabel1.Size = new System.Drawing.Size(73, 14);
             this.skyLabel1.TabIndex = 24;
@@ -391,7 +391,7 @@
             this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Location = new System.Drawing.Point(323, 145);
+            this.txtFullName.Location = new System.Drawing.Point(313, 164);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
@@ -404,7 +404,7 @@
             // PictureBoxEmployee
             // 
             this.PictureBoxEmployee.ImageRotate = 0F;
-            this.PictureBoxEmployee.Location = new System.Drawing.Point(72, 72);
+            this.PictureBoxEmployee.Location = new System.Drawing.Point(43, 92);
             this.PictureBoxEmployee.Name = "PictureBoxEmployee";
             this.PictureBoxEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PictureBoxEmployee.Size = new System.Drawing.Size(200, 190);
@@ -415,7 +415,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GUI.Properties.Resources.icons8_about_me_50;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(18, 33);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -439,7 +439,7 @@
             this.nightHeaderLabel1.Font = new System.Drawing.Font("Monotype Corsiva", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nightHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.nightHeaderLabel1.LeftSideForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.nightHeaderLabel1.Location = new System.Drawing.Point(31, 302);
+            this.nightHeaderLabel1.Location = new System.Drawing.Point(30, 389);
             this.nightHeaderLabel1.Name = "nightHeaderLabel1";
             this.nightHeaderLabel1.RightSideForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(171)))), ((int)(((byte)(176)))));
             this.nightHeaderLabel1.Side = ReaLTaiizor.Controls.NightHeaderLabel.PanelSide.LeftPanel;
@@ -455,12 +455,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1253, 445);
+            this.ClientSize = new System.Drawing.Size(1253, 571);
             this.Controls.Add(this.nightHeaderLabel1);
             this.Controls.Add(this.moonLabel1);
             this.Controls.Add(this.GroupBoxProfile);
             this.Controls.Add(this.GroupBoxCheck);
             this.Name = "CheckinCheckoutForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckinCheckoutForm";
             this.Load += new System.EventHandler(this.CheckinCheckoutForm_Load);
             this.GroupBoxCheck.ResumeLayout(false);

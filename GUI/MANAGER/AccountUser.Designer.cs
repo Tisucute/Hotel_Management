@@ -37,12 +37,12 @@
             this.LabelSearch = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lOGINBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLKSDataSetLogin = new GUI.QLKSDataSetLogin();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.lOGINBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLKSDataSetLogin = new GUI.QLKSDataSetLogin();
             this.lOGINTableAdapter = new GUI.QLKSDataSetLoginTableAdapters.LOGINTableAdapter();
             this.employeeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,6 +165,16 @@
             this.dgvListEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellClick);
             this.dgvListEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListEmployees_CellContentClick);
             // 
+            // lOGINBindingSource
+            // 
+            this.lOGINBindingSource.DataMember = "LOGIN";
+            this.lOGINBindingSource.DataSource = this.qLKSDataSetLogin;
+            // 
+            // qLKSDataSetLogin
+            // 
+            this.qLKSDataSetLogin.DataSetName = "QLKSDataSetLogin";
+            this.qLKSDataSetLogin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -224,16 +234,6 @@
             this.ButtonAdd.Size = new System.Drawing.Size(64, 54);
             this.ButtonAdd.TabIndex = 12;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
-            // 
-            // lOGINBindingSource
-            // 
-            this.lOGINBindingSource.DataMember = "LOGIN";
-            this.lOGINBindingSource.DataSource = this.qLKSDataSetLogin;
-            // 
-            // qLKSDataSetLogin
-            // 
-            this.qLKSDataSetLogin.DataSetName = "QLKSDataSetLogin";
-            this.qLKSDataSetLogin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lOGINTableAdapter
             // 

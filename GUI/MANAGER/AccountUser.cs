@@ -56,7 +56,6 @@ namespace GUI
         private void AccountUserForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLKSDataSetLogin.LOGIN' table. You can move, or remove it, as needed.
-            this.lOGINTableAdapter.Fill(this.qLKSDataSetLogin.LOGIN);
             fillGrid();
         }
 

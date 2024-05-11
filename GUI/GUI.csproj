@@ -124,10 +124,10 @@
     <Compile Include="MANAGER\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="JANITOR\CheckinCheckoutForm.cs">
+    <Compile Include="CheckinCheckoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JANITOR\CheckinCheckoutForm.Designer.cs">
+    <Compile Include="CheckinCheckoutForm.Designer.cs">
       <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MANAGER\EditEmployeeForm.cs">
@@ -186,6 +186,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKSDataSetShifts.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\AddRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\AddRoomForm.Designer.cs">
+      <DependentUpon>AddRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RECEPTIONIST\EditRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\EditRoomForm.Designer.cs">
+      <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\ReceptionistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,18 @@
     </Compile>
     <Compile Include="MANAGER\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RECEPTIONIST\RoomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\RoomManagement.Designer.cs">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ucRooms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ucRooms.Designer.cs">
+      <DependentUpon>ucRooms.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectEmployeeForm.cs">
       <SubType>Form</SubType>
@@ -229,7 +253,7 @@
     <EmbeddedResource Include="MANAGER\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JANITOR\CheckinCheckoutForm.resx">
+    <EmbeddedResource Include="CheckinCheckoutForm.resx">
       <DependentUpon>CheckinCheckoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\AddReportForm.resx">
@@ -261,6 +285,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\AddRoomForm.resx">
+      <DependentUpon>AddRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\EditRoomForm.resx">
+      <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ReceptionistForm.resx">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,7 +300,13 @@
     <EmbeddedResource Include="MANAGER\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\ucRooms.resx">
+      <DependentUpon>ucRooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="RECEPTIONIST\RoomManagement.resx">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectEmployeeForm.resx">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +463,17 @@
     <None Include="Resources\icons8-recycle-bin-48.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\velassaru-maldives-resort-vacation-wallpaper-thumb.jpg" />
+    <None Include="Resources\icons8-home-50 %281%29.png" />
+    <None Include="Resources\icons8-calendar-50.png" />
+    <None Include="Resources\icons8-bed-50.png" />
+    <None Include="Resources\icons8-tourist-50.png" />
+    <None Include="Resources\icons8-service-50.png" />
+    <None Include="Resources\icons8-report-50 %281%29.png" />
+    <None Include="Resources\icons8-arrow-50 %282%29.png" />
+    <None Include="Resources\icons8-arrow-50 %282%291.png" />
+    <None Include="Resources\icons8-find-50.png" />
+    <None Include="Resources\icons8-upload-64.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

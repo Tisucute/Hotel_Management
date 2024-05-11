@@ -4,7 +4,7 @@ using System.IO;
 
 namespace DTO
 {
-    public class LOGIN
+    public  class LOGIN
     {
         public int id { get; set; }
         public string fullname { get; set; }
@@ -19,8 +19,6 @@ namespace DTO
             username = table.Rows[0]["username"].ToString();
             password = table.Rows[0]["password"].ToString();
             role = Convert.ToInt32(table.Rows[0]["role_id"].ToString());
-            byte[] tmp = (byte[])table.Rows[0]["picture"];
-            pic = new MemoryStream(tmp);
         }
     }
 }

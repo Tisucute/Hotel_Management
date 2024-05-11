@@ -64,11 +64,7 @@ namespace GUI
                 }
             }
         }
-        private void MenuSideBarButton_Click(object sender, EventArgs e)
-        {
-            SideBarTimer.Start();
-        }
-
+        
         private void MenuSideBar2_Click(object sender, EventArgs e)
         {
             SideBarTimer.Start();
@@ -77,10 +73,14 @@ namespace GUI
         {
             EmployeeBLL employeeBLL = new EmployeeBLL();
             DataTable table = employeeBLL.getUserNameAndImage(login.id);
-            byte[] pic = (byte[])table.Rows[0]["picture"];
-            MemoryStream picture = new MemoryStream(pic);
-            PictureBoxManager.Image = Image.FromStream(picture);
-            LabelName.Text = "Welcome, " + table.Rows[0]["fullname"].ToString().Trim();
+            if ((table.Rows.Count > 0))
+            {
+                byte[] pic = (byte[])table.Rows[0]["picture"];
+                MemoryStream picture = new MemoryStream(pic);
+                PictureBoxManager.Image = Image.FromStream(picture);
+
+                LabelName.Text = "Welcome, " + table.Rows[0]["fullname"].ToString().Trim();
+            }
         }
         //Hiện thông tin đăng nhập
         private void ManagerForm_Load(object sender, EventArgs e)

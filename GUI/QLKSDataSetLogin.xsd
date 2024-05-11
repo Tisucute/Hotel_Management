@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LOGINTableAdapter" GeneratorDataComponentClassName="LOGINTableAdapter" Name="LOGIN" UserDataComponentName="LOGINTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QLKSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLKSConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT employee_id,  LOGIN.fullname, username, password, ROLE.role_id, picture, ROLE.role_name FROM dbo.LOGIN 
@@ -39,34 +39,34 @@ INNER JOIN EMPLOYEES ON EMPLOYEES.id = LOGIN.employee_id</CommandText>
   <xs:element name="QLKSDataSetLogin" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="QLKSDataSetLogin" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLKSDataSetLogin">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="LOGIN" msprop:Generator_RowClassName="LOGINRow" msprop:Generator_RowEvHandlerName="LOGINRowChangeEventHandler" msprop:Generator_RowDeletedName="LOGINRowDeleted" msprop:Generator_RowDeletingName="LOGINRowDeleting" msprop:Generator_RowEvArgName="LOGINRowChangeEvent" msprop:Generator_TablePropName="LOGIN" msprop:Generator_RowChangedName="LOGINRowChanged" msprop:Generator_UserTableName="LOGIN" msprop:Generator_RowChangingName="LOGINRowChanging" msprop:Generator_TableClassName="LOGINDataTable" msprop:Generator_TableVarName="tableLOGIN">
+        <xs:element name="LOGIN" msprop:Generator_RowEvHandlerName="LOGINRowChangeEventHandler" msprop:Generator_RowDeletedName="LOGINRowDeleted" msprop:Generator_RowDeletingName="LOGINRowDeleting" msprop:Generator_RowEvArgName="LOGINRowChangeEvent" msprop:Generator_TablePropName="LOGIN" msprop:Generator_RowChangedName="LOGINRowChanged" msprop:Generator_UserTableName="LOGIN" msprop:Generator_RowChangingName="LOGINRowChanging" msprop:Generator_RowClassName="LOGINRow" msprop:Generator_TableClassName="LOGINDataTable" msprop:Generator_TableVarName="tableLOGIN">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="employee_id" msprop:Generator_UserColumnName="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnVarNameInTable="columnemployee_id" type="xs:int" />
-              <xs:element name="fullname" msprop:Generator_UserColumnName="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" minOccurs="0">
+              <xs:element name="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_UserColumnName="employee_id" msprop:Generator_ColumnVarNameInTable="columnemployee_id" type="xs:int" />
+              <xs:element name="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_UserColumnName="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="username" msprop:Generator_UserColumnName="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnVarNameInTable="columnusername" minOccurs="0">
+              <xs:element name="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_UserColumnName="username" msprop:Generator_ColumnVarNameInTable="columnusername" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="password" msprop:Generator_UserColumnName="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnVarNameInTable="columnpassword" minOccurs="0">
+              <xs:element name="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_UserColumnName="password" msprop:Generator_ColumnVarNameInTable="columnpassword" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="role_id" msprop:Generator_UserColumnName="role_id" msprop:Generator_ColumnPropNameInTable="role_idColumn" msprop:Generator_ColumnPropNameInRow="role_id" msprop:Generator_ColumnVarNameInTable="columnrole_id" type="xs:int" />
-              <xs:element name="picture" msprop:Generator_ColumnPropNameInRow="picture" msprop:Generator_ColumnPropNameInTable="pictureColumn" msprop:Generator_ColumnVarNameInTable="columnpicture" msprop:Generator_UserColumnName="picture" type="xs:base64Binary" minOccurs="0" />
-              <xs:element name="role_name" msprop:Generator_ColumnPropNameInRow="role_name" msprop:Generator_ColumnPropNameInTable="role_nameColumn" msprop:Generator_ColumnVarNameInTable="columnrole_name" msprop:Generator_UserColumnName="role_name" minOccurs="0">
+              <xs:element name="role_id" msprop:Generator_ColumnPropNameInTable="role_idColumn" msprop:Generator_ColumnPropNameInRow="role_id" msprop:Generator_UserColumnName="role_id" msprop:Generator_ColumnVarNameInTable="columnrole_id" type="xs:int" />
+              <xs:element name="picture" msprop:Generator_UserColumnName="picture" msprop:Generator_ColumnPropNameInTable="pictureColumn" msprop:Generator_ColumnPropNameInRow="picture" msprop:Generator_ColumnVarNameInTable="columnpicture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="role_name" msprop:Generator_UserColumnName="role_name" msprop:Generator_ColumnPropNameInTable="role_nameColumn" msprop:Generator_ColumnPropNameInRow="role_name" msprop:Generator_ColumnVarNameInTable="columnrole_name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
