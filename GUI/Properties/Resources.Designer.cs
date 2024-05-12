@@ -213,6 +213,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_edit_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-edit-100", resourceCulture);
@@ -276,6 +286,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_find_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-find-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_food_receiver_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-food-receiver-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

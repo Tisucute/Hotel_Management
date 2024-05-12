@@ -234,6 +234,12 @@
     <Compile Include="RECEPTIONIST\RoomManagement.Designer.cs">
       <DependentUpon>RoomManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\ucRooms.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ucRooms.resx">
       <DependentUpon>ucRooms.cs</DependentUpon>
@@ -504,6 +513,7 @@
     <None Include="Resources\icons8-upload-48.png" />
     <None Include="Resources\icons8-edit-64.png" />
     <None Include="Resources\icons8-add-64 %282%29.png" />
+    <None Include="Resources\icons8-delete-64.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

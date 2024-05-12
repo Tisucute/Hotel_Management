@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
@@ -44,38 +43,28 @@
             this.txtNation = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel6 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbKind = new ReaLTaiizor.Controls.ComboBoxEdit();
             this.skyLabel7 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioBtnFemale = new ReaLTaiizor.Controls.SkyRadioButton();
             this.radioBtnMale = new ReaLTaiizor.Controls.SkyRadioButton();
             this.skyLabel8 = new ReaLTaiizor.Controls.SkyLabel();
+            this.dgvListCustomers = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.PictureBox();
             this.btnUpLoad = new System.Windows.Forms.PictureBox();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.picBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.dgvListCustomers = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListCustomers)).BeginInit();
             this.SuspendLayout();
-            // 
-            // skyLabel4
-            // 
-            this.skyLabel4.AutoSize = true;
-            this.skyLabel4.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel4.Location = new System.Drawing.Point(159, 76);
-            this.skyLabel4.Name = "skyLabel4";
-            this.skyLabel4.Size = new System.Drawing.Size(36, 14);
-            this.skyLabel4.TabIndex = 38;
-            this.skyLabel4.Text = "Kind";
             // 
             // skyLabel3
             // 
@@ -98,6 +87,7 @@
             this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.Enabled = false;
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -263,25 +253,6 @@
             this.txtAddress.Size = new System.Drawing.Size(254, 31);
             this.txtAddress.TabIndex = 45;
             // 
-            // cmbKind
-            // 
-            this.cmbKind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.cmbKind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbKind.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbKind.DropDownHeight = 100;
-            this.cmbKind.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKind.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbKind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.cmbKind.FormattingEnabled = true;
-            this.cmbKind.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.cmbKind.IntegralHeight = false;
-            this.cmbKind.ItemHeight = 20;
-            this.cmbKind.Location = new System.Drawing.Point(149, 93);
-            this.cmbKind.Name = "cmbKind";
-            this.cmbKind.Size = new System.Drawing.Size(144, 26);
-            this.cmbKind.StartIndex = 0;
-            this.cmbKind.TabIndex = 47;
-            // 
             // skyLabel7
             // 
             this.skyLabel7.AutoSize = true;
@@ -377,27 +348,95 @@
             this.skyLabel8.TabIndex = 51;
             this.skyLabel8.Text = "Gender";
             // 
+            // dgvListCustomers
+            // 
+            this.dgvListCustomers.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvListCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(107)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(107)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvListCustomers.ColumnHeadersHeight = 30;
+            this.dgvListCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListCustomers.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvListCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvListCustomers.Location = new System.Drawing.Point(342, 147);
+            this.dgvListCustomers.Name = "dgvListCustomers";
+            this.dgvListCustomers.RowHeadersVisible = false;
+            this.dgvListCustomers.RowHeadersWidth = 51;
+            this.dgvListCustomers.RowTemplate.Height = 24;
+            this.dgvListCustomers.Size = new System.Drawing.Size(1074, 503);
+            this.dgvListCustomers.TabIndex = 54;
+            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvListCustomers.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvListCustomers.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvListCustomers.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dgvListCustomers.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvListCustomers.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvListCustomers.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvListCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvListCustomers.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvListCustomers.ThemeStyle.ReadOnly = false;
+            this.dgvListCustomers.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvListCustomers.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListCustomers.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvListCustomers.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListCustomers.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvListCustomers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvListCustomers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCustomers_CellContentClick);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnDelete.Image = global::GUI.Properties.Resources.icons8_delete_64;
+            this.btnDelete.Location = new System.Drawing.Point(1126, 683);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(78, 71);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDelete.TabIndex = 55;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.btnAdd.Image = global::GUI.Properties.Resources.icons8_add_64__2_;
-            this.btnAdd.Location = new System.Drawing.Point(782, 683);
+            this.btnAdd.Location = new System.Drawing.Point(588, 683);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 71);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAdd.TabIndex = 53;
             this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.btnEdit.Image = global::GUI.Properties.Resources.icons8_edit_64;
-            this.btnEdit.Location = new System.Drawing.Point(955, 683);
+            this.btnEdit.Location = new System.Drawing.Point(838, 683);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(78, 71);
             this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEdit.TabIndex = 52;
             this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnUpLoad
             // 
@@ -431,6 +470,7 @@
             this.TextBoxSearch.SelectedText = "";
             this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
             this.TextBoxSearch.TabIndex = 42;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
             // picBox
             // 
@@ -438,68 +478,16 @@
             this.picBox.Location = new System.Drawing.Point(39, 498);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(254, 216);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox.TabIndex = 40;
             this.picBox.TabStop = false;
-            // 
-            // dgvListCustomers
-            // 
-            this.dgvListCustomers.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvListCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(107)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(107)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvListCustomers.ColumnHeadersHeight = 30;
-            this.dgvListCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListCustomers.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvListCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListCustomers.Location = new System.Drawing.Point(342, 147);
-            this.dgvListCustomers.Name = "dgvListCustomers";
-            this.dgvListCustomers.RowHeadersVisible = false;
-            this.dgvListCustomers.RowHeadersWidth = 51;
-            this.dgvListCustomers.RowTemplate.Height = 24;
-            this.dgvListCustomers.Size = new System.Drawing.Size(1074, 503);
-            this.dgvListCustomers.TabIndex = 54;
-            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListCustomers.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListCustomers.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListCustomers.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListCustomers.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dgvListCustomers.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListCustomers.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListCustomers.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListCustomers.ThemeStyle.HeaderStyle.Height = 30;
-            this.dgvListCustomers.ThemeStyle.ReadOnly = false;
-            this.dgvListCustomers.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListCustomers.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListCustomers.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListCustomers.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvListCustomers.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvListCustomers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListCustomers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvListCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCustomers_CellContentClick);
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1438, 793);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvListCustomers);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
@@ -507,7 +495,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.skyLabel7);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.cmbKind);
             this.Controls.Add(this.skyLabel6);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.skyLabel5);
@@ -515,7 +502,6 @@
             this.Controls.Add(this.TextBoxSearch);
             this.Controls.Add(this.picBox);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.skyLabel4);
             this.Controls.Add(this.skyLabel3);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.skyLabel2);
@@ -530,19 +516,18 @@
             this.guna2Panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.SkyLabel skyLabel4;
         private ReaLTaiizor.Controls.SkyLabel skyLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtID;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
@@ -557,7 +542,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNation;
         private ReaLTaiizor.Controls.SkyLabel skyLabel6;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
-        private ReaLTaiizor.Controls.ComboBoxEdit cmbKind;
         private ReaLTaiizor.Controls.SkyLabel skyLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -565,8 +549,9 @@
         private ReaLTaiizor.Controls.SkyRadioButton radioBtnFemale;
         private ReaLTaiizor.Controls.SkyRadioButton radioBtnMale;
         private System.Windows.Forms.PictureBox btnUpLoad;
-        private System.Windows.Forms.PictureBox btnEdit;
         private System.Windows.Forms.PictureBox btnAdd;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListCustomers;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnDelete;
     }
 }

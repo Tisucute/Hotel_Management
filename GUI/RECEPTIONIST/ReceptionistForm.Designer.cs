@@ -45,7 +45,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnCustomer = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnService = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
@@ -237,27 +237,28 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnService);
             this.panel3.Location = new System.Drawing.Point(3, 525);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(246, 65);
             this.panel3.TabIndex = 9;
             // 
-            // button2
+            // btnService
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("VNI-Bamas", 9F);
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Image = global::GUI.Properties.Resources.icons8_service_50;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 60);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "               Services";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnService.Font = new System.Drawing.Font("VNI-Bamas", 9F);
+            this.btnService.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnService.Image = global::GUI.Properties.Resources.icons8_service_50;
+            this.btnService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnService.Location = new System.Drawing.Point(3, 2);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(240, 60);
+            this.btnService.TabIndex = 7;
+            this.btnService.Text = "               Services";
+            this.btnService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnService.UseVisualStyleBackColor = true;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
             // panel4
             // 
@@ -415,7 +416,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button BtnRoom;
         private System.Windows.Forms.Button BtnCustomer;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox BtnLogOut;
     }

@@ -188,5 +188,10 @@ namespace GUI
         {
             AddControls(new CustomerForm());
         }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            AddControls(new ServiceForm()); 
+        }
     }
 }
