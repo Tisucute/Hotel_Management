@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 using Microsoft.VisualBasic;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
+using GUI.RECEPTIONIST;
 
 namespace GUI
 {
@@ -179,6 +180,13 @@ namespace GUI
         private void BtnLogOut_Click(object sender, EventArgs e)
         {
             Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
+
+        private void Customer_Click(object sender, EventArgs e)
+        {
+            AddControls(new CustomerForm());
         }
     }
 }

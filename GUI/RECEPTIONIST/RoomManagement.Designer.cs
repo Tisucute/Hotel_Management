@@ -117,7 +117,7 @@
             this.BtnReturnRoom.Name = "BtnReturnRoom";
             this.BtnReturnRoom.Size = new System.Drawing.Size(129, 86);
             this.BtnReturnRoom.TabIndex = 12;
-            this.BtnReturnRoom.Text = "Return Room";
+            this.BtnReturnRoom.Text = "Edit Room";
             // 
             // BtnReceiveRoom
             // 
@@ -157,6 +157,7 @@
             this.BtnBookRoom.Size = new System.Drawing.Size(141, 86);
             this.BtnBookRoom.TabIndex = 10;
             this.BtnBookRoom.Text = "Booking Room";
+            this.BtnBookRoom.Click += new System.EventHandler(this.BtnBookRoom_Click);
             // 
             // BtnAddRoom
             // 
@@ -280,7 +281,7 @@
             this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
             this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
             this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50;
-            this.TextBoxSearch.Location = new System.Drawing.Point(12, 139);
+            this.TextBoxSearch.Location = new System.Drawing.Point(52, 139);
             this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.PasswordChar = '\0';

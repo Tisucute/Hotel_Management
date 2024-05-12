@@ -192,11 +192,23 @@
     <Compile Include="RECEPTIONIST\AddRoomForm.Designer.cs">
       <DependentUpon>AddRoomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\EditRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RECEPTIONIST\EditRoomForm.Designer.cs">
       <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ReceiveRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ReceiveRoomForm.Designer.cs">
+      <DependentUpon>ReceiveRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RECEPTIONIST\ReceptionistForm.cs">
       <SubType>Form</SubType>
@@ -227,6 +239,12 @@
     </Compile>
     <Compile Include="RECEPTIONIST\ucRooms.Designer.cs">
       <DependentUpon>ucRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomBookingForm.Designer.cs">
+      <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectEmployeeForm.cs">
       <SubType>Form</SubType>
@@ -288,8 +306,14 @@
     <EmbeddedResource Include="RECEPTIONIST\AddRoomForm.resx">
       <DependentUpon>AddRoomForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\EditRoomForm.resx">
       <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\ReceiveRoomForm.resx">
+      <DependentUpon>ReceiveRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ReceptionistForm.resx">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
@@ -306,6 +330,9 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="RECEPTIONIST\RoomManagement.resx">
       <DependentUpon>RoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomBookingForm.resx">
+      <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectEmployeeForm.resx">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
@@ -474,6 +501,9 @@
     <None Include="Resources\icons8-arrow-50 %282%291.png" />
     <None Include="Resources\icons8-find-50.png" />
     <None Include="Resources\icons8-upload-64.png" />
+    <None Include="Resources\icons8-upload-48.png" />
+    <None Include="Resources\icons8-edit-64.png" />
+    <None Include="Resources\icons8-add-64 %282%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

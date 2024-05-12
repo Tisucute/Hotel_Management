@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnReceive = new Guna.UI2.WinForms.Guna2Button();
             this.BtnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBook = new Guna.UI2.WinForms.Guna2Button();
             this.RadioBtnStatus = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.labelStatus = new ReaLTaiizor.Controls.NightLabel();
             this.labelName = new ReaLTaiizor.Controls.MetroLabel();
@@ -45,13 +46,14 @@
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.BtnDelete);
-            this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
+            this.guna2ShadowPanel1.Controls.Add(this.btnBook);
             this.guna2ShadowPanel1.Controls.Add(this.RadioBtnStatus);
             this.guna2ShadowPanel1.Controls.Add(this.labelStatus);
             this.guna2ShadowPanel1.Controls.Add(this.labelName);
             this.guna2ShadowPanel1.Controls.Add(this.labelKind);
             this.guna2ShadowPanel1.Controls.Add(this.picBox);
             this.guna2ShadowPanel1.Controls.Add(this.RadioBtnHire);
+            this.guna2ShadowPanel1.Controls.Add(this.btnReceive);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 3);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
@@ -59,6 +61,25 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(211, 281);
             this.guna2ShadowPanel1.TabIndex = 0;
             this.guna2ShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel1_Paint);
+            // 
+            // btnReceive
+            // 
+            this.btnReceive.Animated = true;
+            this.btnReceive.AutoRoundedCorners = true;
+            this.btnReceive.BorderRadius = 13;
+            this.btnReceive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReceive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReceive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReceive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReceive.FillColor = System.Drawing.Color.Orange;
+            this.btnReceive.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceive.ForeColor = System.Drawing.Color.White;
+            this.btnReceive.Location = new System.Drawing.Point(17, 225);
+            this.btnReceive.Name = "btnReceive";
+            this.btnReceive.Size = new System.Drawing.Size(85, 29);
+            this.btnReceive.TabIndex = 10;
+            this.btnReceive.Text = "Receive";
+            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
             // 
             // BtnDelete
             // 
@@ -69,32 +90,34 @@
             this.BtnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BtnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BtnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnDelete.FillColor = System.Drawing.Color.SlateGray;
             this.BtnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnDelete.ForeColor = System.Drawing.Color.White;
             this.BtnDelete.Location = new System.Drawing.Point(110, 225);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(77, 29);
+            this.BtnDelete.Size = new System.Drawing.Size(87, 29);
             this.BtnDelete.TabIndex = 9;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // btnEdit
+            // btnBook
             // 
-            this.btnEdit.Animated = true;
-            this.btnEdit.AutoRoundedCorners = true;
-            this.btnEdit.BorderRadius = 13;
-            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(27, 225);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(77, 29);
-            this.btnEdit.TabIndex = 8;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnBook.Animated = true;
+            this.btnBook.AutoRoundedCorners = true;
+            this.btnBook.BorderRadius = 13;
+            this.btnBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBook.FillColor = System.Drawing.Color.Green;
+            this.btnBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBook.ForeColor = System.Drawing.Color.White;
+            this.btnBook.Location = new System.Drawing.Point(17, 225);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(85, 29);
+            this.btnBook.TabIndex = 8;
+            this.btnBook.Text = "Book";
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // RadioBtnStatus
             // 
@@ -209,6 +232,7 @@
         public Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtnStatus;
         public Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtnHire;
         private Guna.UI2.WinForms.Guna2Button BtnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnBook;
+        private Guna.UI2.WinForms.Guna2Button btnReceive;
     }
 }

@@ -45,5 +45,10 @@ namespace GUI
             txtBoxRole.Text = employee.roleName;
             PictureBoxEmployee.Image = Image.FromStream(employee.pic);
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

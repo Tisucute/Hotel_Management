@@ -55,9 +55,6 @@ namespace GUI
         {
             AddRoomForm addRF = new AddRoomForm();
             addRF.ShowDialog();
-            
-
-
         }
         private void loadRoom()
         {
@@ -76,7 +73,11 @@ namespace GUI
             }
             foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
             {
-                uc.EditClicked += MyControl_EditClicked;
+                uc.BookClicked += MyControl_BookingClicked;
+            }
+            foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
+            {
+                uc.ReceiveClicked += MyControl_ReceiveClicked;
             }
 
 
@@ -87,8 +88,11 @@ namespace GUI
             foreach (var item in panelRoom.Controls)
             {
                 var search = (ucRooms)item;
-                search.Visible = search.room_name.ToLower().Contains(TextBoxSearch.Text.Trim().ToLower());
+                search.Visible = search.room_name.ToLower().Contains(TextBoxSearch.Text.Trim().ToLower())
+                                || search.type.ToLower().Contains(TextBoxSearch.Text.Trim().ToLower())
+                                || search.status.ToLower().Contains(TextBoxSearch.Text.Trim().ToLower());
             }
+
         }
         private void MyControl_DeleteClicked(object sender, EventArgs e)
         {
@@ -99,25 +103,21 @@ namespace GUI
             MessageBox.Show("Deleted Room Successfully", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-        private void MyControl_EditClicked(object sender, EventArgs e)
+        private void MyControl_BookingClicked(object sender, EventArgs e)
         {
-            ucRooms controlToEdit = sender as ucRooms;
-            // Tạo một form mới
-            EditRoomForm editForm = new EditRoomForm();
-            // Tạo một textbox mới và đặt text bằng thông tin từ UserControl
-            //TextBox textBox = new TextBox();
-            editForm.txtName.Text = controlToEdit.room_name;
-            editForm.txtPerson.Text = controlToEdit.person.ToString();
-            editForm.txtPrice.Text = controlToEdit.Pprice;
-            editForm.cmbBoxType.SelectedValue = controlToEdit.type;
-            editForm.picBox.Image = controlToEdit.Ppicture;
-            editForm.txtName.Text = controlToEdit.room_name;
-
-            // Hiển thị form
-            editForm.Show();
+            RoomBookingForm roomBF = new RoomBookingForm();  
+            roomBF.ShowDialog();
         }
 
-
-
+        private void BtnBookRoom_Click(object sender, EventArgs e)
+        {
+            RoomBookingForm roomBF = new RoomBookingForm();
+            roomBF.ShowDialog();
+        }
+        private void MyControl_ReceiveClicked(object sender, EventArgs e)
+        {
+            ReceiveRoomForm receiveRoomForm = new ReceiveRoomForm();
+            receiveRoomForm.ShowDialog();
+        }
     }
 }

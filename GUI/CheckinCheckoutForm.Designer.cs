@@ -50,11 +50,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.moonLabel1 = new ReaLTaiizor.Controls.MoonLabel();
             this.nightHeaderLabel1 = new ReaLTaiizor.Controls.NightHeaderLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.GroupBoxCheck.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GroupBoxProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCheckIn
@@ -191,7 +194,7 @@
             this.GroupBoxCheck.ForeColor = System.Drawing.Color.Black;
             this.GroupBoxCheck.LineColorA = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.GroupBoxCheck.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
-            this.GroupBoxCheck.Location = new System.Drawing.Point(629, 12);
+            this.GroupBoxCheck.Location = new System.Drawing.Point(630, 78);
             this.GroupBoxCheck.Name = "GroupBoxCheck";
             this.GroupBoxCheck.Size = new System.Drawing.Size(611, 473);
             this.GroupBoxCheck.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -254,7 +257,7 @@
             this.GroupBoxProfile.ForeColor = System.Drawing.Color.Black;
             this.GroupBoxProfile.LineColorA = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.GroupBoxProfile.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
-            this.GroupBoxProfile.Location = new System.Drawing.Point(12, 12);
+            this.GroupBoxProfile.Location = new System.Drawing.Point(13, 78);
             this.GroupBoxProfile.Name = "GroupBoxProfile";
             this.GroupBoxProfile.Size = new System.Drawing.Size(611, 358);
             this.GroupBoxProfile.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -439,7 +442,7 @@
             this.nightHeaderLabel1.Font = new System.Drawing.Font("Monotype Corsiva", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nightHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.nightHeaderLabel1.LeftSideForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.nightHeaderLabel1.Location = new System.Drawing.Point(30, 389);
+            this.nightHeaderLabel1.Location = new System.Drawing.Point(31, 466);
             this.nightHeaderLabel1.Name = "nightHeaderLabel1";
             this.nightHeaderLabel1.RightSideForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(171)))), ((int)(((byte)(176)))));
             this.nightHeaderLabel1.Side = ReaLTaiizor.Controls.NightHeaderLabel.PanelSide.LeftPanel;
@@ -450,16 +453,40 @@
             this.nightHeaderLabel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             this.nightHeaderLabel1.UseCompatibleTextRendering = true;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.DimGray;
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1253, 49);
+            this.guna2Panel1.TabIndex = 21;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1196, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
             // CheckinCheckoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1253, 571);
+            this.ClientSize = new System.Drawing.Size(1253, 609);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.nightHeaderLabel1);
             this.Controls.Add(this.moonLabel1);
             this.Controls.Add(this.GroupBoxProfile);
             this.Controls.Add(this.GroupBoxCheck);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckinCheckoutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckinCheckoutForm";
@@ -470,6 +497,7 @@
             this.GroupBoxProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,5 +526,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtBoxID;
         private ReaLTaiizor.Controls.MoonLabel moonLabel1;
         private ReaLTaiizor.Controls.NightHeaderLabel nightHeaderLabel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

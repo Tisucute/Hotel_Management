@@ -19,7 +19,8 @@ namespace GUI.RECEPTIONIST
         }
         public event EventHandler onSelect = null;
         public event EventHandler DeleteClicked;
-        public event EventHandler EditClicked;
+        public event EventHandler BookClicked;
+        public event EventHandler ReceiveClicked;
         private void metroLabel1_Click(object sender, EventArgs e)
         {
 
@@ -30,6 +31,7 @@ namespace GUI.RECEPTIONIST
             if (labelStatus.Text == "Hire")
             {
                 RadioBtnStatus.Hide();
+                btnBook.Hide();
 
             }
 
@@ -78,9 +80,14 @@ namespace GUI.RECEPTIONIST
             DeleteClicked?.Invoke(this, EventArgs.Empty);
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnBook_Click(object sender, EventArgs e)
         {
-            EditClicked?.Invoke(this, EventArgs.Empty);
+            BookClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btnReceive_Click(object sender, EventArgs e)
+        {
+           ReceiveClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }
