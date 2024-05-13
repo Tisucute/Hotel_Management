@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
+namespace GUI.RECEPTIONIST
 {
-    public partial class ForgotPasswordForm : Form
+    public partial class ViewRoomForm : Form
     {
-        public ForgotPasswordForm()
+        public ViewRoomForm()
         {
             InitializeComponent();
         }

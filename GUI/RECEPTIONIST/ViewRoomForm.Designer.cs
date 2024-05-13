@@ -1,6 +1,6 @@
-﻿namespace GUI
+﻿namespace GUI.RECEPTIONIST
 {
-    partial class ForgotPasswordForm
+    partial class ViewRoomForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // ForgotPasswordForm
+            // ViewRoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "ForgotPasswordForm";
-            this.Text = "Forgot Password Form";
+            this.ClientSize = new System.Drawing.Size(967, 701);
+            this.Name = "ViewRoomForm";
+            this.Text = "ViewRoomForm";
             this.ResumeLayout(false);
 
         }

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.RECEPTIONIST
 {
-    public partial class ReceiveRoomForm : Form
+    public partial class DelayRoomForm : Form
     {
-        public ReceiveRoomForm()
+        public DelayRoomForm()
         {
             InitializeComponent();
-        }
-
-        private void btnDelay_Click(object sender, EventArgs e)
-        {
-            DelayRoomForm delayRoomForm = new DelayRoomForm();
-            delayRoomForm.ShowDialog();
         }
     }
 }

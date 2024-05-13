@@ -47,11 +47,14 @@
             this.panelWorkingTime = new System.Windows.Forms.Panel();
             this.ButtonShift = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnReport = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.PanelHienThi = new System.Windows.Forms.Panel();
+            this.BtnReport = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnManageReceip = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnManageJanitor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.panelAvatar.SuspendLayout();
@@ -62,6 +65,8 @@
             this.panelWorkingTime.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBarTimer
@@ -205,12 +210,13 @@
             this.SideBar.Controls.Add(this.panel1);
             this.SideBar.Controls.Add(this.panel2);
             this.SideBar.Controls.Add(this.panel3);
+            this.SideBar.Controls.Add(this.panel4);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.SideBar.Location = new System.Drawing.Point(0, 62);
             this.SideBar.MaximumSize = new System.Drawing.Size(253, 0);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(253, 823);
+            this.SideBar.Size = new System.Drawing.Size(253, 891);
             this.SideBar.TabIndex = 6;
             // 
             // panelHome
@@ -277,37 +283,6 @@
             this.panel1.Size = new System.Drawing.Size(246, 65);
             this.panel1.TabIndex = 7;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.BtnReport);
-            this.panel2.Location = new System.Drawing.Point(3, 525);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 65);
-            this.panel2.TabIndex = 9;
-            // 
-            // BtnReport
-            // 
-            this.BtnReport.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReport.Image = global::GUI.Properties.Resources.icons8_report_50;
-            this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReport.Location = new System.Drawing.Point(4, 5);
-            this.BtnReport.Name = "BtnReport";
-            this.BtnReport.Size = new System.Drawing.Size(240, 60);
-            this.BtnReport.TabIndex = 10;
-            this.BtnReport.Text = "              Report";
-            this.BtnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReport.UseVisualStyleBackColor = true;
-            this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(3, 596);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 65);
-            this.panel3.TabIndex = 11;
-            // 
             // guna2AnimateWindow1
             // 
             this.guna2AnimateWindow1.Interval = 100;
@@ -317,9 +292,81 @@
             this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
             this.PanelHienThi.Name = "PanelHienThi";
-            this.PanelHienThi.Size = new System.Drawing.Size(1214, 823);
+            this.PanelHienThi.Size = new System.Drawing.Size(1214, 891);
             this.PanelHienThi.TabIndex = 7;
             this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
+            // 
+            // BtnReport
+            // 
+            this.BtnReport.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReport.Image = global::GUI.Properties.Resources.icons8_report_50;
+            this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReport.Location = new System.Drawing.Point(3, 0);
+            this.BtnReport.Name = "BtnReport";
+            this.BtnReport.Size = new System.Drawing.Size(240, 60);
+            this.BtnReport.TabIndex = 10;
+            this.BtnReport.Text = "              Report";
+            this.BtnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReport.UseVisualStyleBackColor = true;
+            this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.BtnReport);
+            this.panel2.Location = new System.Drawing.Point(3, 525);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(246, 65);
+            this.panel2.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnManageReceip);
+            this.panel3.Location = new System.Drawing.Point(3, 596);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(246, 65);
+            this.panel3.TabIndex = 10;
+            // 
+            // btnManageReceip
+            // 
+            this.btnManageReceip.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnManageReceip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageReceip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageReceip.Image = global::GUI.Properties.Resources.icons8_report_50;
+            this.btnManageReceip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageReceip.Location = new System.Drawing.Point(3, 0);
+            this.btnManageReceip.Name = "btnManageReceip";
+            this.btnManageReceip.Size = new System.Drawing.Size(240, 60);
+            this.btnManageReceip.TabIndex = 10;
+            this.btnManageReceip.Text = "              Receiption Management";
+            this.btnManageReceip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageReceip.UseVisualStyleBackColor = true;
+            this.btnManageReceip.Click += new System.EventHandler(this.btnManageReceip_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnManageJanitor);
+            this.panel4.Location = new System.Drawing.Point(3, 667);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(246, 65);
+            this.panel4.TabIndex = 11;
+            // 
+            // btnManageJanitor
+            // 
+            this.btnManageJanitor.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnManageJanitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageJanitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageJanitor.Image = global::GUI.Properties.Resources.icons8_report_50;
+            this.btnManageJanitor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageJanitor.Location = new System.Drawing.Point(3, 0);
+            this.btnManageJanitor.Name = "btnManageJanitor";
+            this.btnManageJanitor.Size = new System.Drawing.Size(240, 60);
+            this.btnManageJanitor.TabIndex = 10;
+            this.btnManageJanitor.Text = "              Janitor Management";
+            this.btnManageJanitor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageJanitor.UseVisualStyleBackColor = true;
+            this.btnManageJanitor.Click += new System.EventHandler(this.btnManageJanitor_Click);
             // 
             // ManagerForm
             // 
@@ -327,7 +374,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::GUI.Properties.Resources.R;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1467, 885);
+            this.ClientSize = new System.Drawing.Size(1467, 953);
             this.Controls.Add(this.PanelHienThi);
             this.Controls.Add(this.SideBar);
             this.Controls.Add(this.panelTitle);
@@ -348,6 +395,8 @@
             this.panelWorkingTime.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -371,9 +420,12 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Panel PanelHienThi;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ButtonShift;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnReport;
-        private System.Windows.Forms.Button ButtonShift;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnManageReceip;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnManageJanitor;
     }
 }

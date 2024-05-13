@@ -21,6 +21,8 @@ namespace GUI.RECEPTIONIST
         public event EventHandler DeleteClicked;
         public event EventHandler BookClicked;
         public event EventHandler ReceiveClicked;
+        public event EventHandler EditClicked;
+        public event EventHandler SelectClicked;
         private void metroLabel1_Click(object sender, EventArgs e)
         {
 
@@ -34,6 +36,7 @@ namespace GUI.RECEPTIONIST
                 btnBook.Hide();
 
             }
+
 
         }
         
@@ -77,6 +80,7 @@ namespace GUI.RECEPTIONIST
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            
             DeleteClicked?.Invoke(this, EventArgs.Empty);
         }
 
@@ -88,6 +92,26 @@ namespace GUI.RECEPTIONIST
         private void btnReceive_Click(object sender, EventArgs e)
         {
            ReceiveClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void labelStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelKind_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            EditClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void guna2ShadowPanel1_Click(object sender, EventArgs e)
+        {
+            SelectClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

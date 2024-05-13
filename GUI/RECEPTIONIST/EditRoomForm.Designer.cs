@@ -30,12 +30,6 @@
         {
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.BtnEdit = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.nightLabel2 = new ReaLTaiizor.Controls.NightLabel();
-            this.groupBoxStatus = new System.Windows.Forms.GroupBox();
-            this.nightLabel1 = new ReaLTaiizor.Controls.NightLabel();
-            this.skyLabel6 = new ReaLTaiizor.Controls.SkyLabel();
-            this.BtnRadioEmpty = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.BtnRadioHire = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.skyLabel7 = new ReaLTaiizor.Controls.SkyLabel();
             this.cmbBoxType = new ReaLTaiizor.Controls.ComboBoxEdit();
             this.BtnUpload = new System.Windows.Forms.PictureBox();
@@ -48,7 +42,6 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.groupBoxStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnUpload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
@@ -88,86 +81,6 @@
             this.BtnEdit.TabIndex = 148;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
-            // nightLabel2
-            // 
-            this.nightLabel2.AutoSize = true;
-            this.nightLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.nightLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nightLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel2.Location = new System.Drawing.Point(52, 52);
-            this.nightLabel2.Name = "nightLabel2";
-            this.nightLabel2.Size = new System.Drawing.Size(37, 20);
-            this.nightLabel2.TabIndex = 146;
-            this.nightLabel2.Text = "Hire";
-            // 
-            // groupBoxStatus
-            // 
-            this.groupBoxStatus.Controls.Add(this.nightLabel2);
-            this.groupBoxStatus.Controls.Add(this.nightLabel1);
-            this.groupBoxStatus.Controls.Add(this.skyLabel6);
-            this.groupBoxStatus.Controls.Add(this.BtnRadioEmpty);
-            this.groupBoxStatus.Controls.Add(this.BtnRadioHire);
-            this.groupBoxStatus.Location = new System.Drawing.Point(483, 159);
-            this.groupBoxStatus.Name = "groupBoxStatus";
-            this.groupBoxStatus.Size = new System.Drawing.Size(130, 91);
-            this.groupBoxStatus.TabIndex = 159;
-            this.groupBoxStatus.TabStop = false;
-            // 
-            // nightLabel1
-            // 
-            this.nightLabel1.AutoSize = true;
-            this.nightLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.nightLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nightLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(127)))));
-            this.nightLabel1.Location = new System.Drawing.Point(52, 28);
-            this.nightLabel1.Name = "nightLabel1";
-            this.nightLabel1.Size = new System.Drawing.Size(51, 20);
-            this.nightLabel1.TabIndex = 145;
-            this.nightLabel1.Text = "Empty";
-            // 
-            // skyLabel6
-            // 
-            this.skyLabel6.AutoSize = true;
-            this.skyLabel6.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel6.Location = new System.Drawing.Point(6, 0);
-            this.skyLabel6.Name = "skyLabel6";
-            this.skyLabel6.Size = new System.Drawing.Size(49, 14);
-            this.skyLabel6.TabIndex = 141;
-            this.skyLabel6.Text = "Status";
-            // 
-            // BtnRadioEmpty
-            // 
-            this.BtnRadioEmpty.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.BtnRadioEmpty.CheckedState.BorderThickness = 0;
-            this.BtnRadioEmpty.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.BtnRadioEmpty.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.BtnRadioEmpty.Location = new System.Drawing.Point(26, 28);
-            this.BtnRadioEmpty.Name = "BtnRadioEmpty";
-            this.BtnRadioEmpty.Size = new System.Drawing.Size(20, 20);
-            this.BtnRadioEmpty.TabIndex = 144;
-            this.BtnRadioEmpty.Text = "guna2CustomRadioButton2";
-            this.BtnRadioEmpty.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.BtnRadioEmpty.UncheckedState.BorderThickness = 2;
-            this.BtnRadioEmpty.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.BtnRadioEmpty.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // BtnRadioHire
-            // 
-            this.BtnRadioHire.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.BtnRadioHire.CheckedState.BorderThickness = 0;
-            this.BtnRadioHire.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.BtnRadioHire.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.BtnRadioHire.Location = new System.Drawing.Point(26, 52);
-            this.BtnRadioHire.Name = "BtnRadioHire";
-            this.BtnRadioHire.Size = new System.Drawing.Size(20, 20);
-            this.BtnRadioHire.TabIndex = 142;
-            this.BtnRadioHire.Text = "guna2CustomRadioButton1";
-            this.BtnRadioHire.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.BtnRadioHire.UncheckedState.BorderThickness = 2;
-            this.BtnRadioHire.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.BtnRadioHire.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // skyLabel7
             // 
@@ -365,7 +278,6 @@
             this.Controls.Add(this.skyLabel3);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.BtnEdit);
-            this.Controls.Add(this.groupBoxStatus);
             this.Controls.Add(this.skyLabel7);
             this.Controls.Add(this.cmbBoxType);
             this.Controls.Add(this.BtnUpload);
@@ -379,8 +291,6 @@
             this.Name = "EditRoomForm";
             this.Text = "EditRoomForm";
             this.Load += new System.EventHandler(this.EditRoomForm_Load);
-            this.groupBoxStatus.ResumeLayout(false);
-            this.groupBoxStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnUpload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
@@ -391,17 +301,11 @@
         #endregion
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2GradientButton BtnEdit;
-        private ReaLTaiizor.Controls.NightLabel nightLabel2;
-        private System.Windows.Forms.GroupBox groupBoxStatus;
-        private ReaLTaiizor.Controls.NightLabel nightLabel1;
-        private ReaLTaiizor.Controls.SkyLabel skyLabel6;
         private ReaLTaiizor.Controls.SkyLabel skyLabel7;
         private System.Windows.Forms.PictureBox BtnUpload;
         private ReaLTaiizor.Controls.SkyLabel skyLabel5;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
         private ReaLTaiizor.Controls.SkyLabel skyLabel1;
-        public Guna.UI2.WinForms.Guna2CustomRadioButton BtnRadioEmpty;
-        public Guna.UI2.WinForms.Guna2CustomRadioButton BtnRadioHire;
         public ReaLTaiizor.Controls.ComboBoxEdit cmbBoxType;
         public Guna.UI2.WinForms.Guna2TextBox txtPrice;
         public System.Windows.Forms.PictureBox picBox;

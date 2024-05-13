@@ -34,7 +34,6 @@
             this.RadioButtonManager = new System.Windows.Forms.RadioButton();
             this.RadioButtonReceptionist = new System.Windows.Forms.RadioButton();
             this.RadioButtonJanitor = new System.Windows.Forms.RadioButton();
-            this.LinkLabelForgot = new System.Windows.Forms.LinkLabel();
             this.LabelFollow = new System.Windows.Forms.Label();
             this.LabelLogin = new System.Windows.Forms.Label();
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
@@ -70,9 +69,9 @@
             this.ButtonLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ButtonLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.ButtonLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.ButtonLogin.Font = new System.Drawing.Font("Phatdiem", 8.999999F);
+            this.ButtonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F);
             this.ButtonLogin.ForeColor = System.Drawing.Color.White;
-            this.ButtonLogin.Location = new System.Drawing.Point(124, 418);
+            this.ButtonLogin.Location = new System.Drawing.Point(124, 399);
             this.ButtonLogin.Name = "ButtonLogin";
             this.ButtonLogin.Size = new System.Drawing.Size(255, 34);
             this.ButtonLogin.TabIndex = 4;
@@ -84,7 +83,7 @@
             this.RadioButtonManager.AutoSize = true;
             this.RadioButtonManager.Location = new System.Drawing.Point(80, 199);
             this.RadioButtonManager.Name = "RadioButtonManager";
-            this.RadioButtonManager.Size = new System.Drawing.Size(82, 21);
+            this.RadioButtonManager.Size = new System.Drawing.Size(82, 20);
             this.RadioButtonManager.TabIndex = 9;
             this.RadioButtonManager.TabStop = true;
             this.RadioButtonManager.Text = "Manager";
@@ -95,7 +94,7 @@
             this.RadioButtonReceptionist.AutoSize = true;
             this.RadioButtonReceptionist.Location = new System.Drawing.Point(204, 199);
             this.RadioButtonReceptionist.Name = "RadioButtonReceptionist";
-            this.RadioButtonReceptionist.Size = new System.Drawing.Size(104, 21);
+            this.RadioButtonReceptionist.Size = new System.Drawing.Size(103, 20);
             this.RadioButtonReceptionist.TabIndex = 10;
             this.RadioButtonReceptionist.TabStop = true;
             this.RadioButtonReceptionist.Text = "Receptionist";
@@ -106,31 +105,18 @@
             this.RadioButtonJanitor.AutoSize = true;
             this.RadioButtonJanitor.Location = new System.Drawing.Point(347, 199);
             this.RadioButtonJanitor.Name = "RadioButtonJanitor";
-            this.RadioButtonJanitor.Size = new System.Drawing.Size(68, 21);
+            this.RadioButtonJanitor.Size = new System.Drawing.Size(68, 20);
             this.RadioButtonJanitor.TabIndex = 11;
             this.RadioButtonJanitor.TabStop = true;
             this.RadioButtonJanitor.Text = "Janitor";
             this.RadioButtonJanitor.UseVisualStyleBackColor = true;
             // 
-            // LinkLabelForgot
-            // 
-            this.LinkLabelForgot.AutoSize = true;
-            this.LinkLabelForgot.Font = new System.Drawing.Font("Phatdiem", 7.799999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabelForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
-            this.LinkLabelForgot.Location = new System.Drawing.Point(121, 372);
-            this.LinkLabelForgot.Name = "LinkLabelForgot";
-            this.LinkLabelForgot.Size = new System.Drawing.Size(113, 17);
-            this.LinkLabelForgot.TabIndex = 12;
-            this.LinkLabelForgot.TabStop = true;
-            this.LinkLabelForgot.Text = "Forgot Password?";
-            this.LinkLabelForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelForgot_LinkClicked);
-            // 
             // LabelFollow
             // 
             this.LabelFollow.AutoSize = true;
-            this.LabelFollow.Location = new System.Drawing.Point(152, 479);
+            this.LabelFollow.Location = new System.Drawing.Point(152, 460);
             this.LabelFollow.Name = "LabelFollow";
-            this.LabelFollow.Size = new System.Drawing.Size(196, 17);
+            this.LabelFollow.Size = new System.Drawing.Size(194, 16);
             this.LabelFollow.TabIndex = 21;
             this.LabelFollow.Text = "----------------Follow Us----------------";
             this.LabelFollow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,14 +145,13 @@
             this.PanelLogin.Controls.Add(this.PBTwitter);
             this.PanelLogin.Controls.Add(this.PBeye);
             this.PanelLogin.Controls.Add(this.ImageButtonInsta);
-            this.PanelLogin.Controls.Add(this.LinkLabelForgot);
             this.PanelLogin.Controls.Add(this.RadioButtonJanitor);
             this.PanelLogin.Controls.Add(this.RadioButtonReceptionist);
             this.PanelLogin.Controls.Add(this.RadioButtonManager);
             this.PanelLogin.Controls.Add(this.ButtonLogin);
             this.PanelLogin.Controls.Add(this.PBhide);
             this.PanelLogin.Controls.Add(this.TextBoxPassword);
-            this.PanelLogin.Font = new System.Drawing.Font("Phatdiem", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin.Location = new System.Drawing.Point(-3, 0);
             this.PanelLogin.Name = "PanelLogin";
             this.PanelLogin.Size = new System.Drawing.Size(502, 671);
@@ -180,7 +165,7 @@
             this.moonLabel.ForeColor = System.Drawing.Color.Gray;
             this.moonLabel.Location = new System.Drawing.Point(165, 349);
             this.moonLabel.Name = "moonLabel";
-            this.moonLabel.Size = new System.Drawing.Size(96, 17);
+            this.moonLabel.Size = new System.Drawing.Size(97, 16);
             this.moonLabel.TabIndex = 26;
             this.moonLabel.Text = "Remember Me";
             // 
@@ -209,7 +194,7 @@
             this.ImageButtonFB.ImageOffset = new System.Drawing.Point(0, 0);
             this.ImageButtonFB.ImageRotate = 0F;
             this.ImageButtonFB.ImageSize = new System.Drawing.Size(60, 60);
-            this.ImageButtonFB.Location = new System.Drawing.Point(95, 530);
+            this.ImageButtonFB.Location = new System.Drawing.Point(95, 511);
             this.ImageButtonFB.Name = "ImageButtonFB";
             this.ImageButtonFB.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.ImageButtonFB.Size = new System.Drawing.Size(70, 70);
@@ -256,7 +241,7 @@
             // PBTwitter
             // 
             this.PBTwitter.Image = ((System.Drawing.Image)(resources.GetObject("PBTwitter.Image")));
-            this.PBTwitter.Location = new System.Drawing.Point(204, 530);
+            this.PBTwitter.Location = new System.Drawing.Point(204, 511);
             this.PBTwitter.Name = "PBTwitter";
             this.PBTwitter.Size = new System.Drawing.Size(84, 70);
             this.PBTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -287,7 +272,7 @@
             this.ImageButtonInsta.ImageOffset = new System.Drawing.Point(0, 0);
             this.ImageButtonInsta.ImageRotate = 0F;
             this.ImageButtonInsta.ImageSize = new System.Drawing.Size(70, 70);
-            this.ImageButtonInsta.Location = new System.Drawing.Point(329, 530);
+            this.ImageButtonInsta.Location = new System.Drawing.Point(329, 511);
             this.ImageButtonInsta.Name = "ImageButtonInsta";
             this.ImageButtonInsta.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.ImageButtonInsta.Size = new System.Drawing.Size(64, 64);
@@ -402,7 +387,6 @@
         private System.Windows.Forms.RadioButton RadioButtonManager;
         private System.Windows.Forms.RadioButton RadioButtonReceptionist;
         private System.Windows.Forms.RadioButton RadioButtonJanitor;
-        private System.Windows.Forms.LinkLabel LinkLabelForgot;
         private Guna.UI2.WinForms.Guna2ImageButton ImageButtonInsta;
         private System.Windows.Forms.PictureBox PBeye;
         private System.Windows.Forms.PictureBox PBTwitter;

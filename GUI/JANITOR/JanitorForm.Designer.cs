@@ -182,6 +182,7 @@
             this.nightControlBox1.Name = "nightControlBox1";
             this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
             this.nightControlBox1.TabIndex = 6;
+            this.nightControlBox1.Click += new System.EventHandler(this.nightControlBox1_Click);
             // 
             // panelTitle
             // 
@@ -195,6 +196,8 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(1321, 62);
             this.panelTitle.TabIndex = 8;
+            this.panelTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitle_Paint);
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // MenuSideBar2
             // 
@@ -207,10 +210,12 @@
             this.MenuSideBar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MenuSideBar2.TabIndex = 4;
             this.MenuSideBar2.TabStop = false;
+            this.MenuSideBar2.Click += new System.EventHandler(this.MenuSideBar2_Click);
             // 
             // SideBarTimer
             // 
             this.SideBarTimer.Interval = 10;
+            this.SideBarTimer.Tick += new System.EventHandler(this.SideBarTimer_Tick);
             // 
             // PanelHienThi
             // 

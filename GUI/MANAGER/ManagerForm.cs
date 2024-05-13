@@ -187,5 +187,18 @@ namespace GUI
         {
             AddControls(new AssignShiftForm());
         }
+
+
+        private void btnManageReceip_Click(object sender, EventArgs e)
+        {
+            ReceptionistForm form = new ReceptionistForm(login);
+            form.Show();
+        }
+
+        private void btnManageJanitor_Click(object sender, EventArgs e)
+        {
+            JanitorForm form = new JanitorForm(login);
+            form.Show();
+        }
     }
 }

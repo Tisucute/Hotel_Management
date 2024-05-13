@@ -36,5 +36,9 @@ namespace BLL
         {
             return customerAccess.findCustomersByName(name);
         }
+        public DataTable getCustomersByCCCD(string cccd)
+        {
+            return customerAccess.getCustomersByCCCD(cccd);
+        }
     }
 }

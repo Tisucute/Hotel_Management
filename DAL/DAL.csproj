@@ -234,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceAccess.cs" />
+    <Compile Include="BookingRoomAccess.cs" />
     <Compile Include="CustomerAccess.cs" />
     <Compile Include="EmployeeAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

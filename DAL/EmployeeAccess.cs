@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using DTO;
+using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTO;
-using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -49,14 +43,16 @@ namespace DAL
             SqlConnection conn = mydb.getConnection;
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("SELECT * FROM EMPLOYEES WHERE username = @User AND password = @Pass AND role_id = @Role", conn);
+            SqlCommand command = new SqlCommand();
+            command = new SqlCommand("SELECT * FROM EMPLOYEES WHERE username = @User AND password = @Pass AND role_id = @Role", conn);
             command.Parameters.Add("@User", SqlDbType.VarChar).Value = employee.username;
             command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = employee.password;
             command.Parameters.Add("@Role", SqlDbType.Int).Value = employee.role;
+
             adapter.SelectCommand = command;
             conn.Open();
             adapter.Fill(table);
-            
+
             if ((table.Rows.Count > 0))
             {
                 employee.id = Convert.ToInt32(table.Rows[0]["id"].ToString());
@@ -76,7 +72,7 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
-        public DataTable getEmployees(string command) 
+        public DataTable getEmployees(string command)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(command, mydb.getConnection);
             DataTable table = new DataTable();
@@ -287,7 +283,7 @@ namespace DAL
         }
         public bool calculatorHour(int employeeID, DateTime dateTime)
         {
-            
+
             SqlCommand command = new SqlCommand("UPDATE ATTENDANCE SET hoursWorked = DATEDIFF(second, checkInTime, checkOutTime) / 3600.0 FROM ATTENDANCE WHERE  employee_id = @eid and CAST(ScheduledStartTime AS DATE) = CAST(@checkInTime AS DATE) AND ScheduledStartTime <= @checkInTime AND ScheduledEndTime >= @checkInTime", mydb.getConnection);
             command.Parameters.AddWithValue("@eid", employeeID);
             command.Parameters.AddWithValue("@CheckInTime", dateTime);

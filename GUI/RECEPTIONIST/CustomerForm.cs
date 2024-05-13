@@ -58,15 +58,18 @@ namespace GUI.RECEPTIONIST
             picCol = (DataGridViewImageColumn)dgvListCustomers.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dgvListCustomers.AllowUserToAddRows = false;
-            if ((dgvListCustomers.CurrentRow.Cells[3].Value.ToString() == "Female"))
+            try
             {
-                radioBtnFemale.Checked = true;
+                if ((dgvListCustomers.CurrentRow.Cells[3].Value.ToString() == "Female"))
+                {
+                    radioBtnFemale.Checked = true;
+                }
+                else
+                {
+                    radioBtnMale.Checked = true;
+                }
             }
-            else
-            {
-                radioBtnMale.Checked = true;
-            }
-
+            catch { }
             dgvListCustomers.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvListCustomers.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvListCustomers.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -224,14 +227,48 @@ namespace GUI.RECEPTIONIST
             }
             bool verifyInput()
             {
-                if ((txtFullName.Text.Trim() == "") || txtPhone.Text.Trim() == "" || txtAddress.Text.Trim() == "" || txtCCCD.Text.Trim() == "" || picBox.Image == null)
+                if ((txtFullName.Text.Trim() == "") || txtPhone.Text.Trim() == "" || txtNation.Text.Trim() == "" || txtCCCD.Text.Trim() == "" || txtAddress.Text.Trim() == "" || picBox.Image == null)
                 {
                     return false;
                 }
+                if (!IsValidAlphabetInput(txtFullName.Text.Trim().Replace(" ", "")))
+                {
+                    MessageBox.Show("Tên chỉ được nhập chữ cái!");
+                    txtFullName.Text = "";
+                    return false;
+                }
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+                {
+                    MessageBox.Show("Số điện thoại phải là số!");
+                    txtPhone.Text = "";
+                    return false;
+                }
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtCCCD.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+                {
+                    MessageBox.Show("CCCD phải là số!");
+                    txtCCCD.Text = "";
+                    return false;
+                }
                 return true;
-                
             }
+            bool IsValidAlphabetInput(string input)
+            {
+                // Sử dụng biểu thức chính quy để kiểm tra
+                return Regex.IsMatch(input, @"^[\p{L}\p{Mn}\p{Mc}]+$");
+            }
+
             fillGrid();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtFullName.Text = string.Empty;
+            txtPhone.Text = string.Empty;
+            picBox.Image = null;
+            txtCCCD.Text = string.Empty;
+            txtNation.Text = string.Empty;
+            txtAddress.Text = string.Empty;
         }
     }
 }

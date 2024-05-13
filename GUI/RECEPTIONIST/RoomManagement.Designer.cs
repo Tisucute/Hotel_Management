@@ -32,7 +32,7 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnReturnRoom = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnTotal = new Guna.UI2.WinForms.Guna2Button();
             this.BtnServiceRoom = new Guna.UI2.WinForms.Guna2Button();
             this.BtnAddRoom = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@
             this.ucRooms1 = new GUI.RECEPTIONIST.ucRooms();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.BtnTotal = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -92,32 +91,31 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.BtnTotal);
-            this.panel1.Controls.Add(this.BtnReturnRoom);
             this.panel1.Controls.Add(this.BtnServiceRoom);
             this.panel1.Controls.Add(this.BtnAddRoom);
             this.panel1.Location = new System.Drawing.Point(382, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 105);
+            this.panel1.Size = new System.Drawing.Size(479, 105);
             this.panel1.TabIndex = 13;
             // 
-            // BtnReturnRoom
+            // BtnTotal
             // 
-            this.BtnReturnRoom.Animated = true;
-            this.BtnReturnRoom.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnReturnRoom.BorderRadius = 20;
-            this.BtnReturnRoom.BorderThickness = 1;
-            this.BtnReturnRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnReturnRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnReturnRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnReturnRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnReturnRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.BtnReturnRoom.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.BtnReturnRoom.ForeColor = System.Drawing.Color.White;
-            this.BtnReturnRoom.Location = new System.Drawing.Point(162, 8);
-            this.BtnReturnRoom.Name = "BtnReturnRoom";
-            this.BtnReturnRoom.Size = new System.Drawing.Size(129, 86);
-            this.BtnReturnRoom.TabIndex = 12;
-            this.BtnReturnRoom.Text = "Edit Room";
+            this.BtnTotal.Animated = true;
+            this.BtnTotal.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnTotal.BorderRadius = 20;
+            this.BtnTotal.BorderThickness = 1;
+            this.BtnTotal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnTotal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnTotal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.BtnTotal.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.BtnTotal.ForeColor = System.Drawing.Color.White;
+            this.BtnTotal.Location = new System.Drawing.Point(308, 8);
+            this.BtnTotal.Name = "BtnTotal";
+            this.BtnTotal.Size = new System.Drawing.Size(140, 86);
+            this.BtnTotal.TabIndex = 13;
+            this.BtnTotal.Text = "Total Bill";
             // 
             // BtnServiceRoom
             // 
@@ -132,7 +130,7 @@
             this.BtnServiceRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
             this.BtnServiceRoom.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
             this.BtnServiceRoom.ForeColor = System.Drawing.Color.White;
-            this.BtnServiceRoom.Location = new System.Drawing.Point(297, 8);
+            this.BtnServiceRoom.Location = new System.Drawing.Point(162, 8);
             this.BtnServiceRoom.Name = "BtnServiceRoom";
             this.BtnServiceRoom.Size = new System.Drawing.Size(140, 86);
             this.BtnServiceRoom.TabIndex = 11;
@@ -326,25 +324,6 @@
             this.TextBoxSearch.TabIndex = 4;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
-            // BtnTotal
-            // 
-            this.BtnTotal.Animated = true;
-            this.BtnTotal.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnTotal.BorderRadius = 20;
-            this.BtnTotal.BorderThickness = 1;
-            this.BtnTotal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnTotal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnTotal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.BtnTotal.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.BtnTotal.ForeColor = System.Drawing.Color.White;
-            this.BtnTotal.Location = new System.Drawing.Point(445, 8);
-            this.BtnTotal.Name = "BtnTotal";
-            this.BtnTotal.Size = new System.Drawing.Size(140, 86);
-            this.BtnTotal.TabIndex = 13;
-            this.BtnTotal.Text = "Total Bill";
-            // 
             // RoomManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,7 +359,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button BtnReturnRoom;
         private Guna.UI2.WinForms.Guna2Button BtnServiceRoom;
         private Guna.UI2.WinForms.Guna2Button BtnAddRoom;
         public Guna.UI2.WinForms.Guna2TextBox TextBoxSearch;

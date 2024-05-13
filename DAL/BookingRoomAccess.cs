@@ -1,45 +1,25 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
-using Microsoft.SqlServer.Management.Smo.RegSvrEnum;
 
 namespace DAL
 {
-    public class RoomAccess
+    public class BookingRoomAccess
     {
         SqlConnectionData mydb = new SqlConnectionData();
-        public DataTable getAllType()
+        public bool insertBookingRoom(int customerID, int roomID, int employeeID, DateTime checkInTime, DateTime checkOutTime)
         {
-            DataTable table = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM TYPE", mydb.getConnection);
-            adapter.Fill(table);
-            return table;
-        }
-        public DataTable getRoomByName(string roomName)
-        {
-            SqlCommand command = new SqlCommand("SELECT * FROM ROOM WHERE room_name = @name", mydb.getConnection);
-            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = roomName;
-            DataTable table = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-           
-            adapter.Fill(table);
-            return table;
-        }
-        public bool addRoom(ROOM room)
-        {
-            SqlCommand command = new SqlCommand("INSERT INTO ROOM(room_name, type_id, person, status, price, picture) VALUES (@name, @type, @person, @status, @price, @pic)", mydb.getConnection);
-            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = room.room_name;
-            command.Parameters.Add("@type", SqlDbType.Int).Value = room.type_id;
-            command.Parameters.Add("@person", SqlDbType.Int).Value = room.person;
-            command.Parameters.Add("@status", SqlDbType.VarChar).Value = room.status;
-            command.Parameters.Add("@price", SqlDbType.NVarChar).Value = room.price;
-            command.Parameters.Add("@pic", SqlDbType.Image).Value = room.pic.ToArray();
-  
+            SqlCommand command = new SqlCommand("INSERT INTO ROOM_BOOKING(customer_id, room_id, employee_id, checkInDate, checkOutDate) VALUES (@cid, @rid, @eid, @ci, @co)", mydb.getConnection);
+            command.Parameters.Add("@cid", SqlDbType.Int).Value = customerID;
+            command.Parameters.Add("@rid", SqlDbType.Int).Value = roomID;
+            command.Parameters.Add("@eid", SqlDbType.Int).Value = employeeID;
+            command.Parameters.Add("@ci", SqlDbType.DateTime).Value = checkInTime;
+            command.Parameters.Add("@co", SqlDbType.DateTime).Value = checkOutTime;
             mydb.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -51,13 +31,6 @@ namespace DAL
                 mydb.closeConnection();
                 return false;
             }
-        }
-        public DataTable getAllRoom()
-        {
-            DataTable table = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT *, TYPE.type_name FROM ROOM INNER JOIN TYPE ON TYPE.type_id = ROOM.type_id", mydb.getConnection);
-            adapter.Fill(table);
-            return table;
         }
         public bool editRoom(ROOM room)
         {
@@ -98,6 +71,5 @@ namespace DAL
                 return false;
             }
         }
-
     }
 }

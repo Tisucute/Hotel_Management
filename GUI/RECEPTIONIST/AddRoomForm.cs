@@ -30,12 +30,6 @@ namespace GUI.RECEPTIONIST
             room.type_id = Convert.ToInt32(cmbBoxType.SelectedValue);
             room.status = "Empty";
             MemoryStream pic = new MemoryStream();
-            if (BtnRadioHire.Checked)
-            {
-                room.status = "Hire";
-            }
-            
-            
             if (verifyInput())
             {
                 picBox.Image.Save(pic, picBox.Image.RawFormat);
@@ -67,10 +61,20 @@ namespace GUI.RECEPTIONIST
         }
         bool verifyInput()
         {
+            if ((txtName.Text.Trim() == "") || txtPerson.Text.Trim() == "" || txtPrice.Text.Trim() == "" || picBox.Image == null)
+            {
+                return false;
+            }
             if (!System.Text.RegularExpressions.Regex.IsMatch(txtPerson.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
             {
-                MessageBox.Show("Number of people in this room may number!");
+                MessageBox.Show("Require Number!");
                 txtPerson.Text = "";
+                return false;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+            {
+                MessageBox.Show("Require Number");
+                txtPrice.Text = "";
                 return false;
             }
             return true;
@@ -90,8 +94,7 @@ namespace GUI.RECEPTIONIST
         {
             cmbBoxType.DataSource = roomBLL.getAllType();
             cmbBoxType.DisplayMember = "type_name";
-            cmbBoxType.ValueMember = "type_name";
-            BtnRadioEmpty.Checked = true;
+            cmbBoxType.ValueMember = "type_id";
         }
         private void AddItems(string name, string kind, string status, Image picture)
         {

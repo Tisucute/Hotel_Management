@@ -112,12 +112,6 @@
     <Compile Include="MANAGER\EmployeeManagementForm.Designer.cs">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LOGIN\ForgotPasswordForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LOGIN\ForgotPasswordForm.Designer.cs">
-      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="JANITOR\JanitorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +167,12 @@
     <Compile Include="RECEPTIONIST\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\DelayRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\DelayRoomForm.Designer.cs">
+      <DependentUpon>DelayRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\EditRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +227,12 @@
     <Compile Include="RECEPTIONIST\RoomBookingForm.Designer.cs">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\ViewRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ViewRoomForm.Designer.cs">
+      <DependentUpon>ViewRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,9 +276,6 @@
     <EmbeddedResource Include="MANAGER\EmployeeManagementForm.resx">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LOGIN\ForgotPasswordForm.resx">
-      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="JANITOR\JanitorForm.resx">
       <DependentUpon>JanitorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +299,9 @@
     <EmbeddedResource Include="RECEPTIONIST\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\DelayRoomForm.resx">
+      <DependentUpon>DelayRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\EditRoomForm.resx">
       <DependentUpon>EditRoomForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ucRooms.resx">
       <DependentUpon>ucRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\ViewRoomForm.resx">
+      <DependentUpon>ViewRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="RECEPTIONIST\RoomManagement.resx">
@@ -515,6 +524,7 @@
     <None Include="Resources\icons8-food-receiver-50.png" />
     <None Include="Resources\icons8-check-book-50.png" />
     <None Include="Resources\icons8-find-50 %281%29.png" />
+    <None Include="Resources\icons8-reset-50.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

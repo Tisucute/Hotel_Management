@@ -48,12 +48,12 @@
             this.btnService = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.LabelManager = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.MenuSideBar2 = new System.Windows.Forms.PictureBox();
             this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.PanelHienThi = new System.Windows.Forms.Panel();
+            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.SideBar.SuspendLayout();
             this.panelAvatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnLogOut)).BeginInit();
@@ -115,7 +115,7 @@
             // 
             // LabelName
             // 
-            this.LabelName.Font = new System.Drawing.Font("VNI-Bodon", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelName.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.LabelName.Location = new System.Drawing.Point(0, 179);
             this.LabelName.Name = "LabelName";
@@ -147,7 +147,7 @@
             // 
             this.BtnHome.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.Font = new System.Drawing.Font("VNI-Bamas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHome.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnHome.Image = global::GUI.Properties.Resources.icons8_home_50__1_;
             this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,7 +172,7 @@
             // 
             this.BtnCheckTime.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.BtnCheckTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCheckTime.Font = new System.Drawing.Font("VNI-Bamas", 9F);
+            this.BtnCheckTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.BtnCheckTime.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnCheckTime.Image = global::GUI.Properties.Resources.icons8_calendar_50;
             this.BtnCheckTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,7 +197,7 @@
             // 
             this.BtnRoom.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.BtnRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRoom.Font = new System.Drawing.Font("VNI-Bamas", 9F);
+            this.BtnRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.BtnRoom.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnRoom.Image = global::GUI.Properties.Resources.icons8_bed_50;
             this.BtnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +222,7 @@
             // 
             this.BtnCustomer.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.BtnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCustomer.Font = new System.Drawing.Font("VNI-Bamas", 9F);
+            this.BtnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.BtnCustomer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnCustomer.Image = global::GUI.Properties.Resources.icons8_tourist_50;
             this.BtnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,7 +247,7 @@
             // 
             this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService.Font = new System.Drawing.Font("VNI-Bamas", 9F);
+            this.btnService.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnService.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnService.Image = global::GUI.Properties.Resources.icons8_service_50;
             this.btnService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,7 +272,7 @@
             // 
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("VNI-Bamas", 9F);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button3.Image = global::GUI.Properties.Resources.icons8_report_50__1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -283,30 +283,6 @@
             this.button3.Text = "               Revenue Reports";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // nightControlBox1
-            // 
-            this.nightControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nightControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.nightControlBox1.CloseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.nightControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nightControlBox1.DefaultLocation = true;
-            this.nightControlBox1.DisableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.DisableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.EnableCloseColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMaximizeButton = true;
-            this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMinimizeButton = true;
-            this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1351, 0);
-            this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MinimizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Name = "nightControlBox1";
-            this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
-            this.nightControlBox1.TabIndex = 6;
             // 
             // LabelManager
             // 
@@ -361,6 +337,31 @@
             this.PanelHienThi.Size = new System.Drawing.Size(1237, 799);
             this.PanelHienThi.TabIndex = 13;
             // 
+            // nightControlBox1
+            // 
+            this.nightControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nightControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.nightControlBox1.CloseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.nightControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
+            this.nightControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nightControlBox1.DefaultLocation = true;
+            this.nightControlBox1.DisableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.nightControlBox1.DisableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.nightControlBox1.EnableCloseColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.nightControlBox1.EnableMaximizeButton = true;
+            this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.nightControlBox1.EnableMinimizeButton = true;
+            this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.nightControlBox1.Location = new System.Drawing.Point(1348, 0);
+            this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
+            this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nightControlBox1.MinimizeHoverForeColor = System.Drawing.Color.White;
+            this.nightControlBox1.Name = "nightControlBox1";
+            this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
+            this.nightControlBox1.TabIndex = 6;
+            this.nightControlBox1.Click += new System.EventHandler(this.nightControlBox1_Click);
+            // 
             // ReceptionistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,7 +404,6 @@
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Panel panelWorkingTime;
         private System.Windows.Forms.Button BtnCheckTime;
-        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private System.Windows.Forms.Label LabelManager;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.PictureBox MenuSideBar2;
@@ -419,5 +419,6 @@
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox BtnLogOut;
+        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }
 }

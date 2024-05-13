@@ -28,11 +28,7 @@ namespace GUI.RECEPTIONIST
             room.type_id = (int)cmbBoxType.SelectedValue;
             room.person = Convert.ToInt32(txtPerson.Text);
             room.price = txtPrice.Text;
-            if (BtnRadioEmpty.Checked)
-            {
-                room.status = "Empty";
-            }
-            else room.status = "Hire";
+            room.status = "Empty";
             MemoryStream pic = new MemoryStream();
             if (verifyInput())
             {
@@ -54,9 +50,20 @@ namespace GUI.RECEPTIONIST
         }
         bool verifyInput()
         {
+            if ((txtName.Text.Trim() == "") || txtPerson.Text.Trim() == "" || txtPrice.Text.Trim() == "" || picBox.Image == null)
+            {
+                return false;
+            }
             if (!System.Text.RegularExpressions.Regex.IsMatch(txtPerson.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
             {
+                MessageBox.Show("Require Number!");
                 txtPerson.Text = "";
+                return false;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+            {
+                MessageBox.Show("Require Number");
+                txtPrice.Text = "";
                 return false;
             }
             return true;

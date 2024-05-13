@@ -20,6 +20,15 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
+        public DataTable getCustomersByCCCD(string CCCD)
+        {
+            SqlCommand command = new SqlCommand("SELECT customer_id as ID, name as [Full Name], CCCD, gender as Gender, phone as Phone, address as Address, nation as Nation, image as Image FROM CUSTOMERS WHERE CCCD = @CCCD", mydb.getConnection);
+            command.Parameters.Add("@CCCD", SqlDbType.NVarChar).Value = CCCD;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
         public DataTable getCustomersByID(int id)
         {
             SqlCommand command = new SqlCommand("SELECT customer_id as ID, name as [Full Name], CCCD, gender as Gender, phone as Phone, address as Address, nation as Nation, image as Image FROM CUSTOMERS WHERE customer_id = @id", mydb.getConnection);

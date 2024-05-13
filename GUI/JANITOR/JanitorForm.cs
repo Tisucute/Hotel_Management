@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +19,16 @@ namespace GUI
         public JanitorForm()
         {
             InitializeComponent();
+            this.Padding = new Padding(borderSize);
         }
         EMPLOYEE login;
+        private int borderSize = 2;
+        bool sideBarExpand;
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public JanitorForm(EMPLOYEE login)
         {
             InitializeComponent();
@@ -61,6 +70,84 @@ namespace GUI
         private void JanitorForm_Load(object sender, EventArgs e)
         {
             getImageAndUsername();
+        }
+
+        private void panelTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SideBarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sideBarExpand)
+            {
+                //ì sidebar is expand, minimize
+                SideBar.Width -= 253;
+                if (SideBar.Width <= SideBar.MinimumSize.Width)
+                {
+                    sideBarExpand = false;
+                    SideBarTimer.Stop();
+
+                }
+            }
+            else
+            {
+                SideBar.Width += 253;
+                if (SideBar.Width >= SideBar.MaximumSize.Width)
+                {
+                    sideBarExpand = true;
+                    SideBarTimer.Stop();
+
+                }
+            }
+        }
+
+        private void MenuSideBar2_Click(object sender, EventArgs e)
+        {
+            SideBarTimer.Start();
+        }
+
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                // Tắt border của form
+                this.FormBorderStyle = FormBorderStyle.None;
+            }
+            else
+            {
+                // Khôi phục border khi form không phải là maximum
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+            }
+        }
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_NCCALCSIZE = 0x0083;
+            if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
+            {
+                return;
+            }
+            base.WndProc(ref m);
+        }
+        private void AdjustForm()
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Maximized:
+                    this.Padding = new Padding(0, 8, 8, 0);
+                    break;
+                case FormWindowState.Normal:
+                    if (this.Padding.Top != borderSize)
+                        this.Padding = new Padding(borderSize);
+                    break;
+            }
+        }
+
+        private void nightControlBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
