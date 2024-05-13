@@ -39,8 +39,13 @@ namespace DAL
             command.Parameters.Add("et", SqlDbType.DateTime).Value = dateTime.ToString("yyyy-MM-dd 23:59:59");
             mydb.openConnection();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            double total = 0;
+            if (dataTable.Rows.Count > 0)
+            {
+                total = Convert.ToDouble(dataTable.Rows[0]["total"].ToString());
+            }
             dataAdapter.Fill(dataTable);
-            return Convert.ToDouble(dataTable.Rows[0]["total"].ToString());
+            return total;
         }
         public double getTotalHourByEmployeeID(int empID, DateTime dateTime)
         {

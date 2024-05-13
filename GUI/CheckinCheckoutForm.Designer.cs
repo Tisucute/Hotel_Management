@@ -33,7 +33,6 @@
             this.DateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.TimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnCheckOut = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCheckIn = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupBoxProfile = new ReaLTaiizor.Controls.RibbonGroupBox();
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
@@ -50,6 +49,7 @@
             this.nightHeaderLabel1 = new ReaLTaiizor.Controls.NightHeaderLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnCheckIn = new Guna.UI2.WinForms.Guna2Button();
             this.GroupBoxCheck.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GroupBoxProfile.SuspendLayout();
@@ -66,19 +66,19 @@
             this.GroupBoxCheck.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(178)))), ((int)(((byte)(172)))));
             this.GroupBoxCheck.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(192)))), ((int)(((byte)(200)))));
             this.GroupBoxCheck.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.GroupBoxCheck.Controls.Add(this.btnCheckIn);
             this.GroupBoxCheck.Controls.Add(this.skyLabel5);
             this.GroupBoxCheck.Controls.Add(this.DateTimePicker);
+            this.GroupBoxCheck.Controls.Add(this.pictureBox1);
             this.GroupBoxCheck.Controls.Add(this.TimePicker);
             this.GroupBoxCheck.Controls.Add(this.btnCheckOut);
-            this.GroupBoxCheck.Controls.Add(this.btnCheckIn);
-            this.GroupBoxCheck.Controls.Add(this.pictureBox1);
             this.GroupBoxCheck.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.GroupBoxCheck.ForeColor = System.Drawing.Color.Black;
             this.GroupBoxCheck.LineColorA = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.GroupBoxCheck.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
-            this.GroupBoxCheck.Location = new System.Drawing.Point(639, 140);
+            this.GroupBoxCheck.Location = new System.Drawing.Point(642, 168);
             this.GroupBoxCheck.Name = "GroupBoxCheck";
-            this.GroupBoxCheck.Size = new System.Drawing.Size(602, 306);
+            this.GroupBoxCheck.Size = new System.Drawing.Size(611, 306);
             this.GroupBoxCheck.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.GroupBoxCheck.TabIndex = 16;
             this.GroupBoxCheck.Text = "Check in & Check out";
@@ -98,6 +98,7 @@
             // DateTimePicker
             // 
             this.DateTimePicker.Checked = true;
+            this.DateTimePicker.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
             this.DateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DateTimePicker.Location = new System.Drawing.Point(99, 116);
@@ -138,40 +139,13 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(342, 175);
+            this.btnCheckOut.Location = new System.Drawing.Point(327, 175);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(173, 39);
             this.btnCheckOut.TabIndex = 33;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.UseTransparentBackground = true;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
-            // btnCheckIn
-            // 
-            this.GroupBoxCheck.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBoxCheck.BaseColor = System.Drawing.Color.Transparent;
-            this.GroupBoxCheck.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.GroupBoxCheck.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(178)))), ((int)(((byte)(172)))));
-            this.GroupBoxCheck.BorderColorC = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(192)))), ((int)(((byte)(200)))));
-            this.GroupBoxCheck.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.GroupBoxCheck.Controls.Add(this.pictureBox1);
-            this.GroupBoxCheck.Controls.Add(this.txtBoxDate);
-            this.GroupBoxCheck.Controls.Add(this.txtBoxNote);
-            this.GroupBoxCheck.Controls.Add(this.MonthCalendar);
-            this.GroupBoxCheck.Controls.Add(this.TimePicker);
-            this.GroupBoxCheck.Controls.Add(this.cmbBoxTime);
-            this.GroupBoxCheck.Controls.Add(this.btnCheckOut);
-            this.GroupBoxCheck.Controls.Add(this.btnCheckIn);
-            this.GroupBoxCheck.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.GroupBoxCheck.ForeColor = System.Drawing.Color.Black;
-            this.GroupBoxCheck.LineColorA = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
-            this.GroupBoxCheck.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
-            this.GroupBoxCheck.Location = new System.Drawing.Point(630, 78);
-            this.GroupBoxCheck.Name = "GroupBoxCheck";
-            this.GroupBoxCheck.Size = new System.Drawing.Size(611, 473);
-            this.GroupBoxCheck.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.GroupBoxCheck.TabIndex = 16;
-            this.GroupBoxCheck.Text = "Check in & Check out";
             // 
             // pictureBox1
             // 
@@ -205,7 +179,7 @@
             this.GroupBoxProfile.ForeColor = System.Drawing.Color.Black;
             this.GroupBoxProfile.LineColorA = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.GroupBoxProfile.LineColorB = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
-            this.GroupBoxProfile.Location = new System.Drawing.Point(13, 78);
+            this.GroupBoxProfile.Location = new System.Drawing.Point(25, 168);
             this.GroupBoxProfile.Name = "GroupBoxProfile";
             this.GroupBoxProfile.Size = new System.Drawing.Size(611, 306);
             this.GroupBoxProfile.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -378,7 +352,7 @@
             this.moonLabel1.AutoSize = true;
             this.moonLabel1.BackColor = System.Drawing.Color.Transparent;
             this.moonLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.moonLabel1.Location = new System.Drawing.Point(202, 354);
+            this.moonLabel1.Location = new System.Drawing.Point(214, 485);
             this.moonLabel1.Name = "moonLabel1";
             this.moonLabel1.Size = new System.Drawing.Size(0, 16);
             this.moonLabel1.TabIndex = 19;
@@ -389,11 +363,11 @@
             this.nightHeaderLabel1.Font = new System.Drawing.Font("Monotype Corsiva", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nightHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.nightHeaderLabel1.LeftSideForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.nightHeaderLabel1.Location = new System.Drawing.Point(31, 466);
+            this.nightHeaderLabel1.Location = new System.Drawing.Point(391, 52);
             this.nightHeaderLabel1.Name = "nightHeaderLabel1";
             this.nightHeaderLabel1.RightSideForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(171)))), ((int)(((byte)(176)))));
             this.nightHeaderLabel1.Side = ReaLTaiizor.Controls.NightHeaderLabel.PanelSide.LeftPanel;
-            this.nightHeaderLabel1.Size = new System.Drawing.Size(596, 117);
+            this.nightHeaderLabel1.Size = new System.Drawing.Size(596, 96);
             this.nightHeaderLabel1.TabIndex = 20;
             this.nightHeaderLabel1.Text = "Attendance";
             this.nightHeaderLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,7 +383,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1253, 49);
             this.guna2Panel1.TabIndex = 21;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2ControlBox1
             // 
@@ -422,12 +395,31 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
             // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.Animated = true;
+            this.btnCheckIn.AutoRoundedCorners = true;
+            this.btnCheckIn.BorderRadius = 18;
+            this.btnCheckIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCheckIn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(155)))), ((int)(((byte)(180)))));
+            this.btnCheckIn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCheckIn.ForeColor = System.Drawing.Color.White;
+            this.btnCheckIn.Location = new System.Drawing.Point(115, 175);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(173, 39);
+            this.btnCheckIn.TabIndex = 38;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.UseTransparentBackground = true;
+            // 
             // CheckinCheckoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1253, 609);
+            this.ClientSize = new System.Drawing.Size(1253, 505);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.nightHeaderLabel1);
             this.Controls.Add(this.moonLabel1);

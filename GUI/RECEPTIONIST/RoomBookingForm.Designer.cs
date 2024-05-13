@@ -37,37 +37,42 @@
             this.skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cmbBoxType = new ReaLTaiizor.Controls.ComboBoxEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
-            this.datePickerFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.datePickerTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.skyLabel5 = new ReaLTaiizor.Controls.SkyLabel();
+            this.datePickerTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.datePickerFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.skyLabel6 = new ReaLTaiizor.Controls.SkyLabel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.skyLabel7 = new ReaLTaiizor.Controls.SkyLabel();
-            this.skyLabel8 = new ReaLTaiizor.Controls.SkyLabel();
-            this.skyLabel9 = new ReaLTaiizor.Controls.SkyLabel();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.skyLabel10 = new ReaLTaiizor.Controls.SkyLabel();
-            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtRoomName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPerson = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtRoomID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.skyLabel12 = new ReaLTaiizor.Controls.SkyLabel();
-            this.skyLabel13 = new ReaLTaiizor.Controls.SkyLabel();
-            this.skyLabel14 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel15 = new ReaLTaiizor.Controls.SkyLabel();
+            this.skyLabel14 = new ReaLTaiizor.Controls.SkyLabel();
+            this.skyLabel13 = new ReaLTaiizor.Controls.SkyLabel();
+            this.skyLabel12 = new ReaLTaiizor.Controls.SkyLabel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRoomID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPerson = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
+            this.skyLabel6 = new ReaLTaiizor.Controls.SkyLabel();
+            this.txtRoomName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.skyLabel9 = new ReaLTaiizor.Controls.SkyLabel();
+            this.skyLabel7 = new ReaLTaiizor.Controls.SkyLabel();
+            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.skyLabel21 = new ReaLTaiizor.Controls.SkyLabel();
+            this.skyLabel11 = new ReaLTaiizor.Controls.SkyLabel();
+            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.skyLabel16 = new ReaLTaiizor.Controls.SkyLabel();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.skyLabel17 = new ReaLTaiizor.Controls.SkyLabel();
+            this.txtNation = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioBtnFemale = new ReaLTaiizor.Controls.SkyRadioButton();
             this.radioBtnMale = new ReaLTaiizor.Controls.SkyRadioButton();
@@ -76,25 +81,20 @@
             this.txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel20 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtCCCD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.skyLabel11 = new ReaLTaiizor.Controls.SkyLabel();
-            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.skyLabel16 = new ReaLTaiizor.Controls.SkyLabel();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.skyLabel17 = new ReaLTaiizor.Controls.SkyLabel();
-            this.txtNation = new Guna.UI2.WinForms.Guna2TextBox();
-            this.picBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.skyLabel21 = new ReaLTaiizor.Controls.SkyLabel();
+            this.skyLabel8 = new ReaLTaiizor.Controls.SkyLabel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnExport = new Guna.UI2.WinForms.Guna2Button();
+            this.skyLabel10 = new ReaLTaiizor.Controls.SkyLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBookRoom)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvListBookRoom
@@ -219,15 +219,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1469, 66);
             this.guna2Panel1.TabIndex = 73;
             // 
-            // guna2ControlBox1
+            // pictureBox1
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1403, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(63, 44);
-            this.guna2ControlBox1.TabIndex = 0;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_check_book_50;
+            this.pictureBox1.Location = new System.Drawing.Point(54, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -239,6 +239,16 @@
             this.label1.Size = new System.Drawing.Size(190, 28);
             this.label1.TabIndex = 9;
             this.label1.Text = "BOOKING ROOMS";
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1403, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(63, 44);
+            this.guna2ControlBox1.TabIndex = 0;
             // 
             // cmbBoxType
             // 
@@ -276,33 +286,16 @@
             this.groupBox1.TabIndex = 141;
             this.groupBox1.TabStop = false;
             // 
-            // skyLabel4
+            // skyLabel5
             // 
-            this.skyLabel4.AutoSize = true;
-            this.skyLabel4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.skyLabel4.Location = new System.Drawing.Point(15, 0);
-            this.skyLabel4.Name = "skyLabel4";
-            this.skyLabel4.Size = new System.Drawing.Size(247, 20);
-            this.skyLabel4.TabIndex = 69;
-            this.skyLabel4.Text = "Registration Information";
-            // 
-            // datePickerFrom
-            // 
-            this.datePickerFrom.Animated = true;
-            this.datePickerFrom.AutoRoundedCorners = true;
-            this.datePickerFrom.BorderRadius = 12;
-            this.datePickerFrom.Checked = true;
-            this.datePickerFrom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.datePickerFrom.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.datePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerFrom.Location = new System.Drawing.Point(179, 52);
-            this.datePickerFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datePickerFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.datePickerFrom.Name = "datePickerFrom";
-            this.datePickerFrom.Size = new System.Drawing.Size(180, 26);
-            this.datePickerFrom.TabIndex = 141;
-            this.datePickerFrom.Value = new System.DateTime(2024, 5, 13, 10, 15, 19, 902);
+            this.skyLabel5.AutoSize = true;
+            this.skyLabel5.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel5.Location = new System.Drawing.Point(193, 35);
+            this.skyLabel5.Name = "skyLabel5";
+            this.skyLabel5.Size = new System.Drawing.Size(46, 14);
+            this.skyLabel5.TabIndex = 142;
+            this.skyLabel5.Text = "From:";
             // 
             // datePickerTo
             // 
@@ -321,16 +314,33 @@
             this.datePickerTo.TabIndex = 142;
             this.datePickerTo.Value = new System.DateTime(2024, 5, 13, 10, 15, 19, 902);
             // 
-            // skyLabel5
+            // datePickerFrom
             // 
-            this.skyLabel5.AutoSize = true;
-            this.skyLabel5.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel5.Location = new System.Drawing.Point(193, 35);
-            this.skyLabel5.Name = "skyLabel5";
-            this.skyLabel5.Size = new System.Drawing.Size(46, 14);
-            this.skyLabel5.TabIndex = 142;
-            this.skyLabel5.Text = "From:";
+            this.datePickerFrom.Animated = true;
+            this.datePickerFrom.AutoRoundedCorners = true;
+            this.datePickerFrom.BorderRadius = 12;
+            this.datePickerFrom.Checked = true;
+            this.datePickerFrom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.datePickerFrom.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.datePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePickerFrom.Location = new System.Drawing.Point(179, 52);
+            this.datePickerFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.datePickerFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datePickerFrom.Name = "datePickerFrom";
+            this.datePickerFrom.Size = new System.Drawing.Size(180, 26);
+            this.datePickerFrom.TabIndex = 141;
+            this.datePickerFrom.Value = new System.DateTime(2024, 5, 13, 10, 15, 19, 902);
+            // 
+            // skyLabel4
+            // 
+            this.skyLabel4.AutoSize = true;
+            this.skyLabel4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.skyLabel4.Location = new System.Drawing.Point(15, 0);
+            this.skyLabel4.Name = "skyLabel4";
+            this.skyLabel4.Size = new System.Drawing.Size(247, 20);
+            this.skyLabel4.TabIndex = 69;
+            this.skyLabel4.Text = "Registration Information";
             // 
             // groupBox2
             // 
@@ -352,155 +362,67 @@
             this.groupBox2.TabIndex = 142;
             this.groupBox2.TabStop = false;
             // 
-            // skyLabel6
+            // skyLabel15
             // 
-            this.skyLabel6.AutoSize = true;
-            this.skyLabel6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.skyLabel6.Location = new System.Drawing.Point(19, 0);
-            this.skyLabel6.Name = "skyLabel6";
-            this.skyLabel6.Size = new System.Drawing.Size(187, 20);
-            this.skyLabel6.TabIndex = 70;
-            this.skyLabel6.Text = "ROOM Information";
+            this.skyLabel15.AutoSize = true;
+            this.skyLabel15.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel15.Location = new System.Drawing.Point(16, 200);
+            this.skyLabel15.Name = "skyLabel15";
+            this.skyLabel15.Size = new System.Drawing.Size(48, 16);
+            this.skyLabel15.TabIndex = 86;
+            this.skyLabel15.Text = "Price:";
             // 
-            // groupBox3
+            // skyLabel14
             // 
-            this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Controls.Add(this.skyLabel9);
-            this.groupBox3.Controls.Add(this.skyLabel7);
-            this.groupBox3.Controls.Add(this.TextBoxSearch);
-            this.groupBox3.Location = new System.Drawing.Point(12, 244);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(374, 196);
-            this.groupBox3.TabIndex = 143;
-            this.groupBox3.TabStop = false;
+            this.skyLabel14.AutoSize = true;
+            this.skyLabel14.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel14.Location = new System.Drawing.Point(16, 154);
+            this.skyLabel14.Name = "skyLabel14";
+            this.skyLabel14.Size = new System.Drawing.Size(62, 16);
+            this.skyLabel14.TabIndex = 85;
+            this.skyLabel14.Text = "Person:";
             // 
-            // groupBox4
+            // skyLabel13
             // 
-            this.groupBox4.Controls.Add(this.skyLabel21);
-            this.groupBox4.Controls.Add(this.skyLabel11);
-            this.groupBox4.Controls.Add(this.txtPhone);
-            this.groupBox4.Controls.Add(this.skyLabel16);
-            this.groupBox4.Controls.Add(this.txtAddress);
-            this.groupBox4.Controls.Add(this.skyLabel17);
-            this.groupBox4.Controls.Add(this.txtNation);
-            this.groupBox4.Controls.Add(this.picBox);
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Controls.Add(this.skyLabel19);
-            this.groupBox4.Controls.Add(this.txtCustomerName);
-            this.groupBox4.Controls.Add(this.skyLabel20);
-            this.groupBox4.Controls.Add(this.txtCCCD);
-            this.groupBox4.Controls.Add(this.skyLabel8);
-            this.groupBox4.Location = new System.Drawing.Point(12, 457);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(758, 351);
-            this.groupBox4.TabIndex = 144;
-            this.groupBox4.TabStop = false;
+            this.skyLabel13.AutoSize = true;
+            this.skyLabel13.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel13.Location = new System.Drawing.Point(16, 107);
+            this.skyLabel13.Name = "skyLabel13";
+            this.skyLabel13.Size = new System.Drawing.Size(99, 16);
+            this.skyLabel13.TabIndex = 84;
+            this.skyLabel13.Text = "Room Name:";
             // 
-            // skyLabel7
+            // skyLabel12
             // 
-            this.skyLabel7.AutoSize = true;
-            this.skyLabel7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.skyLabel7.Location = new System.Drawing.Point(15, 0);
-            this.skyLabel7.Name = "skyLabel7";
-            this.skyLabel7.Size = new System.Drawing.Size(170, 20);
-            this.skyLabel7.TabIndex = 71;
-            this.skyLabel7.Text = "Search Customer";
+            this.skyLabel12.AutoSize = true;
+            this.skyLabel12.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel12.Location = new System.Drawing.Point(16, 60);
+            this.skyLabel12.Name = "skyLabel12";
+            this.skyLabel12.Size = new System.Drawing.Size(73, 16);
+            this.skyLabel12.TabIndex = 83;
+            this.skyLabel12.Text = "Room ID:";
             // 
-            // skyLabel8
+            // btnClose
             // 
-            this.skyLabel8.AutoSize = true;
-            this.skyLabel8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.skyLabel8.Location = new System.Drawing.Point(15, 0);
-            this.skyLabel8.Name = "skyLabel8";
-            this.skyLabel8.Size = new System.Drawing.Size(235, 20);
-            this.skyLabel8.TabIndex = 71;
-            this.skyLabel8.Text = "CUSTOMER Information";
-            // 
-            // skyLabel9
-            // 
-            this.skyLabel9.AutoSize = true;
-            this.skyLabel9.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel9.Location = new System.Drawing.Point(39, 52);
-            this.skyLabel9.Name = "skyLabel9";
-            this.skyLabel9.Size = new System.Drawing.Size(120, 14);
-            this.skyLabel9.TabIndex = 73;
-            this.skyLabel9.Text = "Search By CCCD:";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Animated = true;
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BorderRadius = 17;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(102, 132);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(157, 36);
-            this.btnSearch.TabIndex = 74;
-            this.btnSearch.Text = "Search";
-            // 
-            // TextBoxSearch
-            // 
-            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.DefaultText = "";
-            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50__1_;
-            this.TextBoxSearch.Location = new System.Drawing.Point(19, 73);
-            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.PasswordChar = '\0';
-            this.TextBoxSearch.PlaceholderText = "Search here";
-            this.TextBoxSearch.SelectedText = "";
-            this.TextBoxSearch.Size = new System.Drawing.Size(340, 35);
-            this.TextBoxSearch.TabIndex = 72;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_check_book_50;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btnExport);
-            this.groupBox5.Controls.Add(this.skyLabel10);
-            this.groupBox5.Controls.Add(this.dgvListBookRoom);
-            this.groupBox5.Location = new System.Drawing.Point(786, 72);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(668, 736);
-            this.groupBox5.TabIndex = 145;
-            this.groupBox5.TabStop = false;
-            // 
-            // skyLabel10
-            // 
-            this.skyLabel10.AutoSize = true;
-            this.skyLabel10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.skyLabel10.Location = new System.Drawing.Point(13, -3);
-            this.skyLabel10.Name = "skyLabel10";
-            this.skyLabel10.Size = new System.Drawing.Size(189, 20);
-            this.skyLabel10.TabIndex = 76;
-            this.skyLabel10.Text = "List Booking Room";
+            this.btnClose.Animated = true;
+            this.btnClose.AutoRoundedCorners = true;
+            this.btnClose.BorderRadius = 17;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(134, 319);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(113, 36);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.Text = "Close";
             // 
             // txtPrice
             // 
@@ -526,29 +448,29 @@
             this.txtPrice.Size = new System.Drawing.Size(217, 31);
             this.txtPrice.TabIndex = 73;
             // 
-            // txtRoomName
+            // txtRoomID
             // 
-            this.txtRoomName.AutoRoundedCorners = true;
-            this.txtRoomName.BorderRadius = 14;
-            this.txtRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRoomName.DefaultText = "";
-            this.txtRoomName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRoomName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomName.Enabled = false;
-            this.txtRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.txtRoomName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRoomName.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.txtRoomName.Location = new System.Drawing.Point(134, 102);
-            this.txtRoomName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.PasswordChar = '\0';
-            this.txtRoomName.PlaceholderText = "";
-            this.txtRoomName.SelectedText = "";
-            this.txtRoomName.Size = new System.Drawing.Size(217, 31);
-            this.txtRoomName.TabIndex = 76;
+            this.txtRoomID.AutoRoundedCorners = true;
+            this.txtRoomID.BorderRadius = 14;
+            this.txtRoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRoomID.DefaultText = "";
+            this.txtRoomID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRoomID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRoomID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomID.Enabled = false;
+            this.txtRoomID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.txtRoomID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRoomID.ForeColor = System.Drawing.Color.Black;
+            this.txtRoomID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.txtRoomID.Location = new System.Drawing.Point(134, 52);
+            this.txtRoomID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRoomID.Name = "txtRoomID";
+            this.txtRoomID.PasswordChar = '\0';
+            this.txtRoomID.PlaceholderText = "";
+            this.txtRoomID.SelectedText = "";
+            this.txtRoomID.Size = new System.Drawing.Size(217, 31);
+            this.txtRoomID.TabIndex = 80;
             // 
             // txtPerson
             // 
@@ -574,29 +496,23 @@
             this.txtPerson.Size = new System.Drawing.Size(217, 31);
             this.txtPerson.TabIndex = 79;
             // 
-            // txtRoomID
+            // btnCancel
             // 
-            this.txtRoomID.AutoRoundedCorners = true;
-            this.txtRoomID.BorderRadius = 14;
-            this.txtRoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRoomID.DefaultText = "";
-            this.txtRoomID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRoomID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRoomID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomID.Enabled = false;
-            this.txtRoomID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.txtRoomID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRoomID.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.txtRoomID.Location = new System.Drawing.Point(134, 52);
-            this.txtRoomID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRoomID.Name = "txtRoomID";
-            this.txtRoomID.PasswordChar = '\0';
-            this.txtRoomID.PlaceholderText = "";
-            this.txtRoomID.SelectedText = "";
-            this.txtRoomID.Size = new System.Drawing.Size(217, 31);
-            this.txtRoomID.TabIndex = 80;
+            this.btnCancel.Animated = true;
+            this.btnCancel.AutoRoundedCorners = true;
+            this.btnCancel.BorderRadius = 17;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(198, 261);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(113, 36);
+            this.btnCancel.TabIndex = 78;
+            this.btnCancel.Text = "Cancel";
             // 
             // btnAccept
             // 
@@ -616,85 +532,256 @@
             this.btnAccept.TabIndex = 77;
             this.btnAccept.Text = "Accept";
             // 
-            // btnCancel
+            // skyLabel6
             // 
-            this.btnCancel.Animated = true;
-            this.btnCancel.AutoRoundedCorners = true;
-            this.btnCancel.BorderRadius = 17;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(198, 261);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(113, 36);
-            this.btnCancel.TabIndex = 78;
-            this.btnCancel.Text = "Cancel";
+            this.skyLabel6.AutoSize = true;
+            this.skyLabel6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.skyLabel6.Location = new System.Drawing.Point(19, 0);
+            this.skyLabel6.Name = "skyLabel6";
+            this.skyLabel6.Size = new System.Drawing.Size(187, 20);
+            this.skyLabel6.TabIndex = 70;
+            this.skyLabel6.Text = "ROOM Information";
             // 
-            // btnClose
+            // txtRoomName
             // 
-            this.btnClose.Animated = true;
-            this.btnClose.AutoRoundedCorners = true;
-            this.btnClose.BorderRadius = 17;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(134, 319);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(113, 36);
-            this.btnClose.TabIndex = 79;
-            this.btnClose.Text = "Close";
+            this.txtRoomName.AutoRoundedCorners = true;
+            this.txtRoomName.BorderRadius = 14;
+            this.txtRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRoomName.DefaultText = "";
+            this.txtRoomName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRoomName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomName.Enabled = false;
+            this.txtRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.txtRoomName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRoomName.ForeColor = System.Drawing.Color.Black;
+            this.txtRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.txtRoomName.Location = new System.Drawing.Point(134, 102);
+            this.txtRoomName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRoomName.Name = "txtRoomName";
+            this.txtRoomName.PasswordChar = '\0';
+            this.txtRoomName.PlaceholderText = "";
+            this.txtRoomName.SelectedText = "";
+            this.txtRoomName.Size = new System.Drawing.Size(217, 31);
+            this.txtRoomName.TabIndex = 76;
             // 
-            // skyLabel12
+            // groupBox3
             // 
-            this.skyLabel12.AutoSize = true;
-            this.skyLabel12.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel12.Location = new System.Drawing.Point(31, 62);
-            this.skyLabel12.Name = "skyLabel12";
-            this.skyLabel12.Size = new System.Drawing.Size(73, 16);
-            this.skyLabel12.TabIndex = 83;
-            this.skyLabel12.Text = "Room ID:";
+            this.groupBox3.Controls.Add(this.btnSearch);
+            this.groupBox3.Controls.Add(this.skyLabel9);
+            this.groupBox3.Controls.Add(this.skyLabel7);
+            this.groupBox3.Controls.Add(this.TextBoxSearch);
+            this.groupBox3.Location = new System.Drawing.Point(12, 244);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(374, 196);
+            this.groupBox3.TabIndex = 143;
+            this.groupBox3.TabStop = false;
             // 
-            // skyLabel13
+            // btnSearch
             // 
-            this.skyLabel13.AutoSize = true;
-            this.skyLabel13.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel13.Location = new System.Drawing.Point(31, 109);
-            this.skyLabel13.Name = "skyLabel13";
-            this.skyLabel13.Size = new System.Drawing.Size(99, 16);
-            this.skyLabel13.TabIndex = 84;
-            this.skyLabel13.Text = "Room Name:";
+            this.btnSearch.Animated = true;
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BorderRadius = 17;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(102, 132);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(157, 36);
+            this.btnSearch.TabIndex = 74;
+            this.btnSearch.Text = "Search";
             // 
-            // skyLabel14
+            // skyLabel9
             // 
-            this.skyLabel14.AutoSize = true;
-            this.skyLabel14.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel14.Location = new System.Drawing.Point(31, 156);
-            this.skyLabel14.Name = "skyLabel14";
-            this.skyLabel14.Size = new System.Drawing.Size(62, 16);
-            this.skyLabel14.TabIndex = 85;
-            this.skyLabel14.Text = "Person:";
+            this.skyLabel9.AutoSize = true;
+            this.skyLabel9.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel9.Location = new System.Drawing.Point(39, 52);
+            this.skyLabel9.Name = "skyLabel9";
+            this.skyLabel9.Size = new System.Drawing.Size(120, 14);
+            this.skyLabel9.TabIndex = 73;
+            this.skyLabel9.Text = "Search By CCCD:";
             // 
-            // skyLabel15
+            // skyLabel7
             // 
-            this.skyLabel15.AutoSize = true;
-            this.skyLabel15.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel15.Location = new System.Drawing.Point(31, 202);
-            this.skyLabel15.Name = "skyLabel15";
-            this.skyLabel15.Size = new System.Drawing.Size(48, 16);
-            this.skyLabel15.TabIndex = 86;
-            this.skyLabel15.Text = "Price:";
+            this.skyLabel7.AutoSize = true;
+            this.skyLabel7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.skyLabel7.Location = new System.Drawing.Point(15, 0);
+            this.skyLabel7.Name = "skyLabel7";
+            this.skyLabel7.Size = new System.Drawing.Size(170, 20);
+            this.skyLabel7.TabIndex = 71;
+            this.skyLabel7.Text = "Search Customer";
+            // 
+            // TextBoxSearch
+            // 
+            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearch.DefaultText = "";
+            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50__1_;
+            this.TextBoxSearch.Location = new System.Drawing.Point(19, 73);
+            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            this.TextBoxSearch.PasswordChar = '\0';
+            this.TextBoxSearch.PlaceholderText = "Search here";
+            this.TextBoxSearch.SelectedText = "";
+            this.TextBoxSearch.Size = new System.Drawing.Size(340, 35);
+            this.TextBoxSearch.TabIndex = 72;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.skyLabel21);
+            this.groupBox4.Controls.Add(this.skyLabel11);
+            this.groupBox4.Controls.Add(this.txtPhone);
+            this.groupBox4.Controls.Add(this.skyLabel16);
+            this.groupBox4.Controls.Add(this.txtAddress);
+            this.groupBox4.Controls.Add(this.skyLabel17);
+            this.groupBox4.Controls.Add(this.txtNation);
+            this.groupBox4.Controls.Add(this.picBox);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.skyLabel19);
+            this.groupBox4.Controls.Add(this.txtCustomerName);
+            this.groupBox4.Controls.Add(this.skyLabel20);
+            this.groupBox4.Controls.Add(this.txtCCCD);
+            this.groupBox4.Controls.Add(this.skyLabel8);
+            this.groupBox4.Location = new System.Drawing.Point(12, 457);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(758, 351);
+            this.groupBox4.TabIndex = 144;
+            this.groupBox4.TabStop = false;
+            // 
+            // skyLabel21
+            // 
+            this.skyLabel21.AutoSize = true;
+            this.skyLabel21.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel21.Location = new System.Drawing.Point(434, 88);
+            this.skyLabel21.Name = "skyLabel21";
+            this.skyLabel21.Size = new System.Drawing.Size(49, 14);
+            this.skyLabel21.TabIndex = 91;
+            this.skyLabel21.Text = "Image";
+            // 
+            // skyLabel11
+            // 
+            this.skyLabel11.AutoSize = true;
+            this.skyLabel11.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel11.Location = new System.Drawing.Point(434, 32);
+            this.skyLabel11.Name = "skyLabel11";
+            this.skyLabel11.Size = new System.Drawing.Size(48, 14);
+            this.skyLabel11.TabIndex = 90;
+            this.skyLabel11.Text = "Phone";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.AutoRoundedCorners = true;
+            this.txtPhone.BorderRadius = 14;
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Location = new System.Drawing.Point(427, 50);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PasswordChar = '\0';
+            this.txtPhone.PlaceholderText = "";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(254, 31);
+            this.txtPhone.TabIndex = 89;
+            // 
+            // skyLabel16
+            // 
+            this.skyLabel16.AutoSize = true;
+            this.skyLabel16.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel16.Location = new System.Drawing.Point(62, 283);
+            this.skyLabel16.Name = "skyLabel16";
+            this.skyLabel16.Size = new System.Drawing.Size(60, 14);
+            this.skyLabel16.TabIndex = 88;
+            this.skyLabel16.Text = "Address";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.AutoRoundedCorners = true;
+            this.txtAddress.BorderRadius = 14;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Location = new System.Drawing.Point(55, 301);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(254, 31);
+            this.txtAddress.TabIndex = 87;
+            // 
+            // skyLabel17
+            // 
+            this.skyLabel17.AutoSize = true;
+            this.skyLabel17.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel17.Location = new System.Drawing.Point(62, 230);
+            this.skyLabel17.Name = "skyLabel17";
+            this.skyLabel17.Size = new System.Drawing.Size(50, 14);
+            this.skyLabel17.TabIndex = 86;
+            this.skyLabel17.Text = "Nation";
+            // 
+            // txtNation
+            // 
+            this.txtNation.AutoRoundedCorners = true;
+            this.txtNation.BorderRadius = 14;
+            this.txtNation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNation.DefaultText = "";
+            this.txtNation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNation.Location = new System.Drawing.Point(55, 248);
+            this.txtNation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNation.Name = "txtNation";
+            this.txtNation.PasswordChar = '\0';
+            this.txtNation.PlaceholderText = "";
+            this.txtNation.SelectedText = "";
+            this.txtNation.Size = new System.Drawing.Size(254, 31);
+            this.txtNation.TabIndex = 85;
+            // 
+            // picBox
+            // 
+            this.picBox.ImageRotate = 0F;
+            this.picBox.Location = new System.Drawing.Point(427, 116);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(254, 216);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 84;
+            this.picBox.TabStop = false;
             // 
             // groupBox6
             // 
@@ -824,125 +911,27 @@
             this.txtCCCD.Size = new System.Drawing.Size(254, 31);
             this.txtCCCD.TabIndex = 81;
             // 
-            // skyLabel11
+            // skyLabel8
             // 
-            this.skyLabel11.AutoSize = true;
-            this.skyLabel11.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel11.Location = new System.Drawing.Point(434, 32);
-            this.skyLabel11.Name = "skyLabel11";
-            this.skyLabel11.Size = new System.Drawing.Size(48, 14);
-            this.skyLabel11.TabIndex = 90;
-            this.skyLabel11.Text = "Phone";
+            this.skyLabel8.AutoSize = true;
+            this.skyLabel8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.skyLabel8.Location = new System.Drawing.Point(15, 0);
+            this.skyLabel8.Name = "skyLabel8";
+            this.skyLabel8.Size = new System.Drawing.Size(235, 20);
+            this.skyLabel8.TabIndex = 71;
+            this.skyLabel8.Text = "CUSTOMER Information";
             // 
-            // txtPhone
+            // groupBox5
             // 
-            this.txtPhone.AutoRoundedCorners = true;
-            this.txtPhone.BorderRadius = 14;
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultText = "";
-            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(427, 50);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PasswordChar = '\0';
-            this.txtPhone.PlaceholderText = "";
-            this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(254, 31);
-            this.txtPhone.TabIndex = 89;
-            // 
-            // skyLabel16
-            // 
-            this.skyLabel16.AutoSize = true;
-            this.skyLabel16.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel16.Location = new System.Drawing.Point(62, 283);
-            this.skyLabel16.Name = "skyLabel16";
-            this.skyLabel16.Size = new System.Drawing.Size(60, 14);
-            this.skyLabel16.TabIndex = 88;
-            this.skyLabel16.Text = "Address";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.AutoRoundedCorners = true;
-            this.txtAddress.BorderRadius = 14;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(55, 301);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(254, 31);
-            this.txtAddress.TabIndex = 87;
-            // 
-            // skyLabel17
-            // 
-            this.skyLabel17.AutoSize = true;
-            this.skyLabel17.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel17.Location = new System.Drawing.Point(62, 230);
-            this.skyLabel17.Name = "skyLabel17";
-            this.skyLabel17.Size = new System.Drawing.Size(50, 14);
-            this.skyLabel17.TabIndex = 86;
-            this.skyLabel17.Text = "Nation";
-            // 
-            // txtNation
-            // 
-            this.txtNation.AutoRoundedCorners = true;
-            this.txtNation.BorderRadius = 14;
-            this.txtNation.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNation.DefaultText = "";
-            this.txtNation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNation.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNation.Location = new System.Drawing.Point(55, 248);
-            this.txtNation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNation.Name = "txtNation";
-            this.txtNation.PasswordChar = '\0';
-            this.txtNation.PlaceholderText = "";
-            this.txtNation.SelectedText = "";
-            this.txtNation.Size = new System.Drawing.Size(254, 31);
-            this.txtNation.TabIndex = 85;
-            // 
-            // picBox
-            // 
-            this.picBox.ImageRotate = 0F;
-            this.picBox.Location = new System.Drawing.Point(427, 116);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(254, 216);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox.TabIndex = 84;
-            this.picBox.TabStop = false;
-            // 
-            // skyLabel21
-            // 
-            this.skyLabel21.AutoSize = true;
-            this.skyLabel21.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel21.Location = new System.Drawing.Point(434, 88);
-            this.skyLabel21.Name = "skyLabel21";
-            this.skyLabel21.Size = new System.Drawing.Size(49, 14);
-            this.skyLabel21.TabIndex = 91;
-            this.skyLabel21.Text = "Image";
+            this.groupBox5.Controls.Add(this.btnExport);
+            this.groupBox5.Controls.Add(this.skyLabel10);
+            this.groupBox5.Controls.Add(this.dgvListBookRoom);
+            this.groupBox5.Location = new System.Drawing.Point(786, 72);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(668, 736);
+            this.groupBox5.TabIndex = 145;
+            this.groupBox5.TabStop = false;
             // 
             // btnExport
             // 
@@ -961,6 +950,17 @@
             this.btnExport.Size = new System.Drawing.Size(113, 36);
             this.btnExport.TabIndex = 80;
             this.btnExport.Text = "Export";
+            // 
+            // skyLabel10
+            // 
+            this.skyLabel10.AutoSize = true;
+            this.skyLabel10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skyLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.skyLabel10.Location = new System.Drawing.Point(13, -3);
+            this.skyLabel10.Name = "skyLabel10";
+            this.skyLabel10.Size = new System.Drawing.Size(189, 20);
+            this.skyLabel10.TabIndex = 76;
+            this.skyLabel10.Text = "List Booking Room";
             // 
             // RoomBookingForm
             // 
@@ -981,6 +981,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBookRoom)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -989,12 +990,11 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }

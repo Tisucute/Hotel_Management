@@ -50,6 +50,9 @@
     <Compile Include="ShiftScheduler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{fd81c9ba-2f91-4020-a0f3-402a310668a7}</Project>
       <Name>DAL</Name>
@@ -58,9 +61,6 @@
       <Project>{807ab0d8-e3c1-49f4-bd0b-b39ae0cd2129}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
