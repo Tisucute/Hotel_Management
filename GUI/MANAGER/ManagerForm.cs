@@ -26,8 +26,8 @@ namespace GUI
             this.Padding = new Padding(borderSize);
         }
 
-        LOGIN login;
-        public ManagerForm(LOGIN tmp)
+        EMPLOYEE login;
+        public ManagerForm(EMPLOYEE tmp)
         {
             login = tmp;
             InitializeComponent();
@@ -103,7 +103,7 @@ namespace GUI
         
         private void ButtonTimeAndSalary_Click_1(object sender, EventArgs e)
         {
-            AddControls(new WorkingTimeAndSalaryForm());
+            AddControls(new WorkingTimeForm());
         }
 
         private void panel6_MouseDown(object sender, MouseEventArgs e) //Panel TitleBar
@@ -176,11 +176,6 @@ namespace GUI
         private void ButtonHome_Click(object sender, EventArgs e)
         {
             PanelHienThi.Hide();
-        }
-
-        private void BtnAccManage_Click(object sender, EventArgs e)
-        {
-            AddControls(new AccountUserForm(login));
         }
 
         private void BtnReport_Click(object sender, EventArgs e)

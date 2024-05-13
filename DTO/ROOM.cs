@@ -14,7 +14,7 @@ namespace DTO
     {
         public int room_id { get; set; }
         public string room_name { get; set;}
-        public string type { get; set;}
+        public int type_id { get; set;}
         public int person { get; set;}
         public string status { get; set;}
         public string price { get; set;}

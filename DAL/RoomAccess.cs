@@ -20,11 +20,21 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
+        public DataTable getRoomByName(string roomName)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM ROOM WHERE room_name = @name", mydb.getConnection);
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = roomName;
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+           
+            adapter.Fill(table);
+            return table;
+        }
         public bool addRoom(ROOM room)
         {
             SqlCommand command = new SqlCommand("INSERT INTO ROOM(room_name, type, person, status, price, picture) VALUES (@name, @type, @person, @status, @price, @pic)", mydb.getConnection);
             command.Parameters.Add("@name", SqlDbType.NVarChar).Value = room.room_name;
-            command.Parameters.Add("@type", SqlDbType.NVarChar).Value = room.type;
+            command.Parameters.Add("@type", SqlDbType.Int).Value = room.type_id;
             command.Parameters.Add("@person", SqlDbType.Int).Value = room.person;
             command.Parameters.Add("@status", SqlDbType.VarChar).Value = room.status;
             command.Parameters.Add("@price", SqlDbType.NVarChar).Value = room.price;
@@ -45,9 +55,32 @@ namespace DAL
         public DataTable getAllRoom()
         {
             DataTable table = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM ROOM", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT *, TYPE.type_name FROM ROOM INNER JOIN TYPE ON TYPE.type_id = ROOM.type_id", mydb.getConnection);
             adapter.Fill(table);
             return table;
+        }
+        public bool editRoom(ROOM room)
+        {
+            SqlCommand command = new SqlCommand("UPDATE ROOM SET room_name = @name, type_id = @type, person = @person, status = @status, price = @price, picture = @pic WHERE room_id = @id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = room.room_id;
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = room.room_name;
+            command.Parameters.Add("@type", SqlDbType.Int).Value = room.type_id;
+            command.Parameters.Add("@person", SqlDbType.Int).Value = room.person;
+            command.Parameters.Add("@status", SqlDbType.VarChar).Value = room.status;
+            command.Parameters.Add("@price", SqlDbType.NVarChar).Value = room.price;
+            command.Parameters.Add("@pic", SqlDbType.Image).Value = room.pic.ToArray();
+
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
         }
         public bool removeRoom(string name)
         {

@@ -1,4 +1,4 @@
-﻿using GUI.All_UC;
+﻿using GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace GUI
 
         private void BtnEmployeeSalary_Click(object sender, EventArgs e)
         {
-            panelMoving.Left = BtnEmployeeSalary.Left + 42 ;
+            panelMoving.Left = BtnEmployeeSalary.Left + 42;
             uC_ReportES1.Visible = true;
             uC_ReportES1.BringToFront();
         }
@@ -38,6 +38,11 @@ namespace GUI
             panelMoving.Left = BtnEmployeeSalary.Left + 465;
             uC_ReportRS1.Visible= true;
             uC_ReportRS1.BringToFront();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

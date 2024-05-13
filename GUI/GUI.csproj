@@ -82,41 +82,11 @@
     <Compile Include="MANAGER\AssignShiftForm.Designer.cs">
       <DependentUpon>AssignShiftForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MANAGER\EditUserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MANAGER\EditUserForm.Designer.cs">
-      <DependentUpon>EditUserForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MANAGER\AddUserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MANAGER\AddUserForm.Designer.cs">
-      <DependentUpon>AddUserForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MANAGER\AddReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MANAGER\AddReportForm.Designer.cs">
       <DependentUpon>AddReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="All UC\UC_ReportES.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="All UC\UC_ReportES.Designer.cs">
-      <DependentUpon>UC_ReportES.cs</DependentUpon>
-    </Compile>
-    <Compile Include="All UC\UC_ReportRS.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="All UC\UC_ReportRS.Designer.cs">
-      <DependentUpon>UC_ReportRS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MANAGER\AccountUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MANAGER\AccountUser.Designer.cs">
-      <DependentUpon>AccountUser.cs</DependentUpon>
     </Compile>
     <Compile Include="MANAGER\AddEmployeeForm.cs">
       <SubType>Form</SubType>
@@ -176,6 +146,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLKSDataSetAttendance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKSDataSetAttendance.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLKSDataSetLogin.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,11 +179,11 @@
     <Compile Include="RECEPTIONIST\ReceptionistForm.Designer.cs">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MANAGER\WorkingTimeAndSalaryForm.cs">
+    <Compile Include="MANAGER\WorkingTimeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MANAGER\WorkingTimeAndSalaryForm.Designer.cs">
-      <DependentUpon>WorkingTimeAndSalaryForm.cs</DependentUpon>
+    <Compile Include="MANAGER\WorkingTimeForm.Designer.cs">
+      <DependentUpon>WorkingTimeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MANAGER\ReportForm.cs">
       <SubType>Form</SubType>
@@ -234,21 +209,27 @@
     <Compile Include="SelectEmployeeForm.Designer.cs">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MANAGER\ShiftInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANAGER\ShiftInformation.Designer.cs">
+      <DependentUpon>ShiftInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="All UC\UC_ReportES.resx">
+    <Compile Include="All UC\UC_ReportES.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All UC\UC_ReportES.Designer.cs">
       <DependentUpon>UC_ReportES.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="All UC\UC_ReportRS.resx">
+    </Compile>
+    <Compile Include="All UC\UC_ReportRS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All UC\UC_ReportRS.Designer.cs">
       <DependentUpon>UC_ReportRS.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
     <EmbeddedResource Include="MANAGER\AssignShiftForm.resx">
       <DependentUpon>AssignShiftForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MANAGER\EditUserForm.resx">
-      <DependentUpon>EditUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MANAGER\AccountUser.resx">
-      <DependentUpon>AccountUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
@@ -258,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\AddReportForm.resx">
       <DependentUpon>AddReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MANAGER\AddUserForm.resx">
-      <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\EditEmployeeForm.resx">
       <DependentUpon>EditEmployeeForm.cs</DependentUpon>
@@ -280,6 +258,9 @@
     <EmbeddedResource Include="MANAGER\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MANAGER\ShiftInformation.resx">
+      <DependentUpon>ShiftInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -294,8 +275,8 @@
     <EmbeddedResource Include="RECEPTIONIST\ReceptionistForm.resx">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MANAGER\WorkingTimeAndSalaryForm.resx">
-      <DependentUpon>WorkingTimeAndSalaryForm.cs</DependentUpon>
+    <EmbeddedResource Include="MANAGER\WorkingTimeForm.resx">
+      <DependentUpon>WorkingTimeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
@@ -309,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelectEmployeeForm.resx">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All UC\UC_ReportES.resx">
+      <DependentUpon>UC_ReportES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All UC\UC_ReportRS.resx">
+      <DependentUpon>UC_ReportRS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -350,6 +337,17 @@
     </None>
     <None Include="QLKSDataSet.xss">
       <DependentUpon>QLKSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetAttendance.xsc">
+      <DependentUpon>QLKSDataSetAttendance.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetAttendance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSetAttendance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLKSDataSetAttendance.xss">
+      <DependentUpon>QLKSDataSetAttendance.xsd</DependentUpon>
     </None>
     <None Include="QLKSDataSetLogin.xsc">
       <DependentUpon>QLKSDataSetLogin.xsd</DependentUpon>

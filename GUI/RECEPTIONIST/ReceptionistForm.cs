@@ -20,13 +20,13 @@ namespace GUI
 {
     public partial class ReceptionistForm : Form
     {
-        public ReceptionistForm(LOGIN tmp)
+        public ReceptionistForm(EMPLOYEE tmp)
         {
-            loginn = tmp;
+            login = tmp;
             InitializeComponent();
             this.Padding = new Padding(borderSize);
         }
-        LOGIN loginn;
+        EMPLOYEE login;
         private int borderSize = 2;
         bool sideBarExpand;
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -38,7 +38,7 @@ namespace GUI
         {
             EMPLOYEE employee = new EMPLOYEE();
             EmployeeBLL employeeBLL = new EmployeeBLL();
-            DataTable dt = employeeBLL.getEmployeeByID(loginn.id);
+            DataTable dt = employeeBLL.getEmployeeByID(login.id);
             foreach (DataRow row in dt.Rows)
             {
                 employee.id = Convert.ToInt32(row["id"].ToString());
@@ -61,7 +61,7 @@ namespace GUI
         public void getImageAndUsername()
         {
             EmployeeBLL employeeBLL = new EmployeeBLL();
-            DataTable table = employeeBLL.getUserNameAndImage(loginn.id);
+            DataTable table = employeeBLL.getUserNameAndImage(login.id);
             if ((table.Rows.Count > 0))
             {
                 byte[] pic = (byte[])table.Rows[0]["picture"];

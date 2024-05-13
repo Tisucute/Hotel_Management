@@ -27,7 +27,7 @@ namespace GUI.RECEPTIONIST
             room.room_name = txtName.Text.Trim();
             room.person = Convert.ToInt32(txtPerson.Text.ToString());
             room.price = txtPrice.Text.Trim();
-            room.type = cmbBoxType.Text.ToString();
+            room.type_id = Convert.ToInt32(cmbBoxType.SelectedValue);
             room.status = "Empty";
             MemoryStream pic = new MemoryStream();
             if (BtnRadioHire.Checked)
@@ -58,12 +58,6 @@ namespace GUI.RECEPTIONIST
             {
                 MessageBox.Show("Please Fill In Blank Information", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-                
-
-            
-
-
         }
 
         bool IsValidAlphabetInput(string input)

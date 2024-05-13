@@ -75,18 +75,18 @@ namespace GUI
         
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            LoginBLL loginBLL = new LoginBLL();
-            LOGIN login  = new LOGIN();
+            EMPLOYEE employee = new EMPLOYEE();
+            EmployeeBLL employeeBLL = new EmployeeBLL();
             if (TextBoxUsername.Text != "" && TextBoxPassword.Text != "")
             {
-                login.username = TextBoxUsername.Text;
-                login.password = TextBoxPassword.Text;
+                employee.username = TextBoxUsername.Text;
+                employee.password = TextBoxPassword.Text;
                 if (RadioButtonManager.Checked)
                 {
-                    login.role = 1;
-                    if (loginBLL.checkLogin(login))
+                    employee.role = 1;
+                    if (employeeBLL.checkLogin(employee))
                     {
-                        ManagerForm managerForm = new ManagerForm(login);
+                        ManagerForm managerForm = new ManagerForm(employee);
                         this.Hide();
                         managerForm.Show();
                     }
@@ -97,10 +97,10 @@ namespace GUI
                 }
                 else if (RadioButtonReceptionist.Checked)
                 {
-                    login.role = 2;
-                    if (loginBLL.checkLogin(login))
+                    employee.role = 2;
+                    if (employeeBLL.checkLogin(employee))
                     {
-                        ReceptionistForm receptionistForm = new ReceptionistForm(login);
+                        ReceptionistForm receptionistForm = new ReceptionistForm(employee);
                         this.Hide();
                         receptionistForm.Show();
                     }
@@ -111,10 +111,10 @@ namespace GUI
                 }
                 else 
                 {
-                    login.role = 3;
-                    if (loginBLL.checkLogin(login))
+                    employee.role = 3;
+                    if (employeeBLL.checkLogin(employee))
                     {
-                        JanitorForm janitorForm = new JanitorForm(login);
+                        JanitorForm janitorForm = new JanitorForm(employee);
                         this.Hide();
                         janitorForm.Show();
                     }

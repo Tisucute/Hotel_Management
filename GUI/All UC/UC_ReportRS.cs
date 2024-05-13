@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI.All_UC
+namespace GUI
 {
     public partial class UC_ReportRS : UserControl
     {

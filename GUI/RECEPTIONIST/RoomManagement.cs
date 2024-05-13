@@ -67,7 +67,7 @@ namespace GUI
             {
                 Byte[] imagearray = (byte[])item["picture"];
                 byte[] imagebytearray = imagearray;
-                AddItems(item["room_name"].ToString(), item["type"].ToString(), item["status"].ToString(), Image.FromStream(new MemoryStream(imagearray)));
+                AddItems(item["room_name"].ToString(), item["type_name"].ToString(), item["status"].ToString(), Image.FromStream(new MemoryStream(imagearray)));
                 
             }
             foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
@@ -105,16 +105,26 @@ namespace GUI
             // Tạo một form mới
             EditRoomForm editForm = new EditRoomForm();
             // Tạo một textbox mới và đặt text bằng thông tin từ UserControl
+            DataTable dt = roombll.getRoomByName(controlToEdit.room_name);
             //TextBox textBox = new TextBox();
             editForm.txtName.Text = controlToEdit.room_name;
-            editForm.txtPerson.Text = controlToEdit.person.ToString();
-            editForm.txtPrice.Text = controlToEdit.Pprice;
-            editForm.cmbBoxType.SelectedValue = controlToEdit.type;
+            editForm.txtPerson.Text = dt.Rows[0]["person"].ToString();
+            editForm.txtPrice.Text = dt.Rows[0]["price"].ToString();
             editForm.picBox.Image = controlToEdit.Ppicture;
             editForm.txtName.Text = controlToEdit.room_name;
+            if (dt.Rows[0]["status"].ToString().Trim() == "Empty")
+            {
+                editForm.BtnRadioEmpty.Checked = true;
+            }
+            else
+            {
+                editForm.BtnRadioHire.Checked = true;
+            }
 
             // Hiển thị form
             editForm.Show();
+            editForm.cmbBoxType.SelectedValue = dt.Rows[0]["type_id"].ToString();
+            editForm.txtID.Text = dt.Rows[0]["room_id"].ToString();
         }
 
 

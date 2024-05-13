@@ -14,6 +14,8 @@ namespace DTO
         public int id { get; set; }
         public string fullname { get; set; }
         public string gender { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
         public DateTime birthdate { get; set; }
         public string CCCD { get; set; }
         public string address { get; set; }
@@ -33,6 +35,8 @@ namespace DTO
             CCCD = table.Rows[0]["CCCD"].ToString();
             address = table.Rows[0]["address"].ToString();
             phone = table.Rows[0]["phone"].ToString();
+            username = table.Rows[0]["username"].ToString();
+            password = table.Rows[0]["password"].ToString();    
             role = Convert.ToInt32(table.Rows[0]["role_id"].ToString());
             status = table.Rows[0]["status"].ToString();
             byte[] tmp = (byte[])table.Rows[0]["picture"];

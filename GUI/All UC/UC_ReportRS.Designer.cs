@@ -1,4 +1,4 @@
-﻿namespace GUI.All_UC
+﻿namespace GUI
 {
     partial class UC_ReportRS
     {
@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // UC_ReportRS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Name = "UC_ReportRS";
-            this.Size = new System.Drawing.Size(1099, 625);
+            this.Size = new System.Drawing.Size(1097, 621);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
