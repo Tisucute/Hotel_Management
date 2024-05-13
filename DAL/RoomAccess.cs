@@ -30,6 +30,23 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
+        public bool updateStatusRoom(int roomID, string status)
+        {
+            SqlCommand command = new SqlCommand("UPDATE ROOM SET status = @status WHERE room_id = @id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = roomID;
+            command.Parameters.Add("@status", SqlDbType.VarChar).Value = status;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
         public bool addRoom(ROOM room)
         {
             SqlCommand command = new SqlCommand("INSERT INTO ROOM(room_name, type_id, person, status, price, picture) VALUES (@name, @type, @person, @status, @price, @pic)", mydb.getConnection);

@@ -55,6 +55,7 @@ namespace DAL
 
             if ((table.Rows.Count > 0))
             {
+                EMPLOYEE.setemID(Convert.ToInt32(table.Rows[0]["id"].ToString()));
                 employee.id = Convert.ToInt32(table.Rows[0]["id"].ToString());
                 conn.Close();
                 return true;

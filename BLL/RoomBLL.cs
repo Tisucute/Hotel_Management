@@ -37,5 +37,9 @@ namespace BLL
         {
             return roomAccess.editRoom(room);
         }
+        public bool updateStatusRoom(int roomId, string status)
+        {
+            return roomAccess.updateStatusRoom(roomId, status);
+        }
     }
 }

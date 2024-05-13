@@ -11,6 +11,11 @@ namespace DTO
 {
     public class EMPLOYEE
     {
+        public static int emID { get; private set; }
+        public static void setemID(int id)
+        {
+            emID = id;
+        }
         public int id { get; set; }
         public string fullname { get; set; }
         public string gender { get; set; }

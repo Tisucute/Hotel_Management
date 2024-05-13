@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using BLL;
 using DTO;
-using BLL;
+using System;
+using System.Data;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -36,7 +30,7 @@ namespace GUI
         {
             txtRoomID.Text = room.room_id.ToString();
             txtRoomName.Text = room.room_name.ToString();
-            txtPerson.Text = room.person.ToString(); 
+            txtPerson.Text = room.person.ToString();
             txtPrice.Text = room.price.ToString();
             cmbBoxType.DataSource = roomBLL.getAllType();
             cmbBoxType.ValueMember = "type_id";
@@ -53,17 +47,18 @@ namespace GUI
             int date = diff.Days;
             txtNight.Text = date.ToString();
         }
-        
+
         bool IsValidAlphabetInput(string input)
         {
             // Sử dụng biểu thức chính quy để kiểm tra
             return Regex.IsMatch(input, @"^[\p{L}\p{Mn}\p{Mc}]+$");
         }
+        int customerID;
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (!System.Text.RegularExpressions.Regex.IsMatch(TextBoxSearch.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
             {
-                MessageBox.Show("Số điện thoại phải là số!");
+                MessageBox.Show("CCCD Require A Number");
                 TextBoxSearch.Text = "";
                 return;
             }
@@ -71,6 +66,7 @@ namespace GUI
             DataTable dt = customerBLL.getCustomersByCCCD(TextBoxSearch.Text.Trim());
             if (dt.Rows.Count > 0)
             {
+                customerID = Convert.ToInt32(dt.Rows[0]["ID"].ToString());
                 txtCustomerName.Text = dt.Rows[0]["Full Name"].ToString();
                 txtCCCD.Text = dt.Rows[0]["CCCD"].ToString();
                 txtAddress.Text = dt.Rows[0]["Address"].ToString();
@@ -93,7 +89,43 @@ namespace GUI
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
+            BookingRoomBLL bookingRoom = new BookingRoomBLL();
+            RoomBLL roomBLL = new RoomBLL();
+            if (verify())
+            {
+                int roomID = Convert.ToInt32(txtRoomID.Text);
+                DateTime checkInTime = datePickerFrom.Value;
+                DateTime checkOutTime = datePickerTo.Value;
+                if (bookingRoom.insertBookingRoom(customerID, roomID, EMPLOYEE.emID, checkInTime, checkOutTime))
+                {
+                    roomBLL.updateStatusRoom(roomID, "Hire");
+                    MessageBox.Show("Booking successfully!", "Booking", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Booking failed!", "Booking", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        bool verify()
+        {
+            if (txtNight.Text.Trim() == "" || txtNight.Text.Trim() == "0")
+            {
+                MessageBox.Show("Please select an out date!", "Booking", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (txtCustomerName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please select customer!", "Booking", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

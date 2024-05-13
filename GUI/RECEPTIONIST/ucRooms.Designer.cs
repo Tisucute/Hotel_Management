@@ -38,7 +38,7 @@
             this.labelKind = new ReaLTaiizor.Controls.NightLabel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.RadioBtnHire = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.btnReceive = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
@@ -48,14 +48,14 @@
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
             this.guna2ShadowPanel1.Controls.Add(this.BtnDelete);
-            this.guna2ShadowPanel1.Controls.Add(this.btnBook);
             this.guna2ShadowPanel1.Controls.Add(this.RadioBtnStatus);
             this.guna2ShadowPanel1.Controls.Add(this.labelStatus);
             this.guna2ShadowPanel1.Controls.Add(this.labelName);
             this.guna2ShadowPanel1.Controls.Add(this.labelKind);
             this.guna2ShadowPanel1.Controls.Add(this.picBox);
             this.guna2ShadowPanel1.Controls.Add(this.RadioBtnHire);
-            this.guna2ShadowPanel1.Controls.Add(this.btnReceive);
+            this.guna2ShadowPanel1.Controls.Add(this.btnBook);
+            this.guna2ShadowPanel1.Controls.Add(this.btnReturn);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 3);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
@@ -213,24 +213,24 @@
             this.RadioBtnHire.UncheckedState.InnerColor = System.Drawing.Color.OrangeRed;
             this.RadioBtnHire.UseTransparentBackground = true;
             // 
-            // btnReceive
+            // btnReturn
             // 
-            this.btnReceive.Animated = true;
-            this.btnReceive.AutoRoundedCorners = true;
-            this.btnReceive.BorderRadius = 13;
-            this.btnReceive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReceive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReceive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReceive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReceive.FillColor = System.Drawing.Color.Orange;
-            this.btnReceive.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceive.ForeColor = System.Drawing.Color.White;
-            this.btnReceive.Location = new System.Drawing.Point(17, 225);
-            this.btnReceive.Name = "btnReceive";
-            this.btnReceive.Size = new System.Drawing.Size(85, 29);
-            this.btnReceive.TabIndex = 10;
-            this.btnReceive.Text = "Receive";
-            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
+            this.btnReturn.Animated = true;
+            this.btnReturn.AutoRoundedCorners = true;
+            this.btnReturn.BorderRadius = 13;
+            this.btnReturn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReturn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReturn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReturn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReturn.FillColor = System.Drawing.Color.Orange;
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.Color.White;
+            this.btnReturn.Location = new System.Drawing.Point(17, 225);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(85, 29);
+            this.btnReturn.TabIndex = 10;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.Click += new System.EventHandler(this.btnReceive_Click);
             // 
             // ucRooms
             // 
@@ -257,7 +257,7 @@
         public Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtnHire;
         private Guna.UI2.WinForms.Guna2Button BtnDelete;
         private Guna.UI2.WinForms.Guna2Button btnBook;
-        private Guna.UI2.WinForms.Guna2Button btnReceive;
+        private Guna.UI2.WinForms.Guna2Button btnReturn;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
     }
 }

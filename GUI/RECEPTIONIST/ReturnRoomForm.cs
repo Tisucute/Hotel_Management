@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI.RECEPTIONIST
 {
-    public partial class ReceiveRoomForm : Form
+    public partial class ReturnRoomForm : Form
     {
-        public ReceiveRoomForm()
+        public ReturnRoomForm()
         {
             InitializeComponent();
         }

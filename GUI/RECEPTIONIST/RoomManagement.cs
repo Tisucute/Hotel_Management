@@ -129,12 +129,15 @@ namespace GUI
             room.price = dt.Rows[0]["price"].ToString().Trim();
             RoomBookingForm roomBF = new RoomBookingForm(room);
             roomBF.ShowDialog();
+            panelRoom.Controls.Clear();
+            loadRoom();
         }
 
         private void MyControl_ReceiveClicked(object sender, EventArgs e)
         {
-            ReceiveRoomForm receiveRoomForm = new ReceiveRoomForm();
+            ReturnRoomForm receiveRoomForm = new ReturnRoomForm();
             receiveRoomForm.ShowDialog();
+
         }
         private void MyControl_EditClicked(object sender, EventArgs e)
         {

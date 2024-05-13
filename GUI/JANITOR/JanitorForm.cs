@@ -37,7 +37,7 @@ namespace GUI
         public void getImageAndUsername()
         {
             EmployeeBLL employeeBLL = new EmployeeBLL();
-            DataTable table = employeeBLL.getUserNameAndImage(login.id);
+            DataTable table = employeeBLL.getUserNameAndImage(EMPLOYEE.emID);
             byte[] pic = (byte[])table.Rows[0]["picture"];
             MemoryStream picture = new MemoryStream(pic);
             PictureBoxJanitor.Image = Image.FromStream(picture);
