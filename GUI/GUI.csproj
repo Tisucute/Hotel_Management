@@ -246,10 +246,10 @@
     <Compile Include="RECEPTIONIST\ucRooms.Designer.cs">
       <DependentUpon>ucRooms.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoomBookingForm.cs">
+    <Compile Include="RECEPTIONIST\RoomBookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RoomBookingForm.Designer.cs">
+    <Compile Include="RECEPTIONIST\RoomBookingForm.Designer.cs">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectEmployeeForm.cs">
@@ -340,7 +340,7 @@
     <EmbeddedResource Include="RECEPTIONIST\RoomManagement.resx">
       <DependentUpon>RoomManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoomBookingForm.resx">
+    <EmbeddedResource Include="RECEPTIONIST\RoomBookingForm.resx">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectEmployeeForm.resx">
@@ -514,6 +514,9 @@
     <None Include="Resources\icons8-edit-64.png" />
     <None Include="Resources\icons8-add-64 %282%29.png" />
     <None Include="Resources\icons8-delete-64.png" />
+    <None Include="Resources\icons8-food-receiver-50.png" />
+    <None Include="Resources\icons8-check-book-50.png" />
+    <None Include="Resources\icons8-find-50 %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

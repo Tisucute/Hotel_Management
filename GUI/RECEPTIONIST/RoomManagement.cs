@@ -109,11 +109,6 @@ namespace GUI
             roomBF.ShowDialog();
         }
 
-        private void BtnBookRoom_Click(object sender, EventArgs e)
-        {
-            RoomBookingForm roomBF = new RoomBookingForm();
-            roomBF.ShowDialog();
-        }
         private void MyControl_ReceiveClicked(object sender, EventArgs e)
         {
             ReceiveRoomForm receiveRoomForm = new ReceiveRoomForm();

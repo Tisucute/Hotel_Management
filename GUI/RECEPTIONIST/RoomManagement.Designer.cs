@@ -33,8 +33,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnReturnRoom = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnReceiveRoom = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnBookRoom = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnServiceRoom = new Guna.UI2.WinForms.Guna2Button();
             this.BtnAddRoom = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -42,12 +41,13 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelRoom = new System.Windows.Forms.FlowLayoutPanel();
-            this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
-            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.ucRooms4 = new GUI.RECEPTIONIST.ucRooms();
             this.ucRooms3 = new GUI.RECEPTIONIST.ucRooms();
             this.ucRooms2 = new GUI.RECEPTIONIST.ucRooms();
             this.ucRooms1 = new GUI.RECEPTIONIST.ucRooms();
+            this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
+            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BtnTotal = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,13 +91,13 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.BtnTotal);
             this.panel1.Controls.Add(this.BtnReturnRoom);
-            this.panel1.Controls.Add(this.BtnReceiveRoom);
-            this.panel1.Controls.Add(this.BtnBookRoom);
+            this.panel1.Controls.Add(this.BtnServiceRoom);
             this.panel1.Controls.Add(this.BtnAddRoom);
             this.panel1.Location = new System.Drawing.Point(382, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(610, 105);
+            this.panel1.Size = new System.Drawing.Size(599, 105);
             this.panel1.TabIndex = 13;
             // 
             // BtnReturnRoom
@@ -113,51 +113,30 @@
             this.BtnReturnRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
             this.BtnReturnRoom.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
             this.BtnReturnRoom.ForeColor = System.Drawing.Color.White;
-            this.BtnReturnRoom.Location = new System.Drawing.Point(455, 8);
+            this.BtnReturnRoom.Location = new System.Drawing.Point(162, 8);
             this.BtnReturnRoom.Name = "BtnReturnRoom";
             this.BtnReturnRoom.Size = new System.Drawing.Size(129, 86);
             this.BtnReturnRoom.TabIndex = 12;
             this.BtnReturnRoom.Text = "Edit Room";
             // 
-            // BtnReceiveRoom
+            // BtnServiceRoom
             // 
-            this.BtnReceiveRoom.Animated = true;
-            this.BtnReceiveRoom.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnReceiveRoom.BorderRadius = 20;
-            this.BtnReceiveRoom.BorderThickness = 1;
-            this.BtnReceiveRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnReceiveRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnReceiveRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnReceiveRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnReceiveRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.BtnReceiveRoom.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.BtnReceiveRoom.ForeColor = System.Drawing.Color.White;
-            this.BtnReceiveRoom.Location = new System.Drawing.Point(309, 8);
-            this.BtnReceiveRoom.Name = "BtnReceiveRoom";
-            this.BtnReceiveRoom.Size = new System.Drawing.Size(140, 86);
-            this.BtnReceiveRoom.TabIndex = 11;
-            this.BtnReceiveRoom.Text = "Receive Room";
-            // 
-            // BtnBookRoom
-            // 
-            this.BtnBookRoom.Animated = true;
-            this.BtnBookRoom.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnBookRoom.BorderRadius = 20;
-            this.BtnBookRoom.BorderThickness = 1;
-            this.BtnBookRoom.CustomBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnBookRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnBookRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnBookRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnBookRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnBookRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
-            this.BtnBookRoom.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.BtnBookRoom.ForeColor = System.Drawing.Color.White;
-            this.BtnBookRoom.Location = new System.Drawing.Point(162, 8);
-            this.BtnBookRoom.Name = "BtnBookRoom";
-            this.BtnBookRoom.Size = new System.Drawing.Size(141, 86);
-            this.BtnBookRoom.TabIndex = 10;
-            this.BtnBookRoom.Text = "Booking Room";
-            this.BtnBookRoom.Click += new System.EventHandler(this.BtnBookRoom_Click);
+            this.BtnServiceRoom.Animated = true;
+            this.BtnServiceRoom.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnServiceRoom.BorderRadius = 20;
+            this.BtnServiceRoom.BorderThickness = 1;
+            this.BtnServiceRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnServiceRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnServiceRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnServiceRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnServiceRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.BtnServiceRoom.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.BtnServiceRoom.ForeColor = System.Drawing.Color.White;
+            this.BtnServiceRoom.Location = new System.Drawing.Point(297, 8);
+            this.BtnServiceRoom.Name = "BtnServiceRoom";
+            this.BtnServiceRoom.Size = new System.Drawing.Size(140, 86);
+            this.BtnServiceRoom.TabIndex = 11;
+            this.BtnServiceRoom.Text = "Services of Room";
             // 
             // BtnAddRoom
             // 
@@ -258,39 +237,6 @@
             this.panelRoom.Size = new System.Drawing.Size(910, 653);
             this.panelRoom.TabIndex = 3;
             // 
-            // skyLabel3
-            // 
-            this.skyLabel3.AutoSize = true;
-            this.skyLabel3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel3.Location = new System.Drawing.Point(969, 228);
-            this.skyLabel3.Name = "skyLabel3";
-            this.skyLabel3.Size = new System.Drawing.Size(0, 14);
-            this.skyLabel3.TabIndex = 36;
-            // 
-            // TextBoxSearch
-            // 
-            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.DefaultText = "";
-            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50;
-            this.TextBoxSearch.Location = new System.Drawing.Point(52, 139);
-            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.PasswordChar = '\0';
-            this.TextBoxSearch.PlaceholderText = "Search here";
-            this.TextBoxSearch.SelectedText = "";
-            this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
-            this.TextBoxSearch.TabIndex = 4;
-            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
-            // 
             // ucRooms4
             // 
             this.ucRooms4.Location = new System.Drawing.Point(3, 3);
@@ -347,6 +293,58 @@
             this.ucRooms1.TabIndex = 0;
             this.ucRooms1.type = "";
             // 
+            // skyLabel3
+            // 
+            this.skyLabel3.AutoSize = true;
+            this.skyLabel3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
+            this.skyLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.skyLabel3.Location = new System.Drawing.Point(969, 228);
+            this.skyLabel3.Name = "skyLabel3";
+            this.skyLabel3.Size = new System.Drawing.Size(0, 14);
+            this.skyLabel3.TabIndex = 36;
+            // 
+            // TextBoxSearch
+            // 
+            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearch.DefaultText = "";
+            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50;
+            this.TextBoxSearch.Location = new System.Drawing.Point(52, 139);
+            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            this.TextBoxSearch.PasswordChar = '\0';
+            this.TextBoxSearch.PlaceholderText = "Search here";
+            this.TextBoxSearch.SelectedText = "";
+            this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
+            this.TextBoxSearch.TabIndex = 4;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
+            // BtnTotal
+            // 
+            this.BtnTotal.Animated = true;
+            this.BtnTotal.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnTotal.BorderRadius = 20;
+            this.BtnTotal.BorderThickness = 1;
+            this.BtnTotal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnTotal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnTotal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(153)))), ((int)(((byte)(178)))));
+            this.BtnTotal.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.BtnTotal.ForeColor = System.Drawing.Color.White;
+            this.BtnTotal.Location = new System.Drawing.Point(445, 8);
+            this.BtnTotal.Name = "BtnTotal";
+            this.BtnTotal.Size = new System.Drawing.Size(140, 86);
+            this.BtnTotal.TabIndex = 13;
+            this.BtnTotal.Text = "Total Bill";
+            // 
             // RoomManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,8 +381,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button BtnReturnRoom;
-        private Guna.UI2.WinForms.Guna2Button BtnReceiveRoom;
-        private Guna.UI2.WinForms.Guna2Button BtnBookRoom;
+        private Guna.UI2.WinForms.Guna2Button BtnServiceRoom;
         private Guna.UI2.WinForms.Guna2Button BtnAddRoom;
         public Guna.UI2.WinForms.Guna2TextBox TextBoxSearch;
         private ReaLTaiizor.Controls.SkyLabel skyLabel3;
@@ -393,5 +390,6 @@
         private RECEPTIONIST.ucRooms ucRooms3;
         private RECEPTIONIST.ucRooms ucRooms4;
         public System.Windows.Forms.FlowLayoutPanel panelRoom;
+        private Guna.UI2.WinForms.Guna2Button BtnTotal;
     }
 }
