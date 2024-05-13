@@ -14,6 +14,12 @@ namespace BLL
         {
             this.employees = new List<EMPLOYEE>();
             this.employees = employees;
+            EmployeeBLL employeeBLL = new EmployeeBLL();
+            foreach (EMPLOYEE x in employees)
+            {
+                DataTable dt = employeeBLL.getRoleByID(x.role);
+                x.roleName = dt.Rows[0]["role_name"].ToString();
+            }
             shifts = new List<SHIFTS>();
             InitializeShifts(datetime);
         }

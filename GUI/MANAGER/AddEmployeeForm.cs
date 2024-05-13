@@ -36,6 +36,8 @@ namespace GUI
             employee.phone = txtBoxPhone.Text.Trim();
             employee.role = Convert.ToInt32(CmbBoxRole.SelectedValue.ToString());
             employee.gender = "Male";
+            employee.username = txtUsername.Text.Trim();
+            employee.password = txtPassword.Text.Trim();    
             MemoryStream pic = new MemoryStream();
             employee.status = "Working";
             if (RadioBtnFemale.Checked)
@@ -44,7 +46,7 @@ namespace GUI
             }
             int born_year = DatePicker.Value.Year;
             int this_year = DateTime.Now.Year;
-            if ((this_year - born_year < 15 && this_year - born_year > 100))
+            if ((this_year - born_year < 15 || this_year - born_year > 100))
             {
                 MessageBox.Show("Tuổi của nhân viên phải từ 18 trở lên", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -56,18 +58,10 @@ namespace GUI
                 {
                     MessageBox.Show("Thêm thành công", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (verifyInput())
-                {
-                    MessageBox.Show("Lỗi", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
                 else
                 {
                     MessageBox.Show("Empty Fields", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng nhập đủ thông tin", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         bool verifyInput()
@@ -86,6 +80,12 @@ namespace GUI
             {
                 MessageBox.Show("Số điện thoại phải là số!");
                 txtBoxPhone.Text = "";
+                return false;
+            }
+            if(!System.Text.RegularExpressions.Regex.IsMatch(txtBoxCCCD.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+            {
+                MessageBox.Show("CCCD phải là số!");
+                txtBoxCCCD.Text = "";
                 return false;
             }
             return true;

@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
@@ -34,6 +35,8 @@ namespace GUI
             txtBoxID.ReadOnly = true;
             txtBoxCCCD.Text = employee.CCCD;
             txtBoxAddress.Text = employee.address;
+            txtUsername.Text = employee.username;
+            txtPassword.Text = employee.password;
             txtBoxPhone.Text = employee.phone;
             DatePicker.Value = employee.birthdate;
             if (employee.gender.Trim() == "Male")
@@ -62,6 +65,8 @@ namespace GUI
             employee.CCCD = txtBoxCCCD.Text.Trim();
             employee.address = txtBoxAddress.Text.Trim();
             employee.phone = txtBoxPhone.Text.Trim();
+            employee.username = txtUsername.Text.Trim();
+            employee.password = txtPassword.Text.Trim();
             employee.role = Convert.ToInt32(CmbBoxRole.SelectedValue.ToString());
             employee.gender = "Male";
             MemoryStream pic = new MemoryStream();
@@ -76,7 +81,7 @@ namespace GUI
             }
             int born_year = DatePicker.Value.Year;
             int this_year = DateTime.Now.Year;
-            if ((this_year - born_year < 15 && this_year - born_year > 100))
+            if ((this_year - born_year < 15 || this_year - born_year > 100))
             {
                 MessageBox.Show("The employee age must be between 10 and 100", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -87,10 +92,6 @@ namespace GUI
                 if (employeeBLL.updateEmployee(employee))
                 {
                     MessageBox.Show("Sửa thông tin nhân viên thành công", "Edit Employee", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (verifyInput())
-                {
-                    MessageBox.Show("Lỗi", "Edit Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -103,7 +104,30 @@ namespace GUI
                 {
                     return false;
                 }
-                else return true;
+                if (!IsValidAlphabetInput(txtBoxFullName.Text.Trim().Replace(" ", "")))
+                {
+                    MessageBox.Show("Tên chỉ được nhập chữ cái!");
+                    txtBoxFullName.Text = "";
+                    return false;
+                }
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtBoxPhone.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+                {
+                    MessageBox.Show("Số điện thoại phải là số!");
+                    txtBoxPhone.Text = "";
+                    return false;
+                }
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtBoxCCCD.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
+                {
+                    MessageBox.Show("CCCD phải là số!");
+                    txtBoxCCCD.Text = "";
+                    return false;
+                }
+                return true;
+            }
+            bool IsValidAlphabetInput(string input)
+            {
+                // Sử dụng biểu thức chính quy để kiểm tra
+                return Regex.IsMatch(input, @"^[\p{L}\p{Mn}\p{Mc}]+$");
             }
 
         }

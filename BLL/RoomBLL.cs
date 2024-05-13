@@ -29,5 +29,13 @@ namespace BLL
         {
             return roomAccess.removeRoom(name);
         }
+        public DataTable getRoomByName(string name)
+        {
+            return roomAccess.getRoomByName(name);  
+        }
+        public bool updateEmployee(ROOM room)
+        {
+            return roomAccess.editRoom(room);
+        }
     }
 }

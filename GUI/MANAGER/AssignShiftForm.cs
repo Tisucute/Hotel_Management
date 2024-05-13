@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -19,6 +20,7 @@ namespace GUI
 
         private void AssignShiftForm_Load(object sender, EventArgs e)
         {
+            fillGrid();
             dateTimePicker.Value = DateTime.Now;
             dgvListEmployee.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvListEmployee.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -37,6 +39,13 @@ namespace GUI
                 // AutoSize value:
                 dgvListEmployee.Columns[i].Width = colw;
             }
+        }
+        void fillGrid()
+        {
+            string command = "SELECT EMPLOYEES.id as [ID], EMPLOYEES.fullname as [Full Name], EMPLOYEES.gender as [Gender], EMPLOYEES.birthdate as [Birthdate], EMPLOYEES.CCCD, ROLE.role_name as [Role] FROM EMPLOYEES INNER JOIN ROLE ON EMPLOYEES.role_id = ROLE.role_id";
+            dgvListEmployee.ReadOnly = true;
+            dgvListEmployee.DataSource = employeeBLL.getEmployees(command);
+            dgvListEmployee.AllowUserToAddRows = false;
         }
         EmployeeBLL employeeBLL = new EmployeeBLL();
         List<SHIFTS> assignedShift = new List<SHIFTS>();
@@ -79,6 +88,9 @@ namespace GUI
                 dgvListEmployeeAssign.Columns.Remove("phone");
                 dgvListEmployeeAssign.Columns.Remove("address");
                 dgvListEmployeeAssign.Columns.Remove("pic");
+                dgvListEmployeeAssign.Columns.Remove("username");
+                dgvListEmployeeAssign.Columns.Remove("password");
+                dgvListEmployeeAssign.Columns.Remove("role");
             }
             catch { }
             dgvListEmployeeAssign.Columns[0].HeaderText = "ID";
@@ -193,13 +205,17 @@ namespace GUI
             if (comboBox.SelectedIndex == 0)
             {
                 SHIFTS assgin = assignedShift[0];
+                if (!employeeBLL.checkExistShift(assgin.startTime))
+                {
+                    MessageBox.Show("This shift has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     foreach (DataGridViewRow row in dgvListEmployeeAssign.Rows)
                     {
                         int employeeID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
-
-                        employeeBLL.insertShift(employeeID, assgin.startTime);
+                        employeeBLL.insertShift(employeeID, assgin.startTime, assgin.endTime);
                     }
                     MessageBox.Show("Assign Shift Successfully", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -208,13 +224,18 @@ namespace GUI
             else if (comboBox.SelectedIndex == 1)
             {
                 SHIFTS assgin = assignedShift[1];
+                if (!employeeBLL.checkExistShift(assgin.startTime))
+                {
+                    MessageBox.Show("This shift has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     foreach (DataGridViewRow row in dgvListEmployeeAssign.Rows)
                     {
                         int employeeID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
 
-                        employeeBLL.insertShift(employeeID, assgin.startTime);
+                        employeeBLL.insertShift(employeeID, assgin.startTime, assgin.endTime);
                     }
                     MessageBox.Show("Assign Shift Successfully", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -223,13 +244,18 @@ namespace GUI
             else if (comboBox.SelectedIndex == 2)
             {
                 SHIFTS assgin = assignedShift[2];
+                if (!employeeBLL.checkExistShift(assgin.startTime))
+                {
+                    MessageBox.Show("This shift has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     foreach (DataGridViewRow row in dgvListEmployeeAssign.Rows)
                     {
                         int employeeID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
 
-                        employeeBLL.insertShift(employeeID, assgin.startTime);
+                        employeeBLL.insertShift(employeeID, assgin.startTime, assgin.endTime);
                     }
                     MessageBox.Show("Assign Shift Successfully", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -238,13 +264,18 @@ namespace GUI
             else if (comboBox.SelectedIndex == 3)
             {
                 SHIFTS assgin = assignedShift[3];
+                if (!employeeBLL.checkExistShift(assgin.startTime))
+                {
+                    MessageBox.Show("This shift has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     foreach (DataGridViewRow row in dgvListEmployeeAssign.Rows)
                     {
                         int employeeID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
 
-                        employeeBLL.insertShift(employeeID, assgin.startTime);
+                        employeeBLL.insertShift(employeeID, assgin.startTime, assgin.endTime);
                     }
                     MessageBox.Show("Assign Shift Successfully", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -253,13 +284,18 @@ namespace GUI
             else if (comboBox.SelectedIndex == 4)
             {
                 SHIFTS assgin = assignedShift[4];
+                if (!employeeBLL.checkExistShift(assgin.startTime))
+                {
+                    MessageBox.Show("This shift has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     foreach (DataGridViewRow row in dgvListEmployeeAssign.Rows)
                     {
                         int employeeID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
 
-                        employeeBLL.insertShift(employeeID, assgin.startTime);
+                        employeeBLL.insertShift(employeeID, assgin.startTime, assgin.endTime);
                     }
                     MessageBox.Show("Assign Shift Successfully", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -268,13 +304,18 @@ namespace GUI
             else if (comboBox.SelectedIndex == 5)
             {
                 SHIFTS assgin = assignedShift[5];
+                if (!employeeBLL.checkExistShift(assgin.startTime))
+                {
+                    MessageBox.Show("This shift has been assigned", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     foreach (DataGridViewRow row in dgvListEmployeeAssign.Rows)
                     {
                         int employeeID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
 
-                        employeeBLL.insertShift(employeeID, assgin.startTime);
+                        employeeBLL.insertShift(employeeID, assgin.startTime, assgin.endTime);
                     }
                     MessageBox.Show("Assign Shift Successfully", "Assign Shift", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -305,7 +346,7 @@ namespace GUI
                 employee.CCCD = x["CCCD"].ToString();
                 employee.address = x["address"].ToString();
                 employee.phone = x["phone"].ToString();
-                employee.role = Convert.ToInt32(x["role_id"].ToString());
+                employee.roleName = (x["role_name"].ToString());
                 employee.status = x["status"].ToString();
                 employee.pic = new MemoryStream((byte[])x["picture"]);
                 if (list.Any(s => s.id == employee.id))

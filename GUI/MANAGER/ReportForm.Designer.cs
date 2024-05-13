@@ -32,13 +32,13 @@
             this.LabelHeader = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.BtnEmployeeSalary = new Guna.UI2.WinForms.Guna2Button();
             this.btnRoomService = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnEmployeeSalary = new Guna.UI2.WinForms.Guna2Button();
             this.panelMoving = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_ReportES1 = new GUI.All_UC.UC_ReportES();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_ReportRS1 = new GUI.All_UC.UC_ReportRS();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.uC_ReportES1 = new GUI.UC_ReportES();
+            this.uC_ReportRS1 = new GUI.UC_ReportRS();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +64,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1125, 69);
             this.guna2Panel1.TabIndex = 9;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2Panel2
             // 
@@ -74,28 +75,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1051, 64);
             this.guna2Panel2.TabIndex = 12;
-            // 
-            // BtnEmployeeSalary
-            // 
-            this.BtnEmployeeSalary.Animated = true;
-            this.BtnEmployeeSalary.AutoRoundedCorners = true;
-            this.BtnEmployeeSalary.BackColor = System.Drawing.Color.Transparent;
-            this.BtnEmployeeSalary.BorderRadius = 23;
-            this.BtnEmployeeSalary.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.BtnEmployeeSalary.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnEmployeeSalary.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnEmployeeSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnEmployeeSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnEmployeeSalary.FillColor = System.Drawing.Color.SteelBlue;
-            this.BtnEmployeeSalary.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.BtnEmployeeSalary.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.BtnEmployeeSalary.Location = new System.Drawing.Point(224, 8);
-            this.BtnEmployeeSalary.Name = "BtnEmployeeSalary";
-            this.BtnEmployeeSalary.Size = new System.Drawing.Size(137, 49);
-            this.BtnEmployeeSalary.TabIndex = 0;
-            this.BtnEmployeeSalary.Text = "Employee Salary";
-            this.BtnEmployeeSalary.UseTransparentBackground = true;
-            this.BtnEmployeeSalary.Click += new System.EventHandler(this.BtnEmployeeSalary_Click);
             // 
             // btnRoomService
             // 
@@ -119,15 +98,27 @@
             this.btnRoomService.UseTransparentBackground = true;
             this.btnRoomService.Click += new System.EventHandler(this.btnRoomService_Click);
             // 
-            // panel1
+            // BtnEmployeeSalary
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.uC_ReportRS1);
-            this.panel1.Controls.Add(this.uC_ReportES1);
-            this.panel1.Location = new System.Drawing.Point(12, 150);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 625);
-            this.panel1.TabIndex = 13;
+            this.BtnEmployeeSalary.Animated = true;
+            this.BtnEmployeeSalary.AutoRoundedCorners = true;
+            this.BtnEmployeeSalary.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEmployeeSalary.BorderRadius = 23;
+            this.BtnEmployeeSalary.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.BtnEmployeeSalary.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnEmployeeSalary.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnEmployeeSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnEmployeeSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnEmployeeSalary.FillColor = System.Drawing.Color.SteelBlue;
+            this.BtnEmployeeSalary.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnEmployeeSalary.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.BtnEmployeeSalary.Location = new System.Drawing.Point(224, 8);
+            this.BtnEmployeeSalary.Name = "BtnEmployeeSalary";
+            this.BtnEmployeeSalary.Size = new System.Drawing.Size(137, 49);
+            this.BtnEmployeeSalary.TabIndex = 0;
+            this.BtnEmployeeSalary.Text = "Employee Salary";
+            this.BtnEmployeeSalary.UseTransparentBackground = true;
+            this.BtnEmployeeSalary.Click += new System.EventHandler(this.BtnEmployeeSalary_Click);
             // 
             // panelMoving
             // 
@@ -137,24 +128,34 @@
             this.panelMoving.Size = new System.Drawing.Size(116, 10);
             this.panelMoving.TabIndex = 13;
             // 
-            // uC_ReportES1
-            // 
-            this.uC_ReportES1.Location = new System.Drawing.Point(-2, -2);
-            this.uC_ReportES1.Name = "uC_ReportES1";
-            this.uC_ReportES1.Size = new System.Drawing.Size(1101, 625);
-            this.uC_ReportES1.TabIndex = 0;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.uC_ReportES1);
+            this.panel1.Controls.Add(this.uC_ReportRS1);
+            this.panel1.Location = new System.Drawing.Point(12, 150);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1101, 625);
+            this.panel1.TabIndex = 13;
+            // 
+            // uC_ReportES1
+            // 
+            this.uC_ReportES1.Location = new System.Drawing.Point(-2, -2);
+            this.uC_ReportES1.Name = "uC_ReportES1";
+            this.uC_ReportES1.Size = new System.Drawing.Size(1097, 621);
+            this.uC_ReportES1.TabIndex = 1;
+            // 
             // uC_ReportRS1
             // 
             this.uC_ReportRS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.uC_ReportRS1.Location = new System.Drawing.Point(-3, -2);
+            this.uC_ReportRS1.Location = new System.Drawing.Point(-2, -2);
             this.uC_ReportRS1.Name = "uC_ReportRS1";
             this.uC_ReportRS1.Size = new System.Drawing.Size(1097, 621);
-            this.uC_ReportRS1.TabIndex = 1;
+            this.uC_ReportRS1.TabIndex = 0;
             // 
             // ReportForm
             // 
@@ -186,10 +187,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnRoomService;
         private Guna.UI2.WinForms.Guna2Button BtnEmployeeSalary;
-        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel panelMoving;
-        private All_UC.UC_ReportES uC_ReportES1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private All_UC.UC_ReportRS uC_ReportRS1;
+        private System.Windows.Forms.Panel panel1;
+        private UC_ReportES uC_ReportES1;
+        private UC_ReportRS uC_ReportRS1;
     }
 }

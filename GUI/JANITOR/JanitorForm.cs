@@ -19,8 +19,8 @@ namespace GUI
         {
             InitializeComponent();
         }
-        LOGIN login;
-        public JanitorForm(LOGIN login)
+        EMPLOYEE login;
+        public JanitorForm(EMPLOYEE login)
         {
             InitializeComponent();
             this.login = login;
@@ -34,7 +34,6 @@ namespace GUI
             PictureBoxJanitor.Image = Image.FromStream(picture);
             LabelName.Text = "Xin chào, " + table.Rows[0]["fullname"].ToString().Trim();
         }
-        LoginBLL loginBLL = new LoginBLL();
         private void ButtonTimeAndSalary_Click(object sender, EventArgs e)
         {
             EMPLOYEE employee = new EMPLOYEE();

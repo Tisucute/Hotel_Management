@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -14,7 +15,23 @@ namespace BLL
     public class EmployeeBLL
     {
         static EmployeeAccess employeeAccess = new EmployeeAccess();
-       
+        
+        public DataTable getRoleByID(int id)
+        {
+            return employeeAccess.getRoleByID(id);
+        }
+        public bool checkExistUser(string username)
+        {
+            return employeeAccess.checkExistUser(username);
+        }
+        public bool checkLogin(EMPLOYEE employee)
+        {
+            return employeeAccess.checkLogin(employee);
+        }
+        public DataTable getEmployees(string command)
+        {
+            return employeeAccess.getEmployees(command);   
+        }
         public DataTable getEmployeesnoUser()
         {
             return employeeAccess.getEmployeesnoUser();
@@ -55,9 +72,9 @@ namespace BLL
         {
             return employeeAccess.getAllRole();
         }
-        public bool insertShift(int employeeID, DateTime checkInTime)
+        public bool insertShift(int employeeID, DateTime startTime, DateTime endTime)
         {
-            return employeeAccess.insertShift(employeeID, checkInTime);
+            return employeeAccess.insertShift(employeeID, startTime, endTime);
         }
         public DataTable getShiftByTime(DateTime time)
         {
@@ -67,6 +84,17 @@ namespace BLL
         {
             return employeeAccess.checkExistShift(dateTime);
         }
-
+        public bool checkInTime(DateTime time, int id)
+        {
+            return employeeAccess.checkInTime(time, id);
+        }
+        public bool checkOutTime(DateTime time, int id)
+        {
+            return employeeAccess.checkOutTime(time, id);
+        }
+        public bool calculatorHour(int employeeID, DateTime time)
+        {
+            return  employeeAccess.calculatorHour(employeeID, time);
+        }
     }
 }

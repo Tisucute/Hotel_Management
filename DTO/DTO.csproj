@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="CUSTOMERS.cs" />
     <Compile Include="EMPLOYEE.cs" />
-    <Compile Include="LOGIN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ROOM.cs" />
     <Compile Include="SERVICE.cs" />

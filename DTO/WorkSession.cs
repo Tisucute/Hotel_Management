@@ -8,6 +8,7 @@ namespace DTO
 {
     public class WorkSession
     {
+        public int id {  get; set; }
         public int employeeID {  get; set; }
         public DateTime startTime { get; set; }
         public DateTime endTime { get; set; }

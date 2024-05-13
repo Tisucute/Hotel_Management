@@ -64,7 +64,7 @@ namespace GUI
             {
                 Byte[] imagearray = (byte[])item["picture"];
                 byte[] imagebytearray = imagearray;
-                AddItems(item["room_name"].ToString(), item["type"].ToString(), item["status"].ToString(), Image.FromStream(new MemoryStream(imagearray)));
+                AddItems(item["room_name"].ToString(), item["type_name"].ToString(), item["status"].ToString(), Image.FromStream(new MemoryStream(imagearray)));
                 
             }
             foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())

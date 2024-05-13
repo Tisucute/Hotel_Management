@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerBLL.cs" />
+    <Compile Include="AttendanceBLL.cs" />
     <Compile Include="EmployeeBLL.cs" />
-    <Compile Include="LoginBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomBLL.cs" />
     <Compile Include="ServiceBLL.cs" />

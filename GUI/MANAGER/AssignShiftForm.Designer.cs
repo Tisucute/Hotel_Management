@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,24 +46,9 @@
             this.ButtonRemove = new Guna.UI2.WinForms.Guna2Button();
             this.LabelListEmployee = new System.Windows.Forms.Label();
             this.dateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.eMPLOYEESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.eMPLOYEESTableAdapter = new GUI.QLKSDataSetTableAdapters.EMPLOYEESTableAdapter();
-            this.qLKSDataSet = new GUI.QLKSDataSet();
-            this.qLKSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cCCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rolenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployeeAssign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -236,13 +220,6 @@
             this.dgvListEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListEmployee.ColumnHeadersHeight = 18;
             this.dgvListEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.fullnameDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.cCCDDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.rolenameDataGridViewTextBoxColumn});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,78 +303,6 @@
             this.dateTimePicker.UseTransparentBackground = true;
             this.dateTimePicker.Value = new System.DateTime(2024, 4, 27, 21, 40, 53, 875);
             // 
-            // eMPLOYEESBindingSource1
-            // 
-            this.eMPLOYEESBindingSource1.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource1.DataSource = this.qLKSDataSetBindingSource;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
-            // qLKSDataSet
-            // 
-            this.qLKSDataSet.DataSetName = "QLKSDataSet";
-            this.qLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qLKSDataSetBindingSource
-            // 
-            this.qLKSDataSetBindingSource.DataSource = this.qLKSDataSet;
-            this.qLKSDataSetBindingSource.Position = 0;
-            // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.qLKSDataSetBindingSource;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fullnameDataGridViewTextBoxColumn
-            // 
-            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.HeaderText = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
-            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cCCDDataGridViewTextBoxColumn
-            // 
-            this.cCCDDataGridViewTextBoxColumn.DataPropertyName = "CCCD";
-            this.cCCDDataGridViewTextBoxColumn.HeaderText = "CCCD";
-            this.cCCDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cCCDDataGridViewTextBoxColumn.Name = "cCCDDataGridViewTextBoxColumn";
-            this.cCCDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rolenameDataGridViewTextBoxColumn
-            // 
-            this.rolenameDataGridViewTextBoxColumn.DataPropertyName = "role_name";
-            this.rolenameDataGridViewTextBoxColumn.HeaderText = "role_name";
-            this.rolenameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rolenameDataGridViewTextBoxColumn.Name = "rolenameDataGridViewTextBoxColumn";
-            this.rolenameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // AssignShiftForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -424,10 +329,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployeeAssign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKSDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,16 +348,5 @@
         private Guna.UI2.WinForms.Guna2Button ButtonRemove;
         private System.Windows.Forms.Label LabelListEmployee;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cCCDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rolenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource eMPLOYEESBindingSource1;
-        private System.Windows.Forms.BindingSource qLKSDataSetBindingSource;
-        private QLKSDataSet qLKSDataSet;
-        private QLKSDataSetTableAdapters.EMPLOYEESTableAdapter eMPLOYEESTableAdapter;
-        private System.Windows.Forms.BindingSource eMPLOYEESBindingSource;
     }
 }

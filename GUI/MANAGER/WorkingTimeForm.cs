@@ -5,17 +5,17 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class WorkingTimeAndSalaryForm : Form
+    public partial class WorkingTimeForm : Form
     {
-        public WorkingTimeAndSalaryForm()
+        public WorkingTimeForm()
         {
             InitializeComponent();
         }
+        
         EmployeeBLL employeeBLL = new EmployeeBLL();
         private void WorkingTimeAndSalaryForm_Load(object sender, EventArgs e)
         {
             DateTimePicker.Value = DateTime.Now;
-
         }
 
         private void groupBox_Enter(object sender, EventArgs e)
