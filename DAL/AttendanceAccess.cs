@@ -58,7 +58,7 @@ namespace DAL
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             dataAdapter.Fill(dataTable);
             double total = 0;
-            if (dataTable.Rows[0]["total"] != null || dataTable.Rows[0]["total"] == "")
+            if (dataTable.Rows[0]["total"] != null || dataTable.Rows[0]["total"] != "")
             {
                 total = Convert.ToDouble(dataTable.Rows[0]["total"]);
             }

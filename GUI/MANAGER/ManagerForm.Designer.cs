@@ -47,14 +47,14 @@
             this.panelWorkingTime = new System.Windows.Forms.Panel();
             this.ButtonShift = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.PanelHienThi = new System.Windows.Forms.Panel();
-            this.BtnReport = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnReport = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnManageReceip = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnManageJanitor = new System.Windows.Forms.Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.PanelHienThi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.panelAvatar.SuspendLayout();
@@ -147,7 +147,7 @@
             this.ButtonTimeAndSalary.Name = "ButtonTimeAndSalary";
             this.ButtonTimeAndSalary.Size = new System.Drawing.Size(240, 60);
             this.ButtonTimeAndSalary.TabIndex = 4;
-            this.ButtonTimeAndSalary.Text = "              Working Time and Salary";
+            this.ButtonTimeAndSalary.Text = "              Working Time";
             this.ButtonTimeAndSalary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonTimeAndSalary.UseVisualStyleBackColor = true;
             this.ButtonTimeAndSalary.Click += new System.EventHandler(this.ButtonTimeAndSalary_Click_1);
@@ -270,7 +270,7 @@
             this.ButtonShift.Name = "ButtonShift";
             this.ButtonShift.Size = new System.Drawing.Size(240, 60);
             this.ButtonShift.TabIndex = 10;
-            this.ButtonShift.Text = "             Shift";
+            this.ButtonShift.Text = "             Shift Assignment";
             this.ButtonShift.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonShift.UseVisualStyleBackColor = true;
             this.ButtonShift.Click += new System.EventHandler(this.ButtonShift_Click);
@@ -283,18 +283,13 @@
             this.panel1.Size = new System.Drawing.Size(246, 65);
             this.panel1.TabIndex = 7;
             // 
-            // guna2AnimateWindow1
+            // panel2
             // 
-            this.guna2AnimateWindow1.Interval = 100;
-            // 
-            // PanelHienThi
-            // 
-            this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
-            this.PanelHienThi.Name = "PanelHienThi";
-            this.PanelHienThi.Size = new System.Drawing.Size(1214, 891);
-            this.PanelHienThi.TabIndex = 7;
-            this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
+            this.panel2.Controls.Add(this.BtnReport);
+            this.panel2.Location = new System.Drawing.Point(3, 525);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(246, 65);
+            this.panel2.TabIndex = 9;
             // 
             // BtnReport
             // 
@@ -311,14 +306,6 @@
             this.BtnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnReport.UseVisualStyleBackColor = true;
             this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.BtnReport);
-            this.panel2.Location = new System.Drawing.Point(3, 525);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 65);
-            this.panel2.TabIndex = 9;
             // 
             // panel3
             // 
@@ -367,6 +354,19 @@
             this.btnManageJanitor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageJanitor.UseVisualStyleBackColor = true;
             this.btnManageJanitor.Click += new System.EventHandler(this.btnManageJanitor_Click);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.Interval = 100;
+            // 
+            // PanelHienThi
+            // 
+            this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
+            this.PanelHienThi.Name = "PanelHienThi";
+            this.PanelHienThi.Size = new System.Drawing.Size(1214, 891);
+            this.PanelHienThi.TabIndex = 7;
+            this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
             // 
             // ManagerForm
             // 

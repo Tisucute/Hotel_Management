@@ -150,6 +150,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKSDataSetLogin.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLKSDataSetPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKSDataSetPayment.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLKSDataSetShifts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -333,6 +338,7 @@
     <EmbeddedResource Include="RECEPTIONIST\RoomBookingForm.resx">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="SelectEmployeeForm.resx">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,6 +410,17 @@
     </None>
     <None Include="QLKSDataSetLogin.xss">
       <DependentUpon>QLKSDataSetLogin.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetPayment.xsc">
+      <DependentUpon>QLKSDataSetPayment.xsd</DependentUpon>
+    </None>
+    <None Include="QLKSDataSetPayment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSetPayment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLKSDataSetPayment.xss">
+      <DependentUpon>QLKSDataSetPayment.xsd</DependentUpon>
     </None>
     <None Include="QLKSDataSetShifts.xsc">
       <DependentUpon>QLKSDataSetShifts.xsd</DependentUpon>

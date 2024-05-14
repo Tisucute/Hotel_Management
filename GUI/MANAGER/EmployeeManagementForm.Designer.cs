@@ -35,6 +35,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.LabelHeader = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.labelTotal = new System.Windows.Forms.Label();
             this.LabelSearch = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -58,7 +59,6 @@
             this.BtnSearch = new System.Windows.Forms.PictureBox();
             this.ButtonAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelTotal = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).BeginInit();
@@ -99,6 +99,15 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1244, 52);
             this.guna2CustomGradientPanel1.TabIndex = 1;
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Location = new System.Drawing.Point(1000, 12);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(44, 16);
+            this.labelTotal.TabIndex = 0;
+            this.labelTotal.Text = "label1";
             // 
             // LabelSearch
             // 
@@ -377,15 +386,6 @@
             this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
             this.TextBoxSearch.TabIndex = 2;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
-            // 
-            // labelTotal
-            // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(1000, 12);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(44, 16);
-            this.labelTotal.TabIndex = 0;
-            this.labelTotal.Text = "label1";
             // 
             // EmployeeManagementForm
             // 

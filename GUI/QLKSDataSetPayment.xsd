@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLKSDataSetPayment" targetNamespace="http://tempuri.org/QLKSDataSetPayment.xsd" xmlns:mstns="http://tempuri.org/QLKSDataSetPayment.xsd" xmlns="http://tempuri.org/QLKSDataSetPayment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLKSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLKSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GUI.Properties.Settings.GlobalReference.Default.QLKSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SERVICES_ROOMTableAdapter" GeneratorDataComponentClassName="SERVICES_ROOMTableAdapter" Name="SERVICES_ROOM" UserDataComponentName="SERVICES_ROOMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLKSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SERVICES_ROOM.book_id, SERVICES.service_name, SERVICES_ROOM.amount, SERVICES.price, SERVICES.price * SERVICES_ROOM.amount AS total
+FROM     SERVICES_ROOM INNER JOIN
+                  SERVICES ON SERVICES.service_id = SERVICES_ROOM.service_id
+UNION ALL
+SELECT ROOM_BOOKING.booking_id, 'Thuê phòng' AS service_name, 1 AS amount, ROOM.price, ROOM.price * 1 AS total
+FROM     ROOM_BOOKING INNER JOIN
+                  ROOM ON ROOM.room_id = ROOM_BOOKING.room_id
+WHERE  (ROOM_BOOKING.booking_id IN
+                      (SELECT DISTINCT book_id
+                       FROM      SERVICES_ROOM AS SERVICES_ROOM_1))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="service_name" DataSetColumn="service_name" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="book_id" DataSetColumn="book_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLKSDataSetPayment" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="QLKSDataSetPayment" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLKSDataSetPayment">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SERVICES_ROOM" msprop:Generator_RowEvHandlerName="SERVICES_ROOMRowChangeEventHandler" msprop:Generator_RowDeletedName="SERVICES_ROOMRowDeleted" msprop:Generator_RowDeletingName="SERVICES_ROOMRowDeleting" msprop:Generator_RowEvArgName="SERVICES_ROOMRowChangeEvent" msprop:Generator_TablePropName="SERVICES_ROOM" msprop:Generator_RowChangedName="SERVICES_ROOMRowChanged" msprop:Generator_UserTableName="SERVICES_ROOM" msprop:Generator_RowChangingName="SERVICES_ROOMRowChanging" msprop:Generator_RowClassName="SERVICES_ROOMRow" msprop:Generator_TableClassName="SERVICES_ROOMDataTable" msprop:Generator_TableVarName="tableSERVICES_ROOM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_UserColumnName="amount" msprop:Generator_ColumnVarNameInTable="columnamount" type="xs:int" minOccurs="0" />
+              <xs:element name="service_name" msprop:Generator_UserColumnName="service_name" msprop:Generator_ColumnPropNameInTable="service_nameColumn" msprop:Generator_ColumnPropNameInRow="service_name" msprop:Generator_ColumnVarNameInTable="columnservice_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnVarNameInTable="columntotal" type="xs:int" minOccurs="0" />
+              <xs:element name="price" msdata:ReadOnly="true" msprop:Generator_UserColumnName="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnVarNameInTable="columnprice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="book_id" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="book_id" msprop:Generator_ColumnPropNameInTable="book_idColumn" msprop:Generator_ColumnVarNameInTable="columnbook_id" msprop:Generator_UserColumnName="book_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
