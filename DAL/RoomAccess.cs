@@ -115,6 +115,23 @@ namespace DAL
                 return false;
             }
         }
-
+        public bool checkExistRoom(string name)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM ROOM WHERE room_name = @name", mydb.getConnection);
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                mydb.closeConnection();
+                return false;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return true;
+            }
+        }
     }
 }

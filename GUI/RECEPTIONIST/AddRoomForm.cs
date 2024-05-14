@@ -1,16 +1,10 @@
 ﻿using BLL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DTO;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace GUI.RECEPTIONIST
 {
@@ -34,18 +28,25 @@ namespace GUI.RECEPTIONIST
             {
                 picBox.Image.Save(pic, picBox.Image.RawFormat);
                 room.pic = pic;
-                if (roomBLL.addRoom(room))
+                if (roomBLL.checkExistRoom(room.room_name.Trim()))
                 {
-                    MessageBox.Show("Add Room Successfully", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                }
-                else if (verifyInput())
-                {
-                    MessageBox.Show("ERROR", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (roomBLL.addRoom(room))
+                    {
+                        MessageBox.Show("Add Room Successfully", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else if (verifyInput())
+                    {
+                        MessageBox.Show("ERROR", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Empty Fields", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Empty Fields", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Room Name Already Exist", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else

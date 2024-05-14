@@ -1,18 +1,13 @@
-﻿using GUI.RECEPTIONIST;
+﻿using BLL;
+using DTO;
+using GUI.RECEPTIONIST;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
-using DTO;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -21,24 +16,24 @@ namespace GUI
         public RoomManagementForm()
         {
             InitializeComponent();
-            
+
 
 
         }
         SqlConnection mydb = new SqlConnection();
         RoomBLL roombll = new RoomBLL();
         ucRooms myControl = new ucRooms();
-        
-        
+
+
         private void RoomManagementForm_Load(object sender, EventArgs e)
         {
             panelRoom.Controls.Clear();
             loadRoom();
-            
+
         }
         private void AddItems(string name, string kind, string status, Image picture)
         {
-            
+
             var w = new ucRooms();
             {
                 w.room_name = name;
@@ -47,7 +42,7 @@ namespace GUI
                 w.Ppicture = picture;
             };
             panelRoom.Controls.Add(w);
-            
+
 
         }
 
@@ -67,7 +62,7 @@ namespace GUI
                 Byte[] imagearray = (byte[])item["picture"];
                 byte[] imagebytearray = imagearray;
                 AddItems(item["room_name"].ToString(), item["type_name"].ToString(), item["status"].ToString(), Image.FromStream(new MemoryStream(imagearray)));
-                
+
             }
             foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
             {
@@ -118,7 +113,7 @@ namespace GUI
         }
         private void MyControl_BookingClicked(object sender, EventArgs e)
         {
-            
+
             ucRooms controlToBook = sender as ucRooms;
             DataTable dt = roombll.getRoomByName(controlToBook.room_name);
             ROOM room = new ROOM();

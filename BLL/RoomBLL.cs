@@ -41,5 +41,9 @@ namespace BLL
         {
             return roomAccess.updateStatusRoom(roomId, status);
         }
+        public bool checkExistRoom(string name)
+        {
+            return roomAccess.checkExistRoom(name);
+        }
     }
 }
