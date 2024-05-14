@@ -47,13 +47,20 @@ namespace GUI.RECEPTIONIST
         {
 
             SERVICEOFROOM service = new SERVICEOFROOM();
-            service.room_name = roomName;
-            service.book_id = Convert.ToInt32(txtBookID.Text.Trim());
-            service.amount = Convert.ToInt32(txtAmount.Text.ToString());
-            service.price = txtPrice.Text.Trim();
-            service.service_id = Convert.ToInt32(cmbService.SelectedValue.ToString());
+            try
+            {
+                service.room_name = roomName;
+                service.book_id = Convert.ToInt32(txtBookID.Text.Trim());
+                service.amount = Convert.ToInt32(txtAmount.Text.ToString());
+                service.price = txtPrice.Text.Trim();
+                service.service_id = Convert.ToInt32(cmbService.SelectedValue.ToString());
+            }
+            catch
+            {
+                MessageBox.Show("Fiil Blank", "Add Service", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            if (verifyInput())
+                if (verifyInput())
             {
                 if (serviceOfRoomBLL.insertService(service))
                 {
@@ -149,7 +156,7 @@ namespace GUI.RECEPTIONIST
                 if ((MessageBox.Show("Do You Sure To Delete This Service?", "Remove Service", MessageBoxButtons.YesNo) == DialogResult.Yes))
                 {
                     int id = Convert.ToInt32(dgvListServices.CurrentRow.Cells["id"].Value);
-                    serviceOfRoomBLL.deleteService(id);
+                    serviceOfRoomBLL.deleteServiceByID(id);
                     MessageBox.Show("Delete Successfully", "Delete Information of Service", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvListServices.DataSource = serviceOfRoomBLL.getAllServiceOfRoomByID(Convert.ToInt32(txtBookID.Text));
                 }

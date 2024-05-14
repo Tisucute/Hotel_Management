@@ -40,17 +40,21 @@ namespace BLL
         {
             return serviceOfRoomAccess.getAllServiceOfRoomByID(id);
         }
-        public bool deleteService(int id)
+        public bool deleteServiceByID(int id)
         {
-            return serviceOfRoomAccess.deleteService(id);
+            return serviceOfRoomAccess.deleteServiceByID(id);
+        }
+        public bool deleteServiceByRoomName(string roomName)
+        {
+            return serviceOfRoomAccess.deleteServiceByRoomName(roomName);
         }
         public DataTable getReportByRoomName(string roomName)
         {
             return serviceOfRoomAccess.getReportByRoomName(roomName);
         }
-        public bool insertReport(string roomName, string serviceName, int amount, string price, int total)
+        public bool insertReport(string roomName, string serviceName, int amount, string price, int total, DateTime date)
         {
-            return serviceOfRoomAccess.insertReport(roomName, serviceName, amount, price, total);
+            return serviceOfRoomAccess.insertReport(roomName, serviceName, amount, price, total, date);
         }
     }
 }

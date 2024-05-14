@@ -28,6 +28,8 @@ namespace GUI
         RoomBLL roomBLL = new RoomBLL();
         private void RoomBookingForm_Load(object sender, EventArgs e)
         {
+            datePickerFrom.Value = DateTime.Now;
+            datePickerTo.Value = DateTime.Now;
             txtRoomID.Text = room.room_id.ToString();
             txtRoomName.Text = room.room_name.ToString();
             txtPerson.Text = room.person.ToString();

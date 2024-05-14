@@ -80,21 +80,39 @@ namespace GUI.RECEPTIONIST
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            var now = DateTime.Now;
-            var timeOut = datePickerTo.Value.Date;
-            var diff = now - timeOut;
-            int date = diff.Days;
-            if (date > 0)
+            if ((MessageBox.Show("Are You Sure Payment?", "Payment", MessageBoxButtons.YesNo) == DialogResult.Yes))
             {
-                datePickerTo.Value = now; 
-                MessageBox.Show("This room is past the check out deadline " + date + " Days. " + "So Check out time has been set to Today", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BookingRoomBLL bookingRoomBLL = new BookingRoomBLL();
-                bookingRoomBLL.updateBookingRoom(datePickerTo.Value, bookingID);
+                var now = DateTime.Now;
+                var timeOut = datePickerTo.Value.Date;
+                var diff = now - timeOut;
+                int date = diff.Days;
+                if (date > 0)
+                {
+                    datePickerTo.Value = now;
+                    MessageBox.Show("This room is past the check out deadline " + date + " Days. " + "So Check out time has been set to Today", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BookingRoomBLL bookingRoomBLL = new BookingRoomBLL();
+                    bookingRoomBLL.updateBookingRoom(datePickerTo.Value, bookingID);
+                }
+                ReportRoomForm reportRoomForm = new ReportRoomForm(txtRoomName.Text.Trim());
+                reportRoomForm.ShowDialog();
+                RoomBLL roomBLL = new RoomBLL();
+                roomBLL.updateStatusRoom(Convert.ToInt32(txtRoomID.Text), "Empty");
+                ServiceOfRoomBLL serviceOfRoomBLL = new ServiceOfRoomBLL();
+                DataTable dt = serviceOfRoomBLL.getReportByRoomName(txtRoomName.Text.Trim());
+                foreach(DataRow row in dt.Rows)
+                {
+                    string roomName = txtRoomName.Text.Trim();
+                    string serviceName = row["service_name"].ToString();
+                    int amount = Convert.ToInt32(row["amount"].ToString());
+                    string price = row["price"].ToString();
+                    int total = Convert.ToInt32(row["total"].ToString());
+                    serviceOfRoomBLL.insertReport(roomName, serviceName, amount, price, total, DateTime.Now);
+                }
+                serviceOfRoomBLL.deleteServiceByRoomName(txtRoomName.Text.Trim());
+                BookingRoomBLL room = new BookingRoomBLL();
+                room.deleteBookingRoomByRoomID(Convert.ToInt32(txtRoomID.Text));
+                MessageBox.Show("Payment Success");
             }
-
-            ReportRoomForm reportRoomForm = new ReportRoomForm(txtRoomName.Text.Trim());
-            reportRoomForm.ShowDialog();
-
         }
 
     }

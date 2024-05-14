@@ -778,14 +778,14 @@
             // 
             // txtEmployee
             // 
-            this.txtEmployee.AutoSize = true;
             this.txtEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtEmployee.Location = new System.Drawing.Point(758, 474);
+            this.txtEmployee.Location = new System.Drawing.Point(555, 461);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(146, 22);
+            this.txtEmployee.Size = new System.Drawing.Size(448, 55);
             this.txtEmployee.TabIndex = 153;
             this.txtEmployee.Text = "label Employee";
+            this.txtEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ReturnRoomForm
             // 
@@ -818,7 +818,6 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

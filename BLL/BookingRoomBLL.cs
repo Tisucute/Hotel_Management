@@ -23,5 +23,9 @@ namespace BLL
         {
             return bookingRoomAccess.updateBookingRoom(dateTime, booking_id);
         }
+        public bool deleteBookingRoomByRoomID(int roomID)
+        {
+            return bookingRoomAccess.deleteBookingRoomByRoomID(roomID);
+        }
     }
 }

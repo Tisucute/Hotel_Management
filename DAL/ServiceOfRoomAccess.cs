@@ -35,9 +35,25 @@ namespace DAL
                 return false;
             }
         }
-        public bool deleteService(int id)
+        public bool deleteServiceByRoomName(string roomName)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM SERVICES_ROOM WHERE id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM SERVICES_ROOM WHERE room_name = @name", mydb.getConnection);
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = roomName;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
+        public bool deleteServiceByID(int id)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM SERVICES_ROOM WHERE service_id = @id", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             mydb.openConnection();
             if (command.ExecuteNonQuery() == 1)
@@ -103,24 +119,22 @@ namespace DAL
         }
         public DataTable getReportByRoomName(string roomName)
         {
-            SqlCommand command = new SqlCommand("SELECT SERVICES_ROOM.room_name,  SERVICES.service_name,\r\n  SERVICES_ROOM.amount,\r\n  SERVICES.price,\r\n  SERVICES.price * SERVICES_ROOM.amount as total\r\nFROM \r\n  SERVICES_ROOM\r\n" +
-                "INNER JOIN \r\n  SERVICES ON SERVICES.service_id = SERVICES_ROOM.service_id WHERE SERVICES_ROOM.room_name = @name UNION ALL\r\n\r\nSELECT DISTINCT\r\n  SERVICES_ROOM.room_name,\r\n  'Thuê phòng' as service_name,\r\n  DATEDIFF(DAY, checkInDate, checkOutDate) as amount,\r\n  ROOM.price,\r\n  ROOM.price * DATEDIFF(DAY, checkInDate, checkOutDate) as total\r\nFROM \r\n  ROOM_BOOKING\r\nINNER JOIN ROOM ON ROOM.room_id = ROOM_BOOKING.room_id\r\n" +
-                "INNER JOIN SERVICES_ROOM ON SERVICES_ROOM.room_name = ROOM.room_name\r\nWHERE \r\n  booking_id IN (SELECT DISTINCT book_id FROM SERVICES_ROOM WHERE SERVICES_ROOM.room_name = @name ); ", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT \r\n  SR.room_name,\r\n  S.service_name,\r\n  SR.amount,\r\n  S.price,\r\n  S.price * SR.amount as total\r\nFROM \r\n  SERVICES_ROOM SR\r\nINNER JOIN \r\n  SERVICES S ON S.service_id = SR.service_id\r\n  WHERE room_name = @name\r\nUNION ALL\r\n\r\nSELECT \r\n  room_name,\r\n  'Thuê phòng' as service_name,\r\n  DATEDIFF(DAY, RB.checkInDate, RB.checkOutDate) as amount,\r\n  R.price,\r\n  R.price * DATEDIFF(DAY, RB.checkInDate, RB.checkOutDate) as total\r\nFROM \r\n  ROOM R\r\nLEFT JOIN ROOM_BOOKING RB ON R.room_id = RB.room_id\r\nWHERE \r\n  (RB.booking_id IS NOT NULL OR RB.booking_id IS NULL) AND room_name = @name; ", mydb.getConnection);
             command.Parameters.Add("@name", SqlDbType.NVarChar).Value = roomName;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
         }
-        public bool insertReport(string roomName, string serviceName, int amount, string price, int total) 
+        public bool insertReport(string roomName, string serviceName, int amount, string price, int total, DateTime date) 
         {
-            SqlCommand command = new SqlCommand("INSERT INTO Report_Room(room_name, service_name, amount, price, total) VALUES(@rname, @sname, @amount, @price, @total", mydb.getConnection);
-            command.Parameters.Add("@rname", SqlDbType.Int).Value = roomName;
-            command.Parameters.Add("@sname", SqlDbType.Int).Value = serviceName;
+            SqlCommand command = new SqlCommand("INSERT INTO Payments(room_name, service_name, amount, price, total, date) VALUES(@rname, @sname, @amount, @price, @total, @date)", mydb.getConnection);
+            command.Parameters.Add("@rname", SqlDbType.NVarChar).Value = roomName;
+            command.Parameters.Add("@sname", SqlDbType.NVarChar).Value = serviceName;
             command.Parameters.Add("@amount", SqlDbType.Int).Value = amount;
             command.Parameters.Add("@price", SqlDbType.NVarChar).Value = price;
             command.Parameters.Add("@total", SqlDbType.BigInt).Value = total;
-
+            command.Parameters.Add("@date", SqlDbType.Date).Value = date.Date;
             mydb.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
