@@ -45,11 +45,10 @@ namespace GUI
 
 
         }
-
         private void BtnAddRoom_Click(object sender, EventArgs e)
         {
             AddRoomForm addRF = new AddRoomForm();
-            addRF.ShowDialog();
+            addRF.Show();
             panelRoom.Controls.Clear();
             loadRoom();
         }
@@ -80,10 +79,7 @@ namespace GUI
             {
                 uc.EditClicked += MyControl_EditClicked;
             }
-            foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
-            {
-                uc.SelectClicked += MyControl_SelectClicked;
-            }
+            
 
 
         }
@@ -154,10 +150,11 @@ namespace GUI
             panelRoom.Controls.Clear();
             loadRoom();
         }
-        private void MyControl_SelectClicked(object sender, EventArgs e)
+
+        private void BtnServiceRoom_Click(object sender, EventArgs e)
         {
-            ViewRoomForm viewRoomForm = new ViewRoomForm();
-            viewRoomForm.ShowDialog();
+            ServiceOfRoomForm serviceORF = new ServiceOfRoomForm();
+            serviceORF.ShowDialog();
         }
     }
 }

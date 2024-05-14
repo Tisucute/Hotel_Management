@@ -201,5 +201,6 @@ namespace GUI.RECEPTIONIST
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

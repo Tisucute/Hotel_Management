@@ -22,7 +22,7 @@ namespace GUI.RECEPTIONIST
         public event EventHandler BookClicked;
         public event EventHandler ReceiveClicked;
         public event EventHandler EditClicked;
-        public event EventHandler SelectClicked;
+       
         private void metroLabel1_Click(object sender, EventArgs e)
         {
 
@@ -111,7 +111,7 @@ namespace GUI.RECEPTIONIST
 
         private void guna2ShadowPanel1_Click(object sender, EventArgs e)
         {
-            SelectClicked?.Invoke(this, EventArgs.Empty);
+           
         }
     }
 }

@@ -240,6 +240,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomAccess.cs" />
     <Compile Include="ServiceAccess.cs" />
+    <Compile Include="ServiceOfRoomAccess.cs" />
     <Compile Include="SqlConnectionData.cs" />
   </ItemGroup>
   <ItemGroup>
