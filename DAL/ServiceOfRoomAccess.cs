@@ -101,5 +101,37 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
+        public DataTable getReportByRoomName(string roomName)
+        {
+            SqlCommand command = new SqlCommand("SELECT SERVICES_ROOM.room_name,  SERVICES.service_name,\r\n  SERVICES_ROOM.amount,\r\n  SERVICES.price,\r\n  SERVICES.price * SERVICES_ROOM.amount as total\r\nFROM \r\n  SERVICES_ROOM\r\n" +
+                "INNER JOIN \r\n  SERVICES ON SERVICES.service_id = SERVICES_ROOM.service_id WHERE SERVICES_ROOM.room_name = @name UNION ALL\r\n\r\nSELECT DISTINCT\r\n  SERVICES_ROOM.room_name,\r\n  'Thuê phòng' as service_name,\r\n  DATEDIFF(DAY, checkInDate, checkOutDate) as amount,\r\n  ROOM.price,\r\n  ROOM.price * DATEDIFF(DAY, checkInDate, checkOutDate) as total\r\nFROM \r\n  ROOM_BOOKING\r\nINNER JOIN ROOM ON ROOM.room_id = ROOM_BOOKING.room_id\r\n" +
+                "INNER JOIN SERVICES_ROOM ON SERVICES_ROOM.room_name = ROOM.room_name\r\nWHERE \r\n  booking_id IN (SELECT DISTINCT book_id FROM SERVICES_ROOM WHERE SERVICES_ROOM.room_name = @name ); ", mydb.getConnection);
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = roomName;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public bool insertReport(string roomName, string serviceName, int amount, string price, int total) 
+        {
+            SqlCommand command = new SqlCommand("INSERT INTO Report_Room(room_name, service_name, amount, price, total) VALUES(@rname, @sname, @amount, @price, @total", mydb.getConnection);
+            command.Parameters.Add("@rname", SqlDbType.Int).Value = roomName;
+            command.Parameters.Add("@sname", SqlDbType.Int).Value = serviceName;
+            command.Parameters.Add("@amount", SqlDbType.Int).Value = amount;
+            command.Parameters.Add("@price", SqlDbType.NVarChar).Value = price;
+            command.Parameters.Add("@total", SqlDbType.BigInt).Value = total;
+
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
     }
 }

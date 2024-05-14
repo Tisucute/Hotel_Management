@@ -59,7 +59,7 @@ namespace GUI
                 employee.role = Convert.ToInt32(row["role_id"].ToString());
             }
             CheckinCheckoutForm check = new CheckinCheckoutForm(employee);
-            check.ShowDialog();
+            AddControls(check);
         }
 
         private void SideBar_Paint(object sender, PaintEventArgs e)
@@ -148,6 +148,28 @@ namespace GUI
         private void nightControlBox1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void BtnLogOut_Click(object sender, EventArgs e)
+        {
+            Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
+        public void AddControls(Form f)
+        {
+            PanelHienThi.Show();
+            PanelHienThi.Controls.Clear();
+            f.Dock = DockStyle.Fill;
+            f.TopLevel = false;
+            PanelHienThi.Controls.Add(f);
+            f.Show();
+            PanelHienThi.BringToFront();
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            PanelHienThi.Hide();
         }
     }
 }

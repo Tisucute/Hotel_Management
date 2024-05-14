@@ -44,5 +44,13 @@ namespace BLL
         {
             return serviceOfRoomAccess.deleteService(id);
         }
+        public DataTable getReportByRoomName(string roomName)
+        {
+            return serviceOfRoomAccess.getReportByRoomName(roomName);
+        }
+        public bool insertReport(string roomName, string serviceName, int amount, string price, int total)
+        {
+            return serviceOfRoomAccess.insertReport(roomName, serviceName, amount, price, total);
+        }
     }
 }

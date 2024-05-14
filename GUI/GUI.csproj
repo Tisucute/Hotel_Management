@@ -76,6 +76,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetRoomReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRoomReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MANAGER\AssignShiftForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,17 +172,17 @@
     <Compile Include="RECEPTIONIST\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RECEPTIONIST\DelayRoomForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RECEPTIONIST\DelayRoomForm.Designer.cs">
-      <DependentUpon>DelayRoomForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RECEPTIONIST\EditRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RECEPTIONIST\EditRoomForm.Designer.cs">
       <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ReportRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ReportRoomForm.Designer.cs">
+      <DependentUpon>ReportRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RECEPTIONIST\ReturnRoomForm.cs">
       <SubType>Form</SubType>
@@ -233,10 +238,10 @@
     <Compile Include="RECEPTIONIST\RoomBookingForm.Designer.cs">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectEmployeeForm.cs">
+    <Compile Include="MANAGER\SelectEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectEmployeeForm.Designer.cs">
+    <Compile Include="MANAGER\SelectEmployeeForm.Designer.cs">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MANAGER\ShiftInformation.cs">
@@ -299,11 +304,11 @@
     <EmbeddedResource Include="RECEPTIONIST\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RECEPTIONIST\DelayRoomForm.resx">
-      <DependentUpon>DelayRoomForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\EditRoomForm.resx">
       <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\ReportRoomForm.resx">
+      <DependentUpon>ReportRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ReturnRoomForm.resx">
       <DependentUpon>ReturnRoomForm.cs</DependentUpon>
@@ -333,7 +338,7 @@
     <EmbeddedResource Include="RECEPTIONIST\RoomBookingForm.resx">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectEmployeeForm.resx">
+    <EmbeddedResource Include="MANAGER\SelectEmployeeForm.resx">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="All UC\UC_ReportES.resx">
@@ -342,6 +347,18 @@
     <EmbeddedResource Include="All UC\UC_ReportRS.resx">
       <DependentUpon>UC_ReportRS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <None Include="DataSetRoomReport.xsc">
+      <DependentUpon>DataSetRoomReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRoomReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRoomReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRoomReport.xss">
+      <DependentUpon>DataSetRoomReport.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -525,6 +542,13 @@
     <None Include="Resources\icons8-check-book-50.png" />
     <None Include="Resources\icons8-find-50 %281%29.png" />
     <None Include="Resources\icons8-reset-50.png" />
+    <None Include="Resources\OIP %285%29.jpg" />
+    <None Include="Resources\tải xuống.jpg" />
+    <None Include="Resources\icons8-home-50 %282%29.png" />
+    <None Include="Resources\icons8-time-limit-50.png" />
+    <None Include="Resources\tải xuống %281%29.png" />
+    <None Include="Resources\velassaru-maldives-resort-vacation-wallpaper-thumb %281%29.jpg" />
+    <None Include="Resources\velassaru-maldives-resort-vacation-wallpaper-thumb %281%291.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -553,6 +577,8 @@
     <None Include="Resources\icons8-point-48.png" />
     <Content Include="Resources\Screenshot_20221114_093940.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

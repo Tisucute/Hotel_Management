@@ -73,7 +73,7 @@
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtEmployee = new ReaLTaiizor.Controls.SkyLabel();
+            this.txtEmployee = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -416,22 +416,12 @@
             // 
             // btnDelay
             // 
-            this.btnDelay.Animated = true;
-            this.btnDelay.AutoRoundedCorners = true;
-            this.btnDelay.BorderRadius = 23;
-            this.btnDelay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelay.ForeColor = System.Drawing.Color.White;
-            this.btnDelay.Location = new System.Drawing.Point(410, 519);
+            this.btnDelay.Location = new System.Drawing.Point(0, 0);
             this.btnDelay.Name = "btnDelay";
-            this.btnDelay.Size = new System.Drawing.Size(137, 48);
-            this.btnDelay.TabIndex = 79;
-            this.btnDelay.Text = "Delay";
-            this.btnDelay.Click += new System.EventHandler(this.btnDelay_Click);
+            this.btnDelay.Size = new System.Drawing.Size(180, 45);
+            this.btnDelay.TabIndex = 151;
             // 
             // txtPrice
             // 
@@ -517,9 +507,9 @@
             this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(650, 519);
+            this.btnCancel.Location = new System.Drawing.Point(586, 519);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(144, 48);
+            this.btnCancel.Size = new System.Drawing.Size(130, 48);
             this.btnCancel.TabIndex = 78;
             this.btnCancel.Text = "Cancel";
             // 
@@ -535,7 +525,7 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(191, 519);
+            this.btnCheckOut.Location = new System.Drawing.Point(309, 519);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(130, 48);
             this.btnCheckOut.TabIndex = 77;
@@ -788,13 +778,14 @@
             // 
             // txtEmployee
             // 
-            this.txtEmployee.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.txtEmployee.Location = new System.Drawing.Point(544, 461);
+            this.txtEmployee.AutoSize = true;
+            this.txtEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtEmployee.Location = new System.Drawing.Point(758, 474);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(470, 33);
-            this.txtEmployee.TabIndex = 150;
-            this.txtEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtEmployee.Size = new System.Drawing.Size(146, 22);
+            this.txtEmployee.TabIndex = 153;
+            this.txtEmployee.Text = "label Employee";
             // 
             // ReturnRoomForm
             // 
@@ -827,6 +818,7 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -876,6 +868,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datePickerFrom;
         private ReaLTaiizor.Controls.SkyLabel skyLabel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private ReaLTaiizor.Controls.SkyLabel txtEmployee;
+        private System.Windows.Forms.Label txtEmployee;
     }
 }

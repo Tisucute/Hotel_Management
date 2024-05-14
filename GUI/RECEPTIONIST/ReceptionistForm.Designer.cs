@@ -50,8 +50,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.LabelManager = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.MenuSideBar2 = new System.Windows.Forms.PictureBox();
-            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.PanelHienThi = new System.Windows.Forms.Panel();
             this.SideBar.SuspendLayout();
@@ -300,15 +300,25 @@
             // 
             this.panelTitle.BackColor = System.Drawing.Color.White;
             this.panelTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTitle.Controls.Add(this.guna2ControlBox1);
             this.panelTitle.Controls.Add(this.MenuSideBar2);
             this.panelTitle.Controls.Add(this.LabelManager);
-            this.panelTitle.Controls.Add(this.nightControlBox1);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(1490, 62);
             this.panelTitle.TabIndex = 11;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1433, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 6;
             // 
             // MenuSideBar2
             // 
@@ -323,31 +333,6 @@
             this.MenuSideBar2.TabStop = false;
             this.MenuSideBar2.Click += new System.EventHandler(this.MenuSideBar2_Click);
             // 
-            // nightControlBox1
-            // 
-            this.nightControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nightControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.nightControlBox1.CloseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.nightControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nightControlBox1.DefaultLocation = true;
-            this.nightControlBox1.DisableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.DisableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.EnableCloseColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMaximizeButton = true;
-            this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMinimizeButton = true;
-            this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1351, 0);
-            this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MinimizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Name = "nightControlBox1";
-            this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
-            this.nightControlBox1.TabIndex = 6;
-            this.nightControlBox1.Click += new System.EventHandler(this.nightControlBox1_Click);
-            // 
             // SideBarTimer
             // 
             this.SideBarTimer.Interval = 10;
@@ -355,7 +340,7 @@
             // 
             // PanelHienThi
             // 
-            this.PanelHienThi.BackgroundImage = global::GUI.Properties.Resources.velassaru_maldives_resort_vacation_wallpaper_thumb;
+            this.PanelHienThi.BackgroundImage = global::GUI.Properties.Resources.velassaru_maldives_resort_vacation_wallpaper_thumb__1_;
             this.PanelHienThi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
@@ -367,7 +352,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI.Properties.Resources.velassaru_maldives_resort_vacation_wallpaper_thumb;
+            this.BackgroundImage = global::GUI.Properties.Resources.velassaru_maldives_resort_vacation_wallpaper_thumb__1_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1490, 861);
             this.Controls.Add(this.PanelHienThi);
@@ -377,6 +362,8 @@
             this.Name = "ReceptionistForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receptionist Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReceptionistForm_FormClosing);
             this.Load += new System.EventHandler(this.ReceptionistForm_Load);
             this.SideBar.ResumeLayout(false);
             this.panelAvatar.ResumeLayout(false);
@@ -405,7 +392,6 @@
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Panel panelWorkingTime;
         private System.Windows.Forms.Button BtnCheckTime;
-        private System.Windows.Forms.Label LabelManager;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.PictureBox MenuSideBar2;
         private System.Windows.Forms.Timer SideBarTimer;
@@ -420,6 +406,7 @@
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox BtnLogOut;
-        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
+        public System.Windows.Forms.Label LabelManager;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

@@ -25,11 +25,6 @@ namespace GUI.RECEPTIONIST
             this.room = room;
             InitializeComponent();
         }
-        private void btnDelay_Click(object sender, EventArgs e)
-        {
-            DelayRoomForm delayRoomForm = new DelayRoomForm();
-            delayRoomForm.ShowDialog();
-        }
         int customerID;
         int bookingID;
         private void ReturnRoomForm_Load(object sender, EventArgs e)
@@ -96,6 +91,11 @@ namespace GUI.RECEPTIONIST
                 BookingRoomBLL bookingRoomBLL = new BookingRoomBLL();
                 bookingRoomBLL.updateBookingRoom(datePickerTo.Value, bookingID);
             }
+
+            ReportRoomForm reportRoomForm = new ReportRoomForm(txtRoomName.Text.Trim());
+            reportRoomForm.ShowDialog();
+
         }
+
     }
 }

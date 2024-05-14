@@ -35,6 +35,8 @@ namespace GUI
 
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        
+
         private void BtnCheckTime_Click(object sender, EventArgs e)
         {
             EMPLOYEE employee = new EMPLOYEE();
@@ -51,7 +53,7 @@ namespace GUI
                 employee.role = Convert.ToInt32(row["role_id"].ToString());
             }
             CheckinCheckoutForm check = new CheckinCheckoutForm(employee);
-            check.ShowDialog();
+            AddControls(check);
         }
         public ReceptionistForm()
         {
@@ -196,7 +198,14 @@ namespace GUI
 
         private void nightControlBox1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ReceptionistForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
 
         }
+        
+
     }
 }

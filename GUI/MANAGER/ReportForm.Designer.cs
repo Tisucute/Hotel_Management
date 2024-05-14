@@ -148,6 +148,7 @@
             this.uC_ReportES1.Name = "uC_ReportES1";
             this.uC_ReportES1.Size = new System.Drawing.Size(1097, 621);
             this.uC_ReportES1.TabIndex = 1;
+            this.uC_ReportES1.Load += new System.EventHandler(this.uC_ReportES1_Load);
             // 
             // uC_ReportRS1
             // 

@@ -89,5 +89,15 @@ namespace GUI
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        private void skyLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

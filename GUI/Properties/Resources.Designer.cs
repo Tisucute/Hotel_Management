@@ -353,6 +353,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_home_50__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-home-50 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_56 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-56", resourceCulture);
@@ -573,6 +583,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_time_limit_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-time-limit-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_tourist_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-tourist-50", resourceCulture);
@@ -653,9 +673,39 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OIP__5_ {
+            get {
+                object obj = ResourceManager.GetObject("OIP (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R {
             get {
                 object obj = ResourceManager.GetObject("R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -676,6 +726,26 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap velassaru_maldives_resort_vacation_wallpaper_thumb {
             get {
                 object obj = ResourceManager.GetObject("velassaru-maldives-resort-vacation-wallpaper-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap velassaru_maldives_resort_vacation_wallpaper_thumb__1_ {
+            get {
+                object obj = ResourceManager.GetObject("velassaru-maldives-resort-vacation-wallpaper-thumb (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap velassaru_maldives_resort_vacation_wallpaper_thumb__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("velassaru-maldives-resort-vacation-wallpaper-thumb (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

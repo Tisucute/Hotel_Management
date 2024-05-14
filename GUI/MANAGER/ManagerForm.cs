@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DTO;
 using GUI;
+using GUI.RECEPTIONIST;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -193,8 +194,10 @@ namespace GUI
         {
             ReceptionistForm form = new ReceptionistForm(login);
             form.Show();
-        }
+            
 
+        }
+     
         private void btnManageJanitor_Click(object sender, EventArgs e)
         {
             JanitorForm form = new JanitorForm(login);
