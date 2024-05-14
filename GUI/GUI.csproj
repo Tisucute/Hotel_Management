@@ -215,6 +215,12 @@
     <Compile Include="RECEPTIONIST\ServiceForm.Designer.cs">
       <DependentUpon>ServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\ServiceOfRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\ServiceOfRoomForm.Designer.cs">
+      <DependentUpon>ServiceOfRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\ucRooms.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,12 +232,6 @@
     </Compile>
     <Compile Include="RECEPTIONIST\RoomBookingForm.Designer.cs">
       <DependentUpon>RoomBookingForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RECEPTIONIST\ViewRoomForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RECEPTIONIST\ViewRoomForm.Designer.cs">
-      <DependentUpon>ViewRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectEmployeeForm.cs">
       <SubType>Form</SubType>
@@ -320,11 +320,11 @@
     <EmbeddedResource Include="RECEPTIONIST\ServiceForm.resx">
       <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\ServiceOfRoomForm.resx">
+      <DependentUpon>ServiceOfRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ucRooms.resx">
       <DependentUpon>ucRooms.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RECEPTIONIST\ViewRoomForm.resx">
-      <DependentUpon>ViewRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="RECEPTIONIST\RoomManagement.resx">

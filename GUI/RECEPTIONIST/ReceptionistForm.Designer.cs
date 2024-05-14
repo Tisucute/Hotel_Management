@@ -51,9 +51,9 @@
             this.LabelManager = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.MenuSideBar2 = new System.Windows.Forms.PictureBox();
+            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.PanelHienThi = new System.Windows.Forms.Panel();
-            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.SideBar.SuspendLayout();
             this.panelAvatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnLogOut)).BeginInit();
@@ -104,10 +104,11 @@
             // 
             // BtnLogOut
             // 
+            this.BtnLogOut.BackColor = System.Drawing.Color.Transparent;
             this.BtnLogOut.Image = global::GUI.Properties.Resources.icons8_arrow_50__2_1;
-            this.BtnLogOut.Location = new System.Drawing.Point(210, 196);
+            this.BtnLogOut.Location = new System.Drawing.Point(207, 196);
             this.BtnLogOut.Name = "BtnLogOut";
-            this.BtnLogOut.Size = new System.Drawing.Size(34, 33);
+            this.BtnLogOut.Size = new System.Drawing.Size(36, 33);
             this.BtnLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnLogOut.TabIndex = 7;
             this.BtnLogOut.TabStop = false;
@@ -115,11 +116,11 @@
             // 
             // LabelName
             // 
-            this.LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LabelName.Location = new System.Drawing.Point(0, 179);
+            this.LabelName.Location = new System.Drawing.Point(37, 183);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(243, 56);
+            this.LabelName.Size = new System.Drawing.Size(164, 46);
             this.LabelName.TabIndex = 4;
             this.LabelName.Text = "Name";
             this.LabelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -322,21 +323,6 @@
             this.MenuSideBar2.TabStop = false;
             this.MenuSideBar2.Click += new System.EventHandler(this.MenuSideBar2_Click);
             // 
-            // SideBarTimer
-            // 
-            this.SideBarTimer.Interval = 10;
-            this.SideBarTimer.Tick += new System.EventHandler(this.SideBarTimer_Tick);
-            // 
-            // PanelHienThi
-            // 
-            this.PanelHienThi.BackgroundImage = global::GUI.Properties.Resources.velassaru_maldives_resort_vacation_wallpaper_thumb;
-            this.PanelHienThi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
-            this.PanelHienThi.Name = "PanelHienThi";
-            this.PanelHienThi.Size = new System.Drawing.Size(1237, 799);
-            this.PanelHienThi.TabIndex = 13;
-            // 
             // nightControlBox1
             // 
             this.nightControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -352,7 +338,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1348, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(1351, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -361,6 +347,21 @@
             this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
             this.nightControlBox1.TabIndex = 6;
             this.nightControlBox1.Click += new System.EventHandler(this.nightControlBox1_Click);
+            // 
+            // SideBarTimer
+            // 
+            this.SideBarTimer.Interval = 10;
+            this.SideBarTimer.Tick += new System.EventHandler(this.SideBarTimer_Tick);
+            // 
+            // PanelHienThi
+            // 
+            this.PanelHienThi.BackgroundImage = global::GUI.Properties.Resources.velassaru_maldives_resort_vacation_wallpaper_thumb;
+            this.PanelHienThi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
+            this.PanelHienThi.Name = "PanelHienThi";
+            this.PanelHienThi.Size = new System.Drawing.Size(1237, 799);
+            this.PanelHienThi.TabIndex = 13;
             // 
             // ReceptionistForm
             // 

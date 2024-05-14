@@ -41,12 +41,11 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelRoom = new System.Windows.Forms.FlowLayoutPanel();
+            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.ucRooms4 = new GUI.RECEPTIONIST.ucRooms();
             this.ucRooms3 = new GUI.RECEPTIONIST.ucRooms();
             this.ucRooms2 = new GUI.RECEPTIONIST.ucRooms();
             this.ucRooms1 = new GUI.RECEPTIONIST.ucRooms();
-            this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
-            this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,7 +58,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 896);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1386, 46);
+            this.guna2Panel3.Size = new System.Drawing.Size(1529, 46);
             this.guna2Panel3.TabIndex = 1;
             // 
             // guna2Panel4
@@ -73,7 +72,7 @@
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(1386, 132);
+            this.guna2Panel4.Size = new System.Drawing.Size(1529, 132);
             this.guna2Panel4.TabIndex = 2;
             // 
             // guna2Panel1
@@ -84,7 +83,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1386, 144);
+            this.guna2Panel1.Size = new System.Drawing.Size(1529, 144);
             this.guna2Panel1.TabIndex = 12;
             // 
             // panel1
@@ -135,6 +134,7 @@
             this.BtnServiceRoom.Size = new System.Drawing.Size(140, 86);
             this.BtnServiceRoom.TabIndex = 11;
             this.BtnServiceRoom.Text = "Services of Room";
+            this.BtnServiceRoom.Click += new System.EventHandler(this.BtnServiceRoom_Click);
             // 
             // BtnAddRoom
             // 
@@ -235,6 +235,29 @@
             this.panelRoom.Size = new System.Drawing.Size(910, 653);
             this.panelRoom.TabIndex = 3;
             // 
+            // TextBoxSearch
+            // 
+            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearch.DefaultText = "";
+            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50;
+            this.TextBoxSearch.Location = new System.Drawing.Point(52, 139);
+            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            this.TextBoxSearch.PasswordChar = '\0';
+            this.TextBoxSearch.PlaceholderText = "Search here";
+            this.TextBoxSearch.SelectedText = "";
+            this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
+            this.TextBoxSearch.TabIndex = 4;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
             // ucRooms4
             // 
             this.ucRooms4.Location = new System.Drawing.Point(3, 3);
@@ -291,45 +314,11 @@
             this.ucRooms1.TabIndex = 0;
             this.ucRooms1.type = "";
             // 
-            // skyLabel3
-            // 
-            this.skyLabel3.AutoSize = true;
-            this.skyLabel3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.skyLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
-            this.skyLabel3.Location = new System.Drawing.Point(969, 228);
-            this.skyLabel3.Name = "skyLabel3";
-            this.skyLabel3.Size = new System.Drawing.Size(0, 14);
-            this.skyLabel3.TabIndex = 36;
-            // 
-            // TextBoxSearch
-            // 
-            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.DefaultText = "";
-            this.TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.TextBoxSearch.IconLeft = global::GUI.Properties.Resources.icons8_find_50;
-            this.TextBoxSearch.Location = new System.Drawing.Point(52, 139);
-            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.PasswordChar = '\0';
-            this.TextBoxSearch.PlaceholderText = "Search here";
-            this.TextBoxSearch.SelectedText = "";
-            this.TextBoxSearch.Size = new System.Drawing.Size(335, 48);
-            this.TextBoxSearch.TabIndex = 4;
-            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
-            // 
             // RoomManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 942);
-            this.Controls.Add(this.skyLabel3);
+            this.ClientSize = new System.Drawing.Size(1529, 942);
             this.Controls.Add(this.TextBoxSearch);
             this.Controls.Add(this.panelRoom);
             this.Controls.Add(this.guna2Panel4);
@@ -345,7 +334,6 @@
             this.panel1.ResumeLayout(false);
             this.panelRoom.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -362,7 +350,6 @@
         private Guna.UI2.WinForms.Guna2Button BtnServiceRoom;
         private Guna.UI2.WinForms.Guna2Button BtnAddRoom;
         public Guna.UI2.WinForms.Guna2TextBox TextBoxSearch;
-        private ReaLTaiizor.Controls.SkyLabel skyLabel3;
         private RECEPTIONIST.ucRooms ucRooms1;
         private RECEPTIONIST.ucRooms ucRooms2;
         private RECEPTIONIST.ucRooms ucRooms3;

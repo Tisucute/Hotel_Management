@@ -52,6 +52,7 @@ namespace GUI.RECEPTIONIST
             {
                 MessageBox.Show("Please Fill In Blank Information", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         bool IsValidAlphabetInput(string input)
