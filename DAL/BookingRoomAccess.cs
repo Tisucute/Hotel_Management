@@ -14,12 +14,13 @@ namespace DAL
         SqlConnectionData mydb = new SqlConnectionData();
         public bool insertBookingRoom(int customerID, int roomID, int employeeID, DateTime checkInTime, DateTime checkOutTime)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO ROOM_BOOKING(customer_id, room_id, employee_id, checkInDate, checkOutDate) VALUES (@cid, @rid, @eid, @ci, @co)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO ROOM_BOOKING(customer_id, room_id, employee_id, checkInDate, checkOutDate, status) VALUES (@cid, @rid, @eid, @ci, @co, @status)", mydb.getConnection);
             command.Parameters.Add("@cid", SqlDbType.Int).Value = customerID;
             command.Parameters.Add("@rid", SqlDbType.Int).Value = roomID;
             command.Parameters.Add("@eid", SqlDbType.Int).Value = employeeID;
             command.Parameters.Add("@ci", SqlDbType.DateTime).Value = checkInTime;
             command.Parameters.Add("@co", SqlDbType.DateTime).Value = checkOutTime;
+            command.Parameters.Add("@status", SqlDbType.VarChar).Value = "Hire";
             mydb.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -32,33 +33,24 @@ namespace DAL
                 return false;
             }
         }
-        public bool editRoom(ROOM room)
+        public DataTable getBookingRoomByRoomName(string name)
         {
-            SqlCommand command = new SqlCommand("UPDATE ROOM SET room_name = @name, type_id = @type, person = @person, status = @status, price = @price, picture = @pic WHERE room_id = @id", mydb.getConnection);
-            command.Parameters.Add("@id", SqlDbType.Int).Value = room.room_id;
-            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = room.room_name;
-            command.Parameters.Add("@type", SqlDbType.Int).Value = room.type_id;
-            command.Parameters.Add("@person", SqlDbType.Int).Value = room.person;
-            command.Parameters.Add("@status", SqlDbType.VarChar).Value = room.status;
-            command.Parameters.Add("@price", SqlDbType.NVarChar).Value = room.price;
-            command.Parameters.Add("@pic", SqlDbType.Image).Value = room.pic.ToArray();
-
-            mydb.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                mydb.closeConnection();
-                return true;
-            }
-            else
-            {
-                mydb.closeConnection();
-                return false;
-            }
-        }
-        public bool removeRoom(string name)
-        {
-            SqlCommand command = new SqlCommand("DELETE FROM ROOM WHERE room_name = @name", mydb.getConnection);
+            
+            SqlCommand command = new SqlCommand("SELECT * FROM ROOM_BOOKING " +
+                "INNER JOIN ROOM ON ROOM.room_id = ROOM_BOOKING.room_id " +
+                " WHERE ROOM.room_name = @name AND ROOM_BOOKING.status = 'Hire'", mydb.getConnection);
             command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+            return dt;
+
+        }
+        public bool updateBookingRoom(DateTime dateTime , int booking_id)
+        {
+            SqlCommand command = new SqlCommand("UPDATE ROOM_BOOKING SET checkOutDate = @co WHERE booking_id = @id", mydb.getConnection);
+            command.Parameters.Add("@co", SqlDbType.DateTime).Value = dateTime;
+            command.Parameters.Add("@id", SqlDbType.Int).Value = booking_id;
             mydb.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {

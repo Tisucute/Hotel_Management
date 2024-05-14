@@ -55,7 +55,7 @@
             this.txtRoomID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPerson = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCheckOut = new Guna.UI2.WinForms.Guna2Button();
             this.txtNight = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
@@ -73,6 +73,7 @@
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtEmployee = new ReaLTaiizor.Controls.SkyLabel();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -100,7 +101,7 @@
             this.groupBox4.Controls.Add(this.skyLabel8);
             this.groupBox4.Location = new System.Drawing.Point(391, 80);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(628, 351);
+            this.groupBox4.Size = new System.Drawing.Size(628, 378);
             this.groupBox4.TabIndex = 149;
             this.groupBox4.TabStop = false;
             // 
@@ -136,6 +137,7 @@
             this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.Enabled = false;
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -169,6 +171,7 @@
             this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.Enabled = false;
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -202,10 +205,11 @@
             this.txtNation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNation.Enabled = false;
             this.txtNation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNation.Location = new System.Drawing.Point(55, 248);
+            this.txtNation.Location = new System.Drawing.Point(55, 249);
             this.txtNation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNation.Name = "txtNation";
             this.txtNation.PasswordChar = '\0';
@@ -216,6 +220,7 @@
             // 
             // picBox
             // 
+            this.picBox.Enabled = false;
             this.picBox.ImageRotate = 0F;
             this.picBox.Location = new System.Drawing.Point(358, 116);
             this.picBox.Name = "picBox";
@@ -307,6 +312,7 @@
             this.txtCustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerName.Enabled = false;
             this.txtCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -340,6 +346,7 @@
             this.txtCCCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCCCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCCCD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCCCD.Enabled = false;
             this.txtCCCD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -411,7 +418,7 @@
             // 
             this.btnDelay.Animated = true;
             this.btnDelay.AutoRoundedCorners = true;
-            this.btnDelay.BorderRadius = 17;
+            this.btnDelay.BorderRadius = 23;
             this.btnDelay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDelay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDelay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -419,9 +426,9 @@
             this.btnDelay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelay.ForeColor = System.Drawing.Color.White;
-            this.btnDelay.Location = new System.Drawing.Point(123, 245);
+            this.btnDelay.Location = new System.Drawing.Point(410, 519);
             this.btnDelay.Name = "btnDelay";
-            this.btnDelay.Size = new System.Drawing.Size(113, 36);
+            this.btnDelay.Size = new System.Drawing.Size(137, 48);
             this.btnDelay.TabIndex = 79;
             this.btnDelay.Text = "Delay";
             this.btnDelay.Click += new System.EventHandler(this.btnDelay_Click);
@@ -502,7 +509,7 @@
             // 
             this.btnCancel.Animated = true;
             this.btnCancel.AutoRoundedCorners = true;
-            this.btnCancel.BorderRadius = 17;
+            this.btnCancel.BorderRadius = 23;
             this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -510,29 +517,30 @@
             this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(204, 203);
+            this.btnCancel.Location = new System.Drawing.Point(650, 519);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(113, 36);
+            this.btnCancel.Size = new System.Drawing.Size(144, 48);
             this.btnCancel.TabIndex = 78;
             this.btnCancel.Text = "Cancel";
             // 
-            // btnAccept
+            // btnCheckOut
             // 
-            this.btnAccept.Animated = true;
-            this.btnAccept.AutoRoundedCorners = true;
-            this.btnAccept.BorderRadius = 17;
-            this.btnAccept.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccept.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccept.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAccept.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAccept.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAccept.ForeColor = System.Drawing.Color.White;
-            this.btnAccept.Location = new System.Drawing.Point(53, 203);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(113, 36);
-            this.btnAccept.TabIndex = 77;
-            this.btnAccept.Text = "Accept";
+            this.btnCheckOut.Animated = true;
+            this.btnCheckOut.AutoRoundedCorners = true;
+            this.btnCheckOut.BorderRadius = 23;
+            this.btnCheckOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCheckOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
+            this.btnCheckOut.Location = new System.Drawing.Point(191, 519);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(130, 48);
+            this.btnCheckOut.TabIndex = 77;
+            this.btnCheckOut.Text = " Check Out";
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // txtNight
             // 
@@ -586,17 +594,14 @@
             this.groupBox2.Controls.Add(this.skyLabel14);
             this.groupBox2.Controls.Add(this.skyLabel13);
             this.groupBox2.Controls.Add(this.skyLabel12);
-            this.groupBox2.Controls.Add(this.btnDelay);
             this.groupBox2.Controls.Add(this.txtPrice);
             this.groupBox2.Controls.Add(this.txtRoomID);
             this.groupBox2.Controls.Add(this.txtPerson);
-            this.groupBox2.Controls.Add(this.btnCancel);
-            this.groupBox2.Controls.Add(this.btnAccept);
             this.groupBox2.Controls.Add(this.skyLabel6);
             this.groupBox2.Controls.Add(this.txtRoomName);
             this.groupBox2.Location = new System.Drawing.Point(12, 257);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(365, 299);
+            this.groupBox2.Size = new System.Drawing.Size(365, 201);
             this.groupBox2.TabIndex = 147;
             this.groupBox2.TabStop = false;
             // 
@@ -662,7 +667,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(924, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(960, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(63, 44);
             this.guna2ControlBox1.TabIndex = 0;
@@ -768,7 +773,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(990, 66);
+            this.guna2Panel1.Size = new System.Drawing.Size(1026, 66);
             this.guna2Panel1.TabIndex = 145;
             // 
             // pictureBox1
@@ -781,19 +786,34 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // txtEmployee
+            // 
+            this.txtEmployee.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(137)))));
+            this.txtEmployee.Location = new System.Drawing.Point(544, 461);
+            this.txtEmployee.Name = "txtEmployee";
+            this.txtEmployee.Size = new System.Drawing.Size(470, 33);
+            this.txtEmployee.TabIndex = 150;
+            this.txtEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ReturnRoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(990, 866);
+            this.ClientSize = new System.Drawing.Size(1026, 614);
+            this.Controls.Add(this.txtEmployee);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.btnDelay);
+            this.Controls.Add(this.btnCheckOut);
+            this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReturnRoomForm";
             this.Text = "ReceiveRoomForm";
+            this.Load += new System.EventHandler(this.ReturnRoomForm_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
@@ -838,7 +858,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtRoomID;
         private Guna.UI2.WinForms.Guna2TextBox txtPerson;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Guna.UI2.WinForms.Guna2Button btnAccept;
+        private Guna.UI2.WinForms.Guna2Button btnCheckOut;
         private Guna.UI2.WinForms.Guna2TextBox txtNight;
         private ReaLTaiizor.Controls.SkyLabel skyLabel3;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
@@ -856,5 +876,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datePickerFrom;
         private ReaLTaiizor.Controls.SkyLabel skyLabel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private ReaLTaiizor.Controls.SkyLabel txtEmployee;
     }
 }

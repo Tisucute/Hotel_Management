@@ -31,27 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.LabelTotalSalary = new ReaLTaiizor.Controls.MetroLabel();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.dgvListCheck = new Guna.UI2.WinForms.Guna2DataGridView();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCheck)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LabelTotalSalary
-            // 
-            this.LabelTotalSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTotalSalary.IsDerivedStyle = true;
-            this.LabelTotalSalary.Location = new System.Drawing.Point(12, 511);
-            this.LabelTotalSalary.Name = "LabelTotalSalary";
-            this.LabelTotalSalary.Size = new System.Drawing.Size(162, 23);
-            this.LabelTotalSalary.Style = ReaLTaiizor.Enum.Metro.Style.Light;
-            this.LabelTotalSalary.StyleManager = null;
-            this.LabelTotalSalary.TabIndex = 26;
-            this.LabelTotalSalary.Text = "Total Salary:";
-            this.LabelTotalSalary.ThemeAuthor = "Taiizor";
-            this.LabelTotalSalary.ThemeName = "MetroLight";
             // 
             // groupBox
             // 
@@ -80,6 +65,7 @@
             // 
             // dgvListCheck
             // 
+            this.dgvListCheck.AllowUserToAddRows = false;
             this.dgvListCheck.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvListCheck.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -138,8 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(136)))), ((int)(((byte)(158)))));
-            this.ClientSize = new System.Drawing.Size(861, 634);
-            this.Controls.Add(this.LabelTotalSalary);
+            this.ClientSize = new System.Drawing.Size(861, 509);
             this.Controls.Add(this.groupBox);
             this.Name = "ShiftInformation";
             this.Text = "ShiftInformation";
@@ -152,7 +137,6 @@
         }
 
         #endregion
-        private ReaLTaiizor.Controls.MetroLabel LabelTotalSalary;
         private System.Windows.Forms.GroupBox groupBox;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel3;
         public Guna.UI2.WinForms.Guna2DataGridView dgvListCheck;

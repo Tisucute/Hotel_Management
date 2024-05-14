@@ -21,6 +21,12 @@ namespace GUI.RECEPTIONIST
         {
             InitializeComponent();
         }
+        string roomName = "";
+        public ServiceOfRoomForm(string name)
+        {
+            roomName = name;    
+            InitializeComponent();
+        }
         ServiceOfRoomBLL serviceOfRoomBLL = new ServiceOfRoomBLL();
         private void skyLabel3_Click(object sender, EventArgs e)
         {
@@ -41,11 +47,11 @@ namespace GUI.RECEPTIONIST
         {
 
             SERVICEOFROOM service = new SERVICEOFROOM();
-            service.room_name = txtRoomName.Text.Trim();
-            service.book_id = Convert.ToInt32(cmbBookID.SelectedItem.ToString());
+            service.room_name = roomName;
+            service.book_id = Convert.ToInt32(txtBookID.Text.Trim());
             service.amount = Convert.ToInt32(txtAmount.Text.ToString());
             service.price = txtPrice.Text.Trim();
-            service.service_name = cmbService.SelectedItem.ToString();
+            service.service_id = Convert.ToInt32(cmbService.SelectedValue.ToString());
 
             if (verifyInput())
             {
@@ -67,6 +73,7 @@ namespace GUI.RECEPTIONIST
             {
                 MessageBox.Show("Please Fill In Blank Information", "Add Service", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            dgvListServices.DataSource = serviceOfRoomBLL.getAllServiceOfRoomByID(Convert.ToInt32(txtBookID.Text));
 
         }
         bool IsValidAlphabetInput(string input)
@@ -76,7 +83,7 @@ namespace GUI.RECEPTIONIST
         }
         bool verifyInput()
         {
-            if ((txtRoomName.Text.Trim() == "") || txtPrice.Text.Trim() == "" || txtAmount.Text.Trim() == "")
+            if ((txtBookID.Text.Trim() == "") || txtPrice.Text.Trim() == "" || txtAmount.Text.Trim() == "")
             {
                 return false;
             }
@@ -98,13 +105,26 @@ namespace GUI.RECEPTIONIST
 
         private void ServiceOfRoomForm_Load(object sender, EventArgs e)
         {
-            dgvListServices.DataSource = serviceOfRoomBLL.getAllServiceOfRoom();
+            txtRoomName.Text = roomName;
+            try
+            {
+                BookingRoomBLL bookingRoomBLL = new BookingRoomBLL();
+                DataTable dt = bookingRoomBLL.getBookingRoomByRoomName(roomName);
+                txtBookID.Text = dt.Rows[0]["booking_id"].ToString();
+                txtBookID.Enabled = false;
+            }
+            catch { }
+            RoomBLL roomBLL = new RoomBLL();
+            dgvListServices.DataSource = serviceOfRoomBLL.getAllServiceOfRoomByID(Convert.ToInt32(txtBookID.Text));
             cmbService.DataSource = serviceOfRoomBLL.getAllServices();
             cmbService.DisplayMember = "service_name";
             cmbService.ValueMember = "service_id";
-            cmbBookID.DataSource = serviceOfRoomBLL.getAllBookID();
-            cmbBookID.ValueMember = "booking_id";
-            cmbBookID.DisplayMember = "booking_id";
+            try
+            {
+                DataTable dt = serviceOfRoomBLL.getServiceByID(Convert.ToInt32(cmbService.SelectedValue));
+                txtPrice.Text = dt.Rows[0]["price"].ToString();
+            }
+            catch { }
         }
 
         private void txtBookID_TextChanged(object sender, EventArgs e)
@@ -112,21 +132,32 @@ namespace GUI.RECEPTIONIST
             
         }
 
-        private void cmbBookID_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbService_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int roomID = Convert.ToInt32(cmbBookID.SelectedValue.ToString());
-            DataTable dt = serviceOfRoomBLL.getRoomNameByID(roomID);
-            if (dt.Rows.Count > 0)
+            try
             {
-                txtRoomName.Text = dt.Rows[0]["room_name"].ToString();
+                DataTable dt = serviceOfRoomBLL.getServiceByID(Convert.ToInt32(cmbService.SelectedValue));
+                txtPrice.Text = dt.Rows[0]["price"].ToString();
             }
-            else
+            catch { }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            try
             {
-                MessageBox.Show("No information found", "Booking Service", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if ((MessageBox.Show("Do You Sure To Delete This Service?", "Remove Service", MessageBoxButtons.YesNo) == DialogResult.Yes))
+                {
+                    int id = Convert.ToInt32(dgvListServices.CurrentRow.Cells["id"].Value);
+                    serviceOfRoomBLL.deleteService(id);
+                    MessageBox.Show("Delete Successfully", "Delete Information of Service", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvListServices.DataSource = serviceOfRoomBLL.getAllServiceOfRoomByID(Convert.ToInt32(txtBookID.Text));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
-
-    
-    
 }

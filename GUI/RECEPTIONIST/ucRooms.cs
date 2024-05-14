@@ -22,7 +22,8 @@ namespace GUI.RECEPTIONIST
         public event EventHandler BookClicked;
         public event EventHandler ReceiveClicked;
         public event EventHandler EditClicked;
-       
+        public event EventHandler ServiceClicked;
+
         private void metroLabel1_Click(object sender, EventArgs e)
         {
 
@@ -34,6 +35,7 @@ namespace GUI.RECEPTIONIST
             {
                 RadioBtnStatus.Hide();
                 btnBook.Hide();
+                BtnDelete.Hide();
 
             }
 
@@ -112,6 +114,11 @@ namespace GUI.RECEPTIONIST
         private void guna2ShadowPanel1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            ServiceClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

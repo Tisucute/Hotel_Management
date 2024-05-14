@@ -122,6 +122,11 @@ namespace GUI
                     txtBoxCCCD.Text = "";
                     return false;
                 }
+                if (!Regex.IsMatch(txtBoxCCCD.Text.Trim(), @"^\d{12}$"))
+                {
+                    MessageBox.Show("CCCD require 12 numbers!");
+                    return false;
+                }
                 return true;
             }
             bool IsValidAlphabetInput(string input)

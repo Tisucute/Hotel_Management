@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,14 +38,15 @@
             this.skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
-            this.txtRoomName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBookID = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.cmbService = new ReaLTaiizor.Controls.ComboBoxEdit();
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvListServices = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.cmbBookID = new ReaLTaiizor.Controls.ComboBoxEdit();
+            this.txtRoomName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BtnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListServices)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +89,7 @@
             this.skyLabel7.AutoSize = true;
             this.skyLabel7.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
             this.skyLabel7.ForeColor = System.Drawing.Color.Salmon;
-            this.skyLabel7.Location = new System.Drawing.Point(38, 98);
+            this.skyLabel7.Location = new System.Drawing.Point(38, 163);
             this.skyLabel7.Name = "skyLabel7";
             this.skyLabel7.Size = new System.Drawing.Size(85, 14);
             this.skyLabel7.TabIndex = 149;
@@ -136,35 +137,35 @@
             this.skyLabel1.AutoSize = true;
             this.skyLabel1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
             this.skyLabel1.ForeColor = System.Drawing.Color.Salmon;
-            this.skyLabel1.Location = new System.Drawing.Point(38, 163);
+            this.skyLabel1.Location = new System.Drawing.Point(38, 98);
             this.skyLabel1.Name = "skyLabel1";
             this.skyLabel1.Size = new System.Drawing.Size(86, 14);
             this.skyLabel1.TabIndex = 145;
             this.skyLabel1.Text = "Room Name";
             // 
-            // txtRoomName
+            // txtBookID
             // 
-            this.txtRoomName.AutoRoundedCorners = true;
-            this.txtRoomName.BorderRadius = 14;
-            this.txtRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRoomName.DefaultText = "";
-            this.txtRoomName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRoomName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomName.Enabled = false;
-            this.txtRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.txtRoomName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRoomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.txtRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
-            this.txtRoomName.Location = new System.Drawing.Point(29, 181);
-            this.txtRoomName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.PasswordChar = '\0';
-            this.txtRoomName.PlaceholderText = "";
-            this.txtRoomName.SelectedText = "";
-            this.txtRoomName.Size = new System.Drawing.Size(202, 31);
-            this.txtRoomName.TabIndex = 144;
+            this.txtBookID.AutoRoundedCorners = true;
+            this.txtBookID.BorderRadius = 14;
+            this.txtBookID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBookID.DefaultText = "";
+            this.txtBookID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBookID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBookID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBookID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBookID.Enabled = false;
+            this.txtBookID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
+            this.txtBookID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBookID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
+            this.txtBookID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
+            this.txtBookID.Location = new System.Drawing.Point(29, 181);
+            this.txtBookID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBookID.Name = "txtBookID";
+            this.txtBookID.PasswordChar = '\0';
+            this.txtBookID.PlaceholderText = "";
+            this.txtBookID.SelectedText = "";
+            this.txtBookID.Size = new System.Drawing.Size(202, 31);
+            this.txtBookID.TabIndex = 144;
             // 
             // BtnAdd
             // 
@@ -217,6 +218,7 @@
             this.cmbService.Size = new System.Drawing.Size(202, 26);
             this.cmbService.StartIndex = 0;
             this.cmbService.TabIndex = 153;
+            this.cmbService.SelectedIndexChanged += new System.EventHandler(this.cmbService_SelectedIndexChanged);
             // 
             // skyLabel4
             // 
@@ -255,28 +257,28 @@
             // dgvListServices
             // 
             this.dgvListServices.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvListServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvListServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListServices.ColumnHeadersHeight = 30;
             this.dgvListServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListServices.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListServices.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListServices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListServices.Location = new System.Drawing.Point(262, 98);
+            this.dgvListServices.Location = new System.Drawing.Point(261, 98);
             this.dgvListServices.Name = "dgvListServices";
             this.dgvListServices.RowHeadersVisible = false;
             this.dgvListServices.RowHeadersWidth = 51;
@@ -305,25 +307,50 @@
             this.dgvListServices.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListServices.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // cmbBookID
+            // txtRoomName
             // 
-            this.cmbBookID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.cmbBookID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbBookID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbBookID.DropDownHeight = 100;
-            this.cmbBookID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBookID.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbBookID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.cmbBookID.FormattingEnabled = true;
-            this.cmbBookID.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.cmbBookID.IntegralHeight = false;
-            this.cmbBookID.ItemHeight = 20;
-            this.cmbBookID.Location = new System.Drawing.Point(29, 115);
-            this.cmbBookID.Name = "cmbBookID";
-            this.cmbBookID.Size = new System.Drawing.Size(202, 26);
-            this.cmbBookID.StartIndex = 0;
-            this.cmbBookID.TabIndex = 157;
-            this.cmbBookID.SelectedIndexChanged += new System.EventHandler(this.cmbBookID_SelectedIndexChanged);
+            this.txtRoomName.AutoRoundedCorners = true;
+            this.txtRoomName.BorderRadius = 14;
+            this.txtRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRoomName.DefaultText = "";
+            this.txtRoomName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRoomName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomName.Enabled = false;
+            this.txtRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
+            this.txtRoomName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRoomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
+            this.txtRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(98)))));
+            this.txtRoomName.Location = new System.Drawing.Point(29, 116);
+            this.txtRoomName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRoomName.Name = "txtRoomName";
+            this.txtRoomName.PasswordChar = '\0';
+            this.txtRoomName.PlaceholderText = "";
+            this.txtRoomName.SelectedText = "";
+            this.txtRoomName.Size = new System.Drawing.Size(202, 31);
+            this.txtRoomName.TabIndex = 157;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Animated = true;
+            this.BtnDelete.AutoRoundedCorners = true;
+            this.BtnDelete.BorderRadius = 17;
+            this.BtnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnDelete.FillColor = System.Drawing.Color.Salmon;
+            this.BtnDelete.FillColor2 = System.Drawing.Color.LightSalmon;
+            this.BtnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnDelete.ForeColor = System.Drawing.Color.White;
+            this.BtnDelete.Location = new System.Drawing.Point(71, 481);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(126, 36);
+            this.BtnDelete.TabIndex = 158;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // ServiceOfRoomForm
             // 
@@ -331,7 +358,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1023, 543);
-            this.Controls.Add(this.cmbBookID);
+            this.Controls.Add(this.BtnDelete);
+            this.Controls.Add(this.txtRoomName);
             this.Controls.Add(this.dgvListServices);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.skyLabel4);
@@ -342,7 +370,7 @@
             this.Controls.Add(this.skyLabel2);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.skyLabel1);
-            this.Controls.Add(this.txtRoomName);
+            this.Controls.Add(this.txtBookID);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ServiceOfRoomForm";
@@ -365,7 +393,7 @@
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private ReaLTaiizor.Controls.SkyLabel skyLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtRoomName;
+        private Guna.UI2.WinForms.Guna2TextBox txtBookID;
         private Guna.UI2.WinForms.Guna2GradientButton BtnAdd;
         private ReaLTaiizor.Controls.SkyLabel skyLabel3;
         private ReaLTaiizor.Controls.ComboBoxEdit cmbService;
@@ -373,6 +401,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAmount;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListServices;
-        private ReaLTaiizor.Controls.ComboBoxEdit cmbBookID;
+        private Guna.UI2.WinForms.Guna2TextBox txtRoomName;
+        private Guna.UI2.WinForms.Guna2GradientButton BtnDelete;
     }
 }

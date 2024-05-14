@@ -155,6 +155,11 @@ namespace GUI.RECEPTIONIST
                 txtPhone.Text = "";
                 return false;
             }
+            if (!Regex.IsMatch(txtCCCD.Text.Trim(), @"^\d{12}$"))
+            {
+                MessageBox.Show("CCCD require 12 numbers!");
+                return false;
+            }
             return true;
         }
         bool IsValidAlphabetInput(string input)

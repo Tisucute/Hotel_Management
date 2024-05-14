@@ -31,14 +31,15 @@
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.BtnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBook = new Guna.UI2.WinForms.Guna2Button();
             this.RadioBtnStatus = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.labelStatus = new ReaLTaiizor.Controls.NightLabel();
             this.labelName = new ReaLTaiizor.Controls.MetroLabel();
             this.labelKind = new ReaLTaiizor.Controls.NightLabel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.RadioBtnHire = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.btnBook = new Guna.UI2.WinForms.Guna2Button();
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnService = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,6 @@
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
-            this.guna2ShadowPanel1.Controls.Add(this.BtnDelete);
             this.guna2ShadowPanel1.Controls.Add(this.RadioBtnStatus);
             this.guna2ShadowPanel1.Controls.Add(this.labelStatus);
             this.guna2ShadowPanel1.Controls.Add(this.labelName);
@@ -56,6 +56,8 @@
             this.guna2ShadowPanel1.Controls.Add(this.RadioBtnHire);
             this.guna2ShadowPanel1.Controls.Add(this.btnBook);
             this.guna2ShadowPanel1.Controls.Add(this.btnReturn);
+            this.guna2ShadowPanel1.Controls.Add(this.BtnDelete);
+            this.guna2ShadowPanel1.Controls.Add(this.btnService);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 3);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
@@ -102,25 +104,6 @@
             this.BtnDelete.TabIndex = 9;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // btnBook
-            // 
-            this.btnBook.Animated = true;
-            this.btnBook.AutoRoundedCorners = true;
-            this.btnBook.BorderRadius = 13;
-            this.btnBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBook.FillColor = System.Drawing.Color.Green;
-            this.btnBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBook.ForeColor = System.Drawing.Color.White;
-            this.btnBook.Location = new System.Drawing.Point(17, 225);
-            this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(85, 29);
-            this.btnBook.TabIndex = 8;
-            this.btnBook.Text = "Book";
-            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // RadioBtnStatus
             // 
@@ -213,6 +196,25 @@
             this.RadioBtnHire.UncheckedState.InnerColor = System.Drawing.Color.OrangeRed;
             this.RadioBtnHire.UseTransparentBackground = true;
             // 
+            // btnBook
+            // 
+            this.btnBook.Animated = true;
+            this.btnBook.AutoRoundedCorners = true;
+            this.btnBook.BorderRadius = 13;
+            this.btnBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBook.FillColor = System.Drawing.Color.Green;
+            this.btnBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBook.ForeColor = System.Drawing.Color.White;
+            this.btnBook.Location = new System.Drawing.Point(17, 225);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(85, 29);
+            this.btnBook.TabIndex = 8;
+            this.btnBook.Text = "Book";
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
+            // 
             // btnReturn
             // 
             this.btnReturn.Animated = true;
@@ -231,6 +233,25 @@
             this.btnReturn.TabIndex = 10;
             this.btnReturn.Text = "Return";
             this.btnReturn.Click += new System.EventHandler(this.btnReceive_Click);
+            // 
+            // btnService
+            // 
+            this.btnService.Animated = true;
+            this.btnService.AutoRoundedCorners = true;
+            this.btnService.BorderRadius = 13;
+            this.btnService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnService.FillColor = System.Drawing.Color.DarkViolet;
+            this.btnService.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnService.ForeColor = System.Drawing.Color.White;
+            this.btnService.Location = new System.Drawing.Point(110, 225);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(87, 29);
+            this.btnService.TabIndex = 12;
+            this.btnService.Text = "Service";
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
             // ucRooms
             // 
@@ -259,5 +280,6 @@
         private Guna.UI2.WinForms.Guna2Button btnBook;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnService;
     }
 }

@@ -24,13 +24,25 @@ namespace BLL
         {
             return serviceOfRoomAccess.getAllServices();
         }
-        public DataTable getRoomNameByID(int id)
+        public DataTable getServiceByRoom(string name)
         {
-            return serviceOfRoomAccess.getRoomNameByID(id);
+            return serviceOfRoomAccess.getServiceByRoom(name);
         }
         public DataTable getAllBookID()
         {
             return serviceOfRoomAccess.getAllBookID();
+        }
+        public DataTable getServiceByID(int id)
+        {
+            return serviceOfRoomAccess.getServiceByID(id);
+        }
+        public DataTable getAllServiceOfRoomByID(int id)
+        {
+            return serviceOfRoomAccess.getAllServiceOfRoomByID(id);
+        }
+        public bool deleteService(int id)
+        {
+            return serviceOfRoomAccess.deleteService(id);
         }
     }
 }

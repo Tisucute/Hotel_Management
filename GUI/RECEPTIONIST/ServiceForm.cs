@@ -1,15 +1,9 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.RECEPTIONIST
@@ -45,7 +39,7 @@ namespace GUI.RECEPTIONIST
             picCol = (DataGridViewImageColumn)dgvList.Columns[3];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dgvList.AllowUserToAddRows = false;
-            
+
             dgvList.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvList.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvList.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -80,14 +74,11 @@ namespace GUI.RECEPTIONIST
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            service.service_id = Convert.ToInt32(txtID.Text);
-            service.service_name = txtName.Text.Trim();
-            service.price = txtPrice.Text.Trim();
-       
-            MemoryStream pic = new MemoryStream();
-            
             if (verifyInput())
             {
+                service.service_name = txtName.Text.Trim();
+                service.price = txtPrice.Text.Trim();
+                MemoryStream pic = new MemoryStream();
                 picBox.Image.Save(pic, picBox.Image.RawFormat);
                 service.image = pic;
                 if (serviceBLL.insertService(service))
@@ -111,7 +102,7 @@ namespace GUI.RECEPTIONIST
         }
         bool verifyInput()
         {
-            if ((txtName.Text.Trim() == "") || txtPrice.Text.Trim() == "" ||  picBox.Image == null)
+            if ((txtName.Text.Trim() == "") || txtPrice.Text.Trim() == "" || picBox.Image == null)
             {
                 return false;
             }
@@ -137,14 +128,15 @@ namespace GUI.RECEPTIONIST
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            service.service_id = Convert.ToInt32(txtID.Text);
-            service.service_name = txtName.Text.Trim();
-            service.price = txtPrice.Text.Trim();
-
-            MemoryStream pic = new MemoryStream();
-
             if (verifyInput())
             {
+                service.service_id = Convert.ToInt32(txtID.Text);
+                service.service_name = txtName.Text.Trim();
+                service.price = txtPrice.Text.Trim();
+
+                MemoryStream pic = new MemoryStream();
+
+
                 picBox.Image.Save(pic, picBox.Image.RawFormat);
                 service.image = pic;
                 if (serviceBLL.updateService(service))
@@ -185,7 +177,7 @@ namespace GUI.RECEPTIONIST
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
                 if ((MessageBox.Show("Do You Sure To Delete This Service?", "Remove Service", MessageBoxButtons.YesNo) == DialogResult.Yes))

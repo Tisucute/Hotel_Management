@@ -72,23 +72,28 @@ namespace GUI
             }
             if (!IsValidAlphabetInput(txtBoxFullName.Text.Trim().Replace(" ", "")))
             {
-                MessageBox.Show("Tên chỉ được nhập chữ cái!");
+                MessageBox.Show("Name Require A Alphabet!");
                 txtBoxFullName.Text = "";
                 return false;
             }
             if (!System.Text.RegularExpressions.Regex.IsMatch(txtBoxPhone.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
             {
-                MessageBox.Show("Số điện thoại phải là số!");
+                MessageBox.Show("Phone Require A Number!");
                 txtBoxPhone.Text = "";
                 return false;
             }
             if(!System.Text.RegularExpressions.Regex.IsMatch(txtBoxCCCD.Text.Trim().Replace(" ", ""), "^[0-9]*$"))
             {
-                MessageBox.Show("CCCD phải là số!");
+                MessageBox.Show("CCCD require A Number!");
                 txtBoxCCCD.Text = "";
                 return false;
             }
-            return true;
+            if (!Regex.IsMatch(txtBoxCCCD.Text.Trim(), @"^\d{12}$"))
+            {
+                MessageBox.Show("CCCD require 12 numbers!");
+                return false;
+            }
+                return true;
         }
         bool IsValidAlphabetInput(string input)
         {

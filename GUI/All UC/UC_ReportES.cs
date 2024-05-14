@@ -20,10 +20,17 @@ namespace GUI
         
         private void btnCheckTime_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgvListEmployees.CurrentRow.Cells["ID"].Value);
-            DateTime dateTime = DatePicker.Value;
-            ShiftInformation shiftInformation = new ShiftInformation(id, dateTime);
-            shiftInformation.Show();
+            try
+            {
+                int id = Convert.ToInt32(dgvListEmployees.CurrentRow.Cells["ID"].Value);
+                DateTime dateTime = DatePicker.Value;
+                ShiftInformation shiftInformation = new ShiftInformation(id, dateTime);
+                shiftInformation.Show();
+            }
+            catch 
+            {
+                MessageBox.Show("Please Enter A Employee!", "Check Time", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

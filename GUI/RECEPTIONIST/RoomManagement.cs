@@ -48,7 +48,7 @@ namespace GUI
         private void BtnAddRoom_Click(object sender, EventArgs e)
         {
             AddRoomForm addRF = new AddRoomForm();
-            addRF.Show();
+            addRF.ShowDialog();
             panelRoom.Controls.Clear();
             loadRoom();
         }
@@ -73,13 +73,17 @@ namespace GUI
             }
             foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
             {
-                uc.ReceiveClicked += MyControl_ReceiveClicked;
+                uc.ReceiveClicked += MyControl_ReturnClicked;
             }
             foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
             {
                 uc.EditClicked += MyControl_EditClicked;
             }
-            
+            foreach (ucRooms uc in panelRoom.Controls.OfType<UserControl>())
+            {
+                uc.ServiceClicked += MyControl_ServiceClicked;
+            }
+
 
 
         }
@@ -124,10 +128,20 @@ namespace GUI
             loadRoom();
         }
 
-        private void MyControl_ReceiveClicked(object sender, EventArgs e)
+        private void MyControl_ReturnClicked(object sender, EventArgs e)
         {
-            ReturnRoomForm receiveRoomForm = new ReturnRoomForm();
-            receiveRoomForm.ShowDialog();
+            ucRooms controlToBook = sender as ucRooms;
+            DataTable dt = roombll.getRoomByName(controlToBook.room_name);
+            ROOM room = new ROOM();
+            room.room_id = Convert.ToInt32(dt.Rows[0]["room_id"].ToString());
+            room.room_name = dt.Rows[0]["room_name"].ToString();
+            room.type_id = Convert.ToInt32(dt.Rows[0]["type_id"].ToString());
+            room.person = Convert.ToInt32(dt.Rows[0]["person"].ToString());
+            room.price = dt.Rows[0]["price"].ToString().Trim();
+            ReturnRoomForm returnRoomForm = new ReturnRoomForm(room);
+            returnRoomForm.ShowDialog();
+            panelRoom.Controls.Clear();
+            loadRoom();
 
         }
         private void MyControl_EditClicked(object sender, EventArgs e)
@@ -150,11 +164,13 @@ namespace GUI
             panelRoom.Controls.Clear();
             loadRoom();
         }
-
-        private void BtnServiceRoom_Click(object sender, EventArgs e)
+        private void MyControl_ServiceClicked(object sender, EventArgs e)
         {
-            ServiceOfRoomForm serviceORF = new ServiceOfRoomForm();
-            serviceORF.ShowDialog();
+            ucRooms controlToEdit = sender as ucRooms;
+            ServiceOfRoomForm serviceOfRoom = new ServiceOfRoomForm(controlToEdit.room_name);
+            serviceOfRoom.ShowDialog();
+            
         }
+
     }
 }
