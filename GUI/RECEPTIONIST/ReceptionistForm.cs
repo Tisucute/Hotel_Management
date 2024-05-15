@@ -205,7 +205,11 @@ namespace GUI
         {
 
         }
-        
 
+        private void btnRevenueReport_Click(object sender, EventArgs e)
+        {
+            RevenueReportForm revenueReportForm = new RevenueReportForm();
+            revenueReportForm.ShowDialog();
+        }
     }
 }

@@ -47,7 +47,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnService = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRevenueReport = new System.Windows.Forms.Button();
             this.LabelManager = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -263,27 +263,28 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.btnRevenueReport);
             this.panel4.Location = new System.Drawing.Point(3, 596);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(246, 65);
             this.panel4.TabIndex = 10;
             // 
-            // button3
+            // btnRevenueReport
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Image = global::GUI.Properties.Resources.icons8_report_50__1_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 60);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "               Revenue Reports";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRevenueReport.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRevenueReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRevenueReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnRevenueReport.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRevenueReport.Image = global::GUI.Properties.Resources.icons8_report_50__1_;
+            this.btnRevenueReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevenueReport.Location = new System.Drawing.Point(4, 3);
+            this.btnRevenueReport.Name = "btnRevenueReport";
+            this.btnRevenueReport.Size = new System.Drawing.Size(240, 60);
+            this.btnRevenueReport.TabIndex = 8;
+            this.btnRevenueReport.Text = "               Revenue Reports";
+            this.btnRevenueReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevenueReport.UseVisualStyleBackColor = true;
+            this.btnRevenueReport.Click += new System.EventHandler(this.btnRevenueReport_Click);
             // 
             // LabelManager
             // 
@@ -404,7 +405,7 @@
         private System.Windows.Forms.Button BtnRoom;
         private System.Windows.Forms.Button BtnCustomer;
         private System.Windows.Forms.Button btnService;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRevenueReport;
         private System.Windows.Forms.PictureBox BtnLogOut;
         public System.Windows.Forms.Label LabelManager;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;

@@ -208,6 +208,12 @@
     <Compile Include="MANAGER\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RECEPTIONIST\RevenueReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RECEPTIONIST\RevenueReportForm.Designer.cs">
+      <DependentUpon>RevenueReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RECEPTIONIST\RoomManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MANAGER\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RECEPTIONIST\RevenueReportForm.resx">
+      <DependentUpon>RevenueReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RECEPTIONIST\ServiceForm.resx">
       <DependentUpon>ServiceForm.cs</DependentUpon>
