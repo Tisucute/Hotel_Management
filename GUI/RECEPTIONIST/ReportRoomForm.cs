@@ -49,8 +49,6 @@ namespace GUI.RECEPTIONIST
             reportViewer1.LocalReport.SetParameters(reportParameters);
             reportViewer1.LocalReport.DataSources.Add(reportData);
             this.reportViewer1.RefreshReport();
-            
-            
         }
     }
 }

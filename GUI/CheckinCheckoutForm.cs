@@ -74,17 +74,20 @@ namespace GUI
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             TimeSpan hour = new TimeSpan(TimePicker.Value.Ticks);
-            DateTime dateTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, hour.Hours, hour.Minutes, 0);
+            DateTime dateTime = new DateTime(DateTimePicker.Value.Year, DateTimePicker.Value.Month, DateTimePicker.Value.Day, hour.Hours, hour.Minutes, 0);
             try
             {
-                if (employeeBLL.checkOutTime(dateTime, Convert.ToInt32(txtBoxID.Text)))
+                if ((MessageBox.Show("Are you sure Check Out?", "Check Out", MessageBoxButtons.YesNo) == DialogResult.Yes))
                 {
-                    MessageBox.Show("Check out success", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    employeeBLL.calculatorHour(Convert.ToInt32(txtBoxID.Text), dateTime);
-                }
-                else
-                {
-                    MessageBox.Show("The employee has checked out for this shift or Not during shift", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (employeeBLL.checkOutTime(dateTime, Convert.ToInt32(txtBoxID.Text)))
+                    {
+                        MessageBox.Show("Check out success", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        employeeBLL.calculatorHour(Convert.ToInt32(txtBoxID.Text), dateTime);
+                    }
+                    else
+                    {
+                        MessageBox.Show("The employee has checked out for this shift or Not during shift", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }

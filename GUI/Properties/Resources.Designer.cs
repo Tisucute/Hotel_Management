@@ -193,6 +193,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_broom_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-broom-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_calendar_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-calendar-50", resourceCulture);
@@ -473,6 +483,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_receptionist_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-receptionist-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_recycle_bin_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-recycle-bin-48", resourceCulture);
@@ -526,6 +546,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_reset_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-reset-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reset_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reset-501", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

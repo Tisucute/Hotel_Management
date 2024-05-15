@@ -32,6 +32,7 @@
             this.btnCheckIn = new Guna.UI2.WinForms.Guna2Button();
             this.skyLabel5 = new ReaLTaiizor.Controls.SkyLabel();
             this.DateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnCheckOut = new Guna.UI2.WinForms.Guna2Button();
             this.GroupBoxProfile = new ReaLTaiizor.Controls.RibbonGroupBox();
@@ -43,17 +44,16 @@
             this.txtBoxCCCD = new Guna.UI2.WinForms.Guna2TextBox();
             this.skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.PictureBoxEmployee = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.moonLabel1 = new ReaLTaiizor.Controls.MoonLabel();
             this.nightHeaderLabel1 = new ReaLTaiizor.Controls.NightHeaderLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.PictureBoxEmployee = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupBoxCheck.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GroupBoxProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBoxCheck
@@ -100,6 +100,7 @@
             this.btnCheckIn.TabIndex = 38;
             this.btnCheckIn.Text = "Check In";
             this.btnCheckIn.UseTransparentBackground = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // skyLabel5
             // 
@@ -128,6 +129,16 @@
             this.DateTimePicker.Size = new System.Drawing.Size(209, 45);
             this.DateTimePicker.TabIndex = 35;
             this.DateTimePicker.Value = new System.DateTime(2024, 5, 9, 22, 36, 36, 407);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_instagram_check_mark_50;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // TimePicker
             // 
@@ -338,6 +349,27 @@
             this.txtFullName.TabIndex = 23;
             this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
+            // PictureBoxEmployee
+            // 
+            this.PictureBoxEmployee.ImageRotate = 0F;
+            this.PictureBoxEmployee.Location = new System.Drawing.Point(43, 92);
+            this.PictureBoxEmployee.Name = "PictureBoxEmployee";
+            this.PictureBoxEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureBoxEmployee.Size = new System.Drawing.Size(200, 190);
+            this.PictureBoxEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxEmployee.TabIndex = 22;
+            this.PictureBoxEmployee.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.icons8_about_me_50;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
             // moonLabel1
             // 
             this.moonLabel1.AutoSize = true;
@@ -374,37 +406,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1809, 49);
             this.guna2Panel1.TabIndex = 21;
             // 
-            // PictureBoxEmployee
-            // 
-            this.PictureBoxEmployee.ImageRotate = 0F;
-            this.PictureBoxEmployee.Location = new System.Drawing.Point(43, 92);
-            this.PictureBoxEmployee.Name = "PictureBoxEmployee";
-            this.PictureBoxEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.PictureBoxEmployee.Size = new System.Drawing.Size(200, 190);
-            this.PictureBoxEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxEmployee.TabIndex = 22;
-            this.PictureBoxEmployee.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GUI.Properties.Resources.icons8_about_me_50;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_instagram_check_mark_50;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // CheckinCheckoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -423,11 +424,11 @@
             this.Load += new System.EventHandler(this.CheckinCheckoutForm_Load);
             this.GroupBoxCheck.ResumeLayout(false);
             this.GroupBoxCheck.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GroupBoxProfile.ResumeLayout(false);
             this.GroupBoxProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

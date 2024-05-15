@@ -56,5 +56,9 @@ namespace BLL
         {
             return serviceOfRoomAccess.insertReport(roomName, serviceName, amount, price, total, date);
         }
-    }
+        public DataTable getPayment(DateTime date)
+        {
+            return serviceOfRoomAccess.getPayment(date);
+        }
+     }
 }

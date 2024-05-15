@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security;
 
 namespace BLL
 {
@@ -50,73 +51,133 @@ namespace BLL
         {
             if (shift.startTime.TimeOfDay < new TimeSpan(19, 0, 0) && shift.startTime.TimeOfDay >= new TimeSpan(7, 0, 0))
             {
-                if (employee.role == 1)
+                bool isWeekendShift = shift.startTime.DayOfWeek == DayOfWeek.Saturday || shift.startTime.DayOfWeek == DayOfWeek.Sunday;
+                if (!isWeekendShift)
                 {
-                    // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
-                    int shiftsToday = employee.workSessions.Count(s => s.startTime.Date == shift.startTime.Date);
-                    if (shiftsToday >= 2)
+                    if (employee.role == 1)
                     {
-                        // Nhân viên đã đủ ca làm cho hôm nay
-                        return false;
+                        // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
+                        int shiftsToday = employee.workSessions.Count(s => s.startTime.Date == shift.startTime.Date);
+                        if (shiftsToday >= 2)
+                        {
+                            // Nhân viên đã đủ ca làm cho hôm nay
+                            return false;
+                        }
+                        if (employee.shifts.Any(s => s.startTime < shift.endTime && s.endTime > shift.startTime))
+                        {
+                            // Nhân viên đang ở trong ca làm khác
+                            return false;
+                        }
+                        var lastShift = employee.workSessions.OrderByDescending(s => s.endTime).FirstOrDefault();
+                        if (lastShift != null && (shift.startTime - lastShift.endTime).TotalHours < 4)
+                        {
+                            // Khoảng cách giữa 2 ca làm quá ngắn
+                            return false;
+                        }
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 1 && s.workSessions.Count(e => e.startTime.Date == shift.startTime.Date) > 0);
+                        int maxStaffPerShift = 1; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
                     }
-                    if (employee.shifts.Any(s => s.startTime < shift.endTime && s.endTime > shift.startTime))
+                    else if (employee.role == 2)
                     {
-                        // Nhân viên đang ở trong ca làm khác
-                        return false;
-                    }
-                    var lastShift = employee.workSessions.OrderByDescending(s => s.endTime).FirstOrDefault();
-                    if (lastShift != null && (shift.startTime - lastShift.endTime).TotalHours < 4)
-                    {
-                        // Khoảng cách giữa 2 ca làm quá ngắn
-                        return false;
-                    }
-                    int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 1 && s.workSessions.Count(e => e.startTime.Date == shift.startTime.Date) > 0);
-                    int maxStaffPerShift = 1; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
-                    if (currentStaffInShift >= maxStaffPerShift)
-                    {
-                        // Ca làm đã đầy
-                        return false;
-                    }
-                }
-                else if (employee.role == 2)
-                {
-                    // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
-                    int shiftsToday = employee.workSessions.Count(s => s.startTime.Date == shift.startTime.Date);
-                    if (shiftsToday >= 2)
-                    {
-                        // Nhân viên đã đủ ca làm cho hôm nay
-                        return false;
-                    }
+                        // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
+                        int shiftsToday = employee.workSessions.Count(s => s.startTime.Date == shift.startTime.Date);
+                        if (shiftsToday >= 2)
+                        {
+                            // Nhân viên đã đủ ca làm cho hôm nay
+                            return false;
+                        }
 
-                    // Kiểm tra số lượng nhân viên trong ca làm hiện tại
-                    int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 2 && s.workSessions.Count(e => e.startTime.Date == shift.startTime.Date) > 0);
-                    int maxStaffPerShift = 2; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
-                    if (currentStaffInShift >= maxStaffPerShift)
+                        // Kiểm tra số lượng nhân viên trong ca làm hiện tại
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 2 && s.workSessions.Count(e => e.startTime.Date == shift.startTime.Date) > 0);
+                        int maxStaffPerShift = 2; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
+                    }
+                    else
                     {
-                        // Ca làm đã đầy
-                        return false;
+                        // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
+                        int shiftsToday = employee.workSessions.Count(s => s.startTime.Date == shift.startTime.Date);
+                        if (shiftsToday >= 2)
+                        {
+                            // Nhân viên đã đủ ca làm cho hôm nay
+                            return false;
+                        }
+
+                        // Kiểm tra số lượng nhân viên trong ca làm hiện tại
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 3 && s.workSessions.Count(e => e.startTime.Date == shift.startTime.Date) > 0);
+                        int maxStaffPerShift = 4; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
                     }
                 }
                 else
                 {
-                    // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
-                    int shiftsToday = employee.workSessions.Count(s => s.startTime.Date == shift.startTime.Date);
-                    if (shiftsToday >= 2)
+                    if (employee.role == 1 || employee.role == 2)
                     {
-                        // Nhân viên đã đủ ca làm cho hôm nay
-                        return false;
+                        // Kiểm tra xem nhân viên đã đủ 2 ca làm trong ngày chưa
+                        DateTime adjustedStartTime = shift.startTime.TimeOfDay < new TimeSpan(7, 0, 0) ? shift.startTime.Date.AddDays(-1) : shift.startTime.Date;
+
+                        // Đếm số ca trong "ngày làm việc" đã điều chỉnh
+                        int shiftsToday = employee.workSessions.Count(s =>
+                        {
+                            DateTime sAdjustedStartTime = s.startTime.TimeOfDay < new TimeSpan(7, 0, 0) ? s.startTime.Date.AddDays(-1) : s.startTime.Date;
+                            return sAdjustedStartTime == adjustedStartTime;
+                        });
+                        if (shiftsToday >= 2)
+                        {
+                            // Nhân viên đã đủ ca làm cho hôm nay
+                            return false;
+                        }
+
+
+                        // Kiểm tra số lượng nhân viên trong ca làm hiện tại
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 1 || s.role == 2);
+                        int maxStaffPerShift = 1; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
+                    }
+                    else if (employee.role == 3)
+                    {
+                        DateTime adjustedStartTime = shift.startTime.TimeOfDay < new TimeSpan(7, 0, 0) ? shift.startTime.Date.AddDays(-1) : shift.startTime.Date;
+
+                        // Đếm số ca trong "ngày làm việc" đã điều chỉnh
+                        int shiftsToday = employee.workSessions.Count(s =>
+                        {
+                            DateTime sAdjustedStartTime = s.startTime.TimeOfDay < new TimeSpan(7, 0, 0) ? s.startTime.Date.AddDays(-1) : s.startTime.Date;
+                            return sAdjustedStartTime == adjustedStartTime;
+                        });
+                        if (shiftsToday >= 2)
+                        {
+                            // Nhân viên đã đủ ca làm cho hôm nay
+                            return false;
+                        }
+
+                        // Kiểm tra số lượng nhân viên trong ca làm hiện tại
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 3);
+
+                        int maxStaffPerShift = 3; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
                     }
 
-                    // Kiểm tra số lượng nhân viên trong ca làm hiện tại
-                    int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 3 && s.workSessions.Count(e => e.startTime.Date == shift.startTime.Date) > 0);
-                    int maxStaffPerShift = 4; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
-                    if (currentStaffInShift >= maxStaffPerShift)
-                    {
-                        // Ca làm đã đầy
-                        return false;
-                    }
                 }
-
             }
             else if (shift.startTime.TimeOfDay >= new TimeSpan(19, 0, 0) || shift.startTime.TimeOfDay < new TimeSpan(7, 0, 0))
             {
@@ -164,13 +225,28 @@ namespace BLL
                     }
 
                     // Kiểm tra số lượng nhân viên trong ca làm hiện tại
-                    int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 3);
-
-                    int maxStaffPerShift = 1; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
-                    if (currentStaffInShift >= maxStaffPerShift)
+                    bool isWeekendShift = shift.startTime.DayOfWeek == DayOfWeek.Saturday || shift.startTime.DayOfWeek == DayOfWeek.Sunday;
+                    if (!isWeekendShift)
                     {
-                        // Ca làm đã đầy
-                        return false;
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 3);
+
+                        int maxStaffPerShift = 1; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        int currentStaffInShift = shift.assignEmployees.Count(s => s.role == 3);
+
+                        int maxStaffPerShift = 3; // Số lượng nhân viên tối đa cho mỗi ca 4 tiếng
+                        if (currentStaffInShift >= maxStaffPerShift)
+                        {
+                            // Ca làm đã đầy
+                            return false;
+                        }
                     }
                 }
             }

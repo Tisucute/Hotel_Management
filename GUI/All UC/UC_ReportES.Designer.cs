@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.btnCheckTime = new Guna.UI2.WinForms.Guna2Button();
-            this.labelTotalTime = new ReaLTaiizor.Controls.MetroLabel();
             this.DatePicker = new ReaLTaiizor.Controls.PoisonDateTime();
-            this.panelTotalTime = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
             this.RadioBtnAll = new Guna.UI2.WinForms.Guna2RadioButton();
             this.RadioButtonJanitor = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -43,7 +41,6 @@
             this.BtnSearch = new System.Windows.Forms.PictureBox();
             this.TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvListEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panelTotalTime.SuspendLayout();
             this.parrotGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployees)).BeginInit();
@@ -93,21 +90,6 @@
             this.btnCheckTime.Text = "Check Time";
             this.btnCheckTime.Click += new System.EventHandler(this.btnCheckTime_Click);
             // 
-            // labelTotalTime
-            // 
-            this.labelTotalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelTotalTime.IsDerivedStyle = true;
-            this.labelTotalTime.Location = new System.Drawing.Point(-2, 0);
-            this.labelTotalTime.Name = "labelTotalTime";
-            this.labelTotalTime.Size = new System.Drawing.Size(230, 58);
-            this.labelTotalTime.Style = ReaLTaiizor.Enum.Metro.Style.Light;
-            this.labelTotalTime.StyleManager = null;
-            this.labelTotalTime.TabIndex = 0;
-            this.labelTotalTime.Text = "Total Time:";
-            this.labelTotalTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelTotalTime.ThemeAuthor = "Taiizor";
-            this.labelTotalTime.ThemeName = "MetroLight";
-            // 
             // DatePicker
             // 
             this.DatePicker.Location = new System.Drawing.Point(316, 32);
@@ -116,19 +98,6 @@
             this.DatePicker.Size = new System.Drawing.Size(243, 30);
             this.DatePicker.TabIndex = 22;
             this.DatePicker.ValueChanged += new System.EventHandler(this.DatePicker_ValueChanged);
-            // 
-            // panelTotalTime
-            // 
-            this.panelTotalTime.BorderRadius = 30;
-            this.panelTotalTime.Controls.Add(this.labelTotalTime);
-            this.panelTotalTime.FillColor = System.Drawing.Color.PaleTurquoise;
-            this.panelTotalTime.FillColor2 = System.Drawing.Color.LightCyan;
-            this.panelTotalTime.FillColor3 = System.Drawing.Color.PaleTurquoise;
-            this.panelTotalTime.FillColor4 = System.Drawing.Color.CornflowerBlue;
-            this.panelTotalTime.Location = new System.Drawing.Point(65, 475);
-            this.panelTotalTime.Name = "panelTotalTime";
-            this.panelTotalTime.Size = new System.Drawing.Size(223, 59);
-            this.panelTotalTime.TabIndex = 18;
             // 
             // parrotGroupBox1
             // 
@@ -243,26 +212,26 @@
             // 
             this.dgvListEmployees.AllowUserToAddRows = false;
             this.dgvListEmployees.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvListEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvListEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListEmployees.ColumnHeadersHeight = 18;
             this.dgvListEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListEmployees.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListEmployees.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListEmployees.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListEmployees.Location = new System.Drawing.Point(43, 122);
             this.dgvListEmployees.Name = "dgvListEmployees";
@@ -301,12 +270,10 @@
             this.Controls.Add(this.dgvListEmployees);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnCheckTime);
-            this.Controls.Add(this.panelTotalTime);
             this.Controls.Add(this.parrotGroupBox1);
             this.Name = "UC_ReportES";
-            this.Size = new System.Drawing.Size(1062, 621);
+            this.Size = new System.Drawing.Size(1062, 509);
             this.Load += new System.EventHandler(this.UC_ReportES_Load);
-            this.panelTotalTime.ResumeLayout(false);
             this.parrotGroupBox1.ResumeLayout(false);
             this.parrotGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).EndInit();
@@ -318,11 +285,9 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnPrint;
         private Guna.UI2.WinForms.Guna2Button btnCheckTime;
-        private ReaLTaiizor.Controls.MetroLabel labelTotalTime;
         private ReaLTaiizor.Controls.PoisonDateTime DatePicker;
         private System.Windows.Forms.PictureBox BtnSearch;
         public Guna.UI2.WinForms.Guna2TextBox TextBoxSearch;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelTotalTime;
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListEmployees;
         private Guna.UI2.WinForms.Guna2RadioButton RadioBtnAll;

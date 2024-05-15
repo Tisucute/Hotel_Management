@@ -47,14 +47,14 @@
             this.panelWorkingTime = new System.Windows.Forms.Panel();
             this.ButtonShift = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.PanelHienThi = new System.Windows.Forms.Panel();
-            this.BtnReport = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnReport = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnManageReceip = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnManageJanitor = new System.Windows.Forms.Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.PanelHienThi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MenuSideBar2)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.panelAvatar.SuspendLayout();
@@ -264,7 +264,7 @@
             this.ButtonShift.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.ButtonShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonShift.Image = global::GUI.Properties.Resources.icons8_time_is_money_48;
+            this.ButtonShift.Image = global::GUI.Properties.Resources.icons8_reset_501;
             this.ButtonShift.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonShift.Location = new System.Drawing.Point(6, 5);
             this.ButtonShift.Name = "ButtonShift";
@@ -283,18 +283,13 @@
             this.panel1.Size = new System.Drawing.Size(246, 65);
             this.panel1.TabIndex = 7;
             // 
-            // guna2AnimateWindow1
+            // panel2
             // 
-            this.guna2AnimateWindow1.Interval = 100;
-            // 
-            // PanelHienThi
-            // 
-            this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
-            this.PanelHienThi.Name = "PanelHienThi";
-            this.PanelHienThi.Size = new System.Drawing.Size(1214, 891);
-            this.PanelHienThi.TabIndex = 7;
-            this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
+            this.panel2.Controls.Add(this.BtnReport);
+            this.panel2.Location = new System.Drawing.Point(3, 525);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(246, 65);
+            this.panel2.TabIndex = 9;
             // 
             // BtnReport
             // 
@@ -312,14 +307,6 @@
             this.BtnReport.UseVisualStyleBackColor = true;
             this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.BtnReport);
-            this.panel2.Location = new System.Drawing.Point(3, 525);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 65);
-            this.panel2.TabIndex = 9;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnManageReceip);
@@ -333,7 +320,7 @@
             this.btnManageReceip.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btnManageReceip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageReceip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageReceip.Image = global::GUI.Properties.Resources.icons8_report_50;
+            this.btnManageReceip.Image = global::GUI.Properties.Resources.icons8_receptionist_48;
             this.btnManageReceip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageReceip.Location = new System.Drawing.Point(3, 0);
             this.btnManageReceip.Name = "btnManageReceip";
@@ -357,7 +344,7 @@
             this.btnManageJanitor.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btnManageJanitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageJanitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageJanitor.Image = global::GUI.Properties.Resources.icons8_report_50;
+            this.btnManageJanitor.Image = global::GUI.Properties.Resources.icons8_broom_48;
             this.btnManageJanitor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageJanitor.Location = new System.Drawing.Point(3, 0);
             this.btnManageJanitor.Name = "btnManageJanitor";
@@ -367,6 +354,19 @@
             this.btnManageJanitor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageJanitor.UseVisualStyleBackColor = true;
             this.btnManageJanitor.Click += new System.EventHandler(this.btnManageJanitor_Click);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.Interval = 100;
+            // 
+            // PanelHienThi
+            // 
+            this.PanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelHienThi.Location = new System.Drawing.Point(253, 62);
+            this.PanelHienThi.Name = "PanelHienThi";
+            this.PanelHienThi.Size = new System.Drawing.Size(1214, 891);
+            this.PanelHienThi.TabIndex = 7;
+            this.PanelHienThi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHienThi_Paint);
             // 
             // ManagerForm
             // 

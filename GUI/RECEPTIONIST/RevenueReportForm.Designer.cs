@@ -33,6 +33,7 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.AutoSize = true;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -50,6 +51,7 @@
             this.Text = "RevenueReportForm";
             this.Load += new System.EventHandler(this.RevenueReportForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

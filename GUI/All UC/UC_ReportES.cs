@@ -43,7 +43,6 @@ namespace GUI
         {
             double total = Math.Round(attendanceBLL.calculatorTotalHour(DatePicker.Value), 2);
             dgvListEmployees.DataSource = attendanceBLL.getAttendance(DatePicker.Value);
-            labelTotalTime.Text = "Total Time: " + total  + " Hours";
         }
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)

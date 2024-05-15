@@ -126,6 +126,16 @@ namespace DAL
             adapter.Fill(table);
             return table;
         }
+        public DataTable getPayment(DateTime date)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM Payments WHERE Date = @Date", mydb.getConnection);
+            command.Parameters.Add("@Date",SqlDbType.Date).Value = date.Date;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
         public bool insertReport(string roomName, string serviceName, int amount, string price, int total, DateTime date) 
         {
             SqlCommand command = new SqlCommand("INSERT INTO Payments(room_name, service_name, amount, price, total, date) VALUES(@rname, @sname, @amount, @price, @total, @date)", mydb.getConnection);
